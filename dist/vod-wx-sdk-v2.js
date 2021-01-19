@@ -1,588 +1,144 @@
 (function(e, a) { for(var i in a) e[i] = a[i]; }(exports, /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var COS = __webpack_require__(1);
-
-var vodUtil = __webpack_require__(3);
-
-var _require = __webpack_require__(4),
-    UploaderEvent = _require.UploaderEvent;
-
-var _require2 = __webpack_require__(5),
-    EventEmitter = _require2.EventEmitter;
-
-var COS_REGION_KEY = "COS_REGION_KEY";
-
-var _require3 = __webpack_require__(6),
-    VodReporter = _require3.VodReporter,
-    reportEvent = _require3.reportEvent;
-
-function raceRequest(options) {
-  return new Promise(function (resolve, reject) {
-    wx.request({
-      method: "HEAD",
-      url: "https://" + options.domain,
-      success: function success(result) {
-        resolve(options.region);
-      },
-      fail: function fail(result) {
-        if (vodUtil.isFunction(self.error)) {
-          self.error(result);
-        }
-      }
-    });
-  });
-}
-
-var Uploader = /*#__PURE__*/function (_EventEmitter) {
-  _inherits(Uploader, _EventEmitter);
-
-  var _super = _createSuper(Uploader);
-
-  function Uploader(opts) {
-    var _this;
-
-    _classCallCheck(this, Uploader);
-
-    _this = _super.call(this);
-
-    _defineProperty(_assertThisInitialized(_this), "retryCommitNum", 3);
-
-    _defineProperty(_assertThisInitialized(_this), "retryApplyNum", 3);
-
-    _defineProperty(_assertThisInitialized(_this), "retryPrepareNum", 3);
-
-    var self = _assertThisInitialized(_this);
-
-    if (vodUtil.getType(opts) !== "object") {
-      throw new Error("opts must be a object");
-    }
-
-    self.appId = opts.appId || undefined;
-    self.taskId = undefined;
-    self.cos = undefined;
-    var videoFile;
-
-    if (opts.mediaFile) {
-      // alias
-      videoFile = opts.mediaFile;
-    } else {
-      videoFile = opts.videoFile;
-    }
-
-    if (!videoFile) {
-      throw new Error("need `mediaFile` param");
-    }
-
-    self.fileKey = videoFile.tempFilePath.replace(/^.*?([^/]{32}\.\w+)$/, "$1");
-
-    if (opts.mediaName) {
-      // alias
-      self.fileName = opts.mediaName;
-    } else {
-      self.fileName = opts.fileName;
-    }
-
-    var coverFile = opts.coverFile;
-    self.videoFileMessage = vodUtil.getFileMessage(videoFile, self.fileName);
-
-    if (coverFile) {
-      coverFile.tempFilePath = coverFile.tempFilePaths[0];
-      coverFile.size = coverFile.tempFiles[0].size;
-      self.coverFileMessage = vodUtil.getFileMessage(coverFile, self.fileName);
-      self.fileKey = coverFile.tempFilePath.replace(/^.*?([^/]{32}\.\w+)$/, "$1");
-    }
-
-    self.reportId = opts.reportId || '';
-    self.getSignature = opts.getSignature; // self.success = opts.success;
-
-    self.error = opts.error;
-    self.progress = opts.progress;
-    self.finish = opts.finish;
-
-    if (!self.getSignature) {
-      throw new Error("need `getSignature` param");
-    }
-
-    if (!vodUtil.isFunction(self.getSignature) || // !vodUtil.isFunction(self.success) ||
-    !vodUtil.isFunction(self.error) || !vodUtil.isFunction(self.progress) || !vodUtil.isFunction(self.finish)) {
-      throw new Error("getSignature, error, progress, finish must be a Function.");
-    } // 网络状态变化时重新竞速获取最优 storeRegion
-
-
-    wx.onNetworkStatusChange(function (res) {
-      if (res.isConnected) {
-        _this.requestRegion();
-      }
-    });
-    return _this;
-  }
-
-  _createClass(Uploader, [{
-    key: "setStorage",
-    value: function setStorage(name, val) {
-      wx.setStorageSync("wp_ugc_" + name, val);
-    }
-  }, {
-    key: "getStorage",
-    value: function getStorage(name) {
-      try {
-        var val = wx.getStorageSync("wp_ugc_" + name);
-        return val;
-      } catch (e) {
-        return "";
-      }
-    }
-  }, {
-    key: "delStorage",
-    value: function delStorage(name) {
-      wx.removeStorageSync("wp_ugc_" + name);
-    }
-  }, {
-    key: "regionRace",
-    value: function regionRace(cosRegionList, cb) {
-      Promise.race(cosRegionList.map(function (item) {
-        return raceRequest(item);
-      })).then(function (res) {
-        wx.setStorageSync(COS_REGION_KEY, res); // report target region obtain from prepare
-
-        if (cb) {
-          cb(res);
-        }
-      });
-    }
-  }, {
-    key: "requestRegion",
-    value: function requestRegion(callback) {
-      var self = this;
-      self.getSignature(function (signature) {
-        self.signature = signature;
-        var sendParams = {
-          signature: signature
-        };
-        var requestStartTime = Date.now();
-        wx.request({
-          method: "POST",
-          url: "https://vod2.qcloud.com/v3/index.php?Action=PrepareUploadUGC",
-          data: sendParams,
-          dataType: "json",
-          success: function success(result) {
-            if (result.data.code === 0) {
-              self.appId = self.appId || result.data.data.appId;
-              self.regionRace(result.data.data.cosRegionList, function (res) {
-                self.emit(reportEvent.report_prepare, {
-                  data: {
-                    region: res
-                  },
-                  requestStartTime: requestStartTime
-                });
-                callback(res);
-              });
-            } else {
-              // eslint-disable-next-line no-lonely-if
-              if (self.retryPrepareNum > 0) {
-                self.emit(reportEvent.report_prepare, {
-                  err: result.data,
-                  requestStartTime: requestStartTime
-                });
-                self.retryPrepareNum -= 1;
-                self.requestRegion(callback);
-              } else {
-                // eslint-disable-next-line no-lonely-if
-                if (vodUtil.isFunction(self.error)) {
-                  self.error(result);
-                }
-              }
-            }
-          },
-          fail: function fail(result) {
-            if (vodUtil.isFunction(self.error)) {
-              self.error(result);
-            }
-          }
-        });
-      });
-    }
-  }, {
-    key: "getStoreRegion",
-    value: function getStoreRegion(callback) {
-      var self = this;
-
-      try {
-        var region = wx.getStorageSync(COS_REGION_KEY);
-
-        if (!region) {
-          throw new Error("no storage");
-        }
-
-        return callback(region);
-      } catch (e) {
-        self.requestRegion(callback);
-      }
-    }
-  }, {
-    key: "start",
-    value: function start() {
-      var self = this; // self.getStoreRegion((region) => {
-      // });
-
-      self.applyUpload(function (result) {
-        self.uploadFile(result, function () {
-          self.commitUpload();
-        });
-      });
-    }
-  }, {
-    key: "cancel",
-    value: function cancel() {
-      this.cos.cancelTask(this.taskId);
-    }
-  }, {
-    key: "applyUpload",
-    value: function applyUpload(callback) {
-      var self = this;
-      self.getSignature(function (signature) {
-        self.signature = signature;
-        var sessionKey = self.getStorage(self.fileKey);
-        var sendParams;
-
-        if (sessionKey) {
-          sendParams = {
-            signature: signature,
-            vodSessionKey: sessionKey
-          };
-        } else {
-          sendParams = {
-            signature: signature,
-            videoName: self.videoFileMessage.name,
-            videoType: self.videoFileMessage.type // videoSize: self.videoFileMessage.size,
-
-          };
-        }
-
-        if (self.coverFileMessage) {
-          // upload video together with cover
-          sendParams.coverName = self.coverFileMessage.name;
-          sendParams.coverType = self.coverFileMessage.type; // sendParams.coverSize = self.coverFileMessage.size;
-        }
-
-        var requestStartTime = Date.now();
-        wx.request({
-          method: "POST",
-          url: "https://vod2.qcloud.com/v3/index.php?Action=ApplyUploadUGC",
-          data: sendParams,
-          dataType: "json",
-          success: function success(result) {
-            if (result.data.code === 0) {
-              self.appId = self.appId || result.data.data.appId;
-              self.emit(reportEvent.report_apply, {
-                data: sendParams,
-                requestStartTime: requestStartTime
-              });
-              self.vodSessionKey = result.data.data.vodSessionKey;
-              self.setStorage(self.fileKey, self.vodSessionKey);
-              callback(result);
-            } else {
-              // eslint-disable-next-line no-lonely-if
-              if (self.retryApplyNum > 0) {
-                self.emit(reportEvent.report_apply, {
-                  err: result.data,
-                  requestStartTime: requestStartTime
-                });
-                self.retryApplyNum -= 1;
-                self.applyUpload(callback);
-              } else {
-                // eslint-disable-next-line no-lonely-if
-                if (vodUtil.isFunction(self.error)) {
-                  self.error(result);
-                }
-              }
-            }
-          },
-          fail: function fail(result) {
-            if (vodUtil.isFunction(self.error)) {
-              self.error(result);
-            }
-          }
-        });
-      });
-    }
-  }, {
-    key: "uploadFile",
-    value: function uploadFile(result, cb) {
-      var self = this;
-      var applyData = result.data.data;
-      var cos = new COS({
-        getAuthorization: function getAuthorization(options, callback) {
-          callback({
-            TmpSecretId: applyData.tempCertificate.secretId,
-            TmpSecretKey: applyData.tempCertificate.secretKey,
-            XCosSecurityToken: applyData.tempCertificate.token,
-            StartTime: applyData.timestamp,
-            ExpiredTime: applyData.tempCertificate.expiredTime
-          });
-        }
-      });
-      this.cos = cos;
-      var cosCommonParam = {
-        bucket: "".concat(applyData.storageBucket, "-").concat(applyData.storageAppId),
-        region: applyData.storageRegionV5
-      };
-      var uploadCosParams = [];
-
-      if (this.videoFileMessage) {
-        var cosVideoParam = _objectSpread(_objectSpread({}, cosCommonParam), {}, {
-          filePath: this.videoFileMessage.tempFilePath,
-          fileSize: this.videoFileMessage.size,
-          key: applyData.video.storagePath,
-          onProgress: function onProgress(info) {
-            if (vodUtil.isFunction(self.progress)) {
-              self.progress(info);
-            }
-          },
-          // onProgress: function onProgress(data) {
-          //   self.emit(UploaderEvent.video_progress, data);
-          //   self.emit(UploaderEvent.media_progress, data);
-          // },
-          onTaskReady: function onTaskReady(taskId) {
-            self.taskId = taskId;
-          }
-        });
-
-        uploadCosParams.push(cosVideoParam);
-      }
-
-      if (this.coverFileMessage) {
-        var cosCoverParam = _objectSpread(_objectSpread({}, cosCommonParam), {}, {
-          fileSize: this.coverFileMessage.size,
-          filePath: this.coverFileMessage.tempFilePath,
-          key: applyData.cover.storagePath,
-          onTaskReady: vodUtil.noop,
-          onProgress: vodUtil.noop // cover don't need progress
-          // onProgress: function onProgress(data) {
-          //   self.emit(UploaderEvent.cover_progress, data);
-          // }
-
-        });
-
-        uploadCosParams.push(cosCoverParam);
-      }
-
-      var uploadPromises = uploadCosParams.map(function (uploadCosParam) {
-        return new Promise(function (resolve, reject) {
-          var requestStartTime = Date.now();
-          cos.sliceUploadFile( // cos.postObject(
-          {
-            Bucket: uploadCosParam.bucket,
-            Region: uploadCosParam.region,
-            Key: uploadCosParam.key,
-            FilePath: uploadCosParam.filePath,
-            FileSize: uploadCosParam.fileSize,
-            onProgress: uploadCosParam.onProgress,
-            onTaskReady: uploadCosParam.onTaskReady
-          }, function (err, data) {
-            if (err) {
-              // when fails
-              if (uploadCosParam.filePath === self.videoFileMessage.tempFilePath) {
-                self.emit(reportEvent.report_cos_upload, {
-                  err: err,
-                  requestStartTime: requestStartTime
-                });
-              }
-
-              if (vodUtil.isFunction(self.error)) {
-                var error = err.error;
-                var errObj = error && error.Code ? {
-                  code: error.Code,
-                  message: error.Message || error.message,
-                  reqid: error.RequestId || undefined
-                } : {
-                  code: err.statusCode || -2,
-                  message: 'cos error'
-                };
-                self.error(errObj);
-              }
-
-              reject();
-              return;
-            } // when succeeds
-            // if (vodUtil.isFunction(self.success)) {
-            //   self.success(data);
-            // }
-
-
-            resolve();
-          });
-        });
-      });
-      Promise.all(uploadPromises).then(function () {
-        cb();
-      });
-    }
-  }, {
-    key: "commitUpload",
-    value: function commitUpload() {
-      var self = this;
-      var sendParam = {
-        signature: this.signature,
-        vodSessionKey: this.vodSessionKey
-      };
-      var requestStartTime = Date.now();
+  /******/ 	// The module cache
+  /******/ 	var installedModules = {};
+  /******/
+  /******/ 	// The require function
+  /******/ 	function __webpack_require__(moduleId) {
+  /******/
+  /******/ 		// Check if module is in cache
+  /******/ 		if(installedModules[moduleId]) {
+  /******/ 			return installedModules[moduleId].exports;
+  /******/ 		}
+  /******/ 		// Create a new module (and put it into the cache)
+  /******/ 		var module = installedModules[moduleId] = {
+  /******/ 			i: moduleId,
+  /******/ 			l: false,
+  /******/ 			exports: {}
+  /******/ 		};
+  /******/
+  /******/ 		// Execute the module function
+  /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+  /******/
+  /******/ 		// Flag the module as loaded
+  /******/ 		module.l = true;
+  /******/
+  /******/ 		// Return the exports of the module
+  /******/ 		return module.exports;
+  /******/ 	}
+  /******/
+  /******/
+  /******/ 	// expose the modules object (__webpack_modules__)
+  /******/ 	__webpack_require__.m = modules;
+  /******/
+  /******/ 	// expose the module cache
+  /******/ 	__webpack_require__.c = installedModules;
+  /******/
+  /******/ 	// define getter function for harmony exports
+  /******/ 	__webpack_require__.d = function(exports, name, getter) {
+  /******/ 		if(!__webpack_require__.o(exports, name)) {
+  /******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+  /******/ 		}
+  /******/ 	};
+  /******/
+  /******/ 	// define __esModule on exports
+  /******/ 	__webpack_require__.r = function(exports) {
+  /******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+  /******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+  /******/ 		}
+  /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+  /******/ 	};
+  /******/
+  /******/ 	// create a fake namespace object
+  /******/ 	// mode & 1: value is a module id, require it
+  /******/ 	// mode & 2: merge all properties of value into the ns
+  /******/ 	// mode & 4: return value when already ns object
+  /******/ 	// mode & 8|1: behave like require
+  /******/ 	__webpack_require__.t = function(value, mode) {
+  /******/ 		if(mode & 1) value = __webpack_require__(value);
+  /******/ 		if(mode & 8) return value;
+  /******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+  /******/ 		var ns = Object.create(null);
+  /******/ 		__webpack_require__.r(ns);
+  /******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+  /******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+  /******/ 		return ns;
+  /******/ 	};
+  /******/
+  /******/ 	// getDefaultExport function for compatibility with non-harmony modules
+  /******/ 	__webpack_require__.n = function(module) {
+  /******/ 		var getter = module && module.__esModule ?
+  /******/ 			function getDefault() { return module['default']; } :
+  /******/ 			function getModuleExports() { return module; };
+  /******/ 		__webpack_require__.d(getter, 'a', getter);
+  /******/ 		return getter;
+  /******/ 	};
+  /******/
+  /******/ 	// Object.prototype.hasOwnProperty.call
+  /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+  /******/
+  /******/ 	// __webpack_public_path__
+  /******/ 	__webpack_require__.p = "";
+  /******/
+  /******/
+  /******/ 	// Load entry module and return exports
+  /******/ 	return __webpack_require__(__webpack_require__.s = 0);
+  /******/ })
+  /************************************************************************/
+  /******/ ([
+  /* 0 */
+  /***/ (function(module, exports, __webpack_require__) {
+  
+  function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+  
+  function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+  
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+  
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+  
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+  
+  function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+  
+  function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+  
+  function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+  
+  function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+  
+  function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+  
+  function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+  
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+  
+  var COS = __webpack_require__(1);
+  
+  var vodUtil = __webpack_require__(3);
+  
+  var _require = __webpack_require__(4),
+      UploaderEvent = _require.UploaderEvent;
+  
+  var _require2 = __webpack_require__(5),
+      EventEmitter = _require2.EventEmitter;
+  
+  var COS_REGION_KEY = "COS_REGION_KEY";
+  
+  var _require3 = __webpack_require__(6),
+      VodReporter = _require3.VodReporter,
+      reportEvent = _require3.reportEvent;
+  
+  function raceRequest(options) {
+    return new Promise(function (resolve, reject) {
       wx.request({
-        method: "POST",
-        url: "https://vod2.qcloud.com/v3/index.php?Action=CommitUploadUGC",
-        data: sendParam,
-        dataType: "json",
+        method: "HEAD",
+        url: "https://" + options.domain,
         success: function success(result) {
-          if (result.data.code === 0) {
-            self.emit(reportEvent.report_commit, {
-              data: result.data.data,
-              requestStartTime: requestStartTime
-            });
-            var res = result.data.data;
-
-            if (vodUtil.isFunction(self.finish)) {
-              self.finish({
-                fileId: res.fileId,
-                videoName: self.videoFileMessage.name,
-                videoUrl: res.video && res.video.url,
-                coverUrl: res.cover && res.cover.url
-              });
-            }
-
-            self.delStorage(self.fileKey);
-          } else {
-            // eslint-disable-next-line no-lonely-if
-            self.emit(reportEvent.report_commit, {
-              err: result.data,
-              requestStartTime: requestStartTime
-            });
-
-            if (self.retryCommitNum > 0) {
-              self.retryCommitNum -= 1;
-              self.commitUpload();
-            } else {
-              // eslint-disable-next-line no-lonely-if
-              if (vodUtil.isFunction(self.error)) {
-                self.error(result);
-              }
-            }
-          }
+          resolve(options.region);
         },
         fail: function fail(result) {
           if (vodUtil.isFunction(self.error)) {
@@ -590,14632 +146,13567 @@ var Uploader = /*#__PURE__*/function (_EventEmitter) {
           }
         }
       });
-    }
-  }]);
-
-  return Uploader;
-}(EventEmitter);
-
-module.exports = {
-  start: function start(params) {
-    try {
-      var uploader = new Uploader(params);
-      new VodReporter(uploader);
-      uploader.start();
-      return uploader;
-    } catch (e) {
-      if (vodUtil.isFunction(params.error)) {
-        params.error({
-          code: -1,
-          message: e.message
-        });
-      } else {
-        throw e;
-      }
-    }
-  }
-};
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-!function (e, a) {
-  "object" == ( false ? undefined : _typeof(exports)) && "object" == ( false ? undefined : _typeof(module)) ? module.exports = a() :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (a),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : undefined;
-}(this, function () {
-  return function (e) {
-    function a(i) {
-      if (n[i]) return n[i].exports;
-      var o = n[i] = {
-        i: i,
-        l: !1,
-        exports: {}
-      };
-      return e[i].call(o.exports, o, o.exports, a), o.l = !0, o.exports;
-    }
-
-    var n = {};
-    return a.m = e, a.c = n, a.i = function (e) {
-      return e;
-    }, a.d = function (e, n, i) {
-      a.o(e, n) || Object.defineProperty(e, n, {
-        configurable: !1,
-        enumerable: !0,
-        get: i
-      });
-    }, a.n = function (e) {
-      var n = e && e.__esModule ? function () {
-        return e["default"];
-      } : function () {
-        return e;
-      };
-      return a.d(n, "a", n), n;
-    }, a.o = function (e, a) {
-      return Object.prototype.hasOwnProperty.call(e, a);
-    }, a.p = "D:\\code\\cos-wx-sdk-v5\\demo\\lib", a(a.s = 5);
-  }([function (e, a, n) {
-    "use strict";
-
-    function i(e) {
-      return encodeURIComponent(e).replace(/!/g, "%21").replace(/'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29").replace(/\*/g, "%2A");
-    }
-
-    function o(e) {
-      return l(e, function (e) {
-        return "object" == _typeof(e) ? o(e) : e;
-      });
-    }
-
-    function s(e, a) {
-      return p(a, function (n, i) {
-        e[i] = a[i];
-      }), e;
-    }
-
-    function t(e) {
-      return e instanceof Array;
-    }
-
-    function c(e, a) {
-      for (var n = !1, i = 0; i < e.length; i++) {
-        if (a === e[i]) {
-          n = !0;
-          break;
-        }
-      }
-
-      return n;
-    }
-
-    function r(e) {
-      return t(e) ? e : [e];
-    }
-
-    function p(e, a) {
-      for (var n in e) {
-        e.hasOwnProperty(n) && a(e[n], n);
-      }
-    }
-
-    function l(e, a) {
-      var n = t(e) ? [] : {};
-
-      for (var i in e) {
-        e.hasOwnProperty(i) && (n[i] = a(e[i], i));
-      }
-
-      return n;
-    }
-
-    function u(e, a) {
-      var n = t(e),
-          i = n ? [] : {};
-
-      for (var o in e) {
-        e.hasOwnProperty(o) && a(e[o], o) && (n ? i.push(e[o]) : i[o] = e[o]);
-      }
-
-      return i;
-    }
-
-    var d = n(9),
-        m = n(7),
-        x = n(11),
-        f = n(8),
-        v = n(6),
-        h = v.btoa,
-        g = wx.getFileSystemManager(),
-        b = function b(e) {
-      e = e || {};
-      var a,
-          n = e.SecretId,
-          s = e.SecretKey,
-          t = e.KeyTime,
-          c = (e.method || e.Method || "get").toLowerCase(),
-          r = o(e.Query || e.params || {}),
-          p = o(e.Headers || e.headers || {}),
-          l = e.Key || "";
-      if (e.UseRawKey ? a = e.Pathname || e.pathname || "/" + l : (a = e.Pathname || e.pathname || l, 0 !== a.indexOf("/") && (a = "/" + a)), !n) return console.error("missing param SecretId");
-      if (!s) return console.error("missing param SecretKey");
-
-      var u = function u(e) {
-        var a = [];
-
-        for (var n in e) {
-          e.hasOwnProperty(n) && a.push(n);
-        }
-
-        return a.sort(function (e, a) {
-          return e = e.toLowerCase(), a = a.toLowerCase(), e === a ? 0 : e > a ? 1 : -1;
-        });
-      },
-          d = function d(e) {
-        var a,
-            n,
-            o,
-            s = [],
-            t = u(e);
-
-        for (a = 0; a < t.length; a++) {
-          n = t[a], o = void 0 === e[n] || null === e[n] ? "" : "" + e[n], n = n.toLowerCase(), n = i(n), o = i(o) || "", s.push(n + "=" + o);
-        }
-
-        return s.join("&");
-      },
-          x = Math.round(B(e.SystemClockOffset) / 1e3) - 1,
-          f = x,
-          v = e.Expires || e.expires;
-
-      f += void 0 === v ? 900 : 1 * v || 0;
-      var h = n,
-          g = t || x + ";" + f,
-          b = t || x + ";" + f,
-          y = u(p).join(";").toLowerCase(),
-          k = u(r).join(";").toLowerCase(),
-          w = m.HmacSHA1(b, s).toString(),
-          C = [c, a, d(r), d(p), ""].join("\n"),
-          S = ["sha1", g, m.SHA1(C).toString(), ""].join("\n");
-      return ["q-sign-algorithm=sha1", "q-ak=" + h, "q-sign-time=" + g, "q-key-time=" + b, "q-header-list=" + y, "q-url-param-list=" + k, "q-signature=" + m.HmacSHA1(S, w).toString()].join("&");
-    },
-        y = function y() {},
-        k = function k(e) {
-      var a = {};
-
-      for (var n in e) {
-        e.hasOwnProperty(n) && void 0 !== e[n] && null !== e[n] && (a[n] = e[n]);
-      }
-
-      return a;
-    },
-        w = function w(e, a, n, i) {
-      e ? g.readFile({
-        filePath: e,
-        position: a,
-        length: n - a,
-        success: function success(e) {
-          i(e.data);
-        },
-        fail: function fail() {
-          i(null);
-        }
-      }) : i(null);
-    },
-        C = function C(e, a, n) {
-      n = n || y, e && a && a instanceof ArrayBuffer ? I.getFileMd5(a, function (e, a) {
-        n(a);
-      }, onProgress) : n();
-    },
-        S = function S(e) {
-      var a,
-          n = e.byteLength,
-          i = d.getCtx();
-
-      for (a = 0; a < n; a += 1024) {
-        var o = e.slice(a, a + 1024),
-            s = function (e) {
-          var a,
-              n = new Uint8Array(e),
-              i = n.length,
-              o = "";
-
-          for (a = 0; a < i; a++) {
-            o += String.fromCharCode(n[a]);
-          }
-
-          return o;
-        }(o),
-            t = function (e) {
-          var a;
-
-          try {
-            return decodeURIComponent(escape(e));
-          } catch (n) {
-            if ((a = n) instanceof URIError) return e;
-            throw a;
-          }
-        }(s);
-
-        i.update(t, !0);
-      }
-
-      return i.digest("hex");
-    },
-        T = function T(e) {
-      return e instanceof ArrayBuffer ? S(e) : d.getCtx().update(e, !0).digest("hex");
-    },
-        _ = function _(e) {
-      var a,
-          n,
-          i,
-          o = "";
-
-      for (a = 0, n = e.length / 2; a < n; a++) {
-        i = parseInt(e[2 * a] + e[2 * a + 1], 16), o += String.fromCharCode(i);
-      }
-
-      return h(o);
-    },
-        A = function A() {
-      var e = function e() {
-        return (65536 * (1 + Math.random()) | 0).toString(16).substring(1);
-      };
-
-      return e() + e() + "-" + e() + "-" + e() + "-" + e() + "-" + e() + e() + e();
-    },
-        j = function j(e, a) {
-      var n = a.Bucket,
-          i = a.Region,
-          o = a.Key;
-
-      if (e.indexOf("Bucket") > -1 || "deleteMultipleObject" === e || "multipartList" === e || "listObjectVersions" === e) {
-        if (!n) return "Bucket";
-        if (!i) return "Region";
-      } else if (e.indexOf("Object") > -1 || e.indexOf("multipart") > -1 || "sliceUploadFile" === e || "abortUploadTask" === e) {
-        if (!n) return "Bucket";
-        if (!i) return "Region";
-        if (!o) return "Key";
-      }
-
-      return !1;
-    },
-        R = function R(e, a) {
-      if (a = s({}, a), "getAuth" !== e && "getV4Auth" !== e && "getObjectUrl" !== e) {
-        var n = a.Headers || {};
-
-        if (a && "object" == _typeof(a)) {
-          !function () {
-            for (var e in a) {
-              a.hasOwnProperty(e) && e.indexOf("x-cos-") > -1 && (n[e] = a[e]);
-            }
-          }();
-          var i = {
-            "x-cos-mfa": "MFA",
-            "Content-MD5": "ContentMD5",
-            "Content-Length": "ContentLength",
-            "Content-Type": "ContentType",
-            Expect: "Expect",
-            Expires: "Expires",
-            "Cache-Control": "CacheControl",
-            "Content-Disposition": "ContentDisposition",
-            "Content-Encoding": "ContentEncoding",
-            Range: "Range",
-            "If-Modified-Since": "IfModifiedSince",
-            "If-Unmodified-Since": "IfUnmodifiedSince",
-            "If-Match": "IfMatch",
-            "If-None-Match": "IfNoneMatch",
-            "x-cos-copy-source": "CopySource",
-            "x-cos-copy-source-Range": "CopySourceRange",
-            "x-cos-metadata-directive": "MetadataDirective",
-            "x-cos-copy-source-If-Modified-Since": "CopySourceIfModifiedSince",
-            "x-cos-copy-source-If-Unmodified-Since": "CopySourceIfUnmodifiedSince",
-            "x-cos-copy-source-If-Match": "CopySourceIfMatch",
-            "x-cos-copy-source-If-None-Match": "CopySourceIfNoneMatch",
-            "x-cos-acl": "ACL",
-            "x-cos-grant-read": "GrantRead",
-            "x-cos-grant-write": "GrantWrite",
-            "x-cos-grant-full-control": "GrantFullControl",
-            "x-cos-grant-read-acp": "GrantReadAcp",
-            "x-cos-grant-write-acp": "GrantWriteAcp",
-            "x-cos-storage-class": "StorageClass",
-            "x-cos-server-side-encryption-customer-algorithm": "SSECustomerAlgorithm",
-            "x-cos-server-side-encryption-customer-key": "SSECustomerKey",
-            "x-cos-server-side-encryption-customer-key-MD5": "SSECustomerKeyMD5",
-            "x-cos-server-side-encryption": "ServerSideEncryption",
-            "x-cos-server-side-encryption-cos-kms-key-id": "SSEKMSKeyId",
-            "x-cos-server-side-encryption-context": "SSEContext"
-          };
-          I.each(i, function (e, i) {
-            void 0 !== a[e] && (n[i] = a[e]);
-          }), a.Headers = k(n);
-        }
-      }
-
-      return a;
-    },
-        E = function E(e, a) {
-      return function (n, i) {
-        "function" == typeof n && (i = n, n = {}), n = R(e, n);
-
-        var o = function o(e) {
-          return e && e.headers && (e.headers["x-cos-version-id"] && (e.VersionId = e.headers["x-cos-version-id"]), e.headers["x-cos-delete-marker"] && (e.DeleteMarker = e.headers["x-cos-delete-marker"])), e;
-        },
-            s = function s(e, a) {
-          i && i(o(e), o(a));
-        };
-
-        if ("getService" !== e && "abortUploadTask" !== e) {
-          var t;
-          if (t = j(e, n)) return void s({
-            error: "missing param " + t
-          });
-
-          if (n.Region) {
-            if (n.Region.indexOf("cos.") > -1) return void s({
-              error: 'param Region should not be start with "cos."'
-            });
-            if (!/^([a-z\d-]+)$/.test(n.Region)) return void s({
-              error: "Region format error."
-            });
-            this.options.CompatibilityMode || -1 !== n.Region.indexOf("-") || "yfb" === n.Region || "default" === n.Region || console.warn("warning: param Region format error, find help here: https://cloud.tencent.com/document/product/436/6224");
-          }
-
-          if (n.Bucket) {
-            if (!/^([a-z\d-]+)-(\d+)$/.test(n.Bucket)) if (n.AppId) n.Bucket = n.Bucket + "-" + n.AppId;else {
-              if (!this.options.AppId) return void s({
-                error: 'Bucket should format as "test-1250000000".'
-              });
-              n.Bucket = n.Bucket + "-" + this.options.AppId;
-            }
-            n.AppId && (console.warn('warning: AppId has been deprecated, Please put it at the end of parameter Bucket(E.g Bucket:"test-1250000000" ).'), delete n.AppId);
-          }
-
-          n.Key && "/" === n.Key.substr(0, 1) && (n.Key = n.Key.substr(1));
-        }
-
-        var c = a.call(this, n, s);
-        if ("getAuth" === e || "getObjectUrl" === e) return c;
-      };
-    },
-        N = function N(e, a) {
-      function n() {
-        if (o = 0, a && "function" == typeof a) {
-          i = Date.now();
-          var n,
-              s = Math.max(0, Math.round((c - t) / ((i - r) / 1e3) * 100) / 100);
-          n = 0 === c && 0 === e ? 1 : Math.round(c / e * 100) / 100 || 0, r = i, t = c;
-
-          try {
-            a({
-              loaded: c,
-              total: e,
-              speed: s,
-              percent: n
-            });
-          } catch (e) {}
-        }
-      }
-
-      var i,
-          o,
-          s = this,
-          t = 0,
-          c = 0,
-          r = Date.now();
-      return function (a, i) {
-        if (a && (c = a.loaded, e = a.total), i) clearTimeout(o), n();else {
-          if (o) return;
-          o = setTimeout(n, s.options.ProgressInterval);
-        }
-      };
-    },
-        P = function P(e, a, n) {
-      return "postObject" === e ? void n() : a.FilePath ? void g.stat({
-        path: a.FilePath,
-        success: function success(e) {
-          var i = e.stats;
-          a.FileStat = i, a.FileStat.FilePath = a.FilePath;
-          var o = i.isDirectory() ? 0 : i.size;
-          a.ContentLength = o = o || 0, n(null, o);
-        },
-        fail: function fail(e) {
-          n(e);
-        }
-      }) : void n({
-        error: "missing param FilePath"
-      });
-    },
-        B = function B(e) {
-      return Date.now() + (e || 0);
-    },
-        I = {
-      noop: y,
-      formatParams: R,
-      apiWrapper: E,
-      xml2json: x,
-      json2xml: f,
-      md5: d,
-      clearKey: k,
-      fileSlice: w,
-      getFileMd5: T,
-      getBodyMd5: C,
-      binaryBase64: _,
-      extend: s,
-      isArray: t,
-      isInArray: c,
-      makeArray: r,
-      each: p,
-      map: l,
-      filter: u,
-      clone: o,
-      uuid: A,
-      camSafeUrlEncode: i,
-      throttleOnProgress: N,
-      getFileSize: P,
-      getSkewTime: B,
-      getAuth: b,
-      isBrowser: !0
-    };
-
-    e.exports = I;
-  }, function (e, a) {
-    function n(e, a) {
-      for (var n in e) {
-        a[n] = e[n];
-      }
-    }
-
-    function i(e, a) {
-      function i() {}
-
-      var o = e.prototype;
-
-      if (Object.create) {
-        var s = Object.create(a.prototype);
-        o.__proto__ = s;
-      }
-
-      o instanceof a || (i.prototype = a.prototype, i = new i(), n(o, i), e.prototype = o = i), o.constructor != e && ("function" != typeof e && console.error("unknow Class:" + e), o.constructor = e);
-    }
-
-    function o(e, a) {
-      if (a instanceof Error) var n = a;else n = this, Error.call(this, oe[e]), this.message = oe[e], Error.captureStackTrace && Error.captureStackTrace(this, o);
-      return n.code = e, a && (this.message = this.message + ": " + a), n;
-    }
-
-    function s() {}
-
-    function t(e, a) {
-      this._node = e, this._refresh = a, c(this);
-    }
-
-    function c(e) {
-      var a = e._node._inc || e._node.ownerDocument._inc;
-
-      if (e._inc != a) {
-        var i = e._refresh(e._node);
-
-        L(e, "length", i.length), n(i, e), e._inc = a;
-      }
-    }
-
-    function r() {}
-
-    function p(e, a) {
-      for (var n = e.length; n--;) {
-        if (e[n] === a) return n;
-      }
-    }
-
-    function l(e, a, n, i) {
-      if (i ? a[p(a, i)] = n : a[a.length++] = n, e) {
-        n.ownerElement = e;
-        var o = e.ownerDocument;
-        o && (i && g(o, e, i), h(o, e, n));
-      }
-    }
-
-    function u(e, a, n) {
-      var i = p(a, n);
-      if (!(i >= 0)) throw o(te, new Error(e.tagName + "@" + n));
-
-      for (var s = a.length - 1; i < s;) {
-        a[i] = a[++i];
-      }
-
-      if (a.length = s, e) {
-        var t = e.ownerDocument;
-        t && (g(t, e, n), n.ownerElement = null);
-      }
-    }
-
-    function d(e) {
-      if (this._features = {}, e) for (var a in e) {
-        this._features = e[a];
-      }
-    }
-
-    function m() {}
-
-    function x(e) {
-      return "<" == e && "&lt;" || ">" == e && "&gt;" || "&" == e && "&amp;" || '"' == e && "&quot;" || "&#" + e.charCodeAt() + ";";
-    }
-
-    function f(e, a) {
-      if (a(e)) return !0;
-      if (e = e.firstChild) do {
-        if (f(e, a)) return !0;
-      } while (e = e.nextSibling);
-    }
-
-    function v() {}
-
-    function h(e, a, n) {
-      e && e._inc++, "http://www.w3.org/2000/xmlns/" == n.namespaceURI && (a._nsMap[n.prefix ? n.localName : ""] = n.value);
-    }
-
-    function g(e, a, n, i) {
-      e && e._inc++, "http://www.w3.org/2000/xmlns/" == n.namespaceURI && delete a._nsMap[n.prefix ? n.localName : ""];
-    }
-
-    function b(e, a, n) {
-      if (e && e._inc) {
-        e._inc++;
-        var i = a.childNodes;
-        if (n) i[i.length++] = n;else {
-          for (var o = a.firstChild, s = 0; o;) {
-            i[s++] = o, o = o.nextSibling;
-          }
-
-          i.length = s;
-        }
-      }
-    }
-
-    function y(e, a) {
-      var n = a.previousSibling,
-          i = a.nextSibling;
-      return n ? n.nextSibling = i : e.firstChild = i, i ? i.previousSibling = n : e.lastChild = n, b(e.ownerDocument, e), a;
-    }
-
-    function k(e, a, n) {
-      var i = a.parentNode;
-
-      if (i && i.removeChild(a), a.nodeType === ae) {
-        var o = a.firstChild;
-        if (null == o) return a;
-        var s = a.lastChild;
-      } else o = s = a;
-
-      var t = n ? n.previousSibling : e.lastChild;
-      o.previousSibling = t, s.nextSibling = n, t ? t.nextSibling = o : e.firstChild = o, null == n ? e.lastChild = s : n.previousSibling = s;
-
-      do {
-        o.parentNode = e;
-      } while (o !== s && (o = o.nextSibling));
-
-      return b(e.ownerDocument || e, e), a.nodeType == ae && (a.firstChild = a.lastChild = null), a;
-    }
-
-    function w(e, a) {
-      var n = a.parentNode;
-
-      if (n) {
-        var i = e.lastChild;
-        n.removeChild(a);
-        var i = e.lastChild;
-      }
-
-      var i = e.lastChild;
-      return a.parentNode = e, a.previousSibling = i, a.nextSibling = null, i ? i.nextSibling = a : e.firstChild = a, e.lastChild = a, b(e.ownerDocument, e, a), a;
-    }
-
-    function C() {
-      this._nsMap = {};
-    }
-
-    function S() {}
-
-    function T() {}
-
-    function _() {}
-
-    function A() {}
-
-    function j() {}
-
-    function R() {}
-
-    function E() {}
-
-    function N() {}
-
-    function P() {}
-
-    function B() {}
-
-    function I() {}
-
-    function D() {}
-
-    function O(e, a) {
-      var n = [],
-          i = 9 == this.nodeType ? this.documentElement : this,
-          o = i.prefix,
-          s = i.namespaceURI;
-
-      if (s && null == o) {
-        var o = i.lookupPrefix(s);
-        if (null == o) var t = [{
-          namespace: s,
-          prefix: null
-        }];
-      }
-
-      return z(this, n, e, a, t), n.join("");
-    }
-
-    function U(e, a, n) {
-      var i = e.prefix || "",
-          o = e.namespaceURI;
-      if (!i && !o) return !1;
-      if ("xml" === i && "http://www.w3.org/XML/1998/namespace" === o || "http://www.w3.org/2000/xmlns/" == o) return !1;
-
-      for (var s = n.length; s--;) {
-        var t = n[s];
-        if (t.prefix == i) return t.namespace != o;
-      }
-
-      return !0;
-    }
-
-    function z(e, a, n, i, o) {
-      if (i) {
-        if (!(e = i(e))) return;
-        if ("string" == typeof e) return void a.push(e);
-      }
-
-      switch (e.nodeType) {
-        case G:
-          o || (o = []);
-          var s = (o.length, e.attributes),
-              t = s.length,
-              c = e.firstChild,
-              r = e.tagName;
-          n = K === e.namespaceURI || n, a.push("<", r);
-
-          for (var p = 0; p < t; p++) {
-            var l = s.item(p);
-            "xmlns" == l.prefix ? o.push({
-              prefix: l.localName,
-              namespace: l.value
-            }) : "xmlns" == l.nodeName && o.push({
-              prefix: "",
-              namespace: l.value
-            });
-          }
-
-          for (var p = 0; p < t; p++) {
-            var l = s.item(p);
-
-            if (U(l, n, o)) {
-              var u = l.prefix || "",
-                  d = l.namespaceURI,
-                  m = u ? " xmlns:" + u : " xmlns";
-              a.push(m, '="', d, '"'), o.push({
-                prefix: u,
-                namespace: d
-              });
-            }
-
-            z(l, a, n, i, o);
-          }
-
-          if (U(e, n, o)) {
-            var u = e.prefix || "",
-                d = e.namespaceURI,
-                m = u ? " xmlns:" + u : " xmlns";
-            a.push(m, '="', d, '"'), o.push({
-              prefix: u,
-              namespace: d
-            });
-          }
-
-          if (c || n && !/^(?:meta|link|img|br|hr|input)$/i.test(r)) {
-            if (a.push(">"), n && /^script$/i.test(r)) for (; c;) {
-              c.data ? a.push(c.data) : z(c, a, n, i, o), c = c.nextSibling;
-            } else for (; c;) {
-              z(c, a, n, i, o), c = c.nextSibling;
-            }
-            a.push("</", r, ">");
-          } else a.push("/>");
-
-          return;
-
-        case Y:
-        case ae:
-          for (var c = e.firstChild; c;) {
-            z(c, a, n, i, o), c = c.nextSibling;
-          }
-
-          return;
-
-        case V:
-          return a.push(" ", e.name, '="', e.value.replace(/[<&"]/g, x), '"');
-
-        case X:
-          return a.push(e.data.replace(/[<&]/g, x));
-
-        case $:
-          return a.push("<![CDATA[", e.data, "]]>");
-
-        case J:
-          return a.push("\x3c!--", e.data, "--\x3e");
-
-        case ee:
-          var f = e.publicId,
-              v = e.systemId;
-          if (a.push("<!DOCTYPE ", e.name), f) a.push(' PUBLIC "', f), v && "." != v && a.push('" "', v), a.push('">');else if (v && "." != v) a.push(' SYSTEM "', v, '">');else {
-            var h = e.internalSubset;
-            h && a.push(" [", h, "]"), a.push(">");
-          }
-          return;
-
-        case Z:
-          return a.push("<?", e.target, " ", e.data, "?>");
-
-        case W:
-          return a.push("&", e.nodeName, ";");
-
-        default:
-          a.push("??", e.nodeName);
-      }
-    }
-
-    function M(e, a, n) {
-      var i;
-
-      switch (a.nodeType) {
-        case G:
-          i = a.cloneNode(!1), i.ownerDocument = e;
-
-        case ae:
-          break;
-
-        case V:
-          n = !0;
-      }
-
-      if (i || (i = a.cloneNode(!1)), i.ownerDocument = e, i.parentNode = null, n) for (var o = a.firstChild; o;) {
-        i.appendChild(M(e, o, n)), o = o.nextSibling;
-      }
-      return i;
-    }
-
-    function F(e, a, n) {
-      var i = new a.constructor();
-
-      for (var o in a) {
-        var t = a[o];
-        "object" != _typeof(t) && t != i[o] && (i[o] = t);
-      }
-
-      switch (a.childNodes && (i.childNodes = new s()), i.ownerDocument = e, i.nodeType) {
-        case G:
-          var c = a.attributes,
-              p = i.attributes = new r(),
-              l = c.length;
-          p._ownerElement = i;
-
-          for (var u = 0; u < l; u++) {
-            i.setAttributeNode(F(e, c.item(u), !0));
-          }
-
-          break;
-
-        case V:
-          n = !0;
-      }
-
-      if (n) for (var d = a.firstChild; d;) {
-        i.appendChild(F(e, d, n)), d = d.nextSibling;
-      }
-      return i;
-    }
-
-    function L(e, a, n) {
-      e[a] = n;
-    }
-
-    function q(e) {
-      switch (e.nodeType) {
-        case G:
-        case ae:
-          var a = [];
-
-          for (e = e.firstChild; e;) {
-            7 !== e.nodeType && 8 !== e.nodeType && a.push(q(e)), e = e.nextSibling;
-          }
-
-          return a.join("");
-
-        default:
-          return e.nodeValue;
-      }
-    }
-
-    var K = "http://www.w3.org/1999/xhtml",
-        H = {},
-        G = H.ELEMENT_NODE = 1,
-        V = H.ATTRIBUTE_NODE = 2,
-        X = H.TEXT_NODE = 3,
-        $ = H.CDATA_SECTION_NODE = 4,
-        W = H.ENTITY_REFERENCE_NODE = 5,
-        Q = H.ENTITY_NODE = 6,
-        Z = H.PROCESSING_INSTRUCTION_NODE = 7,
-        J = H.COMMENT_NODE = 8,
-        Y = H.DOCUMENT_NODE = 9,
-        ee = H.DOCUMENT_TYPE_NODE = 10,
-        ae = H.DOCUMENT_FRAGMENT_NODE = 11,
-        ne = H.NOTATION_NODE = 12,
-        ie = {},
-        oe = {},
-        se = (ie.INDEX_SIZE_ERR = (oe[1] = "Index size error", 1), ie.DOMSTRING_SIZE_ERR = (oe[2] = "DOMString size error", 2), ie.HIERARCHY_REQUEST_ERR = (oe[3] = "Hierarchy request error", 3)),
-        te = (ie.WRONG_DOCUMENT_ERR = (oe[4] = "Wrong document", 4), ie.INVALID_CHARACTER_ERR = (oe[5] = "Invalid character", 5), ie.NO_DATA_ALLOWED_ERR = (oe[6] = "No data allowed", 6), ie.NO_MODIFICATION_ALLOWED_ERR = (oe[7] = "No modification allowed", 7), ie.NOT_FOUND_ERR = (oe[8] = "Not found", 8)),
-        ce = (ie.NOT_SUPPORTED_ERR = (oe[9] = "Not supported", 9), ie.INUSE_ATTRIBUTE_ERR = (oe[10] = "Attribute in use", 10));
-    ie.INVALID_STATE_ERR = (oe[11] = "Invalid state", 11), ie.SYNTAX_ERR = (oe[12] = "Syntax error", 12), ie.INVALID_MODIFICATION_ERR = (oe[13] = "Invalid modification", 13), ie.NAMESPACE_ERR = (oe[14] = "Invalid namespace", 14), ie.INVALID_ACCESS_ERR = (oe[15] = "Invalid access", 15);
-    o.prototype = Error.prototype, n(ie, o), s.prototype = {
-      length: 0,
-      item: function item(e) {
-        return this[e] || null;
-      },
-      toString: function toString(e, a) {
-        for (var n = [], i = 0; i < this.length; i++) {
-          z(this[i], n, e, a);
-        }
-
-        return n.join("");
-      }
-    }, t.prototype.item = function (e) {
-      return c(this), this[e];
-    }, i(t, s), r.prototype = {
-      length: 0,
-      item: s.prototype.item,
-      getNamedItem: function getNamedItem(e) {
-        for (var a = this.length; a--;) {
-          var n = this[a];
-          if (n.nodeName == e) return n;
-        }
-      },
-      setNamedItem: function setNamedItem(e) {
-        var a = e.ownerElement;
-        if (a && a != this._ownerElement) throw new o(ce);
-        var n = this.getNamedItem(e.nodeName);
-        return l(this._ownerElement, this, e, n), n;
-      },
-      setNamedItemNS: function setNamedItemNS(e) {
-        var a,
-            n = e.ownerElement;
-        if (n && n != this._ownerElement) throw new o(ce);
-        return a = this.getNamedItemNS(e.namespaceURI, e.localName), l(this._ownerElement, this, e, a), a;
-      },
-      removeNamedItem: function removeNamedItem(e) {
-        var a = this.getNamedItem(e);
-        return u(this._ownerElement, this, a), a;
-      },
-      removeNamedItemNS: function removeNamedItemNS(e, a) {
-        var n = this.getNamedItemNS(e, a);
-        return u(this._ownerElement, this, n), n;
-      },
-      getNamedItemNS: function getNamedItemNS(e, a) {
-        for (var n = this.length; n--;) {
-          var i = this[n];
-          if (i.localName == a && i.namespaceURI == e) return i;
-        }
-
-        return null;
-      }
-    }, d.prototype = {
-      hasFeature: function hasFeature(e, a) {
-        var n = this._features[e.toLowerCase()];
-
-        return !(!n || a && !(a in n));
-      },
-      createDocument: function createDocument(e, a, n) {
-        var i = new v();
-
-        if (i.implementation = this, i.childNodes = new s(), i.doctype = n, n && i.appendChild(n), a) {
-          var o = i.createElementNS(e, a);
-          i.appendChild(o);
-        }
-
-        return i;
-      },
-      createDocumentType: function createDocumentType(e, a, n) {
-        var i = new R();
-        return i.name = e, i.nodeName = e, i.publicId = a, i.systemId = n, i;
-      }
-    }, m.prototype = {
-      firstChild: null,
-      lastChild: null,
-      previousSibling: null,
-      nextSibling: null,
-      attributes: null,
-      parentNode: null,
-      childNodes: null,
-      ownerDocument: null,
-      nodeValue: null,
-      namespaceURI: null,
-      prefix: null,
-      localName: null,
-      insertBefore: function insertBefore(e, a) {
-        return k(this, e, a);
-      },
-      replaceChild: function replaceChild(e, a) {
-        this.insertBefore(e, a), a && this.removeChild(a);
-      },
-      removeChild: function removeChild(e) {
-        return y(this, e);
-      },
-      appendChild: function appendChild(e) {
-        return this.insertBefore(e, null);
-      },
-      hasChildNodes: function hasChildNodes() {
-        return null != this.firstChild;
-      },
-      cloneNode: function cloneNode(e) {
-        return F(this.ownerDocument || this, this, e);
-      },
-      normalize: function normalize() {
-        for (var e = this.firstChild; e;) {
-          var a = e.nextSibling;
-          a && a.nodeType == X && e.nodeType == X ? (this.removeChild(a), e.appendData(a.data)) : (e.normalize(), e = a);
-        }
-      },
-      isSupported: function isSupported(e, a) {
-        return this.ownerDocument.implementation.hasFeature(e, a);
-      },
-      hasAttributes: function hasAttributes() {
-        return this.attributes.length > 0;
-      },
-      lookupPrefix: function lookupPrefix(e) {
-        for (var a = this; a;) {
-          var n = a._nsMap;
-          if (n) for (var i in n) {
-            if (n[i] == e) return i;
-          }
-          a = a.nodeType == V ? a.ownerDocument : a.parentNode;
-        }
-
-        return null;
-      },
-      lookupNamespaceURI: function lookupNamespaceURI(e) {
-        for (var a = this; a;) {
-          var n = a._nsMap;
-          if (n && e in n) return n[e];
-          a = a.nodeType == V ? a.ownerDocument : a.parentNode;
-        }
-
-        return null;
-      },
-      isDefaultNamespace: function isDefaultNamespace(e) {
-        return null == this.lookupPrefix(e);
-      }
-    }, n(H, m), n(H, m.prototype), v.prototype = {
-      nodeName: "#document",
-      nodeType: Y,
-      doctype: null,
-      documentElement: null,
-      _inc: 1,
-      insertBefore: function insertBefore(e, a) {
-        if (e.nodeType == ae) {
-          for (var n = e.firstChild; n;) {
-            var i = n.nextSibling;
-            this.insertBefore(n, a), n = i;
-          }
-
-          return e;
-        }
-
-        return null == this.documentElement && e.nodeType == G && (this.documentElement = e), k(this, e, a), e.ownerDocument = this, e;
-      },
-      removeChild: function removeChild(e) {
-        return this.documentElement == e && (this.documentElement = null), y(this, e);
-      },
-      importNode: function importNode(e, a) {
-        return M(this, e, a);
-      },
-      getElementById: function getElementById(e) {
-        var a = null;
-        return f(this.documentElement, function (n) {
-          if (n.nodeType == G && n.getAttribute("id") == e) return a = n, !0;
-        }), a;
-      },
-      createElement: function createElement(e) {
-        var a = new C();
-        return a.ownerDocument = this, a.nodeName = e, a.tagName = e, a.childNodes = new s(), (a.attributes = new r())._ownerElement = a, a;
-      },
-      createDocumentFragment: function createDocumentFragment() {
-        var e = new B();
-        return e.ownerDocument = this, e.childNodes = new s(), e;
-      },
-      createTextNode: function createTextNode(e) {
-        var a = new _();
-        return a.ownerDocument = this, a.appendData(e), a;
-      },
-      createComment: function createComment(e) {
-        var a = new A();
-        return a.ownerDocument = this, a.appendData(e), a;
-      },
-      createCDATASection: function createCDATASection(e) {
-        var a = new j();
-        return a.ownerDocument = this, a.appendData(e), a;
-      },
-      createProcessingInstruction: function createProcessingInstruction(e, a) {
-        var n = new I();
-        return n.ownerDocument = this, n.tagName = n.target = e, n.nodeValue = n.data = a, n;
-      },
-      createAttribute: function createAttribute(e) {
-        var a = new S();
-        return a.ownerDocument = this, a.name = e, a.nodeName = e, a.localName = e, a.specified = !0, a;
-      },
-      createEntityReference: function createEntityReference(e) {
-        var a = new P();
-        return a.ownerDocument = this, a.nodeName = e, a;
-      },
-      createElementNS: function createElementNS(e, a) {
-        var n = new C(),
-            i = a.split(":"),
-            o = n.attributes = new r();
-        return n.childNodes = new s(), n.ownerDocument = this, n.nodeName = a, n.tagName = a, n.namespaceURI = e, 2 == i.length ? (n.prefix = i[0], n.localName = i[1]) : n.localName = a, o._ownerElement = n, n;
-      },
-      createAttributeNS: function createAttributeNS(e, a) {
-        var n = new S(),
-            i = a.split(":");
-        return n.ownerDocument = this, n.nodeName = a, n.name = a, n.namespaceURI = e, n.specified = !0, 2 == i.length ? (n.prefix = i[0], n.localName = i[1]) : n.localName = a, n;
-      }
-    }, i(v, m), C.prototype = {
-      nodeType: G,
-      hasAttribute: function hasAttribute(e) {
-        return null != this.getAttributeNode(e);
-      },
-      getAttribute: function getAttribute(e) {
-        var a = this.getAttributeNode(e);
-        return a && a.value || "";
-      },
-      getAttributeNode: function getAttributeNode(e) {
-        return this.attributes.getNamedItem(e);
-      },
-      setAttribute: function setAttribute(e, a) {
-        var n = this.ownerDocument.createAttribute(e);
-        n.value = n.nodeValue = "" + a, this.setAttributeNode(n);
-      },
-      removeAttribute: function removeAttribute(e) {
-        var a = this.getAttributeNode(e);
-        a && this.removeAttributeNode(a);
-      },
-      appendChild: function appendChild(e) {
-        return e.nodeType === ae ? this.insertBefore(e, null) : w(this, e);
-      },
-      setAttributeNode: function setAttributeNode(e) {
-        return this.attributes.setNamedItem(e);
-      },
-      setAttributeNodeNS: function setAttributeNodeNS(e) {
-        return this.attributes.setNamedItemNS(e);
-      },
-      removeAttributeNode: function removeAttributeNode(e) {
-        return this.attributes.removeNamedItem(e.nodeName);
-      },
-      removeAttributeNS: function removeAttributeNS(e, a) {
-        var n = this.getAttributeNodeNS(e, a);
-        n && this.removeAttributeNode(n);
-      },
-      hasAttributeNS: function hasAttributeNS(e, a) {
-        return null != this.getAttributeNodeNS(e, a);
-      },
-      getAttributeNS: function getAttributeNS(e, a) {
-        var n = this.getAttributeNodeNS(e, a);
-        return n && n.value || "";
-      },
-      setAttributeNS: function setAttributeNS(e, a, n) {
-        var i = this.ownerDocument.createAttributeNS(e, a);
-        i.value = i.nodeValue = "" + n, this.setAttributeNode(i);
-      },
-      getAttributeNodeNS: function getAttributeNodeNS(e, a) {
-        return this.attributes.getNamedItemNS(e, a);
-      },
-      getElementsByTagName: function getElementsByTagName(e) {
-        return new t(this, function (a) {
-          var n = [];
-          return f(a, function (i) {
-            i === a || i.nodeType != G || "*" !== e && i.tagName != e || n.push(i);
-          }), n;
-        });
-      },
-      getElementsByTagNameNS: function getElementsByTagNameNS(e, a) {
-        return new t(this, function (n) {
-          var i = [];
-          return f(n, function (o) {
-            o === n || o.nodeType !== G || "*" !== e && o.namespaceURI !== e || "*" !== a && o.localName != a || i.push(o);
-          }), i;
-        });
-      }
-    }, v.prototype.getElementsByTagName = C.prototype.getElementsByTagName, v.prototype.getElementsByTagNameNS = C.prototype.getElementsByTagNameNS, i(C, m), S.prototype.nodeType = V, i(S, m), T.prototype = {
-      data: "",
-      substringData: function substringData(e, a) {
-        return this.data.substring(e, e + a);
-      },
-      appendData: function appendData(e) {
-        e = this.data + e, this.nodeValue = this.data = e, this.length = e.length;
-      },
-      insertData: function insertData(e, a) {
-        this.replaceData(e, 0, a);
-      },
-      appendChild: function appendChild(e) {
-        throw new Error(oe[se]);
-      },
-      deleteData: function deleteData(e, a) {
-        this.replaceData(e, a, "");
-      },
-      replaceData: function replaceData(e, a, n) {
-        n = this.data.substring(0, e) + n + this.data.substring(e + a), this.nodeValue = this.data = n, this.length = n.length;
-      }
-    }, i(T, m), _.prototype = {
-      nodeName: "#text",
-      nodeType: X,
-      splitText: function splitText(e) {
-        var a = this.data,
-            n = a.substring(e);
-        a = a.substring(0, e), this.data = this.nodeValue = a, this.length = a.length;
-        var i = this.ownerDocument.createTextNode(n);
-        return this.parentNode && this.parentNode.insertBefore(i, this.nextSibling), i;
-      }
-    }, i(_, T), A.prototype = {
-      nodeName: "#comment",
-      nodeType: J
-    }, i(A, T), j.prototype = {
-      nodeName: "#cdata-section",
-      nodeType: $
-    }, i(j, T), R.prototype.nodeType = ee, i(R, m), E.prototype.nodeType = ne, i(E, m), N.prototype.nodeType = Q, i(N, m), P.prototype.nodeType = W, i(P, m), B.prototype.nodeName = "#document-fragment", B.prototype.nodeType = ae, i(B, m), I.prototype.nodeType = Z, i(I, m), D.prototype.serializeToString = function (e, a, n) {
-      return O.call(e, a, n);
-    }, m.prototype.toString = O;
-
-    try {
-      Object.defineProperty && (Object.defineProperty(t.prototype, "length", {
-        get: function get() {
-          return c(this), this.$$length;
-        }
-      }), Object.defineProperty(m.prototype, "textContent", {
-        get: function get() {
-          return q(this);
-        },
-        set: function set(e) {
-          switch (this.nodeType) {
-            case G:
-            case ae:
-              for (; this.firstChild;) {
-                this.removeChild(this.firstChild);
-              }
-
-              (e || String(e)) && this.appendChild(this.ownerDocument.createTextNode(e));
-              break;
-
-            default:
-              this.data = e, this.value = e, this.nodeValue = e;
-          }
-        }
-      }), L = function L(e, a, n) {
-        e["$$" + a] = n;
-      });
-    } catch (e) {}
-
-    a.DOMImplementation = d, a.XMLSerializer = D;
-  }, function (e, a) {
-    var n = function n(e) {
-      var a = {},
-          n = function n(e) {
-        return !a[e] && (a[e] = []), a[e];
-      };
-
-      e.on = function (e, a) {
-        n(e).push(a);
-      }, e.off = function (e, a) {
-        for (var i = n(e), o = i.length - 1; o >= 0; o--) {
-          a === i[o] && i.splice(o, 1);
-        }
-      }, e.emit = function (e, a) {
-        for (var i = n(e).map(function (e) {
-          return e;
-        }), o = 0; o < i.length; o++) {
-          i[o](a);
-        }
-      };
-    },
-        i = function i() {
-      n(this);
-    };
-
-    e.exports.init = n, e.exports.EventProxy = i;
-  }, function (e, a, n) {
-    var i,
-        o,
-        s = n(0),
-        t = function t(e) {
-      try {
-        wx.setStorageSync("cos_sdk_upload_cache", JSON.stringify(e));
-      } catch (e) {}
-    },
-        c = function c() {
-      if (!i) {
-        try {
-          i = JSON.parse(wx.getStorageSync("cos_sdk_upload_cache") || "[]") || [];
-        } catch (e) {}
-
-        for (var e = !1, a = Math.round(Date.now() / 1e3), n = i.length - 1; n >= 0; n--) {
-          var o = i[n][2];
-          (!o || o + 2592e3 < a) && (i.splice(n, 1), e = !0);
-        }
-
-        e && t(i);
-      }
-    },
-        r = function r() {
-      o || (o = setTimeout(function () {
-        t(i), o = null;
-      }, 400));
-    },
-        p = {
-      using: {},
-      setUsing: function setUsing(e) {
-        p.using[e] = !0;
-      },
-      removeUsing: function removeUsing(e) {
-        delete p.using[e];
-      },
-      getFileId: function getFileId(e, a, n, i) {
-        return e.FilePath && e.size && e.lastModifiedTime && a ? s.md5([e.FilePath].join("::")) + "-" + s.md5([e.size, e.mode, e.lastAccessedTime, e.lastModifiedTime, a, n, i].join("::")) : null;
-      },
-      getUploadIdList: function getUploadIdList(e) {
-        if (!e) return null;
-        c();
-
-        for (var a = [], n = 0; n < i.length; n++) {
-          i[n][0] === e && a.push(i[n][1]);
-        }
-
-        return a.length ? a : null;
-      },
-      saveUploadId: function saveUploadId(e, a, n) {
-        if (c(), e) {
-          for (var o = e.substr(0, e.indexOf("-") + 1), s = i.length - 1; s >= 0; s--) {
-            var t = i[s];
-            t[0] === e && t[1] === a ? i.splice(s, 1) : e !== t[0] && 0 === t[0].indexOf(o) && i.splice(s, 1);
-          }
-
-          i.unshift([e, a, Math.round(Date.now() / 1e3)]), i.length > n && i.splice(n), r();
-        }
-      },
-      removeUploadId: function removeUploadId(e) {
-        c(), delete p.using[e];
-
-        for (var a = i.length - 1; a >= 0; a--) {
-          i[a][1] === e && i.splice(a, 1);
-        }
-
-        r();
-      }
-    };
-
-    e.exports = p;
-  }, function (e, a, n) {
-    "use strict";
-
-    var i = n(0),
-        o = n(2),
-        s = n(22),
-        t = n(21),
-        c = n(19),
-        r = {
-      SecretId: "",
-      SecretKey: "",
-      XCosSecurityToken: "",
-      FileParallelLimit: 3,
-      ChunkParallelLimit: 3,
-      ChunkSize: 1048576,
-      SliceSize: 1048576,
-      CopyChunkParallelLimit: 20,
-      CopyChunkSize: 10485760,
-      CopySliceSize: 10485760,
-      MaxPartNumber: 1e4,
-      ProgressInterval: 1e3,
-      UploadQueueSize: 1e4,
-      Domain: "",
-      ServiceDomain: "",
-      Protocol: "",
-      CompatibilityMode: !1,
-      ForcePathStyle: !1,
-      CorrectClockSkew: !0,
-      SystemClockOffset: 0
-    },
-        p = function p(e) {
-      this.options = i.extend(i.clone(r), e || {}), this.options.FileParallelLimit = Math.max(1, this.options.FileParallelLimit), this.options.ChunkParallelLimit = Math.max(1, this.options.ChunkParallelLimit), this.options.ChunkRetryTimes = Math.max(0, this.options.ChunkRetryTimes), this.options.ChunkSize = Math.max(1048576, this.options.ChunkSize), this.options.CopyChunkParallelLimit = Math.max(1, this.options.CopyChunkParallelLimit), this.options.CopyChunkSize = Math.max(1048576, this.options.CopyChunkSize), this.options.CopySliceSize = Math.max(0, this.options.CopySliceSize), this.options.MaxPartNumber = Math.max(1024, Math.min(1e4, this.options.MaxPartNumber)), this.options.Timeout = Math.max(0, this.options.Timeout), this.options.AppId && console.warn('warning: AppId has been deprecated, Please put it at the end of parameter Bucket(E.g: "test-1250000000").'), o.init(this), s.init(this);
-    };
-
-    t.init(p, s), c.init(p, s), p.getAuthorization = i.getAuth, p.version = "0.8.0", e.exports = p;
-  }, function (e, a, n) {
-    var i = n(4);
-    e.exports = i;
-  }, function (e, a) {
-    var n = function (e) {
-      e = e || {};
-
-      var a,
-          n = e.Base64,
-          i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
-          o = function (e) {
-        for (var a = {}, n = 0, i = e.length; n < i; n++) {
-          a[e.charAt(n)] = n;
-        }
-
-        return a;
-      }(i),
-          s = String.fromCharCode,
-          t = function t(e) {
-        if (e.length < 2) {
-          var a = e.charCodeAt(0);
-          return a < 128 ? e : a < 2048 ? s(192 | a >>> 6) + s(128 | 63 & a) : s(224 | a >>> 12 & 15) + s(128 | a >>> 6 & 63) + s(128 | 63 & a);
-        }
-
-        var a = 65536 + 1024 * (e.charCodeAt(0) - 55296) + (e.charCodeAt(1) - 56320);
-        return s(240 | a >>> 18 & 7) + s(128 | a >>> 12 & 63) + s(128 | a >>> 6 & 63) + s(128 | 63 & a);
-      },
-          c = /[\uD800-\uDBFF][\uDC00-\uDFFFF]|[^\x00-\x7F]/g,
-          r = function r(e) {
-        return e.replace(c, t);
-      },
-          p = function p(e) {
-        var a = [0, 2, 1][e.length % 3],
-            n = e.charCodeAt(0) << 16 | (e.length > 1 ? e.charCodeAt(1) : 0) << 8 | (e.length > 2 ? e.charCodeAt(2) : 0);
-        return [i.charAt(n >>> 18), i.charAt(n >>> 12 & 63), a >= 2 ? "=" : i.charAt(n >>> 6 & 63), a >= 1 ? "=" : i.charAt(63 & n)].join("");
-      },
-          l = e.btoa ? function (a) {
-        return e.btoa(a);
-      } : function (e) {
-        return e.replace(/[\s\S]{1,3}/g, p);
-      },
-          u = a ? function (e) {
-        return (e.constructor === a.constructor ? e : new a(e)).toString("base64");
-      } : function (e) {
-        return l(r(e));
-      },
-          d = function d(e, a) {
-        return a ? u(String(e)).replace(/[+\/]/g, function (e) {
-          return "+" == e ? "-" : "_";
-        }).replace(/=/g, "") : u(String(e));
-      },
-          m = function m(e) {
-        return d(e, !0);
-      },
-          x = new RegExp(["[À-ß][-¿]", "[à-ï][-¿]{2}", "[ð-÷][-¿]{3}"].join("|"), "g"),
-          f = function f(e) {
-        switch (e.length) {
-          case 4:
-            var a = (7 & e.charCodeAt(0)) << 18 | (63 & e.charCodeAt(1)) << 12 | (63 & e.charCodeAt(2)) << 6 | 63 & e.charCodeAt(3),
-                n = a - 65536;
-            return s(55296 + (n >>> 10)) + s(56320 + (1023 & n));
-
-          case 3:
-            return s((15 & e.charCodeAt(0)) << 12 | (63 & e.charCodeAt(1)) << 6 | 63 & e.charCodeAt(2));
-
-          default:
-            return s((31 & e.charCodeAt(0)) << 6 | 63 & e.charCodeAt(1));
-        }
-      },
-          v = function v(e) {
-        return e.replace(x, f);
-      },
-          h = function h(e) {
-        var a = e.length,
-            n = a % 4,
-            i = (a > 0 ? o[e.charAt(0)] << 18 : 0) | (a > 1 ? o[e.charAt(1)] << 12 : 0) | (a > 2 ? o[e.charAt(2)] << 6 : 0) | (a > 3 ? o[e.charAt(3)] : 0),
-            t = [s(i >>> 16), s(i >>> 8 & 255), s(255 & i)];
-        return t.length -= [0, 0, 2, 1][n], t.join("");
-      },
-          g = e.atob ? function (a) {
-        return e.atob(a);
-      } : function (e) {
-        return e.replace(/[\s\S]{1,4}/g, h);
-      },
-          b = a ? function (e) {
-        return (e.constructor === a.constructor ? e : new a(e, "base64")).toString();
-      } : function (e) {
-        return v(g(e));
-      },
-          y = function y(e) {
-        return b(String(e).replace(/[-_]/g, function (e) {
-          return "-" == e ? "+" : "/";
-        }).replace(/[^A-Za-z0-9\+\/]/g, ""));
-      };
-
-      return {
-        VERSION: "2.1.9",
-        atob: g,
-        btoa: l,
-        fromBase64: y,
-        toBase64: d,
-        utob: r,
-        encode: d,
-        encodeURI: m,
-        btou: v,
-        decode: y,
-        noConflict: function noConflict() {
-          var a = e.Base64;
-          return e.Base64 = n, a;
-        }
-      };
-    }();
-
-    e.exports = n;
-  }, function (e, a) {
-    var n = n || function (e, a) {
-      var n = {},
-          i = n.lib = {},
-          o = function o() {},
-          s = i.Base = {
-        extend: function extend(e) {
-          o.prototype = this;
-          var a = new o();
-          return e && a.mixIn(e), a.hasOwnProperty("init") || (a.init = function () {
-            a.$super.init.apply(this, arguments);
-          }), a.init.prototype = a, a.$super = this, a;
-        },
-        create: function create() {
-          var e = this.extend();
-          return e.init.apply(e, arguments), e;
-        },
-        init: function init() {},
-        mixIn: function mixIn(e) {
-          for (var a in e) {
-            e.hasOwnProperty(a) && (this[a] = e[a]);
-          }
-
-          e.hasOwnProperty("toString") && (this.toString = e.toString);
-        },
-        clone: function clone() {
-          return this.init.prototype.extend(this);
-        }
-      },
-          t = i.WordArray = s.extend({
-        init: function init(e, a) {
-          e = this.words = e || [], this.sigBytes = void 0 != a ? a : 4 * e.length;
-        },
-        toString: function toString(e) {
-          return (e || r).stringify(this);
-        },
-        concat: function concat(e) {
-          var a = this.words,
-              n = e.words,
-              i = this.sigBytes;
-          if (e = e.sigBytes, this.clamp(), i % 4) for (var o = 0; o < e; o++) {
-            a[i + o >>> 2] |= (n[o >>> 2] >>> 24 - o % 4 * 8 & 255) << 24 - (i + o) % 4 * 8;
-          } else if (65535 < n.length) for (o = 0; o < e; o += 4) {
-            a[i + o >>> 2] = n[o >>> 2];
-          } else a.push.apply(a, n);
-          return this.sigBytes += e, this;
-        },
-        clamp: function clamp() {
-          var a = this.words,
-              n = this.sigBytes;
-          a[n >>> 2] &= 4294967295 << 32 - n % 4 * 8, a.length = e.ceil(n / 4);
-        },
-        clone: function clone() {
-          var e = s.clone.call(this);
-          return e.words = this.words.slice(0), e;
-        },
-        random: function random(a) {
-          for (var n = [], i = 0; i < a; i += 4) {
-            n.push(4294967296 * e.random() | 0);
-          }
-
-          return new t.init(n, a);
-        }
-      }),
-          c = n.enc = {},
-          r = c.Hex = {
-        stringify: function stringify(e) {
-          var a = e.words;
-          e = e.sigBytes;
-
-          for (var n = [], i = 0; i < e; i++) {
-            var o = a[i >>> 2] >>> 24 - i % 4 * 8 & 255;
-            n.push((o >>> 4).toString(16)), n.push((15 & o).toString(16));
-          }
-
-          return n.join("");
-        },
-        parse: function parse(e) {
-          for (var a = e.length, n = [], i = 0; i < a; i += 2) {
-            n[i >>> 3] |= parseInt(e.substr(i, 2), 16) << 24 - i % 8 * 4;
-          }
-
-          return new t.init(n, a / 2);
-        }
-      },
-          p = c.Latin1 = {
-        stringify: function stringify(e) {
-          var a = e.words;
-          e = e.sigBytes;
-
-          for (var n = [], i = 0; i < e; i++) {
-            n.push(String.fromCharCode(a[i >>> 2] >>> 24 - i % 4 * 8 & 255));
-          }
-
-          return n.join("");
-        },
-        parse: function parse(e) {
-          for (var a = e.length, n = [], i = 0; i < a; i++) {
-            n[i >>> 2] |= (255 & e.charCodeAt(i)) << 24 - i % 4 * 8;
-          }
-
-          return new t.init(n, a);
-        }
-      },
-          l = c.Utf8 = {
-        stringify: function stringify(e) {
-          try {
-            return decodeURIComponent(escape(p.stringify(e)));
-          } catch (e) {
-            throw Error("Malformed UTF-8 data");
-          }
-        },
-        parse: function parse(e) {
-          return p.parse(unescape(encodeURIComponent(e)));
-        }
-      },
-          u = i.BufferedBlockAlgorithm = s.extend({
-        reset: function reset() {
-          this._data = new t.init(), this._nDataBytes = 0;
-        },
-        _append: function _append(e) {
-          "string" == typeof e && (e = l.parse(e)), this._data.concat(e), this._nDataBytes += e.sigBytes;
-        },
-        _process: function _process(a) {
-          var n = this._data,
-              i = n.words,
-              o = n.sigBytes,
-              s = this.blockSize,
-              c = o / (4 * s),
-              c = a ? e.ceil(c) : e.max((0 | c) - this._minBufferSize, 0);
-
-          if (a = c * s, o = e.min(4 * a, o), a) {
-            for (var r = 0; r < a; r += s) {
-              this._doProcessBlock(i, r);
-            }
-
-            r = i.splice(0, a), n.sigBytes -= o;
-          }
-
-          return new t.init(r, o);
-        },
-        clone: function clone() {
-          var e = s.clone.call(this);
-          return e._data = this._data.clone(), e;
-        },
-        _minBufferSize: 0
-      });
-
-      i.Hasher = u.extend({
-        cfg: s.extend(),
-        init: function init(e) {
-          this.cfg = this.cfg.extend(e), this.reset();
-        },
-        reset: function reset() {
-          u.reset.call(this), this._doReset();
-        },
-        update: function update(e) {
-          return this._append(e), this._process(), this;
-        },
-        finalize: function finalize(e) {
-          return e && this._append(e), this._doFinalize();
-        },
-        blockSize: 16,
-        _createHelper: function _createHelper(e) {
-          return function (a, n) {
-            return new e.init(n).finalize(a);
-          };
-        },
-        _createHmacHelper: function _createHmacHelper(e) {
-          return function (a, n) {
-            return new d.HMAC.init(e, n).finalize(a);
-          };
-        }
-      });
-      var d = n.algo = {};
-      return n;
-    }(Math);
-
-    !function () {
-      var e = n,
-          a = e.lib,
-          i = a.WordArray,
-          o = a.Hasher,
-          s = [],
-          a = e.algo.SHA1 = o.extend({
-        _doReset: function _doReset() {
-          this._hash = new i.init([1732584193, 4023233417, 2562383102, 271733878, 3285377520]);
-        },
-        _doProcessBlock: function _doProcessBlock(e, a) {
-          for (var n = this._hash.words, i = n[0], o = n[1], t = n[2], c = n[3], r = n[4], p = 0; 80 > p; p++) {
-            if (16 > p) s[p] = 0 | e[a + p];else {
-              var l = s[p - 3] ^ s[p - 8] ^ s[p - 14] ^ s[p - 16];
-              s[p] = l << 1 | l >>> 31;
-            }
-            l = (i << 5 | i >>> 27) + r + s[p], l = 20 > p ? l + (1518500249 + (o & t | ~o & c)) : 40 > p ? l + (1859775393 + (o ^ t ^ c)) : 60 > p ? l + ((o & t | o & c | t & c) - 1894007588) : l + ((o ^ t ^ c) - 899497514), r = c, c = t, t = o << 30 | o >>> 2, o = i, i = l;
-          }
-
-          n[0] = n[0] + i | 0, n[1] = n[1] + o | 0, n[2] = n[2] + t | 0, n[3] = n[3] + c | 0, n[4] = n[4] + r | 0;
-        },
-        _doFinalize: function _doFinalize() {
-          var e = this._data,
-              a = e.words,
-              n = 8 * this._nDataBytes,
-              i = 8 * e.sigBytes;
-          return a[i >>> 5] |= 128 << 24 - i % 32, a[14 + (i + 64 >>> 9 << 4)] = Math.floor(n / 4294967296), a[15 + (i + 64 >>> 9 << 4)] = n, e.sigBytes = 4 * a.length, this._process(), this._hash;
-        },
-        clone: function clone() {
-          var e = o.clone.call(this);
-          return e._hash = this._hash.clone(), e;
-        }
-      });
-      e.SHA1 = o._createHelper(a), e.HmacSHA1 = o._createHmacHelper(a);
-    }(), function () {
-      var e = n,
-          a = e.enc.Utf8;
-      e.algo.HMAC = e.lib.Base.extend({
-        init: function init(e, n) {
-          e = this._hasher = new e.init(), "string" == typeof n && (n = a.parse(n));
-          var i = e.blockSize,
-              o = 4 * i;
-          n.sigBytes > o && (n = e.finalize(n)), n.clamp();
-
-          for (var s = this._oKey = n.clone(), t = this._iKey = n.clone(), c = s.words, r = t.words, p = 0; p < i; p++) {
-            c[p] ^= 1549556828, r[p] ^= 909522486;
-          }
-
-          s.sigBytes = t.sigBytes = o, this.reset();
-        },
-        reset: function reset() {
-          var e = this._hasher;
-          e.reset(), e.update(this._iKey);
-        },
-        update: function update(e) {
-          return this._hasher.update(e), this;
-        },
-        finalize: function finalize(e) {
-          var a = this._hasher;
-          return e = a.finalize(e), a.reset(), a.finalize(this._oKey.clone().concat(e));
-        }
-      });
-    }(), function () {
-      var e = n,
-          a = e.lib,
-          i = a.WordArray,
-          o = e.enc;
-      o.Base64 = {
-        stringify: function stringify(e) {
-          var a = e.words,
-              n = e.sigBytes,
-              i = this._map;
-          e.clamp();
-
-          for (var o = [], s = 0; s < n; s += 3) {
-            for (var t = a[s >>> 2] >>> 24 - s % 4 * 8 & 255, c = a[s + 1 >>> 2] >>> 24 - (s + 1) % 4 * 8 & 255, r = a[s + 2 >>> 2] >>> 24 - (s + 2) % 4 * 8 & 255, p = t << 16 | c << 8 | r, l = 0; l < 4 && s + 0.75 * l < n; l++) {
-              o.push(i.charAt(p >>> 6 * (3 - l) & 63));
-            }
-          }
-
-          var u = i.charAt(64);
-          if (u) for (; o.length % 4;) {
-            o.push(u);
-          }
-          return o.join("");
-        },
-        parse: function parse(e) {
-          var a = e.length,
-              n = this._map,
-              o = n.charAt(64);
-
-          if (o) {
-            var s = e.indexOf(o);
-            -1 != s && (a = s);
-          }
-
-          for (var t = [], c = 0, r = 0; r < a; r++) {
-            if (r % 4) {
-              var p = n.indexOf(e.charAt(r - 1)) << r % 4 * 2,
-                  l = n.indexOf(e.charAt(r)) >>> 6 - r % 4 * 2;
-              t[c >>> 2] |= (p | l) << 24 - c % 4 * 8, c++;
-            }
-          }
-
-          return i.create(t, c);
-        },
-        _map: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
-      };
-    }(), e.exports = n;
-  }, function (e, a) {
-    function n(e) {
-      return ("" + e).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/'/g, "&apos;").replace(/"/g, "&quot;").replace(o, "");
-    }
-
-    var i = new RegExp("^([^a-zA-Z_À-ÖØ-öø-ÿͰ-ͽͿ-῿‌-‍⁰-↏Ⰰ-⿿、-퟿豈-﷏ﷰ-�])|^((x|X)(m|M)(l|L))|([^a-zA-Z_À-ÖØ-öø-ÿͰ-ͽͿ-῿‌-‍⁰-↏Ⰰ-⿿、-퟿豈-﷏ﷰ-�-.0-9·̀-ͯ‿⁀])", "g"),
-        o = /[^\x09\x0A\x0D\x20-\xFF\x85\xA0-\uD7FF\uE000-\uFDCF\uFDE0-\uFFFD]/gm,
-        s = function s(e) {
-      var a = [];
-      if (e instanceof Object) for (var n in e) {
-        e.hasOwnProperty(n) && a.push(n);
-      }
-      return a;
-    },
-        t = function t(e, a) {
-      var o = function o(e, n, _o, s, t) {
-        var c = void 0 !== a.indent ? a.indent : "\t",
-            r = a.prettyPrint ? "\n" + new Array(s).join(c) : "";
-        a.removeIllegalNameCharacters && (e = e.replace(i, "_"));
-        var p = [r, "<", e, _o || ""];
-        return n && n.length > 0 ? (p.push(">"), p.push(n), t && p.push(r), p.push("</"), p.push(e), p.push(">")) : p.push("/>"), p.join("");
-      };
-
-      return function e(i, t, c) {
-        var r = _typeof(i);
-
-        switch ((Array.isArray ? Array.isArray(i) : i instanceof Array) ? r = "array" : i instanceof Date && (r = "date"), r) {
-          case "array":
-            var p = [];
-            return i.map(function (a) {
-              p.push(e(a, 1, c + 1));
-            }), a.prettyPrint && p.push("\n"), p.join("");
-
-          case "date":
-            return i.toJSON ? i.toJSON() : i + "";
-
-          case "object":
-            var l = [];
-
-            for (var u in i) {
-              if (i[u] instanceof Array) for (var d in i[u]) {
-                l.push(o(u, e(i[u][d], 0, c + 1), null, c + 1, s(i[u][d]).length));
-              } else l.push(o(u, e(i[u], 0, c + 1), null, c + 1));
-            }
-
-            return a.prettyPrint && l.length > 0 && l.push("\n"), l.join("");
-
-          case "function":
-            return i();
-
-          default:
-            return a.escape ? n(i) : "" + i;
-        }
-      }(e, 0, 0);
-    },
-        c = function c(e) {
-      var a = ['<?xml version="1.0" encoding="UTF-8"'];
-      return e && a.push(' standalone="yes"'), a.push("?>"), a.join("");
-    },
-        r = function r(e, a) {
-      if (a || (a = {
-        xmlHeader: {
-          standalone: !0
-        },
-        prettyPrint: !0,
-        indent: "  "
-      }), "string" == typeof e) try {
-        e = JSON.parse(e.toString());
-      } catch (e) {
-        return !1;
-      }
-      var n = "",
-          i = "";
-      return a && ("object" == _typeof(a) ? (a.xmlHeader && (n = c(!!a.xmlHeader.standalone)), void 0 !== a.docType && (i = "<!DOCTYPE " + a.docType + ">")) : n = c()), a = a || {}, [n, a.prettyPrint && i ? "\n" : "", i, t(e, a)].join("").replace(/\n{2,}/g, "\n").replace(/\s+$/g, "");
-    };
-
-    e.exports = r;
-  }, function (e, a) {
-    function n(e, a) {
-      var n = e[0],
-          i = e[1],
-          r = e[2],
-          p = e[3];
-      n = o(n, i, r, p, a[0], 7, -680876936), p = o(p, n, i, r, a[1], 12, -389564586), r = o(r, p, n, i, a[2], 17, 606105819), i = o(i, r, p, n, a[3], 22, -1044525330), n = o(n, i, r, p, a[4], 7, -176418897), p = o(p, n, i, r, a[5], 12, 1200080426), r = o(r, p, n, i, a[6], 17, -1473231341), i = o(i, r, p, n, a[7], 22, -45705983), n = o(n, i, r, p, a[8], 7, 1770035416), p = o(p, n, i, r, a[9], 12, -1958414417), r = o(r, p, n, i, a[10], 17, -42063), i = o(i, r, p, n, a[11], 22, -1990404162), n = o(n, i, r, p, a[12], 7, 1804603682), p = o(p, n, i, r, a[13], 12, -40341101), r = o(r, p, n, i, a[14], 17, -1502002290), i = o(i, r, p, n, a[15], 22, 1236535329), n = s(n, i, r, p, a[1], 5, -165796510), p = s(p, n, i, r, a[6], 9, -1069501632), r = s(r, p, n, i, a[11], 14, 643717713), i = s(i, r, p, n, a[0], 20, -373897302), n = s(n, i, r, p, a[5], 5, -701558691), p = s(p, n, i, r, a[10], 9, 38016083), r = s(r, p, n, i, a[15], 14, -660478335), i = s(i, r, p, n, a[4], 20, -405537848), n = s(n, i, r, p, a[9], 5, 568446438), p = s(p, n, i, r, a[14], 9, -1019803690), r = s(r, p, n, i, a[3], 14, -187363961), i = s(i, r, p, n, a[8], 20, 1163531501), n = s(n, i, r, p, a[13], 5, -1444681467), p = s(p, n, i, r, a[2], 9, -51403784), r = s(r, p, n, i, a[7], 14, 1735328473), i = s(i, r, p, n, a[12], 20, -1926607734), n = t(n, i, r, p, a[5], 4, -378558), p = t(p, n, i, r, a[8], 11, -2022574463), r = t(r, p, n, i, a[11], 16, 1839030562), i = t(i, r, p, n, a[14], 23, -35309556), n = t(n, i, r, p, a[1], 4, -1530992060), p = t(p, n, i, r, a[4], 11, 1272893353), r = t(r, p, n, i, a[7], 16, -155497632), i = t(i, r, p, n, a[10], 23, -1094730640), n = t(n, i, r, p, a[13], 4, 681279174), p = t(p, n, i, r, a[0], 11, -358537222), r = t(r, p, n, i, a[3], 16, -722521979), i = t(i, r, p, n, a[6], 23, 76029189), n = t(n, i, r, p, a[9], 4, -640364487), p = t(p, n, i, r, a[12], 11, -421815835), r = t(r, p, n, i, a[15], 16, 530742520), i = t(i, r, p, n, a[2], 23, -995338651), n = c(n, i, r, p, a[0], 6, -198630844), p = c(p, n, i, r, a[7], 10, 1126891415), r = c(r, p, n, i, a[14], 15, -1416354905), i = c(i, r, p, n, a[5], 21, -57434055), n = c(n, i, r, p, a[12], 6, 1700485571), p = c(p, n, i, r, a[3], 10, -1894986606), r = c(r, p, n, i, a[10], 15, -1051523), i = c(i, r, p, n, a[1], 21, -2054922799), n = c(n, i, r, p, a[8], 6, 1873313359), p = c(p, n, i, r, a[15], 10, -30611744), r = c(r, p, n, i, a[6], 15, -1560198380), i = c(i, r, p, n, a[13], 21, 1309151649), n = c(n, i, r, p, a[4], 6, -145523070), p = c(p, n, i, r, a[11], 10, -1120210379), r = c(r, p, n, i, a[2], 15, 718787259), i = c(i, r, p, n, a[9], 21, -343485551), e[0] = h(n, e[0]), e[1] = h(i, e[1]), e[2] = h(r, e[2]), e[3] = h(p, e[3]);
-    }
-
-    function i(e, a, n, i, o, s) {
-      return a = h(h(a, e), h(i, s)), h(a << o | a >>> 32 - o, n);
-    }
-
-    function o(e, a, n, o, s, t, c) {
-      return i(a & n | ~a & o, e, a, s, t, c);
-    }
-
-    function s(e, a, n, o, s, t, c) {
-      return i(a & o | n & ~o, e, a, s, t, c);
-    }
-
-    function t(e, a, n, o, s, t, c) {
-      return i(a ^ n ^ o, e, a, s, t, c);
-    }
-
-    function c(e, a, n, o, s, t, c) {
-      return i(n ^ (a | ~o), e, a, s, t, c);
-    }
-
-    function r(e) {
-      var a,
-          i = e.length,
-          o = [1732584193, -271733879, -1732584194, 271733878];
-
-      for (a = 64; a <= e.length; a += 64) {
-        n(o, l(e.substring(a - 64, a)));
-      }
-
-      e = e.substring(a - 64);
-      var s = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-
-      for (a = 0; a < e.length; a++) {
-        s[a >> 2] |= e.charCodeAt(a) << (a % 4 << 3);
-      }
-
-      if (s[a >> 2] |= 128 << (a % 4 << 3), a > 55) for (n(o, s), a = 0; a < 16; a++) {
-        s[a] = 0;
-      }
-      return s[14] = 8 * i, n(o, s), o;
-    }
-
-    function p() {
-      var e = {};
-      return e.state = [1732584193, -271733879, -1732584194, 271733878], e.tail = "", e.size = 0, e.update = function (a, i) {
-        i || (a = m(a)), e.size += a.length, a = e.tail + a;
-        var o,
-            s = e.state;
-
-        for (o = 64; o <= a.length; o += 64) {
-          n(s, l(a.substring(o - 64, o)));
-        }
-
-        return e.tail = a.substring(o - 64), e;
-      }, e.digest = function (a) {
-        var i,
-            o = e.size,
-            s = e.state,
-            t = e.tail,
-            c = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-
-        for (i = 0; i < t.length; i++) {
-          c[i >> 2] |= t.charCodeAt(i) << (i % 4 << 3);
-        }
-
-        if (c[i >> 2] |= 128 << (i % 4 << 3), i > 55) for (n(s, c), i = 0; i < 16; i++) {
-          c[i] = 0;
-        }
-        return c[14] = 8 * o, n(s, c), "hex" === a ? d(s) : "base64" === a ? f(d(s)) : s;
-      }, e;
-    }
-
-    function l(e) {
-      var a,
-          n = [];
-
-      for (a = 0; a < 64; a += 4) {
-        n[a >> 2] = e.charCodeAt(a) + (e.charCodeAt(a + 1) << 8) + (e.charCodeAt(a + 2) << 16) + (e.charCodeAt(a + 3) << 24);
-      }
-
-      return n;
-    }
-
-    function u(e) {
-      for (var a = "", n = 0; n < 4; n++) {
-        a += v[e >> 8 * n + 4 & 15] + v[e >> 8 * n & 15];
-      }
-
-      return a;
-    }
-
-    function d(e) {
-      for (var a = 0; a < e.length; a++) {
-        e[a] = u(e[a]);
-      }
-
-      return e.join("");
-    }
-
-    function m(e) {
-      e = e.replace(/\r\n/g, "\n");
-
-      for (var a = "", n = 0; n < e.length; n++) {
-        var i = e.charCodeAt(n);
-        i < 128 ? a += String.fromCharCode(i) : i > 127 && i < 2048 ? (a += String.fromCharCode(i >> 6 | 192), a += String.fromCharCode(63 & i | 128)) : (a += String.fromCharCode(i >> 12 | 224), a += String.fromCharCode(i >> 6 & 63 | 128), a += String.fromCharCode(63 & i | 128));
-      }
-
-      return a;
-    }
-
-    function x(e, a) {
-      return a || (e = m(e)), d(r(e));
-    }
-
-    var f = function f(e) {
-      var a,
-          n,
-          i,
-          o = "";
-
-      for (a = 0, n = e.length / 2; a < n; a++) {
-        i = parseInt(e[2 * a] + e[2 * a + 1], 16), o += String.fromCharCode(i);
-      }
-
-      return btoa(o);
-    },
-        v = "0123456789abcdef".split(""),
-        h = function h(e, a) {
-      return e + a & 4294967295;
-    };
-
-    "5d41402abc4b2a76b9719d911017c592" != x("hello") && (h = function h(e, a) {
-      var n = (65535 & e) + (65535 & a);
-      return (e >> 16) + (a >> 16) + (n >> 16) << 16 | 65535 & n;
-    }), x.getCtx = p, e.exports = x;
-  }, function (e, a) {
-    var n = function n(e) {
-      var a,
-          n,
-          i,
-          o = [],
-          s = Object.keys(e);
-
-      for (a = 0; a < s.length; a++) {
-        n = s[a], i = e[n] || "", o.push(n + "=" + encodeURIComponent(i));
-      }
-
-      return o.join("&");
-    },
-        i = function i(e, a) {
-      var i,
-          o = e.filePath,
-          s = e.headers || {},
-          t = e.url,
-          c = e.method,
-          r = e.onProgress,
-          p = function p(e, n) {
-        a(e, {
-          statusCode: n.statusCode,
-          headers: n.header
-        }, n.data);
-      };
-
-      if (o) {
-        var l,
-            u = t.match(/^(https?:\/\/[^\/]+\/)([^\/]*\/?)(.*)$/);
-        e.pathStyle ? (l = decodeURIComponent(u[3] || ""), t = u[1] + u[2]) : (l = decodeURIComponent(u[2] + u[3] || ""), t = u[1]);
-        var f = u[2].substring(0, u[2].indexOf('/'));
-        var d = {
-          key: l,
-          success_action_status: 200,
-          Signature: s.Authorization
-        },
-            m = ["Cache-Control", "Content-Type", "Content-Disposition", "Content-Encoding", "Expires", "x-cos-storage-class", "x-cos-security-token"];
-
-        for (var x in e.headers) {
-          e.headers.hasOwnProperty(x) && (x.indexOf("x-cos-meta-") > -1 || m.indexOf(x) > -1) && (d[x] = e.headers[x]);
-        }
-
-        s["x-cos-acl"] && (d.acl = s["x-cos-acl"]), !d["Content-Type"] && (d["Content-Type"] = ""), i = wx.uploadFile({
-          url: t,
-          method: c,
-          name: "file",
-          filePath: o,
-          formData: d,
-          header: {
-            "Vod-Forward-Cos": f
-          },
-          success: function success(e) {
-            p(null, e);
-          },
-          fail: function fail(e) {
-            p(e.errMsg, e);
-          }
-        });
-      } else {
-        var f = e.qs && n(e.qs) || "";
-        f && (t += (t.indexOf("?") > -1 ? "&" : "?") + f), s["Content-Length"] && delete s["Content-Length"], u = t.match(/^(https?:\/\/[^\/]+\/)([^\/]*\/?)(.*)$/), t = u[1] + u[3], f = u[2].substring(0, u[2].indexOf('/')), s["Vod-Forward-Cos"] = f, i = wx.request({
-          url: t,
-          method: c,
-          header: s,
-          dataType: "text",
-          data: e.body,
-          success: function success(e) {
-            p(null, e);
-          },
-          fail: function fail(e) {
-            p(e.errMsg, e);
-          }
-        });
-      }
-
-      return i.onProgressUpdate(function (e) {
-        r && r({
-          loaded: e.totalBytesSent,
-          total: e.totalBytesExpectedToSend,
-          progress: e.progress / 100
-        });
-      }), i;
-    };
-
-    e.exports = i;
-  }, function (e, a, n) {
-    var i = n(17).DOMParser,
-        o = function o(e) {
-      "use strict";
-
-      function a(e) {
-        var a = e.localName;
-        return null == a && (a = e.baseName), null != a && "" != a || (a = e.nodeName), a;
-      }
-
-      function n(e) {
-        return e.prefix;
-      }
-
-      function o(e) {
-        return "string" == typeof e ? e.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;") : e;
-      }
-
-      function s(e, a, n, i) {
-        for (var o = 0; o < e.length; o++) {
-          var s = e[o];
-
-          if ("string" == typeof s) {
-            if (s == i) break;
-          } else if (s instanceof RegExp) {
-            if (s.test(i)) break;
-          } else if ("function" == typeof s && s(a, n, i)) break;
-        }
-
-        return o != e.length;
-      }
-
-      function t(a, n, i) {
-        switch (e.arrayAccessForm) {
-          case "property":
-            a[n] instanceof Array ? a[n + "_asArray"] = a[n] : a[n + "_asArray"] = [a[n]];
-        }
-
-        !(a[n] instanceof Array) && e.arrayAccessFormPaths.length > 0 && s(e.arrayAccessFormPaths, a, n, i) && (a[n] = [a[n]]);
-      }
-
-      function c(e) {
-        var a = e.split(/[-T:+Z]/g),
-            n = new Date(a[0], a[1] - 1, a[2]),
-            i = a[5].split(".");
-
-        if (n.setHours(a[3], a[4], i[0]), i.length > 1 && n.setMilliseconds(i[1]), a[6] && a[7]) {
-          var o = 60 * a[6] + Number(a[7]);
-          o = 0 + ("-" == (/\d\d-\d\d:\d\d$/.test(e) ? "-" : "+") ? -1 * o : o), n.setMinutes(n.getMinutes() - o - n.getTimezoneOffset());
-        } else -1 !== e.indexOf("Z", e.length - 1) && (n = new Date(Date.UTC(n.getFullYear(), n.getMonth(), n.getDate(), n.getHours(), n.getMinutes(), n.getSeconds(), n.getMilliseconds())));
-
-        return n;
-      }
-
-      function r(a, n, i) {
-        if (e.datetimeAccessFormPaths.length > 0) {
-          var o = i.split(".#")[0];
-          return s(e.datetimeAccessFormPaths, a, n, o) ? c(a) : a;
-        }
-
-        return a;
-      }
-
-      function p(a, n, i, o) {
-        return !(n == C.ELEMENT_NODE && e.xmlElementsFilter.length > 0) || s(e.xmlElementsFilter, a, i, o);
-      }
-
-      function l(i, o) {
-        if (i.nodeType == C.DOCUMENT_NODE) {
-          for (var s = new Object(), c = i.childNodes, u = 0; u < c.length; u++) {
-            var d = c.item(u);
-
-            if (d.nodeType == C.ELEMENT_NODE) {
-              var m = a(d);
-              s[m] = l(d, m);
-            }
-          }
-
-          return s;
-        }
-
-        if (i.nodeType == C.ELEMENT_NODE) {
-          var s = new Object();
-          s.__cnt = 0;
-
-          for (var c = i.childNodes, u = 0; u < c.length; u++) {
-            var d = c.item(u),
-                m = a(d);
-
-            if (d.nodeType != C.COMMENT_NODE) {
-              var x = o + "." + m;
-              p(s, d.nodeType, m, x) && (s.__cnt++, null == s[m] ? (s[m] = l(d, x), t(s, m, x)) : (null != s[m] && (s[m] instanceof Array || (s[m] = [s[m]], t(s, m, x))), s[m][s[m].length] = l(d, x)));
-            }
-          }
-
-          for (var f = 0; f < i.attributes.length; f++) {
-            var v = i.attributes.item(f);
-            s.__cnt++, s[e.attributePrefix + v.name] = v.value;
-          }
-
-          var h = n(i);
-          return null != h && "" != h && (s.__cnt++, s.__prefix = h), null != s["#text"] && (s.__text = s["#text"], s.__text instanceof Array && (s.__text = s.__text.join("\n")), e.stripWhitespaces && (s.__text = s.__text.trim()), delete s["#text"], "property" == e.arrayAccessForm && delete s["#text_asArray"], s.__text = r(s.__text, m, o + "." + m)), null != s["#cdata-section"] && (s.__cdata = s["#cdata-section"], delete s["#cdata-section"], "property" == e.arrayAccessForm && delete s["#cdata-section_asArray"]), 0 == s.__cnt && "text" == e.emptyNodeForm ? s = "" : 1 == s.__cnt && null != s.__text ? s = s.__text : 1 != s.__cnt || null == s.__cdata || e.keepCData ? s.__cnt > 1 && null != s.__text && e.skipEmptyTextNodesForObj && (e.stripWhitespaces && "" == s.__text || "" == s.__text.trim()) && delete s.__text : s = s.__cdata, delete s.__cnt, !e.enableToStringFunc || null == s.__text && null == s.__cdata || (s.toString = function () {
-            return (null != this.__text ? this.__text : "") + (null != this.__cdata ? this.__cdata : "");
-          }), s;
-        }
-
-        if (i.nodeType == C.TEXT_NODE || i.nodeType == C.CDATA_SECTION_NODE) return i.nodeValue;
-      }
-
-      function u(a, n, i, s) {
-        var t = "<" + (null != a && null != a.__prefix ? a.__prefix + ":" : "") + n;
-        if (null != i) for (var c = 0; c < i.length; c++) {
-          var r = i[c],
-              p = a[r];
-          e.escapeMode && (p = o(p)), t += " " + r.substr(e.attributePrefix.length) + "=", e.useDoubleQuotes ? t += '"' + p + '"' : t += "'" + p + "'";
-        }
-        return t += s ? "/>" : ">";
-      }
-
-      function d(e, a) {
-        return "</" + (null != e.__prefix ? e.__prefix + ":" : "") + a + ">";
-      }
-
-      function m(e, a) {
-        return -1 !== e.indexOf(a, e.length - a.length);
-      }
-
-      function x(a, n) {
-        return !!("property" == e.arrayAccessForm && m(n.toString(), "_asArray") || 0 == n.toString().indexOf(e.attributePrefix) || 0 == n.toString().indexOf("__") || a[n] instanceof Function);
-      }
-
-      function f(e) {
-        var a = 0;
-        if (e instanceof Object) for (var n in e) {
-          x(e, n) || a++;
-        }
-        return a;
-      }
-
-      function v(a, n, i) {
-        return 0 == e.jsonPropertiesFilter.length || "" == i || s(e.jsonPropertiesFilter, a, n, i);
-      }
-
-      function h(a) {
-        var n = [];
-        if (a instanceof Object) for (var i in a) {
-          -1 == i.toString().indexOf("__") && 0 == i.toString().indexOf(e.attributePrefix) && n.push(i);
-        }
-        return n;
-      }
-
-      function g(a) {
-        var n = "";
-        return null != a.__cdata && (n += "<![CDATA[" + a.__cdata + "]]>"), null != a.__text && (e.escapeMode ? n += o(a.__text) : n += a.__text), n;
-      }
-
-      function b(a) {
-        var n = "";
-        return a instanceof Object ? n += g(a) : null != a && (e.escapeMode ? n += o(a) : n += a), n;
-      }
-
-      function y(e, a) {
-        return "" === e ? a : e + "." + a;
-      }
-
-      function k(e, a, n, i) {
-        var o = "";
-        if (0 == e.length) o += u(e, a, n, !0);else for (var s = 0; s < e.length; s++) {
-          o += u(e[s], a, h(e[s]), !1), o += w(e[s], y(i, a)), o += d(e[s], a);
-        }
-        return o;
-      }
-
-      function w(e, a) {
-        var n = "";
-        if (f(e) > 0) for (var i in e) {
-          if (!x(e, i) && ("" == a || v(e, i, y(a, i)))) {
-            var o = e[i],
-                s = h(o);
-            if (null == o || void 0 == o) n += u(o, i, s, !0);else if (o instanceof Object) {
-              if (o instanceof Array) n += k(o, i, s, a);else if (o instanceof Date) n += u(o, i, s, !1), n += o.toISOString(), n += d(o, i);else {
-                var t = f(o);
-                t > 0 || null != o.__text || null != o.__cdata ? (n += u(o, i, s, !1), n += w(o, y(a, i)), n += d(o, i)) : n += u(o, i, s, !0);
-              }
-            } else n += u(o, i, s, !1), n += b(o), n += d(o, i);
-          }
-        }
-        return n += b(e);
-      }
-
-      e = e || {}, function () {
-        void 0 === e.escapeMode && (e.escapeMode = !0), e.attributePrefix = e.attributePrefix || "_", e.arrayAccessForm = e.arrayAccessForm || "none", e.emptyNodeForm = e.emptyNodeForm || "text", void 0 === e.enableToStringFunc && (e.enableToStringFunc = !0), e.arrayAccessFormPaths = e.arrayAccessFormPaths || [], void 0 === e.skipEmptyTextNodesForObj && (e.skipEmptyTextNodesForObj = !0), void 0 === e.stripWhitespaces && (e.stripWhitespaces = !0), e.datetimeAccessFormPaths = e.datetimeAccessFormPaths || [], void 0 === e.useDoubleQuotes && (e.useDoubleQuotes = !1), e.xmlElementsFilter = e.xmlElementsFilter || [], e.jsonPropertiesFilter = e.jsonPropertiesFilter || [], void 0 === e.keepCData && (e.keepCData = !1);
-      }();
-      var C = {
-        ELEMENT_NODE: 1,
-        TEXT_NODE: 3,
-        CDATA_SECTION_NODE: 4,
-        COMMENT_NODE: 8,
-        DOCUMENT_NODE: 9
-      };
-      this.parseXmlString = function (e) {
-        if (void 0 === e) return null;
-        var a;
-
-        if (i) {
-          var n = new i(),
-              o = null;
-
-          try {
-            o = n.parseFromString("INVALID", "text/xml").getElementsByTagName("parsererror")[0].namespaceURI;
-          } catch (e) {
-            o = null;
-          }
-
-          try {
-            a = n.parseFromString(e, "text/xml"), null != o && a.getElementsByTagNameNS(o, "parsererror").length > 0 && (a = null);
-          } catch (e) {
-            a = null;
-          }
-        } else 0 == e.indexOf("<?") && (e = e.substr(e.indexOf("?>") + 2)), a = new ActiveXObject("Microsoft.XMLDOM"), a.async = "false", a.loadXML(e);
-
-        return a;
-      }, this.asArray = function (e) {
-        return void 0 === e || null == e ? [] : e instanceof Array ? e : [e];
-      }, this.toXmlDateTime = function (e) {
-        return e instanceof Date ? e.toISOString() : "number" == typeof e ? new Date(e).toISOString() : null;
-      }, this.asDateTime = function (e) {
-        return "string" == typeof e ? c(e) : e;
-      }, this.xml2json = function (e) {
-        return l(e);
-      }, this.xml_str2json = function (e) {
-        var a = this.parseXmlString(e);
-        return null != a ? this.xml2json(a) : null;
-      }, this.json2xml_str = function (e) {
-        return w(e, "");
-      }, this.json2xml = function (e) {
-        var a = this.json2xml_str(e);
-        return this.parseXmlString(a);
-      }, this.getVersion = function () {
-        return "1.2.0";
-      };
-    },
-        s = function s(e) {
-      if (!e) return null;
-      var a = new i(),
-          n = a.parseFromString(e, "text/xml"),
-          s = new o(),
-          t = s.xml2json(n);
-      return t.html && t.getElementsByTagName("parsererror").length ? null : t;
-    };
-
-    e.exports = s;
-  }, function (e, a) {
-    e.exports = {
-      "application/1d-interleaved-parityfec": {
-        source: "iana"
-      },
-      "application/3gpdash-qoe-report+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/3gpp-ims+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/a2l": {
-        source: "iana"
-      },
-      "application/activemessage": {
-        source: "iana"
-      },
-      "application/activity+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/alto-costmap+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/alto-costmapfilter+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/alto-directory+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/alto-endpointcost+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/alto-endpointcostparams+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/alto-endpointprop+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/alto-endpointpropparams+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/alto-error+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/alto-networkmap+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/alto-networkmapfilter+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/alto-updatestreamcontrol+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/alto-updatestreamparams+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/aml": {
-        source: "iana"
-      },
-      "application/andrew-inset": {
-        source: "iana",
-        extensions: ["ez"]
-      },
-      "application/applefile": {
-        source: "iana"
-      },
-      "application/applixware": {
-        source: "apache",
-        extensions: ["aw"]
-      },
-      "application/atf": {
-        source: "iana"
-      },
-      "application/atfx": {
-        source: "iana"
-      },
-      "application/atom+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["atom"]
-      },
-      "application/atomcat+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["atomcat"]
-      },
-      "application/atomdeleted+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["atomdeleted"]
-      },
-      "application/atomicmail": {
-        source: "iana"
-      },
-      "application/atomsvc+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["atomsvc"]
-      },
-      "application/atsc-dwd+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["dwd"]
-      },
-      "application/atsc-dynamic-event-message": {
-        source: "iana"
-      },
-      "application/atsc-held+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["held"]
-      },
-      "application/atsc-rdt+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/atsc-rsat+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["rsat"]
-      },
-      "application/atxml": {
-        source: "iana"
-      },
-      "application/auth-policy+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/bacnet-xdd+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/batch-smtp": {
-        source: "iana"
-      },
-      "application/bdoc": {
-        compressible: !1,
-        extensions: ["bdoc"]
-      },
-      "application/beep+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/calendar+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/calendar+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xcs"]
-      },
-      "application/call-completion": {
-        source: "iana"
-      },
-      "application/cals-1840": {
-        source: "iana"
-      },
-      "application/cap+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/cbor": {
-        source: "iana"
-      },
-      "application/cbor-seq": {
-        source: "iana"
-      },
-      "application/cccex": {
-        source: "iana"
-      },
-      "application/ccmp+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/ccxml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["ccxml"]
-      },
-      "application/cdfx+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["cdfx"]
-      },
-      "application/cdmi-capability": {
-        source: "iana",
-        extensions: ["cdmia"]
-      },
-      "application/cdmi-container": {
-        source: "iana",
-        extensions: ["cdmic"]
-      },
-      "application/cdmi-domain": {
-        source: "iana",
-        extensions: ["cdmid"]
-      },
-      "application/cdmi-object": {
-        source: "iana",
-        extensions: ["cdmio"]
-      },
-      "application/cdmi-queue": {
-        source: "iana",
-        extensions: ["cdmiq"]
-      },
-      "application/cdni": {
-        source: "iana"
-      },
-      "application/cea": {
-        source: "iana"
-      },
-      "application/cea-2018+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/cellml+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/cfw": {
-        source: "iana"
-      },
-      "application/clue+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/clue_info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/cms": {
-        source: "iana"
-      },
-      "application/cnrp+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/coap-group+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/coap-payload": {
-        source: "iana"
-      },
-      "application/commonground": {
-        source: "iana"
-      },
-      "application/conference-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/cose": {
-        source: "iana"
-      },
-      "application/cose-key": {
-        source: "iana"
-      },
-      "application/cose-key-set": {
-        source: "iana"
-      },
-      "application/cpl+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/csrattrs": {
-        source: "iana"
-      },
-      "application/csta+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/cstadata+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/csvm+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/cu-seeme": {
-        source: "apache",
-        extensions: ["cu"]
-      },
-      "application/cwt": {
-        source: "iana"
-      },
-      "application/cybercash": {
-        source: "iana"
-      },
-      "application/dart": {
-        compressible: !0
-      },
-      "application/dash+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["mpd"]
-      },
-      "application/dashdelta": {
-        source: "iana"
-      },
-      "application/davmount+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["davmount"]
-      },
-      "application/dca-rft": {
-        source: "iana"
-      },
-      "application/dcd": {
-        source: "iana"
-      },
-      "application/dec-dx": {
-        source: "iana"
-      },
-      "application/dialog-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/dicom": {
-        source: "iana"
-      },
-      "application/dicom+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/dicom+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/dii": {
-        source: "iana"
-      },
-      "application/dit": {
-        source: "iana"
-      },
-      "application/dns": {
-        source: "iana"
-      },
-      "application/dns+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/dns-message": {
-        source: "iana"
-      },
-      "application/docbook+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["dbk"]
-      },
-      "application/dots+cbor": {
-        source: "iana"
-      },
-      "application/dskpp+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/dssc+der": {
-        source: "iana",
-        extensions: ["dssc"]
-      },
-      "application/dssc+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xdssc"]
-      },
-      "application/dvcs": {
-        source: "iana"
-      },
-      "application/ecmascript": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["ecma", "es"]
-      },
-      "application/edi-consent": {
-        source: "iana"
-      },
-      "application/edi-x12": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/edifact": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/efi": {
-        source: "iana"
-      },
-      "application/emergencycalldata.comment+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/emergencycalldata.control+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/emergencycalldata.deviceinfo+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/emergencycalldata.ecall.msd": {
-        source: "iana"
-      },
-      "application/emergencycalldata.providerinfo+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/emergencycalldata.serviceinfo+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/emergencycalldata.subscriberinfo+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/emergencycalldata.veds+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/emma+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["emma"]
-      },
-      "application/emotionml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["emotionml"]
-      },
-      "application/encaprtp": {
-        source: "iana"
-      },
-      "application/epp+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/epub+zip": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["epub"]
-      },
-      "application/eshop": {
-        source: "iana"
-      },
-      "application/exi": {
-        source: "iana",
-        extensions: ["exi"]
-      },
-      "application/expect-ct-report+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/fastinfoset": {
-        source: "iana"
-      },
-      "application/fastsoap": {
-        source: "iana"
-      },
-      "application/fdt+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["fdt"]
-      },
-      "application/fhir+json": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/fhir+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/fido.trusted-apps+json": {
-        compressible: !0
-      },
-      "application/fits": {
-        source: "iana"
-      },
-      "application/flexfec": {
-        source: "iana"
-      },
-      "application/font-sfnt": {
-        source: "iana"
-      },
-      "application/font-tdpfr": {
-        source: "iana",
-        extensions: ["pfr"]
-      },
-      "application/font-woff": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/framework-attributes+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/geo+json": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["geojson"]
-      },
-      "application/geo+json-seq": {
-        source: "iana"
-      },
-      "application/geopackage+sqlite3": {
-        source: "iana"
-      },
-      "application/geoxacml+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/gltf-buffer": {
-        source: "iana"
-      },
-      "application/gml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["gml"]
-      },
-      "application/gpx+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["gpx"]
-      },
-      "application/gxf": {
-        source: "apache",
-        extensions: ["gxf"]
-      },
-      "application/gzip": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["gz"]
-      },
-      "application/h224": {
-        source: "iana"
-      },
-      "application/held+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/hjson": {
-        extensions: ["hjson"]
-      },
-      "application/http": {
-        source: "iana"
-      },
-      "application/hyperstudio": {
-        source: "iana",
-        extensions: ["stk"]
-      },
-      "application/ibe-key-request+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/ibe-pkg-reply+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/ibe-pp-data": {
-        source: "iana"
-      },
-      "application/iges": {
-        source: "iana"
-      },
-      "application/im-iscomposing+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/index": {
-        source: "iana"
-      },
-      "application/index.cmd": {
-        source: "iana"
-      },
-      "application/index.obj": {
-        source: "iana"
-      },
-      "application/index.response": {
-        source: "iana"
-      },
-      "application/index.vnd": {
-        source: "iana"
-      },
-      "application/inkml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["ink", "inkml"]
-      },
-      "application/iotp": {
-        source: "iana"
-      },
-      "application/ipfix": {
-        source: "iana",
-        extensions: ["ipfix"]
-      },
-      "application/ipp": {
-        source: "iana"
-      },
-      "application/isup": {
-        source: "iana"
-      },
-      "application/its+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["its"]
-      },
-      "application/java-archive": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["jar", "war", "ear"]
-      },
-      "application/java-serialized-object": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["ser"]
-      },
-      "application/java-vm": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["class"]
-      },
-      "application/javascript": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0,
-        extensions: ["js", "mjs"]
-      },
-      "application/jf2feed+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/jose": {
-        source: "iana"
-      },
-      "application/jose+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/jrd+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/json": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0,
-        extensions: ["json", "map"]
-      },
-      "application/json-patch+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/json-seq": {
-        source: "iana"
-      },
-      "application/json5": {
-        extensions: ["json5"]
-      },
-      "application/jsonml+json": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["jsonml"]
-      },
-      "application/jwk+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/jwk-set+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/jwt": {
-        source: "iana"
-      },
-      "application/kpml-request+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/kpml-response+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/ld+json": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["jsonld"]
-      },
-      "application/lgr+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["lgr"]
-      },
-      "application/link-format": {
-        source: "iana"
-      },
-      "application/load-control+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/lost+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["lostxml"]
-      },
-      "application/lostsync+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/lpf+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/lxf": {
-        source: "iana"
-      },
-      "application/mac-binhex40": {
-        source: "iana",
-        extensions: ["hqx"]
-      },
-      "application/mac-compactpro": {
-        source: "apache",
-        extensions: ["cpt"]
-      },
-      "application/macwriteii": {
-        source: "iana"
-      },
-      "application/mads+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["mads"]
-      },
-      "application/manifest+json": {
-        charset: "UTF-8",
-        compressible: !0,
-        extensions: ["webmanifest"]
-      },
-      "application/marc": {
-        source: "iana",
-        extensions: ["mrc"]
-      },
-      "application/marcxml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["mrcx"]
-      },
-      "application/mathematica": {
-        source: "iana",
-        extensions: ["ma", "nb", "mb"]
-      },
-      "application/mathml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["mathml"]
-      },
-      "application/mathml-content+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mathml-presentation+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mbms-associated-procedure-description+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mbms-deregister+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mbms-envelope+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mbms-msk+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mbms-msk-response+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mbms-protection-description+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mbms-reception-report+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mbms-register+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mbms-register-response+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mbms-schedule+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mbms-user-service-description+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mbox": {
-        source: "iana",
-        extensions: ["mbox"]
-      },
-      "application/media-policy-dataset+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/media_control+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/mediaservercontrol+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["mscml"]
-      },
-      "application/merge-patch+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/metalink+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["metalink"]
-      },
-      "application/metalink4+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["meta4"]
-      },
-      "application/mets+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["mets"]
-      },
-      "application/mf4": {
-        source: "iana"
-      },
-      "application/mikey": {
-        source: "iana"
-      },
-      "application/mipc": {
-        source: "iana"
-      },
-      "application/mmt-aei+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["maei"]
-      },
-      "application/mmt-usd+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["musd"]
-      },
-      "application/mods+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["mods"]
-      },
-      "application/moss-keys": {
-        source: "iana"
-      },
-      "application/moss-signature": {
-        source: "iana"
-      },
-      "application/mosskey-data": {
-        source: "iana"
-      },
-      "application/mosskey-request": {
-        source: "iana"
-      },
-      "application/mp21": {
-        source: "iana",
-        extensions: ["m21", "mp21"]
-      },
-      "application/mp4": {
-        source: "iana",
-        extensions: ["mp4s", "m4p"]
-      },
-      "application/mpeg4-generic": {
-        source: "iana"
-      },
-      "application/mpeg4-iod": {
-        source: "iana"
-      },
-      "application/mpeg4-iod-xmt": {
-        source: "iana"
-      },
-      "application/mrb-consumer+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xdf"]
-      },
-      "application/mrb-publish+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xdf"]
-      },
-      "application/msc-ivr+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/msc-mixer+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/msword": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["doc", "dot"]
-      },
-      "application/mud+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/multipart-core": {
-        source: "iana"
-      },
-      "application/mxf": {
-        source: "iana",
-        extensions: ["mxf"]
-      },
-      "application/n-quads": {
-        source: "iana",
-        extensions: ["nq"]
-      },
-      "application/n-triples": {
-        source: "iana",
-        extensions: ["nt"]
-      },
-      "application/nasdata": {
-        source: "iana"
-      },
-      "application/news-checkgroups": {
-        source: "iana",
-        charset: "US-ASCII"
-      },
-      "application/news-groupinfo": {
-        source: "iana",
-        charset: "US-ASCII"
-      },
-      "application/news-transmission": {
-        source: "iana"
-      },
-      "application/nlsml+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/node": {
-        source: "iana",
-        extensions: ["cjs"]
-      },
-      "application/nss": {
-        source: "iana"
-      },
-      "application/ocsp-request": {
-        source: "iana"
-      },
-      "application/ocsp-response": {
-        source: "iana"
-      },
-      "application/octet-stream": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["bin", "dms", "lrf", "mar", "so", "dist", "distz", "pkg", "bpk", "dump", "elc", "deploy", "exe", "dll", "deb", "dmg", "iso", "img", "msi", "msp", "msm", "buffer"]
-      },
-      "application/oda": {
-        source: "iana",
-        extensions: ["oda"]
-      },
-      "application/odm+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/odx": {
-        source: "iana"
-      },
-      "application/oebps-package+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["opf"]
-      },
-      "application/ogg": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["ogx"]
-      },
-      "application/omdoc+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["omdoc"]
-      },
-      "application/onenote": {
-        source: "apache",
-        extensions: ["onetoc", "onetoc2", "onetmp", "onepkg"]
-      },
-      "application/oscore": {
-        source: "iana"
-      },
-      "application/oxps": {
-        source: "iana",
-        extensions: ["oxps"]
-      },
-      "application/p2p-overlay+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["relo"]
-      },
-      "application/parityfec": {
-        source: "iana"
-      },
-      "application/passport": {
-        source: "iana"
-      },
-      "application/patch-ops-error+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xer"]
-      },
-      "application/pdf": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["pdf"]
-      },
-      "application/pdx": {
-        source: "iana"
-      },
-      "application/pem-certificate-chain": {
-        source: "iana"
-      },
-      "application/pgp-encrypted": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["pgp"]
-      },
-      "application/pgp-keys": {
-        source: "iana"
-      },
-      "application/pgp-signature": {
-        source: "iana",
-        extensions: ["asc", "sig"]
-      },
-      "application/pics-rules": {
-        source: "apache",
-        extensions: ["prf"]
-      },
-      "application/pidf+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/pidf-diff+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/pkcs10": {
-        source: "iana",
-        extensions: ["p10"]
-      },
-      "application/pkcs12": {
-        source: "iana"
-      },
-      "application/pkcs7-mime": {
-        source: "iana",
-        extensions: ["p7m", "p7c"]
-      },
-      "application/pkcs7-signature": {
-        source: "iana",
-        extensions: ["p7s"]
-      },
-      "application/pkcs8": {
-        source: "iana",
-        extensions: ["p8"]
-      },
-      "application/pkcs8-encrypted": {
-        source: "iana"
-      },
-      "application/pkix-attr-cert": {
-        source: "iana",
-        extensions: ["ac"]
-      },
-      "application/pkix-cert": {
-        source: "iana",
-        extensions: ["cer"]
-      },
-      "application/pkix-crl": {
-        source: "iana",
-        extensions: ["crl"]
-      },
-      "application/pkix-pkipath": {
-        source: "iana",
-        extensions: ["pkipath"]
-      },
-      "application/pkixcmp": {
-        source: "iana",
-        extensions: ["pki"]
-      },
-      "application/pls+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["pls"]
-      },
-      "application/poc-settings+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/postscript": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["ai", "eps", "ps"]
-      },
-      "application/ppsp-tracker+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/problem+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/problem+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/provenance+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["provx"]
-      },
-      "application/prs.alvestrand.titrax-sheet": {
-        source: "iana"
-      },
-      "application/prs.cww": {
-        source: "iana",
-        extensions: ["cww"]
-      },
-      "application/prs.hpub+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/prs.nprend": {
-        source: "iana"
-      },
-      "application/prs.plucker": {
-        source: "iana"
-      },
-      "application/prs.rdf-xml-crypt": {
-        source: "iana"
-      },
-      "application/prs.xsf+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/pskc+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["pskcxml"]
-      },
-      "application/pvd+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/qsig": {
-        source: "iana"
-      },
-      "application/raml+yaml": {
-        compressible: !0,
-        extensions: ["raml"]
-      },
-      "application/raptorfec": {
-        source: "iana"
-      },
-      "application/rdap+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/rdf+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["rdf", "owl"]
-      },
-      "application/reginfo+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["rif"]
-      },
-      "application/relax-ng-compact-syntax": {
-        source: "iana",
-        extensions: ["rnc"]
-      },
-      "application/remote-printing": {
-        source: "iana"
-      },
-      "application/reputon+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/resource-lists+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["rl"]
-      },
-      "application/resource-lists-diff+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["rld"]
-      },
-      "application/rfc+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/riscos": {
-        source: "iana"
-      },
-      "application/rlmi+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/rls-services+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["rs"]
-      },
-      "application/route-apd+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["rapd"]
-      },
-      "application/route-s-tsid+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["sls"]
-      },
-      "application/route-usd+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["rusd"]
-      },
-      "application/rpki-ghostbusters": {
-        source: "iana",
-        extensions: ["gbr"]
-      },
-      "application/rpki-manifest": {
-        source: "iana",
-        extensions: ["mft"]
-      },
-      "application/rpki-publication": {
-        source: "iana"
-      },
-      "application/rpki-roa": {
-        source: "iana",
-        extensions: ["roa"]
-      },
-      "application/rpki-updown": {
-        source: "iana"
-      },
-      "application/rsd+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["rsd"]
-      },
-      "application/rss+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["rss"]
-      },
-      "application/rtf": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["rtf"]
-      },
-      "application/rtploopback": {
-        source: "iana"
-      },
-      "application/rtx": {
-        source: "iana"
-      },
-      "application/samlassertion+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/samlmetadata+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/sbe": {
-        source: "iana"
-      },
-      "application/sbml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["sbml"]
-      },
-      "application/scaip+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/scim+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/scvp-cv-request": {
-        source: "iana",
-        extensions: ["scq"]
-      },
-      "application/scvp-cv-response": {
-        source: "iana",
-        extensions: ["scs"]
-      },
-      "application/scvp-vp-request": {
-        source: "iana",
-        extensions: ["spq"]
-      },
-      "application/scvp-vp-response": {
-        source: "iana",
-        extensions: ["spp"]
-      },
-      "application/sdp": {
-        source: "iana",
-        extensions: ["sdp"]
-      },
-      "application/secevent+jwt": {
-        source: "iana"
-      },
-      "application/senml+cbor": {
-        source: "iana"
-      },
-      "application/senml+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/senml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["senmlx"]
-      },
-      "application/senml-etch+cbor": {
-        source: "iana"
-      },
-      "application/senml-etch+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/senml-exi": {
-        source: "iana"
-      },
-      "application/sensml+cbor": {
-        source: "iana"
-      },
-      "application/sensml+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/sensml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["sensmlx"]
-      },
-      "application/sensml-exi": {
-        source: "iana"
-      },
-      "application/sep+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/sep-exi": {
-        source: "iana"
-      },
-      "application/session-info": {
-        source: "iana"
-      },
-      "application/set-payment": {
-        source: "iana"
-      },
-      "application/set-payment-initiation": {
-        source: "iana",
-        extensions: ["setpay"]
-      },
-      "application/set-registration": {
-        source: "iana"
-      },
-      "application/set-registration-initiation": {
-        source: "iana",
-        extensions: ["setreg"]
-      },
-      "application/sgml": {
-        source: "iana"
-      },
-      "application/sgml-open-catalog": {
-        source: "iana"
-      },
-      "application/shf+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["shf"]
-      },
-      "application/sieve": {
-        source: "iana",
-        extensions: ["siv", "sieve"]
-      },
-      "application/simple-filter+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/simple-message-summary": {
-        source: "iana"
-      },
-      "application/simplesymbolcontainer": {
-        source: "iana"
-      },
-      "application/sipc": {
-        source: "iana"
-      },
-      "application/slate": {
-        source: "iana"
-      },
-      "application/smil": {
-        source: "iana"
-      },
-      "application/smil+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["smi", "smil"]
-      },
-      "application/smpte336m": {
-        source: "iana"
-      },
-      "application/soap+fastinfoset": {
-        source: "iana"
-      },
-      "application/soap+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/sparql-query": {
-        source: "iana",
-        extensions: ["rq"]
-      },
-      "application/sparql-results+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["srx"]
-      },
-      "application/spirits-event+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/sql": {
-        source: "iana"
-      },
-      "application/srgs": {
-        source: "iana",
-        extensions: ["gram"]
-      },
-      "application/srgs+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["grxml"]
-      },
-      "application/sru+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["sru"]
-      },
-      "application/ssdl+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["ssdl"]
-      },
-      "application/ssml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["ssml"]
-      },
-      "application/stix+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/swid+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["swidtag"]
-      },
-      "application/tamp-apex-update": {
-        source: "iana"
-      },
-      "application/tamp-apex-update-confirm": {
-        source: "iana"
-      },
-      "application/tamp-community-update": {
-        source: "iana"
-      },
-      "application/tamp-community-update-confirm": {
-        source: "iana"
-      },
-      "application/tamp-error": {
-        source: "iana"
-      },
-      "application/tamp-sequence-adjust": {
-        source: "iana"
-      },
-      "application/tamp-sequence-adjust-confirm": {
-        source: "iana"
-      },
-      "application/tamp-status-query": {
-        source: "iana"
-      },
-      "application/tamp-status-response": {
-        source: "iana"
-      },
-      "application/tamp-update": {
-        source: "iana"
-      },
-      "application/tamp-update-confirm": {
-        source: "iana"
-      },
-      "application/tar": {
-        compressible: !0
-      },
-      "application/taxii+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/td+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/tei+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["tei", "teicorpus"]
-      },
-      "application/tetra_isi": {
-        source: "iana"
-      },
-      "application/thraud+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["tfi"]
-      },
-      "application/timestamp-query": {
-        source: "iana"
-      },
-      "application/timestamp-reply": {
-        source: "iana"
-      },
-      "application/timestamped-data": {
-        source: "iana",
-        extensions: ["tsd"]
-      },
-      "application/tlsrpt+gzip": {
-        source: "iana"
-      },
-      "application/tlsrpt+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/tnauthlist": {
-        source: "iana"
-      },
-      "application/toml": {
-        compressible: !0,
-        extensions: ["toml"]
-      },
-      "application/trickle-ice-sdpfrag": {
-        source: "iana"
-      },
-      "application/trig": {
-        source: "iana"
-      },
-      "application/ttml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["ttml"]
-      },
-      "application/tve-trigger": {
-        source: "iana"
-      },
-      "application/tzif": {
-        source: "iana"
-      },
-      "application/tzif-leap": {
-        source: "iana"
-      },
-      "application/ulpfec": {
-        source: "iana"
-      },
-      "application/urc-grpsheet+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/urc-ressheet+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["rsheet"]
-      },
-      "application/urc-targetdesc+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/urc-uisocketdesc+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vcard+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vcard+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vemmi": {
-        source: "iana"
-      },
-      "application/vividence.scriptfile": {
-        source: "apache"
-      },
-      "application/vnd.1000minds.decision-model+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["1km"]
-      },
-      "application/vnd.3gpp-prose+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp-prose-pc3ch+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp-v2x-local-service-information": {
-        source: "iana"
-      },
-      "application/vnd.3gpp.access-transfer-events+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.bsf+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.gmop+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mc-signalling-ear": {
-        source: "iana"
-      },
-      "application/vnd.3gpp.mcdata-affiliation-command+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcdata-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcdata-payload": {
-        source: "iana"
-      },
-      "application/vnd.3gpp.mcdata-service-config+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcdata-signalling": {
-        source: "iana"
-      },
-      "application/vnd.3gpp.mcdata-ue-config+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcdata-user-profile+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcptt-affiliation-command+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcptt-floor-request+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcptt-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcptt-location-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcptt-mbms-usage-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcptt-service-config+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcptt-signed+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcptt-ue-config+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcptt-ue-init-config+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcptt-user-profile+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcvideo-affiliation-command+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcvideo-affiliation-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcvideo-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcvideo-location-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcvideo-mbms-usage-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcvideo-service-config+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcvideo-transmission-request+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcvideo-ue-config+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mcvideo-user-profile+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.mid-call+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.pic-bw-large": {
-        source: "iana",
-        extensions: ["plb"]
-      },
-      "application/vnd.3gpp.pic-bw-small": {
-        source: "iana",
-        extensions: ["psb"]
-      },
-      "application/vnd.3gpp.pic-bw-var": {
-        source: "iana",
-        extensions: ["pvb"]
-      },
-      "application/vnd.3gpp.sms": {
-        source: "iana"
-      },
-      "application/vnd.3gpp.sms+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.srvcc-ext+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.srvcc-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.state-and-event-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp.ussd+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp2.bcmcsinfo+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.3gpp2.sms": {
-        source: "iana"
-      },
-      "application/vnd.3gpp2.tcap": {
-        source: "iana",
-        extensions: ["tcap"]
-      },
-      "application/vnd.3lightssoftware.imagescal": {
-        source: "iana"
-      },
-      "application/vnd.3m.post-it-notes": {
-        source: "iana",
-        extensions: ["pwn"]
-      },
-      "application/vnd.accpac.simply.aso": {
-        source: "iana",
-        extensions: ["aso"]
-      },
-      "application/vnd.accpac.simply.imp": {
-        source: "iana",
-        extensions: ["imp"]
-      },
-      "application/vnd.acucobol": {
-        source: "iana",
-        extensions: ["acu"]
-      },
-      "application/vnd.acucorp": {
-        source: "iana",
-        extensions: ["atc", "acutc"]
-      },
-      "application/vnd.adobe.air-application-installer-package+zip": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["air"]
-      },
-      "application/vnd.adobe.flash.movie": {
-        source: "iana"
-      },
-      "application/vnd.adobe.formscentral.fcdt": {
-        source: "iana",
-        extensions: ["fcdt"]
-      },
-      "application/vnd.adobe.fxp": {
-        source: "iana",
-        extensions: ["fxp", "fxpl"]
-      },
-      "application/vnd.adobe.partial-upload": {
-        source: "iana"
-      },
-      "application/vnd.adobe.xdp+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xdp"]
-      },
-      "application/vnd.adobe.xfdf": {
-        source: "iana",
-        extensions: ["xfdf"]
-      },
-      "application/vnd.aether.imp": {
-        source: "iana"
-      },
-      "application/vnd.afpc.afplinedata": {
-        source: "iana"
-      },
-      "application/vnd.afpc.afplinedata-pagedef": {
-        source: "iana"
-      },
-      "application/vnd.afpc.foca-charset": {
-        source: "iana"
-      },
-      "application/vnd.afpc.foca-codedfont": {
-        source: "iana"
-      },
-      "application/vnd.afpc.foca-codepage": {
-        source: "iana"
-      },
-      "application/vnd.afpc.modca": {
-        source: "iana"
-      },
-      "application/vnd.afpc.modca-formdef": {
-        source: "iana"
-      },
-      "application/vnd.afpc.modca-mediummap": {
-        source: "iana"
-      },
-      "application/vnd.afpc.modca-objectcontainer": {
-        source: "iana"
-      },
-      "application/vnd.afpc.modca-overlay": {
-        source: "iana"
-      },
-      "application/vnd.afpc.modca-pagesegment": {
-        source: "iana"
-      },
-      "application/vnd.ah-barcode": {
-        source: "iana"
-      },
-      "application/vnd.ahead.space": {
-        source: "iana",
-        extensions: ["ahead"]
-      },
-      "application/vnd.airzip.filesecure.azf": {
-        source: "iana",
-        extensions: ["azf"]
-      },
-      "application/vnd.airzip.filesecure.azs": {
-        source: "iana",
-        extensions: ["azs"]
-      },
-      "application/vnd.amadeus+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.amazon.ebook": {
-        source: "apache",
-        extensions: ["azw"]
-      },
-      "application/vnd.amazon.mobi8-ebook": {
-        source: "iana"
-      },
-      "application/vnd.americandynamics.acc": {
-        source: "iana",
-        extensions: ["acc"]
-      },
-      "application/vnd.amiga.ami": {
-        source: "iana",
-        extensions: ["ami"]
-      },
-      "application/vnd.amundsen.maze+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.android.ota": {
-        source: "iana"
-      },
-      "application/vnd.android.package-archive": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["apk"]
-      },
-      "application/vnd.anki": {
-        source: "iana"
-      },
-      "application/vnd.anser-web-certificate-issue-initiation": {
-        source: "iana",
-        extensions: ["cii"]
-      },
-      "application/vnd.anser-web-funds-transfer-initiation": {
-        source: "apache",
-        extensions: ["fti"]
-      },
-      "application/vnd.antix.game-component": {
-        source: "iana",
-        extensions: ["atx"]
-      },
-      "application/vnd.apache.thrift.binary": {
-        source: "iana"
-      },
-      "application/vnd.apache.thrift.compact": {
-        source: "iana"
-      },
-      "application/vnd.apache.thrift.json": {
-        source: "iana"
-      },
-      "application/vnd.api+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.aplextor.warrp+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.apothekende.reservation+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.apple.installer+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["mpkg"]
-      },
-      "application/vnd.apple.keynote": {
-        source: "iana",
-        extensions: ["keynote"]
-      },
-      "application/vnd.apple.mpegurl": {
-        source: "iana",
-        extensions: ["m3u8"]
-      },
-      "application/vnd.apple.numbers": {
-        source: "iana",
-        extensions: ["numbers"]
-      },
-      "application/vnd.apple.pages": {
-        source: "iana",
-        extensions: ["pages"]
-      },
-      "application/vnd.apple.pkpass": {
-        compressible: !1,
-        extensions: ["pkpass"]
-      },
-      "application/vnd.arastra.swi": {
-        source: "iana"
-      },
-      "application/vnd.aristanetworks.swi": {
-        source: "iana",
-        extensions: ["swi"]
-      },
-      "application/vnd.artisan+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.artsquare": {
-        source: "iana"
-      },
-      "application/vnd.astraea-software.iota": {
-        source: "iana",
-        extensions: ["iota"]
-      },
-      "application/vnd.audiograph": {
-        source: "iana",
-        extensions: ["aep"]
-      },
-      "application/vnd.autopackage": {
-        source: "iana"
-      },
-      "application/vnd.avalon+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.avistar+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.balsamiq.bmml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["bmml"]
-      },
-      "application/vnd.balsamiq.bmpr": {
-        source: "iana"
-      },
-      "application/vnd.banana-accounting": {
-        source: "iana"
-      },
-      "application/vnd.bbf.usp.error": {
-        source: "iana"
-      },
-      "application/vnd.bbf.usp.msg": {
-        source: "iana"
-      },
-      "application/vnd.bbf.usp.msg+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.bekitzur-stech+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.bint.med-content": {
-        source: "iana"
-      },
-      "application/vnd.biopax.rdf+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.blink-idb-value-wrapper": {
-        source: "iana"
-      },
-      "application/vnd.blueice.multipass": {
-        source: "iana",
-        extensions: ["mpm"]
-      },
-      "application/vnd.bluetooth.ep.oob": {
-        source: "iana"
-      },
-      "application/vnd.bluetooth.le.oob": {
-        source: "iana"
-      },
-      "application/vnd.bmi": {
-        source: "iana",
-        extensions: ["bmi"]
-      },
-      "application/vnd.bpf": {
-        source: "iana"
-      },
-      "application/vnd.bpf3": {
-        source: "iana"
-      },
-      "application/vnd.businessobjects": {
-        source: "iana",
-        extensions: ["rep"]
-      },
-      "application/vnd.byu.uapi+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.cab-jscript": {
-        source: "iana"
-      },
-      "application/vnd.canon-cpdl": {
-        source: "iana"
-      },
-      "application/vnd.canon-lips": {
-        source: "iana"
-      },
-      "application/vnd.capasystems-pg+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.cendio.thinlinc.clientconf": {
-        source: "iana"
-      },
-      "application/vnd.century-systems.tcp_stream": {
-        source: "iana"
-      },
-      "application/vnd.chemdraw+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["cdxml"]
-      },
-      "application/vnd.chess-pgn": {
-        source: "iana"
-      },
-      "application/vnd.chipnuts.karaoke-mmd": {
-        source: "iana",
-        extensions: ["mmd"]
-      },
-      "application/vnd.ciedi": {
-        source: "iana"
-      },
-      "application/vnd.cinderella": {
-        source: "iana",
-        extensions: ["cdy"]
-      },
-      "application/vnd.cirpack.isdn-ext": {
-        source: "iana"
-      },
-      "application/vnd.citationstyles.style+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["csl"]
-      },
-      "application/vnd.claymore": {
-        source: "iana",
-        extensions: ["cla"]
-      },
-      "application/vnd.cloanto.rp9": {
-        source: "iana",
-        extensions: ["rp9"]
-      },
-      "application/vnd.clonk.c4group": {
-        source: "iana",
-        extensions: ["c4g", "c4d", "c4f", "c4p", "c4u"]
-      },
-      "application/vnd.cluetrust.cartomobile-config": {
-        source: "iana",
-        extensions: ["c11amc"]
-      },
-      "application/vnd.cluetrust.cartomobile-config-pkg": {
-        source: "iana",
-        extensions: ["c11amz"]
-      },
-      "application/vnd.coffeescript": {
-        source: "iana"
-      },
-      "application/vnd.collabio.xodocuments.document": {
-        source: "iana"
-      },
-      "application/vnd.collabio.xodocuments.document-template": {
-        source: "iana"
-      },
-      "application/vnd.collabio.xodocuments.presentation": {
-        source: "iana"
-      },
-      "application/vnd.collabio.xodocuments.presentation-template": {
-        source: "iana"
-      },
-      "application/vnd.collabio.xodocuments.spreadsheet": {
-        source: "iana"
-      },
-      "application/vnd.collabio.xodocuments.spreadsheet-template": {
-        source: "iana"
-      },
-      "application/vnd.collection+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.collection.doc+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.collection.next+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.comicbook+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/vnd.comicbook-rar": {
-        source: "iana"
-      },
-      "application/vnd.commerce-battelle": {
-        source: "iana"
-      },
-      "application/vnd.commonspace": {
-        source: "iana",
-        extensions: ["csp"]
-      },
-      "application/vnd.contact.cmsg": {
-        source: "iana",
-        extensions: ["cdbcmsg"]
-      },
-      "application/vnd.coreos.ignition+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.cosmocaller": {
-        source: "iana",
-        extensions: ["cmc"]
-      },
-      "application/vnd.crick.clicker": {
-        source: "iana",
-        extensions: ["clkx"]
-      },
-      "application/vnd.crick.clicker.keyboard": {
-        source: "iana",
-        extensions: ["clkk"]
-      },
-      "application/vnd.crick.clicker.palette": {
-        source: "iana",
-        extensions: ["clkp"]
-      },
-      "application/vnd.crick.clicker.template": {
-        source: "iana",
-        extensions: ["clkt"]
-      },
-      "application/vnd.crick.clicker.wordbank": {
-        source: "iana",
-        extensions: ["clkw"]
-      },
-      "application/vnd.criticaltools.wbs+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["wbs"]
-      },
-      "application/vnd.cryptii.pipe+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.crypto-shade-file": {
-        source: "iana"
-      },
-      "application/vnd.ctc-posml": {
-        source: "iana",
-        extensions: ["pml"]
-      },
-      "application/vnd.ctct.ws+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.cups-pdf": {
-        source: "iana"
-      },
-      "application/vnd.cups-postscript": {
-        source: "iana"
-      },
-      "application/vnd.cups-ppd": {
-        source: "iana",
-        extensions: ["ppd"]
-      },
-      "application/vnd.cups-raster": {
-        source: "iana"
-      },
-      "application/vnd.cups-raw": {
-        source: "iana"
-      },
-      "application/vnd.curl": {
-        source: "iana"
-      },
-      "application/vnd.curl.car": {
-        source: "apache",
-        extensions: ["car"]
-      },
-      "application/vnd.curl.pcurl": {
-        source: "apache",
-        extensions: ["pcurl"]
-      },
-      "application/vnd.cyan.dean.root+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.cybank": {
-        source: "iana"
-      },
-      "application/vnd.d2l.coursepackage1p0+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/vnd.dart": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["dart"]
-      },
-      "application/vnd.data-vision.rdz": {
-        source: "iana",
-        extensions: ["rdz"]
-      },
-      "application/vnd.datapackage+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.dataresource+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.dbf": {
-        source: "iana"
-      },
-      "application/vnd.debian.binary-package": {
-        source: "iana"
-      },
-      "application/vnd.dece.data": {
-        source: "iana",
-        extensions: ["uvf", "uvvf", "uvd", "uvvd"]
-      },
-      "application/vnd.dece.ttml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["uvt", "uvvt"]
-      },
-      "application/vnd.dece.unspecified": {
-        source: "iana",
-        extensions: ["uvx", "uvvx"]
-      },
-      "application/vnd.dece.zip": {
-        source: "iana",
-        extensions: ["uvz", "uvvz"]
-      },
-      "application/vnd.denovo.fcselayout-link": {
-        source: "iana",
-        extensions: ["fe_launch"]
-      },
-      "application/vnd.desmume.movie": {
-        source: "iana"
-      },
-      "application/vnd.dir-bi.plate-dl-nosuffix": {
-        source: "iana"
-      },
-      "application/vnd.dm.delegation+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.dna": {
-        source: "iana",
-        extensions: ["dna"]
-      },
-      "application/vnd.document+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.dolby.mlp": {
-        source: "apache",
-        extensions: ["mlp"]
-      },
-      "application/vnd.dolby.mobile.1": {
-        source: "iana"
-      },
-      "application/vnd.dolby.mobile.2": {
-        source: "iana"
-      },
-      "application/vnd.doremir.scorecloud-binary-document": {
-        source: "iana"
-      },
-      "application/vnd.dpgraph": {
-        source: "iana",
-        extensions: ["dpg"]
-      },
-      "application/vnd.dreamfactory": {
-        source: "iana",
-        extensions: ["dfac"]
-      },
-      "application/vnd.drive+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.ds-keypoint": {
-        source: "apache",
-        extensions: ["kpxx"]
-      },
-      "application/vnd.dtg.local": {
-        source: "iana"
-      },
-      "application/vnd.dtg.local.flash": {
-        source: "iana"
-      },
-      "application/vnd.dtg.local.html": {
-        source: "iana"
-      },
-      "application/vnd.dvb.ait": {
-        source: "iana",
-        extensions: ["ait"]
-      },
-      "application/vnd.dvb.dvbisl+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.dvb.dvbj": {
-        source: "iana"
-      },
-      "application/vnd.dvb.esgcontainer": {
-        source: "iana"
-      },
-      "application/vnd.dvb.ipdcdftnotifaccess": {
-        source: "iana"
-      },
-      "application/vnd.dvb.ipdcesgaccess": {
-        source: "iana"
-      },
-      "application/vnd.dvb.ipdcesgaccess2": {
-        source: "iana"
-      },
-      "application/vnd.dvb.ipdcesgpdd": {
-        source: "iana"
-      },
-      "application/vnd.dvb.ipdcroaming": {
-        source: "iana"
-      },
-      "application/vnd.dvb.iptv.alfec-base": {
-        source: "iana"
-      },
-      "application/vnd.dvb.iptv.alfec-enhancement": {
-        source: "iana"
-      },
-      "application/vnd.dvb.notif-aggregate-root+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.dvb.notif-container+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.dvb.notif-generic+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.dvb.notif-ia-msglist+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.dvb.notif-ia-registration-request+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.dvb.notif-ia-registration-response+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.dvb.notif-init+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.dvb.pfr": {
-        source: "iana"
-      },
-      "application/vnd.dvb.service": {
-        source: "iana",
-        extensions: ["svc"]
-      },
-      "application/vnd.dxr": {
-        source: "iana"
-      },
-      "application/vnd.dynageo": {
-        source: "iana",
-        extensions: ["geo"]
-      },
-      "application/vnd.dzr": {
-        source: "iana"
-      },
-      "application/vnd.easykaraoke.cdgdownload": {
-        source: "iana"
-      },
-      "application/vnd.ecdis-update": {
-        source: "iana"
-      },
-      "application/vnd.ecip.rlp": {
-        source: "iana"
-      },
-      "application/vnd.ecowin.chart": {
-        source: "iana",
-        extensions: ["mag"]
-      },
-      "application/vnd.ecowin.filerequest": {
-        source: "iana"
-      },
-      "application/vnd.ecowin.fileupdate": {
-        source: "iana"
-      },
-      "application/vnd.ecowin.series": {
-        source: "iana"
-      },
-      "application/vnd.ecowin.seriesrequest": {
-        source: "iana"
-      },
-      "application/vnd.ecowin.seriesupdate": {
-        source: "iana"
-      },
-      "application/vnd.efi.img": {
-        source: "iana"
-      },
-      "application/vnd.efi.iso": {
-        source: "iana"
-      },
-      "application/vnd.emclient.accessrequest+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.enliven": {
-        source: "iana",
-        extensions: ["nml"]
-      },
-      "application/vnd.enphase.envoy": {
-        source: "iana"
-      },
-      "application/vnd.eprints.data+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.epson.esf": {
-        source: "iana",
-        extensions: ["esf"]
-      },
-      "application/vnd.epson.msf": {
-        source: "iana",
-        extensions: ["msf"]
-      },
-      "application/vnd.epson.quickanime": {
-        source: "iana",
-        extensions: ["qam"]
-      },
-      "application/vnd.epson.salt": {
-        source: "iana",
-        extensions: ["slt"]
-      },
-      "application/vnd.epson.ssf": {
-        source: "iana",
-        extensions: ["ssf"]
-      },
-      "application/vnd.ericsson.quickcall": {
-        source: "iana"
-      },
-      "application/vnd.espass-espass+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/vnd.eszigno3+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["es3", "et3"]
-      },
-      "application/vnd.etsi.aoc+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.asic-e+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/vnd.etsi.asic-s+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/vnd.etsi.cug+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.iptvcommand+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.iptvdiscovery+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.iptvprofile+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.iptvsad-bc+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.iptvsad-cod+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.iptvsad-npvr+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.iptvservice+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.iptvsync+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.iptvueprofile+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.mcid+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.mheg5": {
-        source: "iana"
-      },
-      "application/vnd.etsi.overload-control-policy-dataset+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.pstn+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.sci+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.simservs+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.timestamp-token": {
-        source: "iana"
-      },
-      "application/vnd.etsi.tsl+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.etsi.tsl.der": {
-        source: "iana"
-      },
-      "application/vnd.eudora.data": {
-        source: "iana"
-      },
-      "application/vnd.evolv.ecig.profile": {
-        source: "iana"
-      },
-      "application/vnd.evolv.ecig.settings": {
-        source: "iana"
-      },
-      "application/vnd.evolv.ecig.theme": {
-        source: "iana"
-      },
-      "application/vnd.exstream-empower+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/vnd.exstream-package": {
-        source: "iana"
-      },
-      "application/vnd.ezpix-album": {
-        source: "iana",
-        extensions: ["ez2"]
-      },
-      "application/vnd.ezpix-package": {
-        source: "iana",
-        extensions: ["ez3"]
-      },
-      "application/vnd.f-secure.mobile": {
-        source: "iana"
-      },
-      "application/vnd.fastcopy-disk-image": {
-        source: "iana"
-      },
-      "application/vnd.fdf": {
-        source: "iana",
-        extensions: ["fdf"]
-      },
-      "application/vnd.fdsn.mseed": {
-        source: "iana",
-        extensions: ["mseed"]
-      },
-      "application/vnd.fdsn.seed": {
-        source: "iana",
-        extensions: ["seed", "dataless"]
-      },
-      "application/vnd.ffsns": {
-        source: "iana"
-      },
-      "application/vnd.ficlab.flb+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/vnd.filmit.zfc": {
-        source: "iana"
-      },
-      "application/vnd.fints": {
-        source: "iana"
-      },
-      "application/vnd.firemonkeys.cloudcell": {
-        source: "iana"
-      },
-      "application/vnd.flographit": {
-        source: "iana",
-        extensions: ["gph"]
-      },
-      "application/vnd.fluxtime.clip": {
-        source: "iana",
-        extensions: ["ftc"]
-      },
-      "application/vnd.font-fontforge-sfd": {
-        source: "iana"
-      },
-      "application/vnd.framemaker": {
-        source: "iana",
-        extensions: ["fm", "frame", "maker", "book"]
-      },
-      "application/vnd.frogans.fnc": {
-        source: "iana",
-        extensions: ["fnc"]
-      },
-      "application/vnd.frogans.ltf": {
-        source: "iana",
-        extensions: ["ltf"]
-      },
-      "application/vnd.fsc.weblaunch": {
-        source: "iana",
-        extensions: ["fsc"]
-      },
-      "application/vnd.fujitsu.oasys": {
-        source: "iana",
-        extensions: ["oas"]
-      },
-      "application/vnd.fujitsu.oasys2": {
-        source: "iana",
-        extensions: ["oa2"]
-      },
-      "application/vnd.fujitsu.oasys3": {
-        source: "iana",
-        extensions: ["oa3"]
-      },
-      "application/vnd.fujitsu.oasysgp": {
-        source: "iana",
-        extensions: ["fg5"]
-      },
-      "application/vnd.fujitsu.oasysprs": {
-        source: "iana",
-        extensions: ["bh2"]
-      },
-      "application/vnd.fujixerox.art-ex": {
-        source: "iana"
-      },
-      "application/vnd.fujixerox.art4": {
-        source: "iana"
-      },
-      "application/vnd.fujixerox.ddd": {
-        source: "iana",
-        extensions: ["ddd"]
-      },
-      "application/vnd.fujixerox.docuworks": {
-        source: "iana",
-        extensions: ["xdw"]
-      },
-      "application/vnd.fujixerox.docuworks.binder": {
-        source: "iana",
-        extensions: ["xbd"]
-      },
-      "application/vnd.fujixerox.docuworks.container": {
-        source: "iana"
-      },
-      "application/vnd.fujixerox.hbpl": {
-        source: "iana"
-      },
-      "application/vnd.fut-misnet": {
-        source: "iana"
-      },
-      "application/vnd.futoin+cbor": {
-        source: "iana"
-      },
-      "application/vnd.futoin+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.fuzzysheet": {
-        source: "iana",
-        extensions: ["fzs"]
-      },
-      "application/vnd.genomatix.tuxedo": {
-        source: "iana",
-        extensions: ["txd"]
-      },
-      "application/vnd.gentics.grd+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.geo+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.geocube+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.geogebra.file": {
-        source: "iana",
-        extensions: ["ggb"]
-      },
-      "application/vnd.geogebra.tool": {
-        source: "iana",
-        extensions: ["ggt"]
-      },
-      "application/vnd.geometry-explorer": {
-        source: "iana",
-        extensions: ["gex", "gre"]
-      },
-      "application/vnd.geonext": {
-        source: "iana",
-        extensions: ["gxt"]
-      },
-      "application/vnd.geoplan": {
-        source: "iana",
-        extensions: ["g2w"]
-      },
-      "application/vnd.geospace": {
-        source: "iana",
-        extensions: ["g3w"]
-      },
-      "application/vnd.gerber": {
-        source: "iana"
-      },
-      "application/vnd.globalplatform.card-content-mgt": {
-        source: "iana"
-      },
-      "application/vnd.globalplatform.card-content-mgt-response": {
-        source: "iana"
-      },
-      "application/vnd.gmx": {
-        source: "iana",
-        extensions: ["gmx"]
-      },
-      "application/vnd.google-apps.document": {
-        compressible: !1,
-        extensions: ["gdoc"]
-      },
-      "application/vnd.google-apps.presentation": {
-        compressible: !1,
-        extensions: ["gslides"]
-      },
-      "application/vnd.google-apps.spreadsheet": {
-        compressible: !1,
-        extensions: ["gsheet"]
-      },
-      "application/vnd.google-earth.kml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["kml"]
-      },
-      "application/vnd.google-earth.kmz": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["kmz"]
-      },
-      "application/vnd.gov.sk.e-form+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.gov.sk.e-form+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/vnd.gov.sk.xmldatacontainer+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.grafeq": {
-        source: "iana",
-        extensions: ["gqf", "gqs"]
-      },
-      "application/vnd.gridmp": {
-        source: "iana"
-      },
-      "application/vnd.groove-account": {
-        source: "iana",
-        extensions: ["gac"]
-      },
-      "application/vnd.groove-help": {
-        source: "iana",
-        extensions: ["ghf"]
-      },
-      "application/vnd.groove-identity-message": {
-        source: "iana",
-        extensions: ["gim"]
-      },
-      "application/vnd.groove-injector": {
-        source: "iana",
-        extensions: ["grv"]
-      },
-      "application/vnd.groove-tool-message": {
-        source: "iana",
-        extensions: ["gtm"]
-      },
-      "application/vnd.groove-tool-template": {
-        source: "iana",
-        extensions: ["tpl"]
-      },
-      "application/vnd.groove-vcard": {
-        source: "iana",
-        extensions: ["vcg"]
-      },
-      "application/vnd.hal+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.hal+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["hal"]
-      },
-      "application/vnd.handheld-entertainment+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["zmm"]
-      },
-      "application/vnd.hbci": {
-        source: "iana",
-        extensions: ["hbci"]
-      },
-      "application/vnd.hc+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.hcl-bireports": {
-        source: "iana"
-      },
-      "application/vnd.hdt": {
-        source: "iana"
-      },
-      "application/vnd.heroku+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.hhe.lesson-player": {
-        source: "iana",
-        extensions: ["les"]
-      },
-      "application/vnd.hp-hpgl": {
-        source: "iana",
-        extensions: ["hpgl"]
-      },
-      "application/vnd.hp-hpid": {
-        source: "iana",
-        extensions: ["hpid"]
-      },
-      "application/vnd.hp-hps": {
-        source: "iana",
-        extensions: ["hps"]
-      },
-      "application/vnd.hp-jlyt": {
-        source: "iana",
-        extensions: ["jlt"]
-      },
-      "application/vnd.hp-pcl": {
-        source: "iana",
-        extensions: ["pcl"]
-      },
-      "application/vnd.hp-pclxl": {
-        source: "iana",
-        extensions: ["pclxl"]
-      },
-      "application/vnd.httphone": {
-        source: "iana"
-      },
-      "application/vnd.hydrostatix.sof-data": {
-        source: "iana",
-        extensions: ["sfd-hdstx"]
-      },
-      "application/vnd.hyper+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.hyper-item+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.hyperdrive+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.hzn-3d-crossword": {
-        source: "iana"
-      },
-      "application/vnd.ibm.afplinedata": {
-        source: "iana"
-      },
-      "application/vnd.ibm.electronic-media": {
-        source: "iana"
-      },
-      "application/vnd.ibm.minipay": {
-        source: "iana",
-        extensions: ["mpy"]
-      },
-      "application/vnd.ibm.modcap": {
-        source: "iana",
-        extensions: ["afp", "listafp", "list3820"]
-      },
-      "application/vnd.ibm.rights-management": {
-        source: "iana",
-        extensions: ["irm"]
-      },
-      "application/vnd.ibm.secure-container": {
-        source: "iana",
-        extensions: ["sc"]
-      },
-      "application/vnd.iccprofile": {
-        source: "iana",
-        extensions: ["icc", "icm"]
-      },
-      "application/vnd.ieee.1905": {
-        source: "iana"
-      },
-      "application/vnd.igloader": {
-        source: "iana",
-        extensions: ["igl"]
-      },
-      "application/vnd.imagemeter.folder+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/vnd.imagemeter.image+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/vnd.immervision-ivp": {
-        source: "iana",
-        extensions: ["ivp"]
-      },
-      "application/vnd.immervision-ivu": {
-        source: "iana",
-        extensions: ["ivu"]
-      },
-      "application/vnd.ims.imsccv1p1": {
-        source: "iana"
-      },
-      "application/vnd.ims.imsccv1p2": {
-        source: "iana"
-      },
-      "application/vnd.ims.imsccv1p3": {
-        source: "iana"
-      },
-      "application/vnd.ims.lis.v2.result+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.ims.lti.v2.toolconsumerprofile+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.ims.lti.v2.toolproxy+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.ims.lti.v2.toolproxy.id+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.ims.lti.v2.toolsettings+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.ims.lti.v2.toolsettings.simple+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.informedcontrol.rms+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.informix-visionary": {
-        source: "iana"
-      },
-      "application/vnd.infotech.project": {
-        source: "iana"
-      },
-      "application/vnd.infotech.project+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.innopath.wamp.notification": {
-        source: "iana"
-      },
-      "application/vnd.insors.igm": {
-        source: "iana",
-        extensions: ["igm"]
-      },
-      "application/vnd.intercon.formnet": {
-        source: "iana",
-        extensions: ["xpw", "xpx"]
-      },
-      "application/vnd.intergeo": {
-        source: "iana",
-        extensions: ["i2g"]
-      },
-      "application/vnd.intertrust.digibox": {
-        source: "iana"
-      },
-      "application/vnd.intertrust.nncp": {
-        source: "iana"
-      },
-      "application/vnd.intu.qbo": {
-        source: "iana",
-        extensions: ["qbo"]
-      },
-      "application/vnd.intu.qfx": {
-        source: "iana",
-        extensions: ["qfx"]
-      },
-      "application/vnd.iptc.g2.catalogitem+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.iptc.g2.conceptitem+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.iptc.g2.knowledgeitem+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.iptc.g2.newsitem+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.iptc.g2.newsmessage+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.iptc.g2.packageitem+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.iptc.g2.planningitem+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.ipunplugged.rcprofile": {
-        source: "iana",
-        extensions: ["rcprofile"]
-      },
-      "application/vnd.irepository.package+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["irp"]
-      },
-      "application/vnd.is-xpr": {
-        source: "iana",
-        extensions: ["xpr"]
-      },
-      "application/vnd.isac.fcs": {
-        source: "iana",
-        extensions: ["fcs"]
-      },
-      "application/vnd.iso11783-10+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/vnd.jam": {
-        source: "iana",
-        extensions: ["jam"]
-      },
-      "application/vnd.japannet-directory-service": {
-        source: "iana"
-      },
-      "application/vnd.japannet-jpnstore-wakeup": {
-        source: "iana"
-      },
-      "application/vnd.japannet-payment-wakeup": {
-        source: "iana"
-      },
-      "application/vnd.japannet-registration": {
-        source: "iana"
-      },
-      "application/vnd.japannet-registration-wakeup": {
-        source: "iana"
-      },
-      "application/vnd.japannet-setstore-wakeup": {
-        source: "iana"
-      },
-      "application/vnd.japannet-verification": {
-        source: "iana"
-      },
-      "application/vnd.japannet-verification-wakeup": {
-        source: "iana"
-      },
-      "application/vnd.jcp.javame.midlet-rms": {
-        source: "iana",
-        extensions: ["rms"]
-      },
-      "application/vnd.jisp": {
-        source: "iana",
-        extensions: ["jisp"]
-      },
-      "application/vnd.joost.joda-archive": {
-        source: "iana",
-        extensions: ["joda"]
-      },
-      "application/vnd.jsk.isdn-ngn": {
-        source: "iana"
-      },
-      "application/vnd.kahootz": {
-        source: "iana",
-        extensions: ["ktz", "ktr"]
-      },
-      "application/vnd.kde.karbon": {
-        source: "iana",
-        extensions: ["karbon"]
-      },
-      "application/vnd.kde.kchart": {
-        source: "iana",
-        extensions: ["chrt"]
-      },
-      "application/vnd.kde.kformula": {
-        source: "iana",
-        extensions: ["kfo"]
-      },
-      "application/vnd.kde.kivio": {
-        source: "iana",
-        extensions: ["flw"]
-      },
-      "application/vnd.kde.kontour": {
-        source: "iana",
-        extensions: ["kon"]
-      },
-      "application/vnd.kde.kpresenter": {
-        source: "iana",
-        extensions: ["kpr", "kpt"]
-      },
-      "application/vnd.kde.kspread": {
-        source: "iana",
-        extensions: ["ksp"]
-      },
-      "application/vnd.kde.kword": {
-        source: "iana",
-        extensions: ["kwd", "kwt"]
-      },
-      "application/vnd.kenameaapp": {
-        source: "iana",
-        extensions: ["htke"]
-      },
-      "application/vnd.kidspiration": {
-        source: "iana",
-        extensions: ["kia"]
-      },
-      "application/vnd.kinar": {
-        source: "iana",
-        extensions: ["kne", "knp"]
-      },
-      "application/vnd.koan": {
-        source: "iana",
-        extensions: ["skp", "skd", "skt", "skm"]
-      },
-      "application/vnd.kodak-descriptor": {
-        source: "iana",
-        extensions: ["sse"]
-      },
-      "application/vnd.las": {
-        source: "iana"
-      },
-      "application/vnd.las.las+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.las.las+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["lasxml"]
-      },
-      "application/vnd.laszip": {
-        source: "iana"
-      },
-      "application/vnd.leap+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.liberty-request+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.llamagraphics.life-balance.desktop": {
-        source: "iana",
-        extensions: ["lbd"]
-      },
-      "application/vnd.llamagraphics.life-balance.exchange+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["lbe"]
-      },
-      "application/vnd.logipipe.circuit+zip": {
-        source: "iana",
-        compressible: !1
-      },
-      "application/vnd.loom": {
-        source: "iana"
-      },
-      "application/vnd.lotus-1-2-3": {
-        source: "iana",
-        extensions: ["123"]
-      },
-      "application/vnd.lotus-approach": {
-        source: "iana",
-        extensions: ["apr"]
-      },
-      "application/vnd.lotus-freelance": {
-        source: "iana",
-        extensions: ["pre"]
-      },
-      "application/vnd.lotus-notes": {
-        source: "iana",
-        extensions: ["nsf"]
-      },
-      "application/vnd.lotus-organizer": {
-        source: "iana",
-        extensions: ["org"]
-      },
-      "application/vnd.lotus-screencam": {
-        source: "iana",
-        extensions: ["scm"]
-      },
-      "application/vnd.lotus-wordpro": {
-        source: "iana",
-        extensions: ["lwp"]
-      },
-      "application/vnd.macports.portpkg": {
-        source: "iana",
-        extensions: ["portpkg"]
-      },
-      "application/vnd.mapbox-vector-tile": {
-        source: "iana"
-      },
-      "application/vnd.marlin.drm.actiontoken+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.marlin.drm.conftoken+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.marlin.drm.license+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.marlin.drm.mdcf": {
-        source: "iana"
-      },
-      "application/vnd.mason+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.maxmind.maxmind-db": {
-        source: "iana"
-      },
-      "application/vnd.mcd": {
-        source: "iana",
-        extensions: ["mcd"]
-      },
-      "application/vnd.medcalcdata": {
-        source: "iana",
-        extensions: ["mc1"]
-      },
-      "application/vnd.mediastation.cdkey": {
-        source: "iana",
-        extensions: ["cdkey"]
-      },
-      "application/vnd.meridian-slingshot": {
-        source: "iana"
-      },
-      "application/vnd.mfer": {
-        source: "iana",
-        extensions: ["mwf"]
-      },
-      "application/vnd.mfmp": {
-        source: "iana",
-        extensions: ["mfm"]
-      },
-      "application/vnd.micro+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.micrografx.flo": {
-        source: "iana",
-        extensions: ["flo"]
-      },
-      "application/vnd.micrografx.igx": {
-        source: "iana",
-        extensions: ["igx"]
-      },
-      "application/vnd.microsoft.portable-executable": {
-        source: "iana"
-      },
-      "application/vnd.microsoft.windows.thumbnail-cache": {
-        source: "iana"
-      },
-      "application/vnd.miele+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.mif": {
-        source: "iana",
-        extensions: ["mif"]
-      },
-      "application/vnd.minisoft-hp3000-save": {
-        source: "iana"
-      },
-      "application/vnd.mitsubishi.misty-guard.trustweb": {
-        source: "iana"
-      },
-      "application/vnd.mobius.daf": {
-        source: "iana",
-        extensions: ["daf"]
-      },
-      "application/vnd.mobius.dis": {
-        source: "iana",
-        extensions: ["dis"]
-      },
-      "application/vnd.mobius.mbk": {
-        source: "iana",
-        extensions: ["mbk"]
-      },
-      "application/vnd.mobius.mqy": {
-        source: "iana",
-        extensions: ["mqy"]
-      },
-      "application/vnd.mobius.msl": {
-        source: "iana",
-        extensions: ["msl"]
-      },
-      "application/vnd.mobius.plc": {
-        source: "iana",
-        extensions: ["plc"]
-      },
-      "application/vnd.mobius.txf": {
-        source: "iana",
-        extensions: ["txf"]
-      },
-      "application/vnd.mophun.application": {
-        source: "iana",
-        extensions: ["mpn"]
-      },
-      "application/vnd.mophun.certificate": {
-        source: "iana",
-        extensions: ["mpc"]
-      },
-      "application/vnd.motorola.flexsuite": {
-        source: "iana"
-      },
-      "application/vnd.motorola.flexsuite.adsi": {
-        source: "iana"
-      },
-      "application/vnd.motorola.flexsuite.fis": {
-        source: "iana"
-      },
-      "application/vnd.motorola.flexsuite.gotap": {
-        source: "iana"
-      },
-      "application/vnd.motorola.flexsuite.kmr": {
-        source: "iana"
-      },
-      "application/vnd.motorola.flexsuite.ttc": {
-        source: "iana"
-      },
-      "application/vnd.motorola.flexsuite.wem": {
-        source: "iana"
-      },
-      "application/vnd.motorola.iprm": {
-        source: "iana"
-      },
-      "application/vnd.mozilla.xul+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xul"]
-      },
-      "application/vnd.ms-3mfdocument": {
-        source: "iana"
-      },
-      "application/vnd.ms-artgalry": {
-        source: "iana",
-        extensions: ["cil"]
-      },
-      "application/vnd.ms-asf": {
-        source: "iana"
-      },
-      "application/vnd.ms-cab-compressed": {
-        source: "iana",
-        extensions: ["cab"]
-      },
-      "application/vnd.ms-color.iccprofile": {
-        source: "apache"
-      },
-      "application/vnd.ms-excel": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["xls", "xlm", "xla", "xlc", "xlt", "xlw"]
-      },
-      "application/vnd.ms-excel.addin.macroenabled.12": {
-        source: "iana",
-        extensions: ["xlam"]
-      },
-      "application/vnd.ms-excel.sheet.binary.macroenabled.12": {
-        source: "iana",
-        extensions: ["xlsb"]
-      },
-      "application/vnd.ms-excel.sheet.macroenabled.12": {
-        source: "iana",
-        extensions: ["xlsm"]
-      },
-      "application/vnd.ms-excel.template.macroenabled.12": {
-        source: "iana",
-        extensions: ["xltm"]
-      },
-      "application/vnd.ms-fontobject": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["eot"]
-      },
-      "application/vnd.ms-htmlhelp": {
-        source: "iana",
-        extensions: ["chm"]
-      },
-      "application/vnd.ms-ims": {
-        source: "iana",
-        extensions: ["ims"]
-      },
-      "application/vnd.ms-lrm": {
-        source: "iana",
-        extensions: ["lrm"]
-      },
-      "application/vnd.ms-office.activex+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.ms-officetheme": {
-        source: "iana",
-        extensions: ["thmx"]
-      },
-      "application/vnd.ms-opentype": {
-        source: "apache",
-        compressible: !0
-      },
-      "application/vnd.ms-outlook": {
-        compressible: !1,
-        extensions: ["msg"]
-      },
-      "application/vnd.ms-package.obfuscated-opentype": {
-        source: "apache"
-      },
-      "application/vnd.ms-pki.seccat": {
-        source: "apache",
-        extensions: ["cat"]
-      },
-      "application/vnd.ms-pki.stl": {
-        source: "apache",
-        extensions: ["stl"]
-      },
-      "application/vnd.ms-playready.initiator+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.ms-powerpoint": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["ppt", "pps", "pot"]
-      },
-      "application/vnd.ms-powerpoint.addin.macroenabled.12": {
-        source: "iana",
-        extensions: ["ppam"]
-      },
-      "application/vnd.ms-powerpoint.presentation.macroenabled.12": {
-        source: "iana",
-        extensions: ["pptm"]
-      },
-      "application/vnd.ms-powerpoint.slide.macroenabled.12": {
-        source: "iana",
-        extensions: ["sldm"]
-      },
-      "application/vnd.ms-powerpoint.slideshow.macroenabled.12": {
-        source: "iana",
-        extensions: ["ppsm"]
-      },
-      "application/vnd.ms-powerpoint.template.macroenabled.12": {
-        source: "iana",
-        extensions: ["potm"]
-      },
-      "application/vnd.ms-printdevicecapabilities+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.ms-printing.printticket+xml": {
-        source: "apache",
-        compressible: !0
-      },
-      "application/vnd.ms-printschematicket+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.ms-project": {
-        source: "iana",
-        extensions: ["mpp", "mpt"]
-      },
-      "application/vnd.ms-tnef": {
-        source: "iana"
-      },
-      "application/vnd.ms-windows.devicepairing": {
-        source: "iana"
-      },
-      "application/vnd.ms-windows.nwprinting.oob": {
-        source: "iana"
-      },
-      "application/vnd.ms-windows.printerpairing": {
-        source: "iana"
-      },
-      "application/vnd.ms-windows.wsd.oob": {
-        source: "iana"
-      },
-      "application/vnd.ms-wmdrm.lic-chlg-req": {
-        source: "iana"
-      },
-      "application/vnd.ms-wmdrm.lic-resp": {
-        source: "iana"
-      },
-      "application/vnd.ms-wmdrm.meter-chlg-req": {
-        source: "iana"
-      },
-      "application/vnd.ms-wmdrm.meter-resp": {
-        source: "iana"
-      },
-      "application/vnd.ms-word.document.macroenabled.12": {
-        source: "iana",
-        extensions: ["docm"]
-      },
-      "application/vnd.ms-word.template.macroenabled.12": {
-        source: "iana",
-        extensions: ["dotm"]
-      },
-      "application/vnd.ms-works": {
-        source: "iana",
-        extensions: ["wps", "wks", "wcm", "wdb"]
-      },
-      "application/vnd.ms-wpl": {
-        source: "iana",
-        extensions: ["wpl"]
-      },
-      "application/vnd.ms-xpsdocument": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["xps"]
-      },
-      "application/vnd.msa-disk-image": {
-        source: "iana"
-      },
-      "application/vnd.mseq": {
-        source: "iana",
-        extensions: ["mseq"]
-      },
-      "application/vnd.msign": {
-        source: "iana"
-      },
-      "application/vnd.multiad.creator": {
-        source: "iana"
-      },
-      "application/vnd.multiad.creator.cif": {
-        source: "iana"
-      },
-      "application/vnd.music-niff": {
-        source: "iana"
-      },
-      "application/vnd.musician": {
-        source: "iana",
-        extensions: ["mus"]
-      },
-      "application/vnd.muvee.style": {
-        source: "iana",
-        extensions: ["msty"]
-      },
-      "application/vnd.mynfc": {
-        source: "iana",
-        extensions: ["taglet"]
-      },
-      "application/vnd.ncd.control": {
-        source: "iana"
-      },
-      "application/vnd.ncd.reference": {
-        source: "iana"
-      },
-      "application/vnd.nearst.inv+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.nervana": {
-        source: "iana"
-      },
-      "application/vnd.netfpx": {
-        source: "iana"
-      },
-      "application/vnd.neurolanguage.nlu": {
-        source: "iana",
-        extensions: ["nlu"]
-      },
-      "application/vnd.nimn": {
-        source: "iana"
-      },
-      "application/vnd.nintendo.nitro.rom": {
-        source: "iana"
-      },
-      "application/vnd.nintendo.snes.rom": {
-        source: "iana"
-      },
-      "application/vnd.nitf": {
-        source: "iana",
-        extensions: ["ntf", "nitf"]
-      },
-      "application/vnd.noblenet-directory": {
-        source: "iana",
-        extensions: ["nnd"]
-      },
-      "application/vnd.noblenet-sealer": {
-        source: "iana",
-        extensions: ["nns"]
-      },
-      "application/vnd.noblenet-web": {
-        source: "iana",
-        extensions: ["nnw"]
-      },
-      "application/vnd.nokia.catalogs": {
-        source: "iana"
-      },
-      "application/vnd.nokia.conml+wbxml": {
-        source: "iana"
-      },
-      "application/vnd.nokia.conml+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.nokia.iptv.config+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.nokia.isds-radio-presets": {
-        source: "iana"
-      },
-      "application/vnd.nokia.landmark+wbxml": {
-        source: "iana"
-      },
-      "application/vnd.nokia.landmark+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.nokia.landmarkcollection+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.nokia.n-gage.ac+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["ac"]
-      },
-      "application/vnd.nokia.n-gage.data": {
-        source: "iana",
-        extensions: ["ngdat"]
-      },
-      "application/vnd.nokia.n-gage.symbian.install": {
-        source: "iana",
-        extensions: ["n-gage"]
-      },
-      "application/vnd.nokia.ncd": {
-        source: "iana"
-      },
-      "application/vnd.nokia.pcd+wbxml": {
-        source: "iana"
-      },
-      "application/vnd.nokia.pcd+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.nokia.radio-preset": {
-        source: "iana",
-        extensions: ["rpst"]
-      },
-      "application/vnd.nokia.radio-presets": {
-        source: "iana",
-        extensions: ["rpss"]
-      },
-      "application/vnd.novadigm.edm": {
-        source: "iana",
-        extensions: ["edm"]
-      },
-      "application/vnd.novadigm.edx": {
-        source: "iana",
-        extensions: ["edx"]
-      },
-      "application/vnd.novadigm.ext": {
-        source: "iana",
-        extensions: ["ext"]
-      },
-      "application/vnd.ntt-local.content-share": {
-        source: "iana"
-      },
-      "application/vnd.ntt-local.file-transfer": {
-        source: "iana"
-      },
-      "application/vnd.ntt-local.ogw_remote-access": {
-        source: "iana"
-      },
-      "application/vnd.ntt-local.sip-ta_remote": {
-        source: "iana"
-      },
-      "application/vnd.ntt-local.sip-ta_tcp_stream": {
-        source: "iana"
-      },
-      "application/vnd.oasis.opendocument.chart": {
-        source: "iana",
-        extensions: ["odc"]
-      },
-      "application/vnd.oasis.opendocument.chart-template": {
-        source: "iana",
-        extensions: ["otc"]
-      },
-      "application/vnd.oasis.opendocument.database": {
-        source: "iana",
-        extensions: ["odb"]
-      },
-      "application/vnd.oasis.opendocument.formula": {
-        source: "iana",
-        extensions: ["odf"]
-      },
-      "application/vnd.oasis.opendocument.formula-template": {
-        source: "iana",
-        extensions: ["odft"]
-      },
-      "application/vnd.oasis.opendocument.graphics": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["odg"]
-      },
-      "application/vnd.oasis.opendocument.graphics-template": {
-        source: "iana",
-        extensions: ["otg"]
-      },
-      "application/vnd.oasis.opendocument.image": {
-        source: "iana",
-        extensions: ["odi"]
-      },
-      "application/vnd.oasis.opendocument.image-template": {
-        source: "iana",
-        extensions: ["oti"]
-      },
-      "application/vnd.oasis.opendocument.presentation": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["odp"]
-      },
-      "application/vnd.oasis.opendocument.presentation-template": {
-        source: "iana",
-        extensions: ["otp"]
-      },
-      "application/vnd.oasis.opendocument.spreadsheet": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["ods"]
-      },
-      "application/vnd.oasis.opendocument.spreadsheet-template": {
-        source: "iana",
-        extensions: ["ots"]
-      },
-      "application/vnd.oasis.opendocument.text": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["odt"]
-      },
-      "application/vnd.oasis.opendocument.text-master": {
-        source: "iana",
-        extensions: ["odm"]
-      },
-      "application/vnd.oasis.opendocument.text-template": {
-        source: "iana",
-        extensions: ["ott"]
-      },
-      "application/vnd.oasis.opendocument.text-web": {
-        source: "iana",
-        extensions: ["oth"]
-      },
-      "application/vnd.obn": {
-        source: "iana"
-      },
-      "application/vnd.ocf+cbor": {
-        source: "iana"
-      },
-      "application/vnd.oci.image.manifest.v1+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oftn.l10n+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oipf.contentaccessdownload+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oipf.contentaccessstreaming+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oipf.cspg-hexbinary": {
-        source: "iana"
-      },
-      "application/vnd.oipf.dae.svg+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oipf.dae.xhtml+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oipf.mippvcontrolmessage+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oipf.pae.gem": {
-        source: "iana"
-      },
-      "application/vnd.oipf.spdiscovery+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oipf.spdlist+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oipf.ueprofile+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oipf.userprofile+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.olpc-sugar": {
-        source: "iana",
-        extensions: ["xo"]
-      },
-      "application/vnd.oma-scws-config": {
-        source: "iana"
-      },
-      "application/vnd.oma-scws-http-request": {
-        source: "iana"
-      },
-      "application/vnd.oma-scws-http-response": {
-        source: "iana"
-      },
-      "application/vnd.oma.bcast.associated-procedure-parameter+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.bcast.drm-trigger+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.bcast.imd+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.bcast.ltkm": {
-        source: "iana"
-      },
-      "application/vnd.oma.bcast.notification+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.bcast.provisioningtrigger": {
-        source: "iana"
-      },
-      "application/vnd.oma.bcast.sgboot": {
-        source: "iana"
-      },
-      "application/vnd.oma.bcast.sgdd+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.bcast.sgdu": {
-        source: "iana"
-      },
-      "application/vnd.oma.bcast.simple-symbol-container": {
-        source: "iana"
-      },
-      "application/vnd.oma.bcast.smartcard-trigger+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.bcast.sprov+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.bcast.stkm": {
-        source: "iana"
-      },
-      "application/vnd.oma.cab-address-book+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.cab-feature-handler+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.cab-pcc+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.cab-subs-invite+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.cab-user-prefs+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.dcd": {
-        source: "iana"
-      },
-      "application/vnd.oma.dcdc": {
-        source: "iana"
-      },
-      "application/vnd.oma.dd2+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["dd2"]
-      },
-      "application/vnd.oma.drm.risd+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.group-usage-list+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.lwm2m+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.lwm2m+tlv": {
-        source: "iana"
-      },
-      "application/vnd.oma.pal+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.poc.detailed-progress-report+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.poc.final-report+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.poc.groups+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.poc.invocation-descriptor+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.poc.optimized-progress-report+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.push": {
-        source: "iana"
-      },
-      "application/vnd.oma.scidm.messages+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oma.xcap-directory+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.omads-email+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/vnd.omads-file+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/vnd.omads-folder+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/vnd.omaloc-supl-init": {
-        source: "iana"
-      },
-      "application/vnd.onepager": {
-        source: "iana"
-      },
-      "application/vnd.onepagertamp": {
-        source: "iana"
-      },
-      "application/vnd.onepagertamx": {
-        source: "iana"
-      },
-      "application/vnd.onepagertat": {
-        source: "iana"
-      },
-      "application/vnd.onepagertatp": {
-        source: "iana"
-      },
-      "application/vnd.onepagertatx": {
-        source: "iana"
-      },
-      "application/vnd.openblox.game+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["obgx"]
-      },
-      "application/vnd.openblox.game-binary": {
-        source: "iana"
-      },
-      "application/vnd.openeye.oeb": {
-        source: "iana"
-      },
-      "application/vnd.openofficeorg.extension": {
-        source: "apache",
-        extensions: ["oxt"]
-      },
-      "application/vnd.openstreetmap.data+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["osm"]
-      },
-      "application/vnd.openxmlformats-officedocument.custom-properties+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.customxmlproperties+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.drawing+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.drawingml.chart+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.drawingml.diagramcolors+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.drawingml.diagramdata+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.drawingml.diagramlayout+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.drawingml.diagramstyle+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.extended-properties+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.commentauthors+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.comments+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.handoutmaster+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.notesmaster+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.notesslide+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.presentation": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["pptx"]
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.presprops+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.slide": {
-        source: "iana",
-        extensions: ["sldx"]
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.slide+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.slidelayout+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.slidemaster+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.slideshow": {
-        source: "iana",
-        extensions: ["ppsx"]
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.slideshow.main+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.slideupdateinfo+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.tablestyles+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.tags+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.template": {
-        source: "iana",
-        extensions: ["potx"]
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.template.main+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.presentationml.viewprops+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.calcchain+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.connections+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.externallink+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotcachedefinition+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotcacherecords+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.pivottable+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.querytable+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionheaders+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionlog+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sharedstrings+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["xlsx"]
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheetmetadata+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.tablesinglecells+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.template": {
-        source: "iana",
-        extensions: ["xltx"]
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.template.main+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.usernames+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.volatiledependencies+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.theme+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.themeoverride+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.vmldrawing": {
-        source: "iana"
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["docx"]
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document.glossary+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.endnotes+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.fonttable+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.template": {
-        source: "iana",
-        extensions: ["dotx"]
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.websettings+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-package.core-properties+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-package.digital-signature-xmlsignature+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.openxmlformats-package.relationships+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oracle.resource+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.orange.indata": {
-        source: "iana"
-      },
-      "application/vnd.osa.netdeploy": {
-        source: "iana"
-      },
-      "application/vnd.osgeo.mapguide.package": {
-        source: "iana",
-        extensions: ["mgp"]
-      },
-      "application/vnd.osgi.bundle": {
-        source: "iana"
-      },
-      "application/vnd.osgi.dp": {
-        source: "iana",
-        extensions: ["dp"]
-      },
-      "application/vnd.osgi.subsystem": {
-        source: "iana",
-        extensions: ["esa"]
-      },
-      "application/vnd.otps.ct-kip+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.oxli.countgraph": {
-        source: "iana"
-      },
-      "application/vnd.pagerduty+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.palm": {
-        source: "iana",
-        extensions: ["pdb", "pqa", "oprc"]
-      },
-      "application/vnd.panoply": {
-        source: "iana"
-      },
-      "application/vnd.paos.xml": {
-        source: "iana"
-      },
-      "application/vnd.patentdive": {
-        source: "iana"
-      },
-      "application/vnd.patientecommsdoc": {
-        source: "iana"
-      },
-      "application/vnd.pawaafile": {
-        source: "iana",
-        extensions: ["paw"]
-      },
-      "application/vnd.pcos": {
-        source: "iana"
-      },
-      "application/vnd.pg.format": {
-        source: "iana",
-        extensions: ["str"]
-      },
-      "application/vnd.pg.osasli": {
-        source: "iana",
-        extensions: ["ei6"]
-      },
-      "application/vnd.piaccess.application-licence": {
-        source: "iana"
-      },
-      "application/vnd.picsel": {
-        source: "iana",
-        extensions: ["efif"]
-      },
-      "application/vnd.pmi.widget": {
-        source: "iana",
-        extensions: ["wg"]
-      },
-      "application/vnd.poc.group-advertisement+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.pocketlearn": {
-        source: "iana",
-        extensions: ["plf"]
-      },
-      "application/vnd.powerbuilder6": {
-        source: "iana",
-        extensions: ["pbd"]
-      },
-      "application/vnd.powerbuilder6-s": {
-        source: "iana"
-      },
-      "application/vnd.powerbuilder7": {
-        source: "iana"
-      },
-      "application/vnd.powerbuilder7-s": {
-        source: "iana"
-      },
-      "application/vnd.powerbuilder75": {
-        source: "iana"
-      },
-      "application/vnd.powerbuilder75-s": {
-        source: "iana"
-      },
-      "application/vnd.preminet": {
-        source: "iana"
-      },
-      "application/vnd.previewsystems.box": {
-        source: "iana",
-        extensions: ["box"]
-      },
-      "application/vnd.proteus.magazine": {
-        source: "iana",
-        extensions: ["mgz"]
-      },
-      "application/vnd.psfs": {
-        source: "iana"
-      },
-      "application/vnd.publishare-delta-tree": {
-        source: "iana",
-        extensions: ["qps"]
-      },
-      "application/vnd.pvi.ptid1": {
-        source: "iana",
-        extensions: ["ptid"]
-      },
-      "application/vnd.pwg-multiplexed": {
-        source: "iana"
-      },
-      "application/vnd.pwg-xhtml-print+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.qualcomm.brew-app-res": {
-        source: "iana"
-      },
-      "application/vnd.quarantainenet": {
-        source: "iana"
-      },
-      "application/vnd.quark.quarkxpress": {
-        source: "iana",
-        extensions: ["qxd", "qxt", "qwd", "qwt", "qxl", "qxb"]
-      },
-      "application/vnd.quobject-quoxdocument": {
-        source: "iana"
-      },
-      "application/vnd.radisys.moml+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-audit+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-audit-conf+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-audit-conn+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-audit-dialog+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-audit-stream+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-conf+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-dialog+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-dialog-base+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-dialog-fax-detect+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-dialog-fax-sendrecv+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-dialog-group+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-dialog-speech+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.radisys.msml-dialog-transform+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.rainstor.data": {
-        source: "iana"
-      },
-      "application/vnd.rapid": {
-        source: "iana"
-      },
-      "application/vnd.rar": {
-        source: "iana"
-      },
-      "application/vnd.realvnc.bed": {
-        source: "iana",
-        extensions: ["bed"]
-      },
-      "application/vnd.recordare.musicxml": {
-        source: "iana",
-        extensions: ["mxl"]
-      },
-      "application/vnd.recordare.musicxml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["musicxml"]
-      },
-      "application/vnd.renlearn.rlprint": {
-        source: "iana"
-      },
-      "application/vnd.restful+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.rig.cryptonote": {
-        source: "iana",
-        extensions: ["cryptonote"]
-      },
-      "application/vnd.rim.cod": {
-        source: "apache",
-        extensions: ["cod"]
-      },
-      "application/vnd.rn-realmedia": {
-        source: "apache",
-        extensions: ["rm"]
-      },
-      "application/vnd.rn-realmedia-vbr": {
-        source: "apache",
-        extensions: ["rmvb"]
-      },
-      "application/vnd.route66.link66+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["link66"]
-      },
-      "application/vnd.rs-274x": {
-        source: "iana"
-      },
-      "application/vnd.ruckus.download": {
-        source: "iana"
-      },
-      "application/vnd.s3sms": {
-        source: "iana"
-      },
-      "application/vnd.sailingtracker.track": {
-        source: "iana",
-        extensions: ["st"]
-      },
-      "application/vnd.sar": {
-        source: "iana"
-      },
-      "application/vnd.sbm.cid": {
-        source: "iana"
-      },
-      "application/vnd.sbm.mid2": {
-        source: "iana"
-      },
-      "application/vnd.scribus": {
-        source: "iana"
-      },
-      "application/vnd.sealed.3df": {
-        source: "iana"
-      },
-      "application/vnd.sealed.csf": {
-        source: "iana"
-      },
-      "application/vnd.sealed.doc": {
-        source: "iana"
-      },
-      "application/vnd.sealed.eml": {
-        source: "iana"
-      },
-      "application/vnd.sealed.mht": {
-        source: "iana"
-      },
-      "application/vnd.sealed.net": {
-        source: "iana"
-      },
-      "application/vnd.sealed.ppt": {
-        source: "iana"
-      },
-      "application/vnd.sealed.tiff": {
-        source: "iana"
-      },
-      "application/vnd.sealed.xls": {
-        source: "iana"
-      },
-      "application/vnd.sealedmedia.softseal.html": {
-        source: "iana"
-      },
-      "application/vnd.sealedmedia.softseal.pdf": {
-        source: "iana"
-      },
-      "application/vnd.seemail": {
-        source: "iana",
-        extensions: ["see"]
-      },
-      "application/vnd.sema": {
-        source: "iana",
-        extensions: ["sema"]
-      },
-      "application/vnd.semd": {
-        source: "iana",
-        extensions: ["semd"]
-      },
-      "application/vnd.semf": {
-        source: "iana",
-        extensions: ["semf"]
-      },
-      "application/vnd.shade-save-file": {
-        source: "iana"
-      },
-      "application/vnd.shana.informed.formdata": {
-        source: "iana",
-        extensions: ["ifm"]
-      },
-      "application/vnd.shana.informed.formtemplate": {
-        source: "iana",
-        extensions: ["itp"]
-      },
-      "application/vnd.shana.informed.interchange": {
-        source: "iana",
-        extensions: ["iif"]
-      },
-      "application/vnd.shana.informed.package": {
-        source: "iana",
-        extensions: ["ipk"]
-      },
-      "application/vnd.shootproof+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.shopkick+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.shp": {
-        source: "iana"
-      },
-      "application/vnd.shx": {
-        source: "iana"
-      },
-      "application/vnd.sigrok.session": {
-        source: "iana"
-      },
-      "application/vnd.simtech-mindmapper": {
-        source: "iana",
-        extensions: ["twd", "twds"]
-      },
-      "application/vnd.siren+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.smaf": {
-        source: "iana",
-        extensions: ["mmf"]
-      },
-      "application/vnd.smart.notebook": {
-        source: "iana"
-      },
-      "application/vnd.smart.teacher": {
-        source: "iana",
-        extensions: ["teacher"]
-      },
-      "application/vnd.snesdev-page-table": {
-        source: "iana"
-      },
-      "application/vnd.software602.filler.form+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["fo"]
-      },
-      "application/vnd.software602.filler.form-xml-zip": {
-        source: "iana"
-      },
-      "application/vnd.solent.sdkm+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["sdkm", "sdkd"]
-      },
-      "application/vnd.spotfire.dxp": {
-        source: "iana",
-        extensions: ["dxp"]
-      },
-      "application/vnd.spotfire.sfs": {
-        source: "iana",
-        extensions: ["sfs"]
-      },
-      "application/vnd.sqlite3": {
-        source: "iana"
-      },
-      "application/vnd.sss-cod": {
-        source: "iana"
-      },
-      "application/vnd.sss-dtf": {
-        source: "iana"
-      },
-      "application/vnd.sss-ntf": {
-        source: "iana"
-      },
-      "application/vnd.stardivision.calc": {
-        source: "apache",
-        extensions: ["sdc"]
-      },
-      "application/vnd.stardivision.draw": {
-        source: "apache",
-        extensions: ["sda"]
-      },
-      "application/vnd.stardivision.impress": {
-        source: "apache",
-        extensions: ["sdd"]
-      },
-      "application/vnd.stardivision.math": {
-        source: "apache",
-        extensions: ["smf"]
-      },
-      "application/vnd.stardivision.writer": {
-        source: "apache",
-        extensions: ["sdw", "vor"]
-      },
-      "application/vnd.stardivision.writer-global": {
-        source: "apache",
-        extensions: ["sgl"]
-      },
-      "application/vnd.stepmania.package": {
-        source: "iana",
-        extensions: ["smzip"]
-      },
-      "application/vnd.stepmania.stepchart": {
-        source: "iana",
-        extensions: ["sm"]
-      },
-      "application/vnd.street-stream": {
-        source: "iana"
-      },
-      "application/vnd.sun.wadl+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["wadl"]
-      },
-      "application/vnd.sun.xml.calc": {
-        source: "apache",
-        extensions: ["sxc"]
-      },
-      "application/vnd.sun.xml.calc.template": {
-        source: "apache",
-        extensions: ["stc"]
-      },
-      "application/vnd.sun.xml.draw": {
-        source: "apache",
-        extensions: ["sxd"]
-      },
-      "application/vnd.sun.xml.draw.template": {
-        source: "apache",
-        extensions: ["std"]
-      },
-      "application/vnd.sun.xml.impress": {
-        source: "apache",
-        extensions: ["sxi"]
-      },
-      "application/vnd.sun.xml.impress.template": {
-        source: "apache",
-        extensions: ["sti"]
-      },
-      "application/vnd.sun.xml.math": {
-        source: "apache",
-        extensions: ["sxm"]
-      },
-      "application/vnd.sun.xml.writer": {
-        source: "apache",
-        extensions: ["sxw"]
-      },
-      "application/vnd.sun.xml.writer.global": {
-        source: "apache",
-        extensions: ["sxg"]
-      },
-      "application/vnd.sun.xml.writer.template": {
-        source: "apache",
-        extensions: ["stw"]
-      },
-      "application/vnd.sus-calendar": {
-        source: "iana",
-        extensions: ["sus", "susp"]
-      },
-      "application/vnd.svd": {
-        source: "iana",
-        extensions: ["svd"]
-      },
-      "application/vnd.swiftview-ics": {
-        source: "iana"
-      },
-      "application/vnd.symbian.install": {
-        source: "apache",
-        extensions: ["sis", "sisx"]
-      },
-      "application/vnd.syncml+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0,
-        extensions: ["xsm"]
-      },
-      "application/vnd.syncml.dm+wbxml": {
-        source: "iana",
-        charset: "UTF-8",
-        extensions: ["bdm"]
-      },
-      "application/vnd.syncml.dm+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0,
-        extensions: ["xdm"]
-      },
-      "application/vnd.syncml.dm.notification": {
-        source: "iana"
-      },
-      "application/vnd.syncml.dmddf+wbxml": {
-        source: "iana"
-      },
-      "application/vnd.syncml.dmddf+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0,
-        extensions: ["ddf"]
-      },
-      "application/vnd.syncml.dmtnds+wbxml": {
-        source: "iana"
-      },
-      "application/vnd.syncml.dmtnds+xml": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0
-      },
-      "application/vnd.syncml.ds.notification": {
-        source: "iana"
-      },
-      "application/vnd.tableschema+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.tao.intent-module-archive": {
-        source: "iana",
-        extensions: ["tao"]
-      },
-      "application/vnd.tcpdump.pcap": {
-        source: "iana",
-        extensions: ["pcap", "cap", "dmp"]
-      },
-      "application/vnd.think-cell.ppttc+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.tmd.mediaflex.api+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.tml": {
-        source: "iana"
-      },
-      "application/vnd.tmobile-livetv": {
-        source: "iana",
-        extensions: ["tmo"]
-      },
-      "application/vnd.tri.onesource": {
-        source: "iana"
-      },
-      "application/vnd.trid.tpt": {
-        source: "iana",
-        extensions: ["tpt"]
-      },
-      "application/vnd.triscape.mxs": {
-        source: "iana",
-        extensions: ["mxs"]
-      },
-      "application/vnd.trueapp": {
-        source: "iana",
-        extensions: ["tra"]
-      },
-      "application/vnd.truedoc": {
-        source: "iana"
-      },
-      "application/vnd.ubisoft.webplayer": {
-        source: "iana"
-      },
-      "application/vnd.ufdl": {
-        source: "iana",
-        extensions: ["ufd", "ufdl"]
-      },
-      "application/vnd.uiq.theme": {
-        source: "iana",
-        extensions: ["utz"]
-      },
-      "application/vnd.umajin": {
-        source: "iana",
-        extensions: ["umj"]
-      },
-      "application/vnd.unity": {
-        source: "iana",
-        extensions: ["unityweb"]
-      },
-      "application/vnd.uoml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["uoml"]
-      },
-      "application/vnd.uplanet.alert": {
-        source: "iana"
-      },
-      "application/vnd.uplanet.alert-wbxml": {
-        source: "iana"
-      },
-      "application/vnd.uplanet.bearer-choice": {
-        source: "iana"
-      },
-      "application/vnd.uplanet.bearer-choice-wbxml": {
-        source: "iana"
-      },
-      "application/vnd.uplanet.cacheop": {
-        source: "iana"
-      },
-      "application/vnd.uplanet.cacheop-wbxml": {
-        source: "iana"
-      },
-      "application/vnd.uplanet.channel": {
-        source: "iana"
-      },
-      "application/vnd.uplanet.channel-wbxml": {
-        source: "iana"
-      },
-      "application/vnd.uplanet.list": {
-        source: "iana"
-      },
-      "application/vnd.uplanet.list-wbxml": {
-        source: "iana"
-      },
-      "application/vnd.uplanet.listcmd": {
-        source: "iana"
-      },
-      "application/vnd.uplanet.listcmd-wbxml": {
-        source: "iana"
-      },
-      "application/vnd.uplanet.signal": {
-        source: "iana"
-      },
-      "application/vnd.uri-map": {
-        source: "iana"
-      },
-      "application/vnd.valve.source.material": {
-        source: "iana"
-      },
-      "application/vnd.vcx": {
-        source: "iana",
-        extensions: ["vcx"]
-      },
-      "application/vnd.vd-study": {
-        source: "iana"
-      },
-      "application/vnd.vectorworks": {
-        source: "iana"
-      },
-      "application/vnd.vel+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.verimatrix.vcas": {
-        source: "iana"
-      },
-      "application/vnd.veryant.thin": {
-        source: "iana"
-      },
-      "application/vnd.ves.encrypted": {
-        source: "iana"
-      },
-      "application/vnd.vidsoft.vidconference": {
-        source: "iana"
-      },
-      "application/vnd.visio": {
-        source: "iana",
-        extensions: ["vsd", "vst", "vss", "vsw"]
-      },
-      "application/vnd.visionary": {
-        source: "iana",
-        extensions: ["vis"]
-      },
-      "application/vnd.vividence.scriptfile": {
-        source: "iana"
-      },
-      "application/vnd.vsf": {
-        source: "iana",
-        extensions: ["vsf"]
-      },
-      "application/vnd.wap.sic": {
-        source: "iana"
-      },
-      "application/vnd.wap.slc": {
-        source: "iana"
-      },
-      "application/vnd.wap.wbxml": {
-        source: "iana",
-        charset: "UTF-8",
-        extensions: ["wbxml"]
-      },
-      "application/vnd.wap.wmlc": {
-        source: "iana",
-        extensions: ["wmlc"]
-      },
-      "application/vnd.wap.wmlscriptc": {
-        source: "iana",
-        extensions: ["wmlsc"]
-      },
-      "application/vnd.webturbo": {
-        source: "iana",
-        extensions: ["wtb"]
-      },
-      "application/vnd.wfa.p2p": {
-        source: "iana"
-      },
-      "application/vnd.wfa.wsc": {
-        source: "iana"
-      },
-      "application/vnd.windows.devicepairing": {
-        source: "iana"
-      },
-      "application/vnd.wmc": {
-        source: "iana"
-      },
-      "application/vnd.wmf.bootstrap": {
-        source: "iana"
-      },
-      "application/vnd.wolfram.mathematica": {
-        source: "iana"
-      },
-      "application/vnd.wolfram.mathematica.package": {
-        source: "iana"
-      },
-      "application/vnd.wolfram.player": {
-        source: "iana",
-        extensions: ["nbp"]
-      },
-      "application/vnd.wordperfect": {
-        source: "iana",
-        extensions: ["wpd"]
-      },
-      "application/vnd.wqd": {
-        source: "iana",
-        extensions: ["wqd"]
-      },
-      "application/vnd.wrq-hp3000-labelled": {
-        source: "iana"
-      },
-      "application/vnd.wt.stf": {
-        source: "iana",
-        extensions: ["stf"]
-      },
-      "application/vnd.wv.csp+wbxml": {
-        source: "iana"
-      },
-      "application/vnd.wv.csp+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.wv.ssp+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.xacml+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.xara": {
-        source: "iana",
-        extensions: ["xar"]
-      },
-      "application/vnd.xfdl": {
-        source: "iana",
-        extensions: ["xfdl"]
-      },
-      "application/vnd.xfdl.webform": {
-        source: "iana"
-      },
-      "application/vnd.xmi+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vnd.xmpie.cpkg": {
-        source: "iana"
-      },
-      "application/vnd.xmpie.dpkg": {
-        source: "iana"
-      },
-      "application/vnd.xmpie.plan": {
-        source: "iana"
-      },
-      "application/vnd.xmpie.ppkg": {
-        source: "iana"
-      },
-      "application/vnd.xmpie.xlim": {
-        source: "iana"
-      },
-      "application/vnd.yamaha.hv-dic": {
-        source: "iana",
-        extensions: ["hvd"]
-      },
-      "application/vnd.yamaha.hv-script": {
-        source: "iana",
-        extensions: ["hvs"]
-      },
-      "application/vnd.yamaha.hv-voice": {
-        source: "iana",
-        extensions: ["hvp"]
-      },
-      "application/vnd.yamaha.openscoreformat": {
-        source: "iana",
-        extensions: ["osf"]
-      },
-      "application/vnd.yamaha.openscoreformat.osfpvg+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["osfpvg"]
-      },
-      "application/vnd.yamaha.remote-setup": {
-        source: "iana"
-      },
-      "application/vnd.yamaha.smaf-audio": {
-        source: "iana",
-        extensions: ["saf"]
-      },
-      "application/vnd.yamaha.smaf-phrase": {
-        source: "iana",
-        extensions: ["spf"]
-      },
-      "application/vnd.yamaha.through-ngn": {
-        source: "iana"
-      },
-      "application/vnd.yamaha.tunnel-udpencap": {
-        source: "iana"
-      },
-      "application/vnd.yaoweme": {
-        source: "iana"
-      },
-      "application/vnd.yellowriver-custom-menu": {
-        source: "iana",
-        extensions: ["cmp"]
-      },
-      "application/vnd.youtube.yt": {
-        source: "iana"
-      },
-      "application/vnd.zul": {
-        source: "iana",
-        extensions: ["zir", "zirz"]
-      },
-      "application/vnd.zzazz.deck+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["zaz"]
-      },
-      "application/voicexml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["vxml"]
-      },
-      "application/voucher-cms+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/vq-rtcpxr": {
-        source: "iana"
-      },
-      "application/wasm": {
-        compressible: !0,
-        extensions: ["wasm"]
-      },
-      "application/watcherinfo+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/webpush-options+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/whoispp-query": {
-        source: "iana"
-      },
-      "application/whoispp-response": {
-        source: "iana"
-      },
-      "application/widget": {
-        source: "iana",
-        extensions: ["wgt"]
-      },
-      "application/winhlp": {
-        source: "apache",
-        extensions: ["hlp"]
-      },
-      "application/wita": {
-        source: "iana"
-      },
-      "application/wordperfect5.1": {
-        source: "iana"
-      },
-      "application/wsdl+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["wsdl"]
-      },
-      "application/wspolicy+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["wspolicy"]
-      },
-      "application/x-7z-compressed": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["7z"]
-      },
-      "application/x-abiword": {
-        source: "apache",
-        extensions: ["abw"]
-      },
-      "application/x-ace-compressed": {
-        source: "apache",
-        extensions: ["ace"]
-      },
-      "application/x-amf": {
-        source: "apache"
-      },
-      "application/x-apple-diskimage": {
-        source: "apache",
-        extensions: ["dmg"]
-      },
-      "application/x-arj": {
-        compressible: !1,
-        extensions: ["arj"]
-      },
-      "application/x-authorware-bin": {
-        source: "apache",
-        extensions: ["aab", "x32", "u32", "vox"]
-      },
-      "application/x-authorware-map": {
-        source: "apache",
-        extensions: ["aam"]
-      },
-      "application/x-authorware-seg": {
-        source: "apache",
-        extensions: ["aas"]
-      },
-      "application/x-bcpio": {
-        source: "apache",
-        extensions: ["bcpio"]
-      },
-      "application/x-bdoc": {
-        compressible: !1,
-        extensions: ["bdoc"]
-      },
-      "application/x-bittorrent": {
-        source: "apache",
-        extensions: ["torrent"]
-      },
-      "application/x-blorb": {
-        source: "apache",
-        extensions: ["blb", "blorb"]
-      },
-      "application/x-bzip": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["bz"]
-      },
-      "application/x-bzip2": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["bz2", "boz"]
-      },
-      "application/x-cbr": {
-        source: "apache",
-        extensions: ["cbr", "cba", "cbt", "cbz", "cb7"]
-      },
-      "application/x-cdlink": {
-        source: "apache",
-        extensions: ["vcd"]
-      },
-      "application/x-cfs-compressed": {
-        source: "apache",
-        extensions: ["cfs"]
-      },
-      "application/x-chat": {
-        source: "apache",
-        extensions: ["chat"]
-      },
-      "application/x-chess-pgn": {
-        source: "apache",
-        extensions: ["pgn"]
-      },
-      "application/x-chrome-extension": {
-        extensions: ["crx"]
-      },
-      "application/x-cocoa": {
-        source: "nginx",
-        extensions: ["cco"]
-      },
-      "application/x-compress": {
-        source: "apache"
-      },
-      "application/x-conference": {
-        source: "apache",
-        extensions: ["nsc"]
-      },
-      "application/x-cpio": {
-        source: "apache",
-        extensions: ["cpio"]
-      },
-      "application/x-csh": {
-        source: "apache",
-        extensions: ["csh"]
-      },
-      "application/x-deb": {
-        compressible: !1
-      },
-      "application/x-debian-package": {
-        source: "apache",
-        extensions: ["deb", "udeb"]
-      },
-      "application/x-dgc-compressed": {
-        source: "apache",
-        extensions: ["dgc"]
-      },
-      "application/x-director": {
-        source: "apache",
-        extensions: ["dir", "dcr", "dxr", "cst", "cct", "cxt", "w3d", "fgd", "swa"]
-      },
-      "application/x-doom": {
-        source: "apache",
-        extensions: ["wad"]
-      },
-      "application/x-dtbncx+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["ncx"]
-      },
-      "application/x-dtbook+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["dtb"]
-      },
-      "application/x-dtbresource+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["res"]
-      },
-      "application/x-dvi": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["dvi"]
-      },
-      "application/x-envoy": {
-        source: "apache",
-        extensions: ["evy"]
-      },
-      "application/x-eva": {
-        source: "apache",
-        extensions: ["eva"]
-      },
-      "application/x-font-bdf": {
-        source: "apache",
-        extensions: ["bdf"]
-      },
-      "application/x-font-dos": {
-        source: "apache"
-      },
-      "application/x-font-framemaker": {
-        source: "apache"
-      },
-      "application/x-font-ghostscript": {
-        source: "apache",
-        extensions: ["gsf"]
-      },
-      "application/x-font-libgrx": {
-        source: "apache"
-      },
-      "application/x-font-linux-psf": {
-        source: "apache",
-        extensions: ["psf"]
-      },
-      "application/x-font-pcf": {
-        source: "apache",
-        extensions: ["pcf"]
-      },
-      "application/x-font-snf": {
-        source: "apache",
-        extensions: ["snf"]
-      },
-      "application/x-font-speedo": {
-        source: "apache"
-      },
-      "application/x-font-sunos-news": {
-        source: "apache"
-      },
-      "application/x-font-type1": {
-        source: "apache",
-        extensions: ["pfa", "pfb", "pfm", "afm"]
-      },
-      "application/x-font-vfont": {
-        source: "apache"
-      },
-      "application/x-freearc": {
-        source: "apache",
-        extensions: ["arc"]
-      },
-      "application/x-futuresplash": {
-        source: "apache",
-        extensions: ["spl"]
-      },
-      "application/x-gca-compressed": {
-        source: "apache",
-        extensions: ["gca"]
-      },
-      "application/x-glulx": {
-        source: "apache",
-        extensions: ["ulx"]
-      },
-      "application/x-gnumeric": {
-        source: "apache",
-        extensions: ["gnumeric"]
-      },
-      "application/x-gramps-xml": {
-        source: "apache",
-        extensions: ["gramps"]
-      },
-      "application/x-gtar": {
-        source: "apache",
-        extensions: ["gtar"]
-      },
-      "application/x-gzip": {
-        source: "apache"
-      },
-      "application/x-hdf": {
-        source: "apache",
-        extensions: ["hdf"]
-      },
-      "application/x-httpd-php": {
-        compressible: !0,
-        extensions: ["php"]
-      },
-      "application/x-install-instructions": {
-        source: "apache",
-        extensions: ["install"]
-      },
-      "application/x-iso9660-image": {
-        source: "apache",
-        extensions: ["iso"]
-      },
-      "application/x-java-archive-diff": {
-        source: "nginx",
-        extensions: ["jardiff"]
-      },
-      "application/x-java-jnlp-file": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["jnlp"]
-      },
-      "application/x-javascript": {
-        compressible: !0
-      },
-      "application/x-keepass2": {
-        extensions: ["kdbx"]
-      },
-      "application/x-latex": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["latex"]
-      },
-      "application/x-lua-bytecode": {
-        extensions: ["luac"]
-      },
-      "application/x-lzh-compressed": {
-        source: "apache",
-        extensions: ["lzh", "lha"]
-      },
-      "application/x-makeself": {
-        source: "nginx",
-        extensions: ["run"]
-      },
-      "application/x-mie": {
-        source: "apache",
-        extensions: ["mie"]
-      },
-      "application/x-mobipocket-ebook": {
-        source: "apache",
-        extensions: ["prc", "mobi"]
-      },
-      "application/x-mpegurl": {
-        compressible: !1
-      },
-      "application/x-ms-application": {
-        source: "apache",
-        extensions: ["application"]
-      },
-      "application/x-ms-shortcut": {
-        source: "apache",
-        extensions: ["lnk"]
-      },
-      "application/x-ms-wmd": {
-        source: "apache",
-        extensions: ["wmd"]
-      },
-      "application/x-ms-wmz": {
-        source: "apache",
-        extensions: ["wmz"]
-      },
-      "application/x-ms-xbap": {
-        source: "apache",
-        extensions: ["xbap"]
-      },
-      "application/x-msaccess": {
-        source: "apache",
-        extensions: ["mdb"]
-      },
-      "application/x-msbinder": {
-        source: "apache",
-        extensions: ["obd"]
-      },
-      "application/x-mscardfile": {
-        source: "apache",
-        extensions: ["crd"]
-      },
-      "application/x-msclip": {
-        source: "apache",
-        extensions: ["clp"]
-      },
-      "application/x-msdos-program": {
-        extensions: ["exe"]
-      },
-      "application/x-msdownload": {
-        source: "apache",
-        extensions: ["exe", "dll", "com", "bat", "msi"]
-      },
-      "application/x-msmediaview": {
-        source: "apache",
-        extensions: ["mvb", "m13", "m14"]
-      },
-      "application/x-msmetafile": {
-        source: "apache",
-        extensions: ["wmf", "wmz", "emf", "emz"]
-      },
-      "application/x-msmoney": {
-        source: "apache",
-        extensions: ["mny"]
-      },
-      "application/x-mspublisher": {
-        source: "apache",
-        extensions: ["pub"]
-      },
-      "application/x-msschedule": {
-        source: "apache",
-        extensions: ["scd"]
-      },
-      "application/x-msterminal": {
-        source: "apache",
-        extensions: ["trm"]
-      },
-      "application/x-mswrite": {
-        source: "apache",
-        extensions: ["wri"]
-      },
-      "application/x-netcdf": {
-        source: "apache",
-        extensions: ["nc", "cdf"]
-      },
-      "application/x-ns-proxy-autoconfig": {
-        compressible: !0,
-        extensions: ["pac"]
-      },
-      "application/x-nzb": {
-        source: "apache",
-        extensions: ["nzb"]
-      },
-      "application/x-perl": {
-        source: "nginx",
-        extensions: ["pl", "pm"]
-      },
-      "application/x-pilot": {
-        source: "nginx",
-        extensions: ["prc", "pdb"]
-      },
-      "application/x-pkcs12": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["p12", "pfx"]
-      },
-      "application/x-pkcs7-certificates": {
-        source: "apache",
-        extensions: ["p7b", "spc"]
-      },
-      "application/x-pkcs7-certreqresp": {
-        source: "apache",
-        extensions: ["p7r"]
-      },
-      "application/x-pki-message": {
-        source: "iana"
-      },
-      "application/x-rar-compressed": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["rar"]
-      },
-      "application/x-redhat-package-manager": {
-        source: "nginx",
-        extensions: ["rpm"]
-      },
-      "application/x-research-info-systems": {
-        source: "apache",
-        extensions: ["ris"]
-      },
-      "application/x-sea": {
-        source: "nginx",
-        extensions: ["sea"]
-      },
-      "application/x-sh": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["sh"]
-      },
-      "application/x-shar": {
-        source: "apache",
-        extensions: ["shar"]
-      },
-      "application/x-shockwave-flash": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["swf"]
-      },
-      "application/x-silverlight-app": {
-        source: "apache",
-        extensions: ["xap"]
-      },
-      "application/x-sql": {
-        source: "apache",
-        extensions: ["sql"]
-      },
-      "application/x-stuffit": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["sit"]
-      },
-      "application/x-stuffitx": {
-        source: "apache",
-        extensions: ["sitx"]
-      },
-      "application/x-subrip": {
-        source: "apache",
-        extensions: ["srt"]
-      },
-      "application/x-sv4cpio": {
-        source: "apache",
-        extensions: ["sv4cpio"]
-      },
-      "application/x-sv4crc": {
-        source: "apache",
-        extensions: ["sv4crc"]
-      },
-      "application/x-t3vm-image": {
-        source: "apache",
-        extensions: ["t3"]
-      },
-      "application/x-tads": {
-        source: "apache",
-        extensions: ["gam"]
-      },
-      "application/x-tar": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["tar"]
-      },
-      "application/x-tcl": {
-        source: "apache",
-        extensions: ["tcl", "tk"]
-      },
-      "application/x-tex": {
-        source: "apache",
-        extensions: ["tex"]
-      },
-      "application/x-tex-tfm": {
-        source: "apache",
-        extensions: ["tfm"]
-      },
-      "application/x-texinfo": {
-        source: "apache",
-        extensions: ["texinfo", "texi"]
-      },
-      "application/x-tgif": {
-        source: "apache",
-        extensions: ["obj"]
-      },
-      "application/x-ustar": {
-        source: "apache",
-        extensions: ["ustar"]
-      },
-      "application/x-virtualbox-hdd": {
-        compressible: !0,
-        extensions: ["hdd"]
-      },
-      "application/x-virtualbox-ova": {
-        compressible: !0,
-        extensions: ["ova"]
-      },
-      "application/x-virtualbox-ovf": {
-        compressible: !0,
-        extensions: ["ovf"]
-      },
-      "application/x-virtualbox-vbox": {
-        compressible: !0,
-        extensions: ["vbox"]
-      },
-      "application/x-virtualbox-vbox-extpack": {
-        compressible: !1,
-        extensions: ["vbox-extpack"]
-      },
-      "application/x-virtualbox-vdi": {
-        compressible: !0,
-        extensions: ["vdi"]
-      },
-      "application/x-virtualbox-vhd": {
-        compressible: !0,
-        extensions: ["vhd"]
-      },
-      "application/x-virtualbox-vmdk": {
-        compressible: !0,
-        extensions: ["vmdk"]
-      },
-      "application/x-wais-source": {
-        source: "apache",
-        extensions: ["src"]
-      },
-      "application/x-web-app-manifest+json": {
-        compressible: !0,
-        extensions: ["webapp"]
-      },
-      "application/x-www-form-urlencoded": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/x-x509-ca-cert": {
-        source: "iana",
-        extensions: ["der", "crt", "pem"]
-      },
-      "application/x-x509-ca-ra-cert": {
-        source: "iana"
-      },
-      "application/x-x509-next-ca-cert": {
-        source: "iana"
-      },
-      "application/x-xfig": {
-        source: "apache",
-        extensions: ["fig"]
-      },
-      "application/x-xliff+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["xlf"]
-      },
-      "application/x-xpinstall": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["xpi"]
-      },
-      "application/x-xz": {
-        source: "apache",
-        extensions: ["xz"]
-      },
-      "application/x-zmachine": {
-        source: "apache",
-        extensions: ["z1", "z2", "z3", "z4", "z5", "z6", "z7", "z8"]
-      },
-      "application/x400-bp": {
-        source: "iana"
-      },
-      "application/xacml+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/xaml+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["xaml"]
-      },
-      "application/xcap-att+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xav"]
-      },
-      "application/xcap-caps+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xca"]
-      },
-      "application/xcap-diff+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xdf"]
-      },
-      "application/xcap-el+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xel"]
-      },
-      "application/xcap-error+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xer"]
-      },
-      "application/xcap-ns+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xns"]
-      },
-      "application/xcon-conference-info+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/xcon-conference-info-diff+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/xenc+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xenc"]
-      },
-      "application/xhtml+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xhtml", "xht"]
-      },
-      "application/xhtml-voice+xml": {
-        source: "apache",
-        compressible: !0
-      },
-      "application/xliff+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xlf"]
-      },
-      "application/xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xml", "xsl", "xsd", "rng"]
-      },
-      "application/xml-dtd": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["dtd"]
-      },
-      "application/xml-external-parsed-entity": {
-        source: "iana"
-      },
-      "application/xml-patch+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/xmpp+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/xop+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xop"]
-      },
-      "application/xproc+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["xpl"]
-      },
-      "application/xslt+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xslt"]
-      },
-      "application/xspf+xml": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["xspf"]
-      },
-      "application/xv+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["mxml", "xhvml", "xvml", "xvm"]
-      },
-      "application/yang": {
-        source: "iana",
-        extensions: ["yang"]
-      },
-      "application/yang-data+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/yang-data+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/yang-patch+json": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/yang-patch+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "application/yin+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["yin"]
-      },
-      "application/zip": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["zip"]
-      },
-      "application/zlib": {
-        source: "iana"
-      },
-      "application/zstd": {
-        source: "iana"
-      },
-      "audio/1d-interleaved-parityfec": {
-        source: "iana"
-      },
-      "audio/32kadpcm": {
-        source: "iana"
-      },
-      "audio/3gpp": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["3gpp"]
-      },
-      "audio/3gpp2": {
-        source: "iana"
-      },
-      "audio/aac": {
-        source: "iana"
-      },
-      "audio/ac3": {
-        source: "iana"
-      },
-      "audio/adpcm": {
-        source: "apache",
-        extensions: ["adp"]
-      },
-      "audio/amr": {
-        source: "iana"
-      },
-      "audio/amr-wb": {
-        source: "iana"
-      },
-      "audio/amr-wb+": {
-        source: "iana"
-      },
-      "audio/aptx": {
-        source: "iana"
-      },
-      "audio/asc": {
-        source: "iana"
-      },
-      "audio/atrac-advanced-lossless": {
-        source: "iana"
-      },
-      "audio/atrac-x": {
-        source: "iana"
-      },
-      "audio/atrac3": {
-        source: "iana"
-      },
-      "audio/basic": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["au", "snd"]
-      },
-      "audio/bv16": {
-        source: "iana"
-      },
-      "audio/bv32": {
-        source: "iana"
-      },
-      "audio/clearmode": {
-        source: "iana"
-      },
-      "audio/cn": {
-        source: "iana"
-      },
-      "audio/dat12": {
-        source: "iana"
-      },
-      "audio/dls": {
-        source: "iana"
-      },
-      "audio/dsr-es201108": {
-        source: "iana"
-      },
-      "audio/dsr-es202050": {
-        source: "iana"
-      },
-      "audio/dsr-es202211": {
-        source: "iana"
-      },
-      "audio/dsr-es202212": {
-        source: "iana"
-      },
-      "audio/dv": {
-        source: "iana"
-      },
-      "audio/dvi4": {
-        source: "iana"
-      },
-      "audio/eac3": {
-        source: "iana"
-      },
-      "audio/encaprtp": {
-        source: "iana"
-      },
-      "audio/evrc": {
-        source: "iana"
-      },
-      "audio/evrc-qcp": {
-        source: "iana"
-      },
-      "audio/evrc0": {
-        source: "iana"
-      },
-      "audio/evrc1": {
-        source: "iana"
-      },
-      "audio/evrcb": {
-        source: "iana"
-      },
-      "audio/evrcb0": {
-        source: "iana"
-      },
-      "audio/evrcb1": {
-        source: "iana"
-      },
-      "audio/evrcnw": {
-        source: "iana"
-      },
-      "audio/evrcnw0": {
-        source: "iana"
-      },
-      "audio/evrcnw1": {
-        source: "iana"
-      },
-      "audio/evrcwb": {
-        source: "iana"
-      },
-      "audio/evrcwb0": {
-        source: "iana"
-      },
-      "audio/evrcwb1": {
-        source: "iana"
-      },
-      "audio/evs": {
-        source: "iana"
-      },
-      "audio/flexfec": {
-        source: "iana"
-      },
-      "audio/fwdred": {
-        source: "iana"
-      },
-      "audio/g711-0": {
-        source: "iana"
-      },
-      "audio/g719": {
-        source: "iana"
-      },
-      "audio/g722": {
-        source: "iana"
-      },
-      "audio/g7221": {
-        source: "iana"
-      },
-      "audio/g723": {
-        source: "iana"
-      },
-      "audio/g726-16": {
-        source: "iana"
-      },
-      "audio/g726-24": {
-        source: "iana"
-      },
-      "audio/g726-32": {
-        source: "iana"
-      },
-      "audio/g726-40": {
-        source: "iana"
-      },
-      "audio/g728": {
-        source: "iana"
-      },
-      "audio/g729": {
-        source: "iana"
-      },
-      "audio/g7291": {
-        source: "iana"
-      },
-      "audio/g729d": {
-        source: "iana"
-      },
-      "audio/g729e": {
-        source: "iana"
-      },
-      "audio/gsm": {
-        source: "iana"
-      },
-      "audio/gsm-efr": {
-        source: "iana"
-      },
-      "audio/gsm-hr-08": {
-        source: "iana"
-      },
-      "audio/ilbc": {
-        source: "iana"
-      },
-      "audio/ip-mr_v2.5": {
-        source: "iana"
-      },
-      "audio/isac": {
-        source: "apache"
-      },
-      "audio/l16": {
-        source: "iana"
-      },
-      "audio/l20": {
-        source: "iana"
-      },
-      "audio/l24": {
-        source: "iana",
-        compressible: !1
-      },
-      "audio/l8": {
-        source: "iana"
-      },
-      "audio/lpc": {
-        source: "iana"
-      },
-      "audio/melp": {
-        source: "iana"
-      },
-      "audio/melp1200": {
-        source: "iana"
-      },
-      "audio/melp2400": {
-        source: "iana"
-      },
-      "audio/melp600": {
-        source: "iana"
-      },
-      "audio/mhas": {
-        source: "iana"
-      },
-      "audio/midi": {
-        source: "apache",
-        extensions: ["mid", "midi", "kar", "rmi"]
-      },
-      "audio/mobile-xmf": {
-        source: "iana",
-        extensions: ["mxmf"]
-      },
-      "audio/mp3": {
-        compressible: !1,
-        extensions: ["mp3"]
-      },
-      "audio/mp4": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["m4a", "mp4a"]
-      },
-      "audio/mp4a-latm": {
-        source: "iana"
-      },
-      "audio/mpa": {
-        source: "iana"
-      },
-      "audio/mpa-robust": {
-        source: "iana"
-      },
-      "audio/mpeg": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["mpga", "mp2", "mp2a", "mp3", "m2a", "m3a"]
-      },
-      "audio/mpeg4-generic": {
-        source: "iana"
-      },
-      "audio/musepack": {
-        source: "apache"
-      },
-      "audio/ogg": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["oga", "ogg", "spx"]
-      },
-      "audio/opus": {
-        source: "iana"
-      },
-      "audio/parityfec": {
-        source: "iana"
-      },
-      "audio/pcma": {
-        source: "iana"
-      },
-      "audio/pcma-wb": {
-        source: "iana"
-      },
-      "audio/pcmu": {
-        source: "iana"
-      },
-      "audio/pcmu-wb": {
-        source: "iana"
-      },
-      "audio/prs.sid": {
-        source: "iana"
-      },
-      "audio/qcelp": {
-        source: "iana"
-      },
-      "audio/raptorfec": {
-        source: "iana"
-      },
-      "audio/red": {
-        source: "iana"
-      },
-      "audio/rtp-enc-aescm128": {
-        source: "iana"
-      },
-      "audio/rtp-midi": {
-        source: "iana"
-      },
-      "audio/rtploopback": {
-        source: "iana"
-      },
-      "audio/rtx": {
-        source: "iana"
-      },
-      "audio/s3m": {
-        source: "apache",
-        extensions: ["s3m"]
-      },
-      "audio/silk": {
-        source: "apache",
-        extensions: ["sil"]
-      },
-      "audio/smv": {
-        source: "iana"
-      },
-      "audio/smv-qcp": {
-        source: "iana"
-      },
-      "audio/smv0": {
-        source: "iana"
-      },
-      "audio/sp-midi": {
-        source: "iana"
-      },
-      "audio/speex": {
-        source: "iana"
-      },
-      "audio/t140c": {
-        source: "iana"
-      },
-      "audio/t38": {
-        source: "iana"
-      },
-      "audio/telephone-event": {
-        source: "iana"
-      },
-      "audio/tetra_acelp": {
-        source: "iana"
-      },
-      "audio/tetra_acelp_bb": {
-        source: "iana"
-      },
-      "audio/tone": {
-        source: "iana"
-      },
-      "audio/uemclip": {
-        source: "iana"
-      },
-      "audio/ulpfec": {
-        source: "iana"
-      },
-      "audio/usac": {
-        source: "iana"
-      },
-      "audio/vdvi": {
-        source: "iana"
-      },
-      "audio/vmr-wb": {
-        source: "iana"
-      },
-      "audio/vnd.3gpp.iufp": {
-        source: "iana"
-      },
-      "audio/vnd.4sb": {
-        source: "iana"
-      },
-      "audio/vnd.audiokoz": {
-        source: "iana"
-      },
-      "audio/vnd.celp": {
-        source: "iana"
-      },
-      "audio/vnd.cisco.nse": {
-        source: "iana"
-      },
-      "audio/vnd.cmles.radio-events": {
-        source: "iana"
-      },
-      "audio/vnd.cns.anp1": {
-        source: "iana"
-      },
-      "audio/vnd.cns.inf1": {
-        source: "iana"
-      },
-      "audio/vnd.dece.audio": {
-        source: "iana",
-        extensions: ["uva", "uvva"]
-      },
-      "audio/vnd.digital-winds": {
-        source: "iana",
-        extensions: ["eol"]
-      },
-      "audio/vnd.dlna.adts": {
-        source: "iana"
-      },
-      "audio/vnd.dolby.heaac.1": {
-        source: "iana"
-      },
-      "audio/vnd.dolby.heaac.2": {
-        source: "iana"
-      },
-      "audio/vnd.dolby.mlp": {
-        source: "iana"
-      },
-      "audio/vnd.dolby.mps": {
-        source: "iana"
-      },
-      "audio/vnd.dolby.pl2": {
-        source: "iana"
-      },
-      "audio/vnd.dolby.pl2x": {
-        source: "iana"
-      },
-      "audio/vnd.dolby.pl2z": {
-        source: "iana"
-      },
-      "audio/vnd.dolby.pulse.1": {
-        source: "iana"
-      },
-      "audio/vnd.dra": {
-        source: "iana",
-        extensions: ["dra"]
-      },
-      "audio/vnd.dts": {
-        source: "iana",
-        extensions: ["dts"]
-      },
-      "audio/vnd.dts.hd": {
-        source: "iana",
-        extensions: ["dtshd"]
-      },
-      "audio/vnd.dts.uhd": {
-        source: "iana"
-      },
-      "audio/vnd.dvb.file": {
-        source: "iana"
-      },
-      "audio/vnd.everad.plj": {
-        source: "iana"
-      },
-      "audio/vnd.hns.audio": {
-        source: "iana"
-      },
-      "audio/vnd.lucent.voice": {
-        source: "iana",
-        extensions: ["lvp"]
-      },
-      "audio/vnd.ms-playready.media.pya": {
-        source: "iana",
-        extensions: ["pya"]
-      },
-      "audio/vnd.nokia.mobile-xmf": {
-        source: "iana"
-      },
-      "audio/vnd.nortel.vbk": {
-        source: "iana"
-      },
-      "audio/vnd.nuera.ecelp4800": {
-        source: "iana",
-        extensions: ["ecelp4800"]
-      },
-      "audio/vnd.nuera.ecelp7470": {
-        source: "iana",
-        extensions: ["ecelp7470"]
-      },
-      "audio/vnd.nuera.ecelp9600": {
-        source: "iana",
-        extensions: ["ecelp9600"]
-      },
-      "audio/vnd.octel.sbc": {
-        source: "iana"
-      },
-      "audio/vnd.presonus.multitrack": {
-        source: "iana"
-      },
-      "audio/vnd.qcelp": {
-        source: "iana"
-      },
-      "audio/vnd.rhetorex.32kadpcm": {
-        source: "iana"
-      },
-      "audio/vnd.rip": {
-        source: "iana",
-        extensions: ["rip"]
-      },
-      "audio/vnd.rn-realaudio": {
-        compressible: !1
-      },
-      "audio/vnd.sealedmedia.softseal.mpeg": {
-        source: "iana"
-      },
-      "audio/vnd.vmx.cvsd": {
-        source: "iana"
-      },
-      "audio/vnd.wave": {
-        compressible: !1
-      },
-      "audio/vorbis": {
-        source: "iana",
-        compressible: !1
-      },
-      "audio/vorbis-config": {
-        source: "iana"
-      },
-      "audio/wav": {
-        compressible: !1,
-        extensions: ["wav"]
-      },
-      "audio/wave": {
-        compressible: !1,
-        extensions: ["wav"]
-      },
-      "audio/webm": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["weba"]
-      },
-      "audio/x-aac": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["aac"]
-      },
-      "audio/x-aiff": {
-        source: "apache",
-        extensions: ["aif", "aiff", "aifc"]
-      },
-      "audio/x-caf": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["caf"]
-      },
-      "audio/x-flac": {
-        source: "apache",
-        extensions: ["flac"]
-      },
-      "audio/x-m4a": {
-        source: "nginx",
-        extensions: ["m4a"]
-      },
-      "audio/x-matroska": {
-        source: "apache",
-        extensions: ["mka"]
-      },
-      "audio/x-mpegurl": {
-        source: "apache",
-        extensions: ["m3u"]
-      },
-      "audio/x-ms-wax": {
-        source: "apache",
-        extensions: ["wax"]
-      },
-      "audio/x-ms-wma": {
-        source: "apache",
-        extensions: ["wma"]
-      },
-      "audio/x-pn-realaudio": {
-        source: "apache",
-        extensions: ["ram", "ra"]
-      },
-      "audio/x-pn-realaudio-plugin": {
-        source: "apache",
-        extensions: ["rmp"]
-      },
-      "audio/x-realaudio": {
-        source: "nginx",
-        extensions: ["ra"]
-      },
-      "audio/x-tta": {
-        source: "apache"
-      },
-      "audio/x-wav": {
-        source: "apache",
-        extensions: ["wav"]
-      },
-      "audio/xm": {
-        source: "apache",
-        extensions: ["xm"]
-      },
-      "chemical/x-cdx": {
-        source: "apache",
-        extensions: ["cdx"]
-      },
-      "chemical/x-cif": {
-        source: "apache",
-        extensions: ["cif"]
-      },
-      "chemical/x-cmdf": {
-        source: "apache",
-        extensions: ["cmdf"]
-      },
-      "chemical/x-cml": {
-        source: "apache",
-        extensions: ["cml"]
-      },
-      "chemical/x-csml": {
-        source: "apache",
-        extensions: ["csml"]
-      },
-      "chemical/x-pdb": {
-        source: "apache"
-      },
-      "chemical/x-xyz": {
-        source: "apache",
-        extensions: ["xyz"]
-      },
-      "font/collection": {
-        source: "iana",
-        extensions: ["ttc"]
-      },
-      "font/otf": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["otf"]
-      },
-      "font/sfnt": {
-        source: "iana"
-      },
-      "font/ttf": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["ttf"]
-      },
-      "font/woff": {
-        source: "iana",
-        extensions: ["woff"]
-      },
-      "font/woff2": {
-        source: "iana",
-        extensions: ["woff2"]
-      },
-      "image/aces": {
-        source: "iana",
-        extensions: ["exr"]
-      },
-      "image/apng": {
-        compressible: !1,
-        extensions: ["apng"]
-      },
-      "image/avci": {
-        source: "iana"
-      },
-      "image/avcs": {
-        source: "iana"
-      },
-      "image/bmp": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["bmp"]
-      },
-      "image/cgm": {
-        source: "iana",
-        extensions: ["cgm"]
-      },
-      "image/dicom-rle": {
-        source: "iana",
-        extensions: ["drle"]
-      },
-      "image/emf": {
-        source: "iana",
-        extensions: ["emf"]
-      },
-      "image/fits": {
-        source: "iana",
-        extensions: ["fits"]
-      },
-      "image/g3fax": {
-        source: "iana",
-        extensions: ["g3"]
-      },
-      "image/gif": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["gif"]
-      },
-      "image/heic": {
-        source: "iana",
-        extensions: ["heic"]
-      },
-      "image/heic-sequence": {
-        source: "iana",
-        extensions: ["heics"]
-      },
-      "image/heif": {
-        source: "iana",
-        extensions: ["heif"]
-      },
-      "image/heif-sequence": {
-        source: "iana",
-        extensions: ["heifs"]
-      },
-      "image/hej2k": {
-        source: "iana",
-        extensions: ["hej2"]
-      },
-      "image/hsj2": {
-        source: "iana",
-        extensions: ["hsj2"]
-      },
-      "image/ief": {
-        source: "iana",
-        extensions: ["ief"]
-      },
-      "image/jls": {
-        source: "iana",
-        extensions: ["jls"]
-      },
-      "image/jp2": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["jp2", "jpg2"]
-      },
-      "image/jpeg": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["jpeg", "jpg", "jpe"]
-      },
-      "image/jph": {
-        source: "iana",
-        extensions: ["jph"]
-      },
-      "image/jphc": {
-        source: "iana",
-        extensions: ["jhc"]
-      },
-      "image/jpm": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["jpm"]
-      },
-      "image/jpx": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["jpx", "jpf"]
-      },
-      "image/jxr": {
-        source: "iana",
-        extensions: ["jxr"]
-      },
-      "image/jxra": {
-        source: "iana",
-        extensions: ["jxra"]
-      },
-      "image/jxrs": {
-        source: "iana",
-        extensions: ["jxrs"]
-      },
-      "image/jxs": {
-        source: "iana",
-        extensions: ["jxs"]
-      },
-      "image/jxsc": {
-        source: "iana",
-        extensions: ["jxsc"]
-      },
-      "image/jxsi": {
-        source: "iana",
-        extensions: ["jxsi"]
-      },
-      "image/jxss": {
-        source: "iana",
-        extensions: ["jxss"]
-      },
-      "image/ktx": {
-        source: "iana",
-        extensions: ["ktx"]
-      },
-      "image/naplps": {
-        source: "iana"
-      },
-      "image/pjpeg": {
-        compressible: !1
-      },
-      "image/png": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["png"]
-      },
-      "image/prs.btif": {
-        source: "iana",
-        extensions: ["btif"]
-      },
-      "image/prs.pti": {
-        source: "iana",
-        extensions: ["pti"]
-      },
-      "image/pwg-raster": {
-        source: "iana"
-      },
-      "image/sgi": {
-        source: "apache",
-        extensions: ["sgi"]
-      },
-      "image/svg+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["svg", "svgz"]
-      },
-      "image/t38": {
-        source: "iana",
-        extensions: ["t38"]
-      },
-      "image/tiff": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["tif", "tiff"]
-      },
-      "image/tiff-fx": {
-        source: "iana",
-        extensions: ["tfx"]
-      },
-      "image/vnd.adobe.photoshop": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["psd"]
-      },
-      "image/vnd.airzip.accelerator.azv": {
-        source: "iana",
-        extensions: ["azv"]
-      },
-      "image/vnd.cns.inf2": {
-        source: "iana"
-      },
-      "image/vnd.dece.graphic": {
-        source: "iana",
-        extensions: ["uvi", "uvvi", "uvg", "uvvg"]
-      },
-      "image/vnd.djvu": {
-        source: "iana",
-        extensions: ["djvu", "djv"]
-      },
-      "image/vnd.dvb.subtitle": {
-        source: "iana",
-        extensions: ["sub"]
-      },
-      "image/vnd.dwg": {
-        source: "iana",
-        extensions: ["dwg"]
-      },
-      "image/vnd.dxf": {
-        source: "iana",
-        extensions: ["dxf"]
-      },
-      "image/vnd.fastbidsheet": {
-        source: "iana",
-        extensions: ["fbs"]
-      },
-      "image/vnd.fpx": {
-        source: "iana",
-        extensions: ["fpx"]
-      },
-      "image/vnd.fst": {
-        source: "iana",
-        extensions: ["fst"]
-      },
-      "image/vnd.fujixerox.edmics-mmr": {
-        source: "iana",
-        extensions: ["mmr"]
-      },
-      "image/vnd.fujixerox.edmics-rlc": {
-        source: "iana",
-        extensions: ["rlc"]
-      },
-      "image/vnd.globalgraphics.pgb": {
-        source: "iana"
-      },
-      "image/vnd.microsoft.icon": {
-        source: "iana",
-        extensions: ["ico"]
-      },
-      "image/vnd.mix": {
-        source: "iana"
-      },
-      "image/vnd.mozilla.apng": {
-        source: "iana"
-      },
-      "image/vnd.ms-dds": {
-        extensions: ["dds"]
-      },
-      "image/vnd.ms-modi": {
-        source: "iana",
-        extensions: ["mdi"]
-      },
-      "image/vnd.ms-photo": {
-        source: "apache",
-        extensions: ["wdp"]
-      },
-      "image/vnd.net-fpx": {
-        source: "iana",
-        extensions: ["npx"]
-      },
-      "image/vnd.radiance": {
-        source: "iana"
-      },
-      "image/vnd.sealed.png": {
-        source: "iana"
-      },
-      "image/vnd.sealedmedia.softseal.gif": {
-        source: "iana"
-      },
-      "image/vnd.sealedmedia.softseal.jpg": {
-        source: "iana"
-      },
-      "image/vnd.svf": {
-        source: "iana"
-      },
-      "image/vnd.tencent.tap": {
-        source: "iana",
-        extensions: ["tap"]
-      },
-      "image/vnd.valve.source.texture": {
-        source: "iana",
-        extensions: ["vtf"]
-      },
-      "image/vnd.wap.wbmp": {
-        source: "iana",
-        extensions: ["wbmp"]
-      },
-      "image/vnd.xiff": {
-        source: "iana",
-        extensions: ["xif"]
-      },
-      "image/vnd.zbrush.pcx": {
-        source: "iana",
-        extensions: ["pcx"]
-      },
-      "image/webp": {
-        source: "apache",
-        extensions: ["webp"]
-      },
-      "image/wmf": {
-        source: "iana",
-        extensions: ["wmf"]
-      },
-      "image/x-3ds": {
-        source: "apache",
-        extensions: ["3ds"]
-      },
-      "image/x-cmu-raster": {
-        source: "apache",
-        extensions: ["ras"]
-      },
-      "image/x-cmx": {
-        source: "apache",
-        extensions: ["cmx"]
-      },
-      "image/x-freehand": {
-        source: "apache",
-        extensions: ["fh", "fhc", "fh4", "fh5", "fh7"]
-      },
-      "image/x-icon": {
-        source: "apache",
-        compressible: !0,
-        extensions: ["ico"]
-      },
-      "image/x-jng": {
-        source: "nginx",
-        extensions: ["jng"]
-      },
-      "image/x-mrsid-image": {
-        source: "apache",
-        extensions: ["sid"]
-      },
-      "image/x-ms-bmp": {
-        source: "nginx",
-        compressible: !0,
-        extensions: ["bmp"]
-      },
-      "image/x-pcx": {
-        source: "apache",
-        extensions: ["pcx"]
-      },
-      "image/x-pict": {
-        source: "apache",
-        extensions: ["pic", "pct"]
-      },
-      "image/x-portable-anymap": {
-        source: "apache",
-        extensions: ["pnm"]
-      },
-      "image/x-portable-bitmap": {
-        source: "apache",
-        extensions: ["pbm"]
-      },
-      "image/x-portable-graymap": {
-        source: "apache",
-        extensions: ["pgm"]
-      },
-      "image/x-portable-pixmap": {
-        source: "apache",
-        extensions: ["ppm"]
-      },
-      "image/x-rgb": {
-        source: "apache",
-        extensions: ["rgb"]
-      },
-      "image/x-tga": {
-        source: "apache",
-        extensions: ["tga"]
-      },
-      "image/x-xbitmap": {
-        source: "apache",
-        extensions: ["xbm"]
-      },
-      "image/x-xcf": {
-        compressible: !1
-      },
-      "image/x-xpixmap": {
-        source: "apache",
-        extensions: ["xpm"]
-      },
-      "image/x-xwindowdump": {
-        source: "apache",
-        extensions: ["xwd"]
-      },
-      "message/cpim": {
-        source: "iana"
-      },
-      "message/delivery-status": {
-        source: "iana"
-      },
-      "message/disposition-notification": {
-        source: "iana",
-        extensions: ["disposition-notification"]
-      },
-      "message/external-body": {
-        source: "iana"
-      },
-      "message/feedback-report": {
-        source: "iana"
-      },
-      "message/global": {
-        source: "iana",
-        extensions: ["u8msg"]
-      },
-      "message/global-delivery-status": {
-        source: "iana",
-        extensions: ["u8dsn"]
-      },
-      "message/global-disposition-notification": {
-        source: "iana",
-        extensions: ["u8mdn"]
-      },
-      "message/global-headers": {
-        source: "iana",
-        extensions: ["u8hdr"]
-      },
-      "message/http": {
-        source: "iana",
-        compressible: !1
-      },
-      "message/imdn+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "message/news": {
-        source: "iana"
-      },
-      "message/partial": {
-        source: "iana",
-        compressible: !1
-      },
-      "message/rfc822": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["eml", "mime"]
-      },
-      "message/s-http": {
-        source: "iana"
-      },
-      "message/sip": {
-        source: "iana"
-      },
-      "message/sipfrag": {
-        source: "iana"
-      },
-      "message/tracking-status": {
-        source: "iana"
-      },
-      "message/vnd.si.simp": {
-        source: "iana"
-      },
-      "message/vnd.wfa.wsc": {
-        source: "iana",
-        extensions: ["wsc"]
-      },
-      "model/3mf": {
-        source: "iana",
-        extensions: ["3mf"]
-      },
-      "model/gltf+json": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["gltf"]
-      },
-      "model/gltf-binary": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["glb"]
-      },
-      "model/iges": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["igs", "iges"]
-      },
-      "model/mesh": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["msh", "mesh", "silo"]
-      },
-      "model/mtl": {
-        source: "iana",
-        extensions: ["mtl"]
-      },
-      "model/obj": {
-        source: "iana",
-        extensions: ["obj"]
-      },
-      "model/stl": {
-        source: "iana",
-        extensions: ["stl"]
-      },
-      "model/vnd.collada+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["dae"]
-      },
-      "model/vnd.dwf": {
-        source: "iana",
-        extensions: ["dwf"]
-      },
-      "model/vnd.flatland.3dml": {
-        source: "iana"
-      },
-      "model/vnd.gdl": {
-        source: "iana",
-        extensions: ["gdl"]
-      },
-      "model/vnd.gs-gdl": {
-        source: "apache"
-      },
-      "model/vnd.gs.gdl": {
-        source: "iana"
-      },
-      "model/vnd.gtw": {
-        source: "iana",
-        extensions: ["gtw"]
-      },
-      "model/vnd.moml+xml": {
-        source: "iana",
-        compressible: !0
-      },
-      "model/vnd.mts": {
-        source: "iana",
-        extensions: ["mts"]
-      },
-      "model/vnd.opengex": {
-        source: "iana",
-        extensions: ["ogex"]
-      },
-      "model/vnd.parasolid.transmit.binary": {
-        source: "iana",
-        extensions: ["x_b"]
-      },
-      "model/vnd.parasolid.transmit.text": {
-        source: "iana",
-        extensions: ["x_t"]
-      },
-      "model/vnd.rosette.annotated-data-model": {
-        source: "iana"
-      },
-      "model/vnd.usdz+zip": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["usdz"]
-      },
-      "model/vnd.valve.source.compiled-map": {
-        source: "iana",
-        extensions: ["bsp"]
-      },
-      "model/vnd.vtu": {
-        source: "iana",
-        extensions: ["vtu"]
-      },
-      "model/vrml": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["wrl", "vrml"]
-      },
-      "model/x3d+binary": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["x3db", "x3dbz"]
-      },
-      "model/x3d+fastinfoset": {
-        source: "iana",
-        extensions: ["x3db"]
-      },
-      "model/x3d+vrml": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["x3dv", "x3dvz"]
-      },
-      "model/x3d+xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["x3d", "x3dz"]
-      },
-      "model/x3d-vrml": {
-        source: "iana",
-        extensions: ["x3dv"]
-      },
-      "multipart/alternative": {
-        source: "iana",
-        compressible: !1
-      },
-      "multipart/appledouble": {
-        source: "iana"
-      },
-      "multipart/byteranges": {
-        source: "iana"
-      },
-      "multipart/digest": {
-        source: "iana"
-      },
-      "multipart/encrypted": {
-        source: "iana",
-        compressible: !1
-      },
-      "multipart/form-data": {
-        source: "iana",
-        compressible: !1
-      },
-      "multipart/header-set": {
-        source: "iana"
-      },
-      "multipart/mixed": {
-        source: "iana"
-      },
-      "multipart/multilingual": {
-        source: "iana"
-      },
-      "multipart/parallel": {
-        source: "iana"
-      },
-      "multipart/related": {
-        source: "iana",
-        compressible: !1
-      },
-      "multipart/report": {
-        source: "iana"
-      },
-      "multipart/signed": {
-        source: "iana",
-        compressible: !1
-      },
-      "multipart/vnd.bint.med-plus": {
-        source: "iana"
-      },
-      "multipart/voice-message": {
-        source: "iana"
-      },
-      "multipart/x-mixed-replace": {
-        source: "iana"
-      },
-      "text/1d-interleaved-parityfec": {
-        source: "iana"
-      },
-      "text/cache-manifest": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["appcache", "manifest"]
-      },
-      "text/calendar": {
-        source: "iana",
-        extensions: ["ics", "ifb"]
-      },
-      "text/calender": {
-        compressible: !0
-      },
-      "text/cmd": {
-        compressible: !0
-      },
-      "text/coffeescript": {
-        extensions: ["coffee", "litcoffee"]
-      },
-      "text/css": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0,
-        extensions: ["css"]
-      },
-      "text/csv": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["csv"]
-      },
-      "text/csv-schema": {
-        source: "iana"
-      },
-      "text/directory": {
-        source: "iana"
-      },
-      "text/dns": {
-        source: "iana"
-      },
-      "text/ecmascript": {
-        source: "iana"
-      },
-      "text/encaprtp": {
-        source: "iana"
-      },
-      "text/enriched": {
-        source: "iana"
-      },
-      "text/flexfec": {
-        source: "iana"
-      },
-      "text/fwdred": {
-        source: "iana"
-      },
-      "text/grammar-ref-list": {
-        source: "iana"
-      },
-      "text/html": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["html", "htm", "shtml"]
-      },
-      "text/jade": {
-        extensions: ["jade"]
-      },
-      "text/javascript": {
-        source: "iana",
-        compressible: !0
-      },
-      "text/jcr-cnd": {
-        source: "iana"
-      },
-      "text/jsx": {
-        compressible: !0,
-        extensions: ["jsx"]
-      },
-      "text/less": {
-        compressible: !0,
-        extensions: ["less"]
-      },
-      "text/markdown": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["markdown", "md"]
-      },
-      "text/mathml": {
-        source: "nginx",
-        extensions: ["mml"]
-      },
-      "text/mdx": {
-        compressible: !0,
-        extensions: ["mdx"]
-      },
-      "text/mizar": {
-        source: "iana"
-      },
-      "text/n3": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0,
-        extensions: ["n3"]
-      },
-      "text/parameters": {
-        source: "iana",
-        charset: "UTF-8"
-      },
-      "text/parityfec": {
-        source: "iana"
-      },
-      "text/plain": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["txt", "text", "conf", "def", "list", "log", "in", "ini"]
-      },
-      "text/provenance-notation": {
-        source: "iana",
-        charset: "UTF-8"
-      },
-      "text/prs.fallenstein.rst": {
-        source: "iana"
-      },
-      "text/prs.lines.tag": {
-        source: "iana",
-        extensions: ["dsc"]
-      },
-      "text/prs.prop.logic": {
-        source: "iana"
-      },
-      "text/raptorfec": {
-        source: "iana"
-      },
-      "text/red": {
-        source: "iana"
-      },
-      "text/rfc822-headers": {
-        source: "iana"
-      },
-      "text/richtext": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["rtx"]
-      },
-      "text/rtf": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["rtf"]
-      },
-      "text/rtp-enc-aescm128": {
-        source: "iana"
-      },
-      "text/rtploopback": {
-        source: "iana"
-      },
-      "text/rtx": {
-        source: "iana"
-      },
-      "text/sgml": {
-        source: "iana",
-        extensions: ["sgml", "sgm"]
-      },
-      "text/shex": {
-        extensions: ["shex"]
-      },
-      "text/slim": {
-        extensions: ["slim", "slm"]
-      },
-      "text/strings": {
-        source: "iana"
-      },
-      "text/stylus": {
-        extensions: ["stylus", "styl"]
-      },
-      "text/t140": {
-        source: "iana"
-      },
-      "text/tab-separated-values": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["tsv"]
-      },
-      "text/troff": {
-        source: "iana",
-        extensions: ["t", "tr", "roff", "man", "me", "ms"]
-      },
-      "text/turtle": {
-        source: "iana",
-        charset: "UTF-8",
-        extensions: ["ttl"]
-      },
-      "text/ulpfec": {
-        source: "iana"
-      },
-      "text/uri-list": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["uri", "uris", "urls"]
-      },
-      "text/vcard": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["vcard"]
-      },
-      "text/vnd.a": {
-        source: "iana"
-      },
-      "text/vnd.abc": {
-        source: "iana"
-      },
-      "text/vnd.ascii-art": {
-        source: "iana"
-      },
-      "text/vnd.curl": {
-        source: "iana",
-        extensions: ["curl"]
-      },
-      "text/vnd.curl.dcurl": {
-        source: "apache",
-        extensions: ["dcurl"]
-      },
-      "text/vnd.curl.mcurl": {
-        source: "apache",
-        extensions: ["mcurl"]
-      },
-      "text/vnd.curl.scurl": {
-        source: "apache",
-        extensions: ["scurl"]
-      },
-      "text/vnd.debian.copyright": {
-        source: "iana",
-        charset: "UTF-8"
-      },
-      "text/vnd.dmclientscript": {
-        source: "iana"
-      },
-      "text/vnd.dvb.subtitle": {
-        source: "iana",
-        extensions: ["sub"]
-      },
-      "text/vnd.esmertec.theme-descriptor": {
-        source: "iana",
-        charset: "UTF-8"
-      },
-      "text/vnd.ficlab.flt": {
-        source: "iana"
-      },
-      "text/vnd.fly": {
-        source: "iana",
-        extensions: ["fly"]
-      },
-      "text/vnd.fmi.flexstor": {
-        source: "iana",
-        extensions: ["flx"]
-      },
-      "text/vnd.gml": {
-        source: "iana"
-      },
-      "text/vnd.graphviz": {
-        source: "iana",
-        extensions: ["gv"]
-      },
-      "text/vnd.hgl": {
-        source: "iana"
-      },
-      "text/vnd.in3d.3dml": {
-        source: "iana",
-        extensions: ["3dml"]
-      },
-      "text/vnd.in3d.spot": {
-        source: "iana",
-        extensions: ["spot"]
-      },
-      "text/vnd.iptc.newsml": {
-        source: "iana"
-      },
-      "text/vnd.iptc.nitf": {
-        source: "iana"
-      },
-      "text/vnd.latex-z": {
-        source: "iana"
-      },
-      "text/vnd.motorola.reflex": {
-        source: "iana"
-      },
-      "text/vnd.ms-mediapackage": {
-        source: "iana"
-      },
-      "text/vnd.net2phone.commcenter.command": {
-        source: "iana"
-      },
-      "text/vnd.radisys.msml-basic-layout": {
-        source: "iana"
-      },
-      "text/vnd.senx.warpscript": {
-        source: "iana"
-      },
-      "text/vnd.si.uricatalogue": {
-        source: "iana"
-      },
-      "text/vnd.sosi": {
-        source: "iana"
-      },
-      "text/vnd.sun.j2me.app-descriptor": {
-        source: "iana",
-        charset: "UTF-8",
-        extensions: ["jad"]
-      },
-      "text/vnd.trolltech.linguist": {
-        source: "iana",
-        charset: "UTF-8"
-      },
-      "text/vnd.wap.si": {
-        source: "iana"
-      },
-      "text/vnd.wap.sl": {
-        source: "iana"
-      },
-      "text/vnd.wap.wml": {
-        source: "iana",
-        extensions: ["wml"]
-      },
-      "text/vnd.wap.wmlscript": {
-        source: "iana",
-        extensions: ["wmls"]
-      },
-      "text/vtt": {
-        source: "iana",
-        charset: "UTF-8",
-        compressible: !0,
-        extensions: ["vtt"]
-      },
-      "text/x-asm": {
-        source: "apache",
-        extensions: ["s", "asm"]
-      },
-      "text/x-c": {
-        source: "apache",
-        extensions: ["c", "cc", "cxx", "cpp", "h", "hh", "dic"]
-      },
-      "text/x-component": {
-        source: "nginx",
-        extensions: ["htc"]
-      },
-      "text/x-fortran": {
-        source: "apache",
-        extensions: ["f", "for", "f77", "f90"]
-      },
-      "text/x-gwt-rpc": {
-        compressible: !0
-      },
-      "text/x-handlebars-template": {
-        extensions: ["hbs"]
-      },
-      "text/x-java-source": {
-        source: "apache",
-        extensions: ["java"]
-      },
-      "text/x-jquery-tmpl": {
-        compressible: !0
-      },
-      "text/x-lua": {
-        extensions: ["lua"]
-      },
-      "text/x-markdown": {
-        compressible: !0,
-        extensions: ["mkd"]
-      },
-      "text/x-nfo": {
-        source: "apache",
-        extensions: ["nfo"]
-      },
-      "text/x-opml": {
-        source: "apache",
-        extensions: ["opml"]
-      },
-      "text/x-org": {
-        compressible: !0,
-        extensions: ["org"]
-      },
-      "text/x-pascal": {
-        source: "apache",
-        extensions: ["p", "pas"]
-      },
-      "text/x-processing": {
-        compressible: !0,
-        extensions: ["pde"]
-      },
-      "text/x-sass": {
-        extensions: ["sass"]
-      },
-      "text/x-scss": {
-        extensions: ["scss"]
-      },
-      "text/x-setext": {
-        source: "apache",
-        extensions: ["etx"]
-      },
-      "text/x-sfv": {
-        source: "apache",
-        extensions: ["sfv"]
-      },
-      "text/x-suse-ymp": {
-        compressible: !0,
-        extensions: ["ymp"]
-      },
-      "text/x-uuencode": {
-        source: "apache",
-        extensions: ["uu"]
-      },
-      "text/x-vcalendar": {
-        source: "apache",
-        extensions: ["vcs"]
-      },
-      "text/x-vcard": {
-        source: "apache",
-        extensions: ["vcf"]
-      },
-      "text/xml": {
-        source: "iana",
-        compressible: !0,
-        extensions: ["xml"]
-      },
-      "text/xml-external-parsed-entity": {
-        source: "iana"
-      },
-      "text/yaml": {
-        extensions: ["yaml", "yml"]
-      },
-      "video/1d-interleaved-parityfec": {
-        source: "iana"
-      },
-      "video/3gpp": {
-        source: "iana",
-        extensions: ["3gp", "3gpp"]
-      },
-      "video/3gpp-tt": {
-        source: "iana"
-      },
-      "video/3gpp2": {
-        source: "iana",
-        extensions: ["3g2"]
-      },
-      "video/bmpeg": {
-        source: "iana"
-      },
-      "video/bt656": {
-        source: "iana"
-      },
-      "video/celb": {
-        source: "iana"
-      },
-      "video/dv": {
-        source: "iana"
-      },
-      "video/encaprtp": {
-        source: "iana"
-      },
-      "video/flexfec": {
-        source: "iana"
-      },
-      "video/h261": {
-        source: "iana",
-        extensions: ["h261"]
-      },
-      "video/h263": {
-        source: "iana",
-        extensions: ["h263"]
-      },
-      "video/h263-1998": {
-        source: "iana"
-      },
-      "video/h263-2000": {
-        source: "iana"
-      },
-      "video/h264": {
-        source: "iana",
-        extensions: ["h264"]
-      },
-      "video/h264-rcdo": {
-        source: "iana"
-      },
-      "video/h264-svc": {
-        source: "iana"
-      },
-      "video/h265": {
-        source: "iana"
-      },
-      "video/iso.segment": {
-        source: "iana"
-      },
-      "video/jpeg": {
-        source: "iana",
-        extensions: ["jpgv"]
-      },
-      "video/jpeg2000": {
-        source: "iana"
-      },
-      "video/jpm": {
-        source: "apache",
-        extensions: ["jpm", "jpgm"]
-      },
-      "video/mj2": {
-        source: "iana",
-        extensions: ["mj2", "mjp2"]
-      },
-      "video/mp1s": {
-        source: "iana"
-      },
-      "video/mp2p": {
-        source: "iana"
-      },
-      "video/mp2t": {
-        source: "iana",
-        extensions: ["ts"]
-      },
-      "video/mp4": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["mp4", "mp4v", "mpg4"]
-      },
-      "video/mp4v-es": {
-        source: "iana"
-      },
-      "video/mpeg": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["mpeg", "mpg", "mpe", "m1v", "m2v"]
-      },
-      "video/mpeg4-generic": {
-        source: "iana"
-      },
-      "video/mpv": {
-        source: "iana"
-      },
-      "video/nv": {
-        source: "iana"
-      },
-      "video/ogg": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["ogv"]
-      },
-      "video/parityfec": {
-        source: "iana"
-      },
-      "video/pointer": {
-        source: "iana"
-      },
-      "video/quicktime": {
-        source: "iana",
-        compressible: !1,
-        extensions: ["qt", "mov"]
-      },
-      "video/raptorfec": {
-        source: "iana"
-      },
-      "video/raw": {
-        source: "iana"
-      },
-      "video/rtp-enc-aescm128": {
-        source: "iana"
-      },
-      "video/rtploopback": {
-        source: "iana"
-      },
-      "video/rtx": {
-        source: "iana"
-      },
-      "video/smpte291": {
-        source: "iana"
-      },
-      "video/smpte292m": {
-        source: "iana"
-      },
-      "video/ulpfec": {
-        source: "iana"
-      },
-      "video/vc1": {
-        source: "iana"
-      },
-      "video/vc2": {
-        source: "iana"
-      },
-      "video/vnd.cctv": {
-        source: "iana"
-      },
-      "video/vnd.dece.hd": {
-        source: "iana",
-        extensions: ["uvh", "uvvh"]
-      },
-      "video/vnd.dece.mobile": {
-        source: "iana",
-        extensions: ["uvm", "uvvm"]
-      },
-      "video/vnd.dece.mp4": {
-        source: "iana"
-      },
-      "video/vnd.dece.pd": {
-        source: "iana",
-        extensions: ["uvp", "uvvp"]
-      },
-      "video/vnd.dece.sd": {
-        source: "iana",
-        extensions: ["uvs", "uvvs"]
-      },
-      "video/vnd.dece.video": {
-        source: "iana",
-        extensions: ["uvv", "uvvv"]
-      },
-      "video/vnd.directv.mpeg": {
-        source: "iana"
-      },
-      "video/vnd.directv.mpeg-tts": {
-        source: "iana"
-      },
-      "video/vnd.dlna.mpeg-tts": {
-        source: "iana"
-      },
-      "video/vnd.dvb.file": {
-        source: "iana",
-        extensions: ["dvb"]
-      },
-      "video/vnd.fvt": {
-        source: "iana",
-        extensions: ["fvt"]
-      },
-      "video/vnd.hns.video": {
-        source: "iana"
-      },
-      "video/vnd.iptvforum.1dparityfec-1010": {
-        source: "iana"
-      },
-      "video/vnd.iptvforum.1dparityfec-2005": {
-        source: "iana"
-      },
-      "video/vnd.iptvforum.2dparityfec-1010": {
-        source: "iana"
-      },
-      "video/vnd.iptvforum.2dparityfec-2005": {
-        source: "iana"
-      },
-      "video/vnd.iptvforum.ttsavc": {
-        source: "iana"
-      },
-      "video/vnd.iptvforum.ttsmpeg2": {
-        source: "iana"
-      },
-      "video/vnd.motorola.video": {
-        source: "iana"
-      },
-      "video/vnd.motorola.videop": {
-        source: "iana"
-      },
-      "video/vnd.mpegurl": {
-        source: "iana",
-        extensions: ["mxu", "m4u"]
-      },
-      "video/vnd.ms-playready.media.pyv": {
-        source: "iana",
-        extensions: ["pyv"]
-      },
-      "video/vnd.nokia.interleaved-multimedia": {
-        source: "iana"
-      },
-      "video/vnd.nokia.mp4vr": {
-        source: "iana"
-      },
-      "video/vnd.nokia.videovoip": {
-        source: "iana"
-      },
-      "video/vnd.objectvideo": {
-        source: "iana"
-      },
-      "video/vnd.radgamettools.bink": {
-        source: "iana"
-      },
-      "video/vnd.radgamettools.smacker": {
-        source: "iana"
-      },
-      "video/vnd.sealed.mpeg1": {
-        source: "iana"
-      },
-      "video/vnd.sealed.mpeg4": {
-        source: "iana"
-      },
-      "video/vnd.sealed.swf": {
-        source: "iana"
-      },
-      "video/vnd.sealedmedia.softseal.mov": {
-        source: "iana"
-      },
-      "video/vnd.uvvu.mp4": {
-        source: "iana",
-        extensions: ["uvu", "uvvu"]
-      },
-      "video/vnd.vivo": {
-        source: "iana",
-        extensions: ["viv"]
-      },
-      "video/vnd.youtube.yt": {
-        source: "iana"
-      },
-      "video/vp8": {
-        source: "iana"
-      },
-      "video/webm": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["webm"]
-      },
-      "video/x-f4v": {
-        source: "apache",
-        extensions: ["f4v"]
-      },
-      "video/x-fli": {
-        source: "apache",
-        extensions: ["fli"]
-      },
-      "video/x-flv": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["flv"]
-      },
-      "video/x-m4v": {
-        source: "apache",
-        extensions: ["m4v"]
-      },
-      "video/x-matroska": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["mkv", "mk3d", "mks"]
-      },
-      "video/x-mng": {
-        source: "apache",
-        extensions: ["mng"]
-      },
-      "video/x-ms-asf": {
-        source: "apache",
-        extensions: ["asf", "asx"]
-      },
-      "video/x-ms-vob": {
-        source: "apache",
-        extensions: ["vob"]
-      },
-      "video/x-ms-wm": {
-        source: "apache",
-        extensions: ["wm"]
-      },
-      "video/x-ms-wmv": {
-        source: "apache",
-        compressible: !1,
-        extensions: ["wmv"]
-      },
-      "video/x-ms-wmx": {
-        source: "apache",
-        extensions: ["wmx"]
-      },
-      "video/x-ms-wvx": {
-        source: "apache",
-        extensions: ["wvx"]
-      },
-      "video/x-msvideo": {
-        source: "apache",
-        extensions: ["avi"]
-      },
-      "video/x-sgi-movie": {
-        source: "apache",
-        extensions: ["movie"]
-      },
-      "video/x-smv": {
-        source: "apache",
-        extensions: ["smv"]
-      },
-      "x-conference/x-cooltalk": {
-        source: "apache",
-        extensions: ["ice"]
-      },
-      "x-shader/x-fragment": {
-        compressible: !0
-      },
-      "x-shader/x-vertex": {
-        compressible: !0
-      }
-    };
-  }, function (e, a, n) {
-    /*!
-     * mime-db
-     * Copyright(c) 2014 Jonathan Ong
-     * MIT Licensed
-     */
-    e.exports = n(12);
-  }, function (e, a, n) {
-    "use strict";
-
-    function i(e) {
-      if (!e || "string" != typeof e) return !1;
-      var a = p.exec(e),
-          n = a && c[a[1].toLowerCase()];
-      return n && n.charset ? n.charset : !(!a || !l.test(a[1])) && "UTF-8";
-    }
-
-    function o(e) {
-      if (!e || "string" != typeof e) return !1;
-      var n = -1 === e.indexOf("/") ? a.lookup(e) : e;
-      if (!n) return !1;
-
-      if (-1 === n.indexOf("charset")) {
-        var i = a.charset(n);
-        i && (n += "; charset=" + i.toLowerCase());
-      }
-
-      return n;
-    }
-
-    function s(e) {
-      if (!e || "string" != typeof e) return !1;
-      var n = p.exec(e),
-          i = n && a.extensions[n[1].toLowerCase()];
-      return !(!i || !i.length) && i[0];
-    }
-
-    function t(e) {
-      if (!e || "string" != typeof e) return !1;
-      var n = r("x." + e).toLowerCase().substr(1);
-      return !!n && (a.types[n] || !1);
-    }
-    /*!
-     * mime-types
-     * Copyright(c) 2014 Jonathan Ong
-     * Copyright(c) 2015 Douglas Christopher Wilson
-     * MIT Licensed
-     */
-
-
-    var c = n(13),
-        r = n(15).extname,
-        p = /^\s*([^;\s]*)(?:;|\s|$)/,
-        l = /^text\//i;
-    a.charset = i, a.charsets = {
-      lookup: i
-    }, a.contentType = o, a.extension = s, a.extensions = Object.create(null), a.lookup = t, a.types = Object.create(null), function (e, a) {
-      var n = ["nginx", "apache", void 0, "iana"];
-      Object.keys(c).forEach(function (i) {
-        var o = c[i],
-            s = o.extensions;
-
-        if (s && s.length) {
-          e[i] = s;
-
-          for (var t = 0; t < s.length; t++) {
-            var r = s[t];
-
-            if (a[r]) {
-              var p = n.indexOf(c[a[r]].source),
-                  l = n.indexOf(o.source);
-              if ("application/octet-stream" !== a[r] && (p > l || p === l && "application/" === a[r].substr(0, 12))) continue;
-            }
-
-            a[r] = i;
-          }
-        }
-      });
-    }(a.extensions, a.types);
-  }, function (e, a, n) {
-    (function (e) {
-      function n(e, a) {
-        for (var n = 0, i = e.length - 1; i >= 0; i--) {
-          var o = e[i];
-          "." === o ? e.splice(i, 1) : ".." === o ? (e.splice(i, 1), n++) : n && (e.splice(i, 1), n--);
-        }
-
-        if (a) for (; n--; n) {
-          e.unshift("..");
-        }
-        return e;
-      }
-
-      function i(e, a) {
-        if (e.filter) return e.filter(a);
-
-        for (var n = [], i = 0; i < e.length; i++) {
-          a(e[i], i, e) && n.push(e[i]);
-        }
-
-        return n;
-      }
-
-      var o = /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/,
-          s = function s(e) {
-        return o.exec(e).slice(1);
-      };
-
-      a.resolve = function () {
-        for (var a = "", o = !1, s = arguments.length - 1; s >= -1 && !o; s--) {
-          var t = s >= 0 ? arguments[s] : e.cwd();
-          if ("string" != typeof t) throw new TypeError("Arguments to path.resolve must be strings");
-          t && (a = t + "/" + a, o = "/" === t.charAt(0));
-        }
-
-        return a = n(i(a.split("/"), function (e) {
-          return !!e;
-        }), !o).join("/"), (o ? "/" : "") + a || ".";
-      }, a.normalize = function (e) {
-        var o = a.isAbsolute(e),
-            s = "/" === t(e, -1);
-        return e = n(i(e.split("/"), function (e) {
-          return !!e;
-        }), !o).join("/"), e || o || (e = "."), e && s && (e += "/"), (o ? "/" : "") + e;
-      }, a.isAbsolute = function (e) {
-        return "/" === e.charAt(0);
-      }, a.join = function () {
-        var e = Array.prototype.slice.call(arguments, 0);
-        return a.normalize(i(e, function (e, a) {
-          if ("string" != typeof e) throw new TypeError("Arguments to path.join must be strings");
-          return e;
-        }).join("/"));
-      }, a.relative = function (e, n) {
-        function i(e) {
-          for (var a = 0; a < e.length && "" === e[a]; a++) {
-            ;
-          }
-
-          for (var n = e.length - 1; n >= 0 && "" === e[n]; n--) {
-            ;
-          }
-
-          return a > n ? [] : e.slice(a, n - a + 1);
-        }
-
-        e = a.resolve(e).substr(1), n = a.resolve(n).substr(1);
-
-        for (var o = i(e.split("/")), s = i(n.split("/")), t = Math.min(o.length, s.length), c = t, r = 0; r < t; r++) {
-          if (o[r] !== s[r]) {
-            c = r;
-            break;
-          }
-        }
-
-        for (var p = [], r = c; r < o.length; r++) {
-          p.push("..");
-        }
-
-        return p = p.concat(s.slice(c)), p.join("/");
-      }, a.sep = "/", a.delimiter = ":", a.dirname = function (e) {
-        var a = s(e),
-            n = a[0],
-            i = a[1];
-        return n || i ? (i && (i = i.substr(0, i.length - 1)), n + i) : ".";
-      }, a.basename = function (e, a) {
-        var n = s(e)[2];
-        return a && n.substr(-1 * a.length) === a && (n = n.substr(0, n.length - a.length)), n;
-      }, a.extname = function (e) {
-        return s(e)[3];
-      };
-      var t = "b" === "ab".substr(-1) ? function (e, a, n) {
-        return e.substr(a, n);
-      } : function (e, a, n) {
-        return a < 0 && (a = e.length + a), e.substr(a, n);
-      };
-    }).call(a, n(16));
-  }, function (e, a) {
-    function n() {
-      throw new Error("setTimeout has not been defined");
-    }
-
-    function i() {
-      throw new Error("clearTimeout has not been defined");
-    }
-
-    function o(e) {
-      if (l === setTimeout) return setTimeout(e, 0);
-      if ((l === n || !l) && setTimeout) return l = setTimeout, setTimeout(e, 0);
-
-      try {
-        return l(e, 0);
-      } catch (a) {
-        try {
-          return l.call(null, e, 0);
-        } catch (a) {
-          return l.call(this, e, 0);
-        }
-      }
-    }
-
-    function s(e) {
-      if (u === clearTimeout) return clearTimeout(e);
-      if ((u === i || !u) && clearTimeout) return u = clearTimeout, clearTimeout(e);
-
-      try {
-        return u(e);
-      } catch (a) {
-        try {
-          return u.call(null, e);
-        } catch (a) {
-          return u.call(this, e);
-        }
-      }
-    }
-
-    function t() {
-      f && m && (f = !1, m.length ? x = m.concat(x) : v = -1, x.length && c());
-    }
-
-    function c() {
-      if (!f) {
-        var e = o(t);
-        f = !0;
-
-        for (var a = x.length; a;) {
-          for (m = x, x = []; ++v < a;) {
-            m && m[v].run();
-          }
-
-          v = -1, a = x.length;
-        }
-
-        m = null, f = !1, s(e);
-      }
-    }
-
-    function r(e, a) {
-      this.fun = e, this.array = a;
-    }
-
-    function p() {}
-
-    var l,
-        u,
-        d = e.exports = {};
-    !function () {
-      try {
-        l = "function" == typeof setTimeout ? setTimeout : n;
-      } catch (e) {
-        l = n;
-      }
-
-      try {
-        u = "function" == typeof clearTimeout ? clearTimeout : i;
-      } catch (e) {
-        u = i;
-      }
-    }();
-    var m,
-        x = [],
-        f = !1,
-        v = -1;
-    d.nextTick = function (e) {
-      var a = new Array(arguments.length - 1);
-      if (arguments.length > 1) for (var n = 1; n < arguments.length; n++) {
-        a[n - 1] = arguments[n];
-      }
-      x.push(new r(e, a)), 1 !== x.length || f || o(c);
-    }, r.prototype.run = function () {
-      this.fun.apply(null, this.array);
-    }, d.title = "browser", d.browser = !0, d.env = {}, d.argv = [], d.version = "", d.versions = {}, d.on = p, d.addListener = p, d.once = p, d.off = p, d.removeListener = p, d.removeAllListeners = p, d.emit = p, d.prependListener = p, d.prependOnceListener = p, d.listeners = function (e) {
-      return [];
-    }, d.binding = function (e) {
-      throw new Error("process.binding is not supported");
-    }, d.cwd = function () {
-      return "/";
-    }, d.chdir = function (e) {
-      throw new Error("process.chdir is not supported");
-    }, d.umask = function () {
-      return 0;
-    };
-  }, function (e, a, n) {
-    function i(e) {
-      this.options = e || {
-        locator: {}
-      };
-    }
-
-    function o(e, a, n) {
-      function i(a) {
-        var i = e[a];
-        !i && t && (i = 2 == e.length ? function (n) {
-          e(a, n);
-        } : e), o[a] = i && function (e) {
-          i("[xmldom " + a + "]\t" + e + c(n));
-        } || function () {};
-      }
-
-      if (!e) {
-        if (a instanceof s) return a;
-        e = a;
-      }
-
-      var o = {},
-          t = e instanceof Function;
-      return n = n || {}, i("warning"), i("error"), i("fatalError"), o;
-    }
-
-    function s() {
-      this.cdata = !1;
-    }
-
-    function t(e, a) {
-      a.lineNumber = e.lineNumber, a.columnNumber = e.columnNumber;
-    }
-
-    function c(e) {
-      if (e) return "\n@" + (e.systemId || "") + "#[line:" + e.lineNumber + ",col:" + e.columnNumber + "]";
-    }
-
-    function r(e, a, n) {
-      return "string" == typeof e ? e.substr(a, n) : e.length >= a + n || a ? new java.lang.String(e, a, n) + "" : e;
-    }
-
-    function p(e, a) {
-      e.currentElement ? e.currentElement.appendChild(a) : e.doc.appendChild(a);
-    }
-
-    i.prototype.parseFromString = function (e, a) {
-      var n = this.options,
-          i = new l(),
-          t = n.domBuilder || new s(),
-          c = n.errorHandler,
-          r = n.locator,
-          p = n.xmlns || {},
-          u = {
-        lt: "<",
-        gt: ">",
-        amp: "&",
-        quot: '"',
-        apos: "'"
-      };
-      return r && t.setDocumentLocator(r), i.errorHandler = o(c, t, r), i.domBuilder = n.domBuilder || t, /\/x?html?$/.test(a) && (u.nbsp = " ", u.copy = "©", p[""] = "http://www.w3.org/1999/xhtml"), p.xml = p.xml || "http://www.w3.org/XML/1998/namespace", e ? i.parse(e, p, u) : i.errorHandler.error("invalid doc source"), t.doc;
-    }, s.prototype = {
-      startDocument: function startDocument() {
-        this.doc = new u().createDocument(null, null, null), this.locator && (this.doc.documentURI = this.locator.systemId);
-      },
-      startElement: function startElement(e, a, n, i) {
-        var o = this.doc,
-            s = o.createElementNS(e, n || a),
-            c = i.length;
-        p(this, s), this.currentElement = s, this.locator && t(this.locator, s);
-
-        for (var r = 0; r < c; r++) {
-          var e = i.getURI(r),
-              l = i.getValue(r),
-              n = i.getQName(r),
-              u = o.createAttributeNS(e, n);
-          this.locator && t(i.getLocator(r), u), u.value = u.nodeValue = l, s.setAttributeNode(u);
-        }
-      },
-      endElement: function endElement(e, a, n) {
-        var i = this.currentElement;
-        i.tagName;
-        this.currentElement = i.parentNode;
-      },
-      startPrefixMapping: function startPrefixMapping(e, a) {},
-      endPrefixMapping: function endPrefixMapping(e) {},
-      processingInstruction: function processingInstruction(e, a) {
-        var n = this.doc.createProcessingInstruction(e, a);
-        this.locator && t(this.locator, n), p(this, n);
-      },
-      ignorableWhitespace: function ignorableWhitespace(e, a, n) {},
-      characters: function characters(e, a, n) {
-        if (e = r.apply(this, arguments)) {
-          if (this.cdata) var i = this.doc.createCDATASection(e);else var i = this.doc.createTextNode(e);
-          this.currentElement ? this.currentElement.appendChild(i) : /^\s*$/.test(e) && this.doc.appendChild(i), this.locator && t(this.locator, i);
-        }
-      },
-      skippedEntity: function skippedEntity(e) {},
-      endDocument: function endDocument() {
-        this.doc.normalize();
-      },
-      setDocumentLocator: function setDocumentLocator(e) {
-        (this.locator = e) && (e.lineNumber = 0);
-      },
-      comment: function comment(e, a, n) {
-        e = r.apply(this, arguments);
-        var i = this.doc.createComment(e);
-        this.locator && t(this.locator, i), p(this, i);
-      },
-      startCDATA: function startCDATA() {
-        this.cdata = !0;
-      },
-      endCDATA: function endCDATA() {
-        this.cdata = !1;
-      },
-      startDTD: function startDTD(e, a, n) {
-        var i = this.doc.implementation;
-
-        if (i && i.createDocumentType) {
-          var o = i.createDocumentType(e, a, n);
-          this.locator && t(this.locator, o), p(this, o);
-        }
-      },
-      warning: function warning(e) {
-        console.warn("[xmldom warning]\t" + e, c(this.locator));
-      },
-      error: function error(e) {
-        console.error("[xmldom error]\t" + e, c(this.locator));
-      },
-      fatalError: function fatalError(e) {
-        throw console.error("[xmldom fatalError]\t" + e, c(this.locator)), e;
-      }
-    }, "endDTD,startEntity,endEntity,attributeDecl,elementDecl,externalEntityDecl,internalEntityDecl,resolveEntity,getExternalSubset,notationDecl,unparsedEntityDecl".replace(/\w+/g, function (e) {
-      s.prototype[e] = function () {
-        return null;
-      };
     });
-    var l = n(18).XMLReader,
-        u = a.DOMImplementation = n(1).DOMImplementation;
-    a.XMLSerializer = n(1).XMLSerializer, a.DOMParser = i;
-  }, function (e, a) {
-    function n() {}
-
-    function i(e, a, n, i, p) {
-      function m(e) {
-        if (e > 65535) {
-          e -= 65536;
-          var a = 55296 + (e >> 10),
-              n = 56320 + (1023 & e);
-          return String.fromCharCode(a, n);
+  }
+  
+  var Uploader = /*#__PURE__*/function (_EventEmitter) {
+    _inherits(Uploader, _EventEmitter);
+  
+    var _super = _createSuper(Uploader);
+  
+    function Uploader(opts) {
+      var _this;
+  
+      _classCallCheck(this, Uploader);
+  
+      _this = _super.call(this);
+  
+      _defineProperty(_assertThisInitialized(_this), "retryCommitNum", 3);
+  
+      _defineProperty(_assertThisInitialized(_this), "retryApplyNum", 3);
+  
+      _defineProperty(_assertThisInitialized(_this), "retryPrepareNum", 3);
+  
+      var self = _assertThisInitialized(_this);
+  
+      if (vodUtil.getType(opts) !== "object") {
+        throw new Error("opts must be a object");
+      }
+  
+      self.appId = opts.appId || undefined;
+      self.taskId = undefined;
+      self.cos = undefined;
+      var videoFile;
+  
+      if (opts.mediaFile) {
+        // alias
+        videoFile = opts.mediaFile;
+      } else {
+        videoFile = opts.videoFile;
+      }
+  
+      if (!videoFile) {
+        throw new Error("need `mediaFile` param");
+      }
+  
+      self.fileKey = videoFile.tempFilePath.replace(/^.*?([^/]{32}\.\w+)$/, "$1");
+  
+      if (opts.mediaName) {
+        // alias
+        self.fileName = opts.mediaName;
+      } else {
+        self.fileName = opts.fileName;
+      }
+  
+      var coverFile = opts.coverFile;
+      self.videoFileMessage = vodUtil.getFileMessage(videoFile, self.fileName);
+  
+      if (coverFile) {
+        coverFile.tempFilePath = coverFile.tempFilePaths[0];
+        coverFile.size = coverFile.tempFiles[0].size;
+        self.coverFileMessage = vodUtil.getFileMessage(coverFile, self.fileName);
+        self.fileKey = coverFile.tempFilePath.replace(/^.*?([^/]{32}\.\w+)$/, "$1");
+      }
+  
+      self.reportId = opts.reportId || "";
+      self.getSignature = opts.getSignature; // self.success = opts.success;
+  
+      self.error = opts.error;
+      self.progress = opts.progress;
+      self.finish = opts.finish;
+  
+      if (!self.getSignature) {
+        throw new Error("need `getSignature` param");
+      }
+  
+      if (!vodUtil.isFunction(self.getSignature) || // !vodUtil.isFunction(self.success) ||
+      !vodUtil.isFunction(self.error) || !vodUtil.isFunction(self.progress) || !vodUtil.isFunction(self.finish)) {
+        throw new Error("getSignature, error, progress, finish must be a Function.");
+      } // 网络状态变化时重新竞速获取最优 storeRegion
+  
+  
+      wx.onNetworkStatusChange(function (res) {
+        if (res.isConnected) {
+          _this.requestRegion();
         }
-
-        return String.fromCharCode(e);
+      });
+      return _this;
+    }
+  
+    _createClass(Uploader, [{
+      key: "setStorage",
+      value: function setStorage(name, val) {
+        wx.setStorageSync("wp_ugc_" + name, val);
       }
-
-      function x(e) {
-        var a = e.slice(1, -1);
-        return a in n ? n[a] : "#" === a.charAt(0) ? m(parseInt(a.substr(1).replace("x", "0x"))) : (p.error("entity not found:" + e), e);
-      }
-
-      function f(a) {
-        if (a > C) {
-          var n = e.substring(C, a).replace(/&#?\w+;/g, x);
-          y && v(C), i.characters(n, 0, a - C), C = a;
-        }
-      }
-
-      function v(a, n) {
-        for (; a >= g && (n = b.exec(e));) {
-          h = n.index, g = h + n[0].length, y.lineNumber++;
-        }
-
-        y.columnNumber = a - h + 1;
-      }
-
-      for (var h = 0, g = 0, b = /.*(?:\r\n?|\n)|.*$/g, y = i.locator, k = [{
-        currentNSMap: a
-      }], w = {}, C = 0;;) {
+    }, {
+      key: "getStorage",
+      value: function getStorage(name) {
         try {
-          var S = e.indexOf("<", C);
-
-          if (S < 0) {
-            if (!e.substr(C).match(/^\s*$/)) {
-              var T = i.doc,
-                  _ = T.createTextNode(e.substr(C));
-
-              T.appendChild(_), i.currentElement = _;
+          var val = wx.getStorageSync("wp_ugc_" + name);
+          return val;
+        } catch (e) {
+          return "";
+        }
+      }
+    }, {
+      key: "delStorage",
+      value: function delStorage(name) {
+        wx.removeStorageSync("wp_ugc_" + name);
+      }
+    }, {
+      key: "regionRace",
+      value: function regionRace(cosRegionList, cb) {
+        Promise.race(cosRegionList.map(function (item) {
+          return raceRequest(item);
+        })).then(function (res) {
+          wx.setStorageSync(COS_REGION_KEY, res); // report target region obtain from prepare
+  
+          if (cb) {
+            cb(res);
+          }
+        });
+      }
+    }, {
+      key: "requestRegion",
+      value: function requestRegion(callback) {
+        var self = this;
+        self.getSignature(function (signature) {
+          self.signature = signature;
+          var sendParams = {
+            signature: signature
+          };
+          var requestStartTime = Date.now();
+          wx.request({
+            method: "POST",
+            url: "https://vod2.qcloud.com/v3/index.php?Action=PrepareUploadUGC",
+            data: sendParams,
+            dataType: "json",
+            success: function success(result) {
+              if (result.data.code === 0) {
+                self.appId = self.appId || result.data.data.appId;
+                self.regionRace(result.data.data.cosRegionList, function (res) {
+                  self.emit(reportEvent.report_prepare, {
+                    data: {
+                      region: res
+                    },
+                    requestStartTime: requestStartTime
+                  });
+                  callback(res);
+                });
+              } else {
+                // eslint-disable-next-line no-lonely-if
+                if (self.retryPrepareNum > 0) {
+                  self.emit(reportEvent.report_prepare, {
+                    err: result.data,
+                    requestStartTime: requestStartTime
+                  });
+                  self.retryPrepareNum -= 1;
+                  self.requestRegion(callback);
+                } else {
+                  // eslint-disable-next-line no-lonely-if
+                  if (vodUtil.isFunction(self.error)) {
+                    self.error(result);
+                  }
+                }
+              }
+            },
+            fail: function fail(result) {
+              if (vodUtil.isFunction(self.error)) {
+                self.error(result);
+              }
             }
-
+          });
+        });
+      }
+    }, {
+      key: "getStoreRegion",
+      value: function getStoreRegion(callback) {
+        var self = this;
+  
+        try {
+          var region = wx.getStorageSync(COS_REGION_KEY);
+  
+          if (!region) {
+            throw new Error("no storage");
+          }
+  
+          return callback(region);
+        } catch (e) {
+          self.requestRegion(callback);
+        }
+      }
+    }, {
+      key: "start",
+      value: function start() {
+        var self = this; // self.getStoreRegion((region) => {
+        // });
+  
+        self.applyUpload(function (result) {
+          self.uploadFile(result, function () {
+            self.commitUpload();
+          });
+        });
+      }
+    }, {
+      key: "cancel",
+      value: function cancel() {
+        this.cos.cancelTask(this.taskId);
+      }
+    }, {
+      key: "pause",
+      value: function pause() {
+        this.cos.pauseTask(this.taskId);
+      }
+    }, {
+      key: "restart",
+      value: function restart() {
+        this.cos.restartTask(this.taskId);
+      }
+    }, {
+      key: "applyUpload",
+      value: function applyUpload(callback) {
+        var self = this;
+        self.getSignature(function (signature) {
+          self.signature = signature;
+          var sessionKey = self.getStorage(self.fileKey);
+          var sendParams;
+  
+          if (sessionKey) {
+            sendParams = {
+              signature: signature,
+              vodSessionKey: sessionKey
+            };
+          } else {
+            sendParams = {
+              signature: signature,
+              videoName: self.videoFileMessage.name,
+              videoType: self.videoFileMessage.type // videoSize: self.videoFileMessage.size,
+  
+            };
+          }
+  
+          if (self.coverFileMessage) {
+            // upload video together with cover
+            sendParams.coverName = self.coverFileMessage.name;
+            sendParams.coverType = self.coverFileMessage.type; // sendParams.coverSize = self.coverFileMessage.size;
+          }
+  
+          var requestStartTime = Date.now();
+          wx.request({
+            method: "POST",
+            url: "https://vod2.qcloud.com/v3/index.php?Action=ApplyUploadUGC",
+            data: sendParams,
+            dataType: "json",
+            success: function success(result) {
+              if (result.data.code === 0) {
+                self.appId = self.appId || result.data.data.appId;
+                self.emit(reportEvent.report_apply, {
+                  data: sendParams,
+                  requestStartTime: requestStartTime
+                });
+                self.vodSessionKey = result.data.data.vodSessionKey;
+                self.setStorage(self.fileKey, self.vodSessionKey);
+                callback(result);
+              } else {
+                // eslint-disable-next-line no-lonely-if
+                if (self.retryApplyNum > 0) {
+                  self.emit(reportEvent.report_apply, {
+                    err: result.data,
+                    requestStartTime: requestStartTime
+                  });
+                  self.retryApplyNum -= 1;
+                  self.applyUpload(callback);
+                } else {
+                  // eslint-disable-next-line no-lonely-if
+                  if (vodUtil.isFunction(self.error)) {
+                    self.error(result);
+                  }
+                }
+              }
+            },
+            fail: function fail(result) {
+              if (vodUtil.isFunction(self.error)) {
+                self.error(result);
+              }
+            }
+          });
+        });
+      }
+    }, {
+      key: "uploadFile",
+      value: function uploadFile(result, cb) {
+        var self = this;
+        var applyData = result.data.data;
+        var cos = new COS({
+          getAuthorization: function getAuthorization(options, callback) {
+            callback({
+              TmpSecretId: applyData.tempCertificate.secretId,
+              TmpSecretKey: applyData.tempCertificate.secretKey,
+              XCosSecurityToken: applyData.tempCertificate.token,
+              StartTime: applyData.timestamp,
+              ExpiredTime: applyData.tempCertificate.expiredTime
+            });
+          }
+        });
+        cos.on("before-send", function (opt) {
+          var url = opt.url;
+          var u = url.match(/^(https?:\/\/([^\/]+)\/)([^\/]*\/?)(.*)$/);
+          opt.url = url.replace(u[2], "vod2.qcloud.com");
+          opt.headers["Vod-Forward-Cos"] = u[2];
+        });
+        this.cos = cos;
+        var cosCommonParam = {
+          bucket: "".concat(applyData.storageBucket, "-").concat(applyData.storageAppId),
+          region: applyData.storageRegionV5
+        };
+        var uploadCosParams = [];
+  
+        if (this.videoFileMessage) {
+          var cosVideoParam = _objectSpread(_objectSpread({}, cosCommonParam), {}, {
+            filePath: this.videoFileMessage.tempFilePath,
+            fileSize: this.videoFileMessage.size,
+            key: applyData.video.storagePath,
+            onProgress: function onProgress(info) {
+              if (vodUtil.isFunction(self.progress)) {
+                self.progress(info);
+              }
+            },
+            // onProgress: function onProgress(data) {
+            //   self.emit(UploaderEvent.video_progress, data);
+            //   self.emit(UploaderEvent.media_progress, data);
+            // },
+            onTaskReady: function onTaskReady(taskId) {
+              self.taskId = taskId;
+            }
+          });
+  
+          uploadCosParams.push(cosVideoParam);
+        }
+  
+        if (this.coverFileMessage) {
+          var cosCoverParam = _objectSpread(_objectSpread({}, cosCommonParam), {}, {
+            fileSize: this.coverFileMessage.size,
+            filePath: this.coverFileMessage.tempFilePath,
+            key: applyData.cover.storagePath,
+            onTaskReady: vodUtil.noop,
+            onProgress: vodUtil.noop // cover don't need progress
+            // onProgress: function onProgress(data) {
+            //   self.emit(UploaderEvent.cover_progress, data);
+            // }
+  
+          });
+  
+          uploadCosParams.push(cosCoverParam);
+        }
+  
+        var uploadPromises = uploadCosParams.map(function (uploadCosParam) {
+          return new Promise(function (resolve, reject) {
+            var requestStartTime = Date.now();
+            cos.sliceUploadFile( // cos.postObject(
+            {
+              Bucket: uploadCosParam.bucket,
+              Region: uploadCosParam.region,
+              Key: uploadCosParam.key,
+              FilePath: uploadCosParam.filePath,
+              FileSize: uploadCosParam.fileSize,
+              onProgress: uploadCosParam.onProgress,
+              onTaskReady: uploadCosParam.onTaskReady
+            }, function (err, data) {
+              if (err) {
+                // when fails
+                if (uploadCosParam.filePath === self.videoFileMessage.tempFilePath) {
+                  self.emit(reportEvent.report_cos_upload, {
+                    err: err,
+                    requestStartTime: requestStartTime
+                  });
+                }
+  
+                if (vodUtil.isFunction(self.error)) {
+                  var error = err.error;
+                  var errObj = error && error.Code ? {
+                    code: error.Code,
+                    message: error.Message || error.message,
+                    reqid: error.RequestId || undefined
+                  } : {
+                    code: err.statusCode || -2,
+                    message: "cos error"
+                  };
+                  self.error(errObj);
+                }
+  
+                reject();
+                return;
+              } // when succeeds
+              // if (vodUtil.isFunction(self.success)) {
+              //   self.success(data);
+              // }
+  
+  
+              resolve();
+            });
+          });
+        });
+        Promise.all(uploadPromises).then(function () {
+          cb();
+        });
+      }
+    }, {
+      key: "commitUpload",
+      value: function commitUpload() {
+        var self = this;
+        var sendParam = {
+          signature: this.signature,
+          vodSessionKey: this.vodSessionKey
+        };
+        var requestStartTime = Date.now();
+        wx.request({
+          method: "POST",
+          url: "https://vod2.qcloud.com/v3/index.php?Action=CommitUploadUGC",
+          data: sendParam,
+          dataType: "json",
+          success: function success(result) {
+            if (result.data.code === 0) {
+              self.emit(reportEvent.report_commit, {
+                data: result.data.data,
+                requestStartTime: requestStartTime
+              });
+              var res = result.data.data;
+  
+              if (vodUtil.isFunction(self.finish)) {
+                self.finish({
+                  fileId: res.fileId,
+                  videoName: self.videoFileMessage.name,
+                  videoUrl: res.video && res.video.url,
+                  coverUrl: res.cover && res.cover.url
+                });
+              }
+  
+              self.delStorage(self.fileKey);
+            } else {
+              // eslint-disable-next-line no-lonely-if
+              self.emit(reportEvent.report_commit, {
+                err: result.data,
+                requestStartTime: requestStartTime
+              });
+  
+              if (self.retryCommitNum > 0) {
+                self.retryCommitNum -= 1;
+                self.commitUpload();
+              } else {
+                // eslint-disable-next-line no-lonely-if
+                if (vodUtil.isFunction(self.error)) {
+                  self.error(result);
+                }
+              }
+            }
+          },
+          fail: function fail(result) {
+            if (vodUtil.isFunction(self.error)) {
+              self.error(result);
+            }
+          }
+        });
+      }
+    }]);
+  
+    return Uploader;
+  }(EventEmitter);
+  
+  module.exports = {
+    start: function start(params) {
+      try {
+        var uploader = new Uploader(params);
+        new VodReporter(uploader);
+        uploader.start();
+        return uploader;
+      } catch (e) {
+        if (vodUtil.isFunction(params.error)) {
+          params.error({
+            code: -1,
+            message: e.message
+          });
+        } else {
+          throw e;
+        }
+      }
+    }
+  };
+  
+  /***/ }),
+  /* 1 */
+  /***/ (function(module, exports, __webpack_require__) {
+  
+  /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+  
+  (function webpackUniversalModuleDefinition(root, factory) {
+    if (( false ? undefined : _typeof(exports)) === "object" && ( false ? undefined : _typeof(module)) === "object") module.exports = factory();else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+          __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+          (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+          __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else {}
+  })(typeof self !== "undefined" ? self : this, function () {
+    return (
+      /******/
+      function (modules) {
+        // webpackBootstrap
+  
+        /******/
+        // The module cache
+  
+        /******/
+        var installedModules = {}; // The require function
+  
+        /******/
+  
+        /******/
+  
+        /******/
+  
+        function __webpack_require__(moduleId) {
+          /******/
+  
+          /******/
+          // Check if module is in cache
+  
+          /******/
+          if (installedModules[moduleId]) {
+            /******/
+            return installedModules[moduleId].exports;
+            /******/
+          } // Create a new module (and put it into the cache)
+  
+          /******/
+  
+          /******/
+  
+  
+          var module = installedModules[moduleId] = {
+            /******/
+            i: moduleId,
+  
+            /******/
+            l: false,
+  
+            /******/
+            exports: {}
+            /******/
+  
+          }; // Execute the module function
+  
+          /******/
+  
+          /******/
+  
+          /******/
+  
+          modules[moduleId].call(module.exports, module, module.exports, __webpack_require__); // Flag the module as loaded
+  
+          /******/
+  
+          /******/
+  
+          /******/
+  
+          module.l = true; // Return the exports of the module
+  
+          /******/
+  
+          /******/
+  
+          /******/
+  
+          return module.exports;
+          /******/
+        } // expose the modules object (__webpack_modules__)
+  
+        /******/
+  
+        /******/
+  
+        /******/
+  
+        /******/
+  
+  
+        __webpack_require__.m = modules; // expose the module cache
+  
+        /******/
+  
+        /******/
+  
+        /******/
+  
+        __webpack_require__.c = installedModules; // define getter function for harmony exports
+  
+        /******/
+  
+        /******/
+  
+        /******/
+  
+        __webpack_require__.d = function (exports, name, getter) {
+          /******/
+          if (!__webpack_require__.o(exports, name)) {
+            /******/
+            Object.defineProperty(exports, name, {
+              /******/
+              configurable: false,
+  
+              /******/
+              enumerable: true,
+  
+              /******/
+              get: getter
+              /******/
+  
+            });
+            /******/
+          }
+          /******/
+  
+        }; // getDefaultExport function for compatibility with non-harmony modules
+  
+        /******/
+  
+        /******/
+  
+        /******/
+  
+  
+        __webpack_require__.n = function (module) {
+          /******/
+          var getter = module && module.__esModule ?
+          /******/
+          function getDefault() {
+            return module["default"];
+          } :
+          /******/
+          function getModuleExports() {
+            return module;
+          };
+          /******/
+  
+          __webpack_require__.d(getter, "a", getter);
+          /******/
+  
+  
+          return getter;
+          /******/
+        }; // Object.prototype.hasOwnProperty.call
+  
+        /******/
+  
+        /******/
+  
+        /******/
+  
+  
+        __webpack_require__.o = function (object, property) {
+          return Object.prototype.hasOwnProperty.call(object, property);
+        }; // __webpack_public_path__
+  
+        /******/
+  
+        /******/
+  
+        /******/
+  
+  
+        __webpack_require__.p = "D:\\code\\cos-wx-sdk-v5\\demo\\lib"; // Load entry module and return exports
+  
+        /******/
+  
+        /******/
+  
+        /******/
+  
+        return __webpack_require__(__webpack_require__.s = 6);
+        /******/
+      }(
+      /************************************************************************/
+  
+      /******/
+      [
+      /* 0 */
+  
+      /***/
+      function (module, exports, __webpack_require__) {
+        "use strict";
+        /* WEBPACK VAR INJECTION */
+  
+        (function (global) {
+          var md5 = __webpack_require__(8);
+  
+          var CryptoJS = __webpack_require__(11);
+  
+          var xml2json = __webpack_require__(12);
+  
+          var json2xml = __webpack_require__(15);
+  
+          var base64 = __webpack_require__(3);
+  
+          var btoa = base64.btoa;
+          var wxfs = wx.getFileSystemManager();
+  
+          function camSafeUrlEncode(str) {
+            return encodeURIComponent(str).replace(/!/g, "%21").replace(/'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29").replace(/\*/g, "%2A");
+          } //测试用的key后面可以去掉
+  
+  
+          var getAuth = function getAuth(opt) {
+            opt = opt || {};
+            var SecretId = opt.SecretId;
+            var SecretKey = opt.SecretKey;
+            var KeyTime = opt.KeyTime;
+            var method = (opt.method || opt.Method || "get").toLowerCase();
+            var queryParams = clone(opt.Query || opt.params || {});
+            var headers = clone(opt.Headers || opt.headers || {});
+            var Key = opt.Key || "";
+            var pathname;
+  
+            if (opt.UseRawKey) {
+              pathname = opt.Pathname || opt.pathname || "/" + Key;
+            } else {
+              pathname = opt.Pathname || opt.pathname || Key;
+              pathname.indexOf("/") !== 0 && (pathname = "/" + pathname);
+            }
+  
+            if (!SecretId) return console.error("missing param SecretId");
+            if (!SecretKey) return console.error("missing param SecretKey");
+  
+            var getObjectKeys = function getObjectKeys(obj, forKey) {
+              var list = [];
+  
+              for (var key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                  list.push(forKey ? camSafeUrlEncode(key).toLowerCase() : key);
+                }
+              }
+  
+              return list.sort(function (a, b) {
+                a = a.toLowerCase();
+                b = b.toLowerCase();
+                return a === b ? 0 : a > b ? 1 : -1;
+              });
+            };
+  
+            var obj2str = function obj2str(obj) {
+              var i, key, val;
+              var list = [];
+              var keyList = getObjectKeys(obj);
+  
+              for (i = 0; i < keyList.length; i++) {
+                key = keyList[i];
+                val = obj[key] === undefined || obj[key] === null ? "" : "" + obj[key];
+                key = camSafeUrlEncode(key).toLowerCase();
+                val = camSafeUrlEncode(val) || "";
+                list.push(key + "=" + val);
+              }
+  
+              return list.join("&");
+            }; // 签名有效起止时间
+  
+  
+            var now = Math.round(getSkewTime(opt.SystemClockOffset) / 1000) - 1;
+            var exp = now;
+            var Expires = opt.Expires || opt.expires;
+  
+            if (Expires === undefined) {
+              exp += 900; // 签名过期时间为当前 + 900s
+            } else {
+              exp += Expires * 1 || 0;
+            } // 要用到的 Authorization 参数列表
+  
+  
+            var qSignAlgorithm = "sha1";
+            var qAk = SecretId;
+            var qSignTime = KeyTime || now + ";" + exp;
+            var qKeyTime = KeyTime || now + ";" + exp;
+            var qHeaderList = getObjectKeys(headers, true).join(";").toLowerCase();
+            var qUrlParamList = getObjectKeys(queryParams, true).join(";").toLowerCase(); // 签名算法说明文档：https://www.qcloud.com/document/product/436/7778
+            // 步骤一：计算 SignKey
+  
+            var signKey = CryptoJS.HmacSHA1(qKeyTime, SecretKey).toString(); // 步骤二：构成 FormatString
+  
+            var formatString = [method, pathname, obj2str(queryParams), obj2str(headers), ""].join("\n"); // 步骤三：计算 StringToSign
+  
+            var stringToSign = ["sha1", qSignTime, CryptoJS.SHA1(formatString).toString(), ""].join("\n"); // 步骤四：计算 Signature
+  
+            var qSignature = CryptoJS.HmacSHA1(stringToSign, signKey).toString(); // 步骤五：构造 Authorization
+  
+            var authorization = ["q-sign-algorithm=" + qSignAlgorithm, "q-ak=" + qAk, "q-sign-time=" + qSignTime, "q-key-time=" + qKeyTime, "q-header-list=" + qHeaderList, "q-url-param-list=" + qUrlParamList, "q-signature=" + qSignature].join("&");
+            return authorization;
+          };
+  
+          var noop = function noop() {}; // 清除对象里值为的 undefined 或 null 的属性
+  
+  
+          var clearKey = function clearKey(obj) {
+            var retObj = {};
+  
+            for (var key in obj) {
+              if (obj.hasOwnProperty(key) && obj[key] !== undefined && obj[key] !== null) {
+                retObj[key] = obj[key];
+              }
+            }
+  
+            return retObj;
+          }; // 获取文件分片
+  
+  
+          var fileSlice = function fileSlice(FilePath, start, end, callback) {
+            if (FilePath) {
+              wxfs.readFile({
+                filePath: FilePath,
+                position: start,
+                length: end - start,
+                success: function success(res) {
+                  callback(res.data);
+                },
+                fail: function fail() {
+                  callback(null);
+                }
+              });
+            } else {
+              callback(null);
+            }
+          }; // 获取文件内容的 MD5
+  
+  
+          var getBodyMd5 = function getBodyMd5(UploadCheckContentMd5, Body, callback) {
+            callback = callback || noop;
+  
+            if (UploadCheckContentMd5) {
+              if (Body && Body instanceof ArrayBuffer) {
+                util.getFileMd5(Body, function (err, md5) {
+                  callback(md5);
+                });
+              } else {
+                callback();
+              }
+            } else {
+              callback();
+            }
+          }; // 获取文件 md5 值
+  
+  
+          var getFileMd5 = function getFileMd5(body, callback) {
+            var hash = md5(body);
+            callback && callback(hash);
+            return hash;
+          };
+  
+          function clone(obj) {
+            return map(obj, function (v) {
+              return _typeof(v) === "object" ? clone(v) : v;
+            });
+          }
+  
+          function attr(obj, name, defaultValue) {
+            return obj && name in obj ? obj[name] : defaultValue;
+          }
+  
+          function extend(target, source) {
+            each(source, function (val, key) {
+              target[key] = source[key];
+            });
+            return target;
+          }
+  
+          function isArray(arr) {
+            return arr instanceof Array;
+          }
+  
+          function isInArray(arr, item) {
+            var flag = false;
+  
+            for (var i = 0; i < arr.length; i++) {
+              if (item === arr[i]) {
+                flag = true;
+                break;
+              }
+            }
+  
+            return flag;
+          }
+  
+          function makeArray(arr) {
+            return isArray(arr) ? arr : [arr];
+          }
+  
+          function each(obj, fn) {
+            for (var i in obj) {
+              if (obj.hasOwnProperty(i)) {
+                fn(obj[i], i);
+              }
+            }
+          }
+  
+          function map(obj, fn) {
+            var o = isArray(obj) ? [] : {};
+  
+            for (var i in obj) {
+              if (obj.hasOwnProperty(i)) {
+                o[i] = fn(obj[i], i);
+              }
+            }
+  
+            return o;
+          }
+  
+          function filter(obj, fn) {
+            var iaArr = isArray(obj);
+            var o = iaArr ? [] : {};
+  
+            for (var i in obj) {
+              if (obj.hasOwnProperty(i)) {
+                if (fn(obj[i], i)) {
+                  if (iaArr) {
+                    o.push(obj[i]);
+                  } else {
+                    o[i] = obj[i];
+                  }
+                }
+              }
+            }
+  
+            return o;
+          }
+  
+          var binaryBase64 = function binaryBase64(str) {
+            var i,
+                len,
+                _char,
+                res = "";
+  
+            for (i = 0, len = str.length / 2; i < len; i++) {
+              _char = parseInt(str[i * 2] + str[i * 2 + 1], 16);
+              res += String.fromCharCode(_char);
+            }
+  
+            return btoa(res);
+          };
+  
+          var uuid = function uuid() {
+            var S4 = function S4() {
+              return ((1 + Math.random()) * 0x10000 | 0).toString(16).substring(1);
+            };
+  
+            return S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4();
+          };
+  
+          var hasMissingParams = function hasMissingParams(apiName, params) {
+            var Bucket = params.Bucket;
+            var Region = params.Region;
+            var Key = params.Key;
+  
+            if (apiName.indexOf("Bucket") > -1 || apiName === "deleteMultipleObject" || apiName === "multipartList" || apiName === "listObjectVersions") {
+              if (!Bucket) return "Bucket";
+              if (!Region) return "Region";
+            } else if (apiName.indexOf("Object") > -1 || apiName.indexOf("multipart") > -1 || apiName === "sliceUploadFile" || apiName === "abortUploadTask") {
+              if (!Bucket) return "Bucket";
+              if (!Region) return "Region";
+              if (!Key) return "Key";
+            }
+  
+            return false;
+          };
+  
+          var formatParams = function formatParams(apiName, params) {
+            // 复制参数对象
+            params = extend({}, params); // 统一处理 Headers
+  
+            if (apiName !== "getAuth" && apiName !== "getV4Auth" && apiName !== "getObjectUrl") {
+              var Headers = params.Headers || {};
+  
+              if (params && _typeof(params) === "object") {
+                (function () {
+                  for (var key in params) {
+                    if (params.hasOwnProperty(key) && key.indexOf("x-cos-") > -1) {
+                      Headers[key] = params[key];
+                    }
+                  }
+                })();
+  
+                var headerMap = {
+                  // params headers
+                  "x-cos-mfa": "MFA",
+                  "Content-MD5": "ContentMD5",
+                  "Content-Length": "ContentLength",
+                  "Content-Type": "ContentType",
+                  Expect: "Expect",
+                  Expires: "Expires",
+                  "Cache-Control": "CacheControl",
+                  "Content-Disposition": "ContentDisposition",
+                  "Content-Encoding": "ContentEncoding",
+                  Range: "Range",
+                  "If-Modified-Since": "IfModifiedSince",
+                  "If-Unmodified-Since": "IfUnmodifiedSince",
+                  "If-Match": "IfMatch",
+                  "If-None-Match": "IfNoneMatch",
+                  "x-cos-copy-source": "CopySource",
+                  "x-cos-copy-source-Range": "CopySourceRange",
+                  "x-cos-metadata-directive": "MetadataDirective",
+                  "x-cos-copy-source-If-Modified-Since": "CopySourceIfModifiedSince",
+                  "x-cos-copy-source-If-Unmodified-Since": "CopySourceIfUnmodifiedSince",
+                  "x-cos-copy-source-If-Match": "CopySourceIfMatch",
+                  "x-cos-copy-source-If-None-Match": "CopySourceIfNoneMatch",
+                  "x-cos-acl": "ACL",
+                  "x-cos-grant-read": "GrantRead",
+                  "x-cos-grant-write": "GrantWrite",
+                  "x-cos-grant-full-control": "GrantFullControl",
+                  "x-cos-grant-read-acp": "GrantReadAcp",
+                  "x-cos-grant-write-acp": "GrantWriteAcp",
+                  "x-cos-storage-class": "StorageClass",
+                  // SSE-C
+                  "x-cos-server-side-encryption-customer-algorithm": "SSECustomerAlgorithm",
+                  "x-cos-server-side-encryption-customer-key": "SSECustomerKey",
+                  "x-cos-server-side-encryption-customer-key-MD5": "SSECustomerKeyMD5",
+                  // SSE-COS、SSE-KMS
+                  "x-cos-server-side-encryption": "ServerSideEncryption",
+                  "x-cos-server-side-encryption-cos-kms-key-id": "SSEKMSKeyId",
+                  "x-cos-server-side-encryption-context": "SSEContext"
+                };
+                util.each(headerMap, function (paramKey, headerKey) {
+                  if (params[paramKey] !== undefined) {
+                    Headers[headerKey] = params[paramKey];
+                  }
+                });
+                params.Headers = clearKey(Headers);
+              }
+            }
+  
+            return params;
+          };
+  
+          var apiWrapper = function apiWrapper(apiName, apiFn) {
+            return function (params, callback) {
+              var self = this; // 处理参数
+  
+              if (typeof params === "function") {
+                callback = params;
+                params = {};
+              } // 整理参数格式
+  
+  
+              params = formatParams(apiName, params); // 代理回调函数
+  
+              var formatResult = function formatResult(result) {
+                if (result && result.headers) {
+                  result.headers["x-cos-version-id"] && (result.VersionId = result.headers["x-cos-version-id"]);
+                  result.headers["x-cos-delete-marker"] && (result.DeleteMarker = result.headers["x-cos-delete-marker"]);
+                }
+  
+                return result;
+              };
+  
+              var _callback = function _callback(err, data) {
+                callback && callback(formatResult(err), formatResult(data));
+              };
+  
+              var checkParams = function checkParams() {
+                if (apiName !== "getService" && apiName !== "abortUploadTask") {
+                  // 判断参数是否完整
+                  var missingResult = hasMissingParams(apiName, params);
+  
+                  if (missingResult) {
+                    return "missing param " + missingResult;
+                  } // 判断 region 格式
+  
+  
+                  if (params.Region) {
+                    if (params.Region.indexOf("cos.") > -1) {
+                      return 'param Region should not be start with "cos."';
+                    } else if (!/^([a-z\d-]+)$/.test(params.Region)) {
+                      return "Region format error.";
+                    } // 判断 region 格式
+  
+  
+                    if (!self.options.CompatibilityMode && params.Region.indexOf("-") === -1 && params.Region !== "yfb" && params.Region !== "default") {
+                      console.warn("warning: param Region format error, find help here: https://cloud.tencent.com/document/product/436/6224");
+                    }
+                  } // 兼容不带 AppId 的 Bucket
+  
+  
+                  if (params.Bucket) {
+                    if (!/^([a-z\d-]+)-(\d+)$/.test(params.Bucket)) {
+                      if (params.AppId) {
+                        params.Bucket = params.Bucket + "-" + params.AppId;
+                      } else if (self.options.AppId) {
+                        params.Bucket = params.Bucket + "-" + self.options.AppId;
+                      } else {
+                        return 'Bucket should format as "test-1250000000".';
+                      }
+                    }
+  
+                    if (params.AppId) {
+                      console.warn('warning: AppId has been deprecated, Please put it at the end of parameter Bucket(E.g Bucket:"test-1250000000" ).');
+                      delete params.AppId;
+                    }
+                  } // 如果 Key 是 / 开头，强制去掉第一个 /
+  
+  
+                  if (params.Key && params.Key.substr(0, 1) === "/") {
+                    params.Key = params.Key.substr(1);
+                  }
+                }
+              };
+  
+              var errMsg = checkParams();
+              var isSync = apiName === "getAuth" || apiName === "getObjectUrl";
+              var Promise = global.Promise;
+  
+              if (!isSync && Promise && !callback) {
+                return new Promise(function (resolve, reject) {
+                  callback = function callback(err, data) {
+                    err ? reject(err) : resolve(data);
+                  };
+  
+                  if (errMsg) return _callback({
+                    error: errMsg
+                  });
+                  apiFn.call(self, params, _callback);
+                });
+              } else {
+                if (errMsg) return _callback({
+                  error: errMsg
+                });
+                var res = apiFn.call(self, params, _callback);
+                if (isSync) return res;
+              }
+            };
+          };
+  
+          var throttleOnProgress = function throttleOnProgress(total, onProgress) {
+            var self = this;
+            var size0 = 0;
+            var size1 = 0;
+            var time0 = Date.now();
+            var time1;
+            var timer;
+  
+            function update() {
+              timer = 0;
+  
+              if (onProgress && typeof onProgress === "function") {
+                time1 = Date.now();
+                var speed = Math.max(0, Math.round((size1 - size0) / ((time1 - time0) / 1000) * 100) / 100) || 0;
+                var percent;
+  
+                if (size1 === 0 && total === 0) {
+                  percent = 1;
+                } else {
+                  percent = Math.floor(size1 / total * 100) / 100 || 0;
+                }
+  
+                time0 = time1;
+                size0 = size1;
+  
+                try {
+                  onProgress({
+                    loaded: size1,
+                    total: total,
+                    speed: speed,
+                    percent: percent
+                  });
+                } catch (e) {}
+              }
+            }
+  
+            return function (info, immediately) {
+              if (info) {
+                size1 = info.loaded;
+                total = info.total;
+              }
+  
+              if (immediately) {
+                clearTimeout(timer);
+                update();
+              } else {
+                if (timer) return;
+                timer = setTimeout(update, self.options.ProgressInterval);
+              }
+            };
+          };
+  
+          var getFileSize = function getFileSize(api, params, callback) {
+            if (api === "postObject") {
+              callback();
+            } else if (api === "putObject") {
+              if (params.Body !== undefined) {
+                params.ContentLength = params.Body.byteLength;
+                callback(null, params.ContentLength);
+              } else {
+                callback({
+                  error: "missing param Body"
+                });
+              }
+            } else {
+              if (params.FilePath) {
+                wxfs.stat({
+                  path: params.FilePath,
+                  success: function success(res) {
+                    var stats = res.stats;
+                    params.FileStat = stats;
+                    params.FileStat.FilePath = params.FilePath;
+                    var size = stats.isDirectory() ? 0 : stats.size;
+                    params.ContentLength = size = size || 0;
+                    callback(null, size);
+                  },
+                  fail: function fail(err) {
+                    callback(err);
+                  }
+                });
+              } else {
+                callback({
+                  error: "missing param FilePath"
+                });
+              }
+            }
+          };
+  
+          var getSkewTime = function getSkewTime(offset) {
+            return Date.now() + (offset || 0);
+          };
+  
+          var compareVersion = function compareVersion(v1, v2) {
+            v1 = v1.split(".");
+            v2 = v2.split(".");
+            var len = Math.max(v1.length, v2.length);
+  
+            while (v1.length < len) {
+              v1.push("0");
+            }
+  
+            while (v2.length < len) {
+              v2.push("0");
+            }
+  
+            for (var i = 0; i < len; i++) {
+              var num1 = parseInt(v1[i]);
+              var num2 = parseInt(v2[i]);
+  
+              if (num1 > num2) {
+                return 1;
+              } else if (num1 < num2) {
+                return -1;
+              }
+            }
+  
+            return 0;
+          };
+  
+          var canFileSlice = function () {
+            var systemInfo = wx.getSystemInfoSync();
+            var support = compareVersion(systemInfo.SDKVersion, "2.10.0") >= 0;
+            var needWarning = !support && systemInfo.platform === "devtools";
+            return function () {
+              if (needWarning) console.warn("当前小程序版本小于 2.10.0，不支持分片上传，请更新软件。");
+              needWarning = false;
+              return support;
+            };
+          }();
+  
+          var util = {
+            noop: noop,
+            formatParams: formatParams,
+            apiWrapper: apiWrapper,
+            xml2json: xml2json,
+            json2xml: json2xml,
+            md5: md5,
+            clearKey: clearKey,
+            fileSlice: fileSlice,
+            getBodyMd5: getBodyMd5,
+            getFileMd5: getFileMd5,
+            binaryBase64: binaryBase64,
+            extend: extend,
+            isArray: isArray,
+            isInArray: isInArray,
+            makeArray: makeArray,
+            each: each,
+            map: map,
+            filter: filter,
+            clone: clone,
+            attr: attr,
+            uuid: uuid,
+            camSafeUrlEncode: camSafeUrlEncode,
+            throttleOnProgress: throttleOnProgress,
+            getFileSize: getFileSize,
+            getSkewTime: getSkewTime,
+            getAuth: getAuth,
+            compareVersion: compareVersion,
+            canFileSlice: canFileSlice
+          };
+          module.exports = util;
+          xml2json;
+          /* WEBPACK VAR INJECTION */
+        }).call(exports, __webpack_require__(1));
+        /***/
+      },
+      /* 1 */
+  
+      /***/
+      function (module, exports) {
+        var g; // This works in non-strict mode
+  
+        g = function () {
+          return this;
+        }();
+  
+        try {
+          // This works if eval is allowed (see CSP)
+          g = g || Function("return this")() || (1, eval)("this");
+        } catch (e) {
+          // This works if the window reference is available
+          if ((typeof window === "undefined" ? "undefined" : _typeof(window)) === "object") g = window;
+        } // g can still be undefined, but nothing to do about it...
+        // We return undefined, instead of nothing here, so it's
+        // easier to handle this case. if(!global) { ...}
+  
+  
+        module.exports = g;
+        /***/
+      },
+      /* 2 */
+  
+      /***/
+      function (module, exports) {
+        /*
+         * DOM Level 2
+         * Object DOMException
+         * @see http://www.w3.org/TR/REC-DOM-Level-1/ecma-script-language-binding.html
+         * @see http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/ecma-script-binding.html
+         */
+        function copy(src, dest) {
+          for (var p in src) {
+            dest[p] = src[p];
+          }
+        }
+        /**
+        ^\w+\.prototype\.([_\w]+)\s*=\s*((?:.*\{\s*?[\r\n][\s\S]*?^})|\S.*?(?=[;\r\n]));?
+        ^\w+\.prototype\.([_\w]+)\s*=\s*(\S.*?(?=[;\r\n]));?
+        */
+  
+  
+        function _extends(Class, Super) {
+          var pt = Class.prototype;
+  
+          if (Object.create) {
+            var ppt = Object.create(Super.prototype);
+            pt.__proto__ = ppt;
+          }
+  
+          if (!(pt instanceof Super)) {
+            var t = function t() {};
+  
+            t.prototype = Super.prototype;
+            t = new t();
+            copy(pt, t);
+            Class.prototype = pt = t;
+          }
+  
+          if (pt.constructor != Class) {
+            if (typeof Class != "function") {
+              console.error("unknow Class:" + Class);
+            }
+  
+            pt.constructor = Class;
+          }
+        }
+  
+        var htmlns = "http://www.w3.org/1999/xhtml"; // Node Types
+  
+        var NodeType = {};
+        var ELEMENT_NODE = NodeType.ELEMENT_NODE = 1;
+        var ATTRIBUTE_NODE = NodeType.ATTRIBUTE_NODE = 2;
+        var TEXT_NODE = NodeType.TEXT_NODE = 3;
+        var CDATA_SECTION_NODE = NodeType.CDATA_SECTION_NODE = 4;
+        var ENTITY_REFERENCE_NODE = NodeType.ENTITY_REFERENCE_NODE = 5;
+        var ENTITY_NODE = NodeType.ENTITY_NODE = 6;
+        var PROCESSING_INSTRUCTION_NODE = NodeType.PROCESSING_INSTRUCTION_NODE = 7;
+        var COMMENT_NODE = NodeType.COMMENT_NODE = 8;
+        var DOCUMENT_NODE = NodeType.DOCUMENT_NODE = 9;
+        var DOCUMENT_TYPE_NODE = NodeType.DOCUMENT_TYPE_NODE = 10;
+        var DOCUMENT_FRAGMENT_NODE = NodeType.DOCUMENT_FRAGMENT_NODE = 11;
+        var NOTATION_NODE = NodeType.NOTATION_NODE = 12; // ExceptionCode
+  
+        var ExceptionCode = {};
+        var ExceptionMessage = {};
+        var INDEX_SIZE_ERR = ExceptionCode.INDEX_SIZE_ERR = (ExceptionMessage[1] = "Index size error", 1);
+        var DOMSTRING_SIZE_ERR = ExceptionCode.DOMSTRING_SIZE_ERR = (ExceptionMessage[2] = "DOMString size error", 2);
+        var HIERARCHY_REQUEST_ERR = ExceptionCode.HIERARCHY_REQUEST_ERR = (ExceptionMessage[3] = "Hierarchy request error", 3);
+        var WRONG_DOCUMENT_ERR = ExceptionCode.WRONG_DOCUMENT_ERR = (ExceptionMessage[4] = "Wrong document", 4);
+        var INVALID_CHARACTER_ERR = ExceptionCode.INVALID_CHARACTER_ERR = (ExceptionMessage[5] = "Invalid character", 5);
+        var NO_DATA_ALLOWED_ERR = ExceptionCode.NO_DATA_ALLOWED_ERR = (ExceptionMessage[6] = "No data allowed", 6);
+        var NO_MODIFICATION_ALLOWED_ERR = ExceptionCode.NO_MODIFICATION_ALLOWED_ERR = (ExceptionMessage[7] = "No modification allowed", 7);
+        var NOT_FOUND_ERR = ExceptionCode.NOT_FOUND_ERR = (ExceptionMessage[8] = "Not found", 8);
+        var NOT_SUPPORTED_ERR = ExceptionCode.NOT_SUPPORTED_ERR = (ExceptionMessage[9] = "Not supported", 9);
+        var INUSE_ATTRIBUTE_ERR = ExceptionCode.INUSE_ATTRIBUTE_ERR = (ExceptionMessage[10] = "Attribute in use", 10); //level2
+  
+        var INVALID_STATE_ERR = ExceptionCode.INVALID_STATE_ERR = (ExceptionMessage[11] = "Invalid state", 11);
+        var SYNTAX_ERR = ExceptionCode.SYNTAX_ERR = (ExceptionMessage[12] = "Syntax error", 12);
+        var INVALID_MODIFICATION_ERR = ExceptionCode.INVALID_MODIFICATION_ERR = (ExceptionMessage[13] = "Invalid modification", 13);
+        var NAMESPACE_ERR = ExceptionCode.NAMESPACE_ERR = (ExceptionMessage[14] = "Invalid namespace", 14);
+        var INVALID_ACCESS_ERR = ExceptionCode.INVALID_ACCESS_ERR = (ExceptionMessage[15] = "Invalid access", 15);
+  
+        function DOMException(code, message) {
+          if (message instanceof Error) {
+            var error = message;
+          } else {
+            error = this;
+            Error.call(this, ExceptionMessage[code]);
+            this.message = ExceptionMessage[code];
+            if (Error.captureStackTrace) Error.captureStackTrace(this, DOMException);
+          }
+  
+          error.code = code;
+          if (message) this.message = this.message + ": " + message;
+          return error;
+        }
+  
+        DOMException.prototype = Error.prototype;
+        copy(ExceptionCode, DOMException);
+        /**
+         * @see http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-536297177
+         * The NodeList interface provides the abstraction of an ordered collection of nodes, without defining or constraining how this collection is implemented. NodeList objects in the DOM are live.
+         * The items in the NodeList are accessible via an integral index, starting from 0.
+         */
+  
+        function NodeList() {}
+  
+        NodeList.prototype = {
+          /**
+           * The number of nodes in the list. The range of valid child node indices is 0 to length-1 inclusive.
+           * @standard level1
+           */
+          length: 0,
+  
+          /**
+           * Returns the indexth item in the collection. If index is greater than or equal to the number of nodes in the list, this returns null.
+           * @standard level1
+           * @param index  unsigned long
+           *   Index into the collection.
+           * @return Node
+           * 	The node at the indexth position in the NodeList, or null if that is not a valid index.
+           */
+          item: function item(index) {
+            return this[index] || null;
+          },
+          toString: function toString(isHTML, nodeFilter) {
+            for (var buf = [], i = 0; i < this.length; i++) {
+              serializeToString(this[i], buf, isHTML, nodeFilter);
+            }
+  
+            return buf.join("");
+          }
+        };
+  
+        function LiveNodeList(node, refresh) {
+          this._node = node;
+          this._refresh = refresh;
+  
+          _updateLiveList(this);
+        }
+  
+        function _updateLiveList(list) {
+          var inc = list._node._inc || list._node.ownerDocument._inc;
+  
+          if (list._inc != inc) {
+            var ls = list._refresh(list._node); //console.log(ls.length)
+  
+  
+            __set__(list, "length", ls.length);
+  
+            copy(ls, list);
+            list._inc = inc;
+          }
+        }
+  
+        LiveNodeList.prototype.item = function (i) {
+          _updateLiveList(this);
+  
+          return this[i];
+        };
+  
+        _extends(LiveNodeList, NodeList);
+        /**
+         *
+         * Objects implementing the NamedNodeMap interface are used to represent collections of nodes that can be accessed by name. Note that NamedNodeMap does not inherit from NodeList; NamedNodeMaps are not maintained in any particular order. Objects contained in an object implementing NamedNodeMap may also be accessed by an ordinal index, but this is simply to allow convenient enumeration of the contents of a NamedNodeMap, and does not imply that the DOM specifies an order to these Nodes.
+         * NamedNodeMap objects in the DOM are live.
+         * used for attributes or DocumentType entities
+         */
+  
+  
+        function NamedNodeMap() {}
+  
+        function _findNodeIndex(list, node) {
+          var i = list.length;
+  
+          while (i--) {
+            if (list[i] === node) {
+              return i;
+            }
+          }
+        }
+  
+        function _addNamedNode(el, list, newAttr, oldAttr) {
+          if (oldAttr) {
+            list[_findNodeIndex(list, oldAttr)] = newAttr;
+          } else {
+            list[list.length++] = newAttr;
+          }
+  
+          if (el) {
+            newAttr.ownerElement = el;
+            var doc = el.ownerDocument;
+  
+            if (doc) {
+              oldAttr && _onRemoveAttribute(doc, el, oldAttr);
+  
+              _onAddAttribute(doc, el, newAttr);
+            }
+          }
+        }
+  
+        function _removeNamedNode(el, list, attr) {
+          //console.log('remove attr:'+attr)
+          var i = _findNodeIndex(list, attr);
+  
+          if (i >= 0) {
+            var lastIndex = list.length - 1;
+  
+            while (i < lastIndex) {
+              list[i] = list[++i];
+            }
+  
+            list.length = lastIndex;
+  
+            if (el) {
+              var doc = el.ownerDocument;
+  
+              if (doc) {
+                _onRemoveAttribute(doc, el, attr);
+  
+                attr.ownerElement = null;
+              }
+            }
+          } else {
+            throw DOMException(NOT_FOUND_ERR, new Error(el.tagName + "@" + attr));
+          }
+        }
+  
+        NamedNodeMap.prototype = {
+          length: 0,
+          item: NodeList.prototype.item,
+          getNamedItem: function getNamedItem(key) {
+            //		if(key.indexOf(':')>0 || key == 'xmlns'){
+            //			return null;
+            //		}
+            //console.log()
+            var i = this.length;
+  
+            while (i--) {
+              var attr = this[i]; //console.log(attr.nodeName,key)
+  
+              if (attr.nodeName == key) {
+                return attr;
+              }
+            }
+          },
+          setNamedItem: function setNamedItem(attr) {
+            var el = attr.ownerElement;
+  
+            if (el && el != this._ownerElement) {
+              throw new DOMException(INUSE_ATTRIBUTE_ERR);
+            }
+  
+            var oldAttr = this.getNamedItem(attr.nodeName);
+  
+            _addNamedNode(this._ownerElement, this, attr, oldAttr);
+  
+            return oldAttr;
+          },
+  
+          /* returns Node */
+          setNamedItemNS: function setNamedItemNS(attr) {
+            // raises: WRONG_DOCUMENT_ERR,NO_MODIFICATION_ALLOWED_ERR,INUSE_ATTRIBUTE_ERR
+            var el = attr.ownerElement,
+                oldAttr;
+  
+            if (el && el != this._ownerElement) {
+              throw new DOMException(INUSE_ATTRIBUTE_ERR);
+            }
+  
+            oldAttr = this.getNamedItemNS(attr.namespaceURI, attr.localName);
+  
+            _addNamedNode(this._ownerElement, this, attr, oldAttr);
+  
+            return oldAttr;
+          },
+  
+          /* returns Node */
+          removeNamedItem: function removeNamedItem(key) {
+            var attr = this.getNamedItem(key);
+  
+            _removeNamedNode(this._ownerElement, this, attr);
+  
+            return attr;
+          },
+          // raises: NOT_FOUND_ERR,NO_MODIFICATION_ALLOWED_ERR
+          //for level2
+          removeNamedItemNS: function removeNamedItemNS(namespaceURI, localName) {
+            var attr = this.getNamedItemNS(namespaceURI, localName);
+  
+            _removeNamedNode(this._ownerElement, this, attr);
+  
+            return attr;
+          },
+          getNamedItemNS: function getNamedItemNS(namespaceURI, localName) {
+            var i = this.length;
+  
+            while (i--) {
+              var node = this[i];
+  
+              if (node.localName == localName && node.namespaceURI == namespaceURI) {
+                return node;
+              }
+            }
+  
+            return null;
+          }
+        };
+        /**
+         * @see http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-102161490
+         */
+  
+        function DOMImplementation(
+        /* Object */
+        features) {
+          this._features = {};
+  
+          if (features) {
+            for (var feature in features) {
+              this._features = features[feature];
+            }
+          }
+        }
+  
+        DOMImplementation.prototype = {
+          hasFeature: function hasFeature(
+          /* string */
+          feature,
+          /* string */
+          version) {
+            var versions = this._features[feature.toLowerCase()];
+  
+            if (versions && (!version || version in versions)) {
+              return true;
+            } else {
+              return false;
+            }
+          },
+          // Introduced in DOM Level 2:
+          createDocument: function createDocument(namespaceURI, qualifiedName, doctype) {
+            // raises:INVALID_CHARACTER_ERR,NAMESPACE_ERR,WRONG_DOCUMENT_ERR
+            var doc = new Document();
+            doc.implementation = this;
+            doc.childNodes = new NodeList();
+            doc.doctype = doctype;
+  
+            if (doctype) {
+              doc.appendChild(doctype);
+            }
+  
+            if (qualifiedName) {
+              var root = doc.createElementNS(namespaceURI, qualifiedName);
+              doc.appendChild(root);
+            }
+  
+            return doc;
+          },
+          // Introduced in DOM Level 2:
+          createDocumentType: function createDocumentType(qualifiedName, publicId, systemId) {
+            // raises:INVALID_CHARACTER_ERR,NAMESPACE_ERR
+            var node = new DocumentType();
+            node.name = qualifiedName;
+            node.nodeName = qualifiedName;
+            node.publicId = publicId;
+            node.systemId = systemId; // Introduced in DOM Level 2:
+            //readonly attribute DOMString        internalSubset;
+            //TODO:..
+            //  readonly attribute NamedNodeMap     entities;
+            //  readonly attribute NamedNodeMap     notations;
+  
+            return node;
+          }
+        };
+        /**
+         * @see http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-1950641247
+         */
+  
+        function Node() {}
+  
+        Node.prototype = {
+          firstChild: null,
+          lastChild: null,
+          previousSibling: null,
+          nextSibling: null,
+          attributes: null,
+          parentNode: null,
+          childNodes: null,
+          ownerDocument: null,
+          nodeValue: null,
+          namespaceURI: null,
+          prefix: null,
+          localName: null,
+          // Modified in DOM Level 2:
+          insertBefore: function insertBefore(newChild, refChild) {
+            //raises
+            return _insertBefore(this, newChild, refChild);
+          },
+          replaceChild: function replaceChild(newChild, oldChild) {
+            //raises
+            this.insertBefore(newChild, oldChild);
+  
+            if (oldChild) {
+              this.removeChild(oldChild);
+            }
+          },
+          removeChild: function removeChild(oldChild) {
+            return _removeChild(this, oldChild);
+          },
+          appendChild: function appendChild(newChild) {
+            return this.insertBefore(newChild, null);
+          },
+          hasChildNodes: function hasChildNodes() {
+            return this.firstChild != null;
+          },
+          cloneNode: function cloneNode(deep) {
+            return _cloneNode(this.ownerDocument || this, this, deep);
+          },
+          // Modified in DOM Level 2:
+          normalize: function normalize() {
+            var child = this.firstChild;
+  
+            while (child) {
+              var next = child.nextSibling;
+  
+              if (next && next.nodeType == TEXT_NODE && child.nodeType == TEXT_NODE) {
+                this.removeChild(next);
+                child.appendData(next.data);
+              } else {
+                child.normalize();
+                child = next;
+              }
+            }
+          },
+          // Introduced in DOM Level 2:
+          isSupported: function isSupported(feature, version) {
+            return this.ownerDocument.implementation.hasFeature(feature, version);
+          },
+          // Introduced in DOM Level 2:
+          hasAttributes: function hasAttributes() {
+            return this.attributes.length > 0;
+          },
+          lookupPrefix: function lookupPrefix(namespaceURI) {
+            var el = this;
+  
+            while (el) {
+              var map = el._nsMap; //console.dir(map)
+  
+              if (map) {
+                for (var n in map) {
+                  if (map[n] == namespaceURI) {
+                    return n;
+                  }
+                }
+              }
+  
+              el = el.nodeType == ATTRIBUTE_NODE ? el.ownerDocument : el.parentNode;
+            }
+  
+            return null;
+          },
+          // Introduced in DOM Level 3:
+          lookupNamespaceURI: function lookupNamespaceURI(prefix) {
+            var el = this;
+  
+            while (el) {
+              var map = el._nsMap; //console.dir(map)
+  
+              if (map) {
+                if (prefix in map) {
+                  return map[prefix];
+                }
+              }
+  
+              el = el.nodeType == ATTRIBUTE_NODE ? el.ownerDocument : el.parentNode;
+            }
+  
+            return null;
+          },
+          // Introduced in DOM Level 3:
+          isDefaultNamespace: function isDefaultNamespace(namespaceURI) {
+            var prefix = this.lookupPrefix(namespaceURI);
+            return prefix == null;
+          }
+        };
+  
+        function _xmlEncoder(c) {
+          return c == "<" && "&lt;" || c == ">" && "&gt;" || c == "&" && "&amp;" || c == '"' && "&quot;" || "&#" + c.charCodeAt() + ";";
+        }
+  
+        copy(NodeType, Node);
+        copy(NodeType, Node.prototype);
+        /**
+         * @param callback return true for continue,false for break
+         * @return boolean true: break visit;
+         */
+  
+        function _visitNode(node, callback) {
+          if (callback(node)) {
+            return true;
+          }
+  
+          if (node = node.firstChild) {
+            do {
+              if (_visitNode(node, callback)) {
+                return true;
+              }
+            } while (node = node.nextSibling);
+          }
+        }
+  
+        function Document() {}
+  
+        function _onAddAttribute(doc, el, newAttr) {
+          doc && doc._inc++;
+          var ns = newAttr.namespaceURI;
+  
+          if (ns == "http://www.w3.org/2000/xmlns/") {
+            //update namespace
+            el._nsMap[newAttr.prefix ? newAttr.localName : ""] = newAttr.value;
+          }
+        }
+  
+        function _onRemoveAttribute(doc, el, newAttr, remove) {
+          doc && doc._inc++;
+          var ns = newAttr.namespaceURI;
+  
+          if (ns == "http://www.w3.org/2000/xmlns/") {
+            //update namespace
+            delete el._nsMap[newAttr.prefix ? newAttr.localName : ""];
+          }
+        }
+  
+        function _onUpdateChild(doc, el, newChild) {
+          if (doc && doc._inc) {
+            doc._inc++; //update childNodes
+  
+            var cs = el.childNodes;
+  
+            if (newChild) {
+              cs[cs.length++] = newChild;
+            } else {
+              //console.log(1)
+              var child = el.firstChild;
+              var i = 0;
+  
+              while (child) {
+                cs[i++] = child;
+                child = child.nextSibling;
+              }
+  
+              cs.length = i;
+            }
+          }
+        }
+        /**
+         * attributes;
+         * children;
+         *
+         * writeable properties:
+         * nodeValue,Attr:value,CharacterData:data
+         * prefix
+         */
+  
+  
+        function _removeChild(parentNode, child) {
+          var previous = child.previousSibling;
+          var next = child.nextSibling;
+  
+          if (previous) {
+            previous.nextSibling = next;
+          } else {
+            parentNode.firstChild = next;
+          }
+  
+          if (next) {
+            next.previousSibling = previous;
+          } else {
+            parentNode.lastChild = previous;
+          }
+  
+          _onUpdateChild(parentNode.ownerDocument, parentNode);
+  
+          return child;
+        }
+        /**
+         * preformance key(refChild == null)
+         */
+  
+  
+        function _insertBefore(parentNode, newChild, nextChild) {
+          var cp = newChild.parentNode;
+  
+          if (cp) {
+            cp.removeChild(newChild); //remove and update
+          }
+  
+          if (newChild.nodeType === DOCUMENT_FRAGMENT_NODE) {
+            var newFirst = newChild.firstChild;
+  
+            if (newFirst == null) {
+              return newChild;
+            }
+  
+            var newLast = newChild.lastChild;
+          } else {
+            newFirst = newLast = newChild;
+          }
+  
+          var pre = nextChild ? nextChild.previousSibling : parentNode.lastChild;
+          newFirst.previousSibling = pre;
+          newLast.nextSibling = nextChild;
+  
+          if (pre) {
+            pre.nextSibling = newFirst;
+          } else {
+            parentNode.firstChild = newFirst;
+          }
+  
+          if (nextChild == null) {
+            parentNode.lastChild = newLast;
+          } else {
+            nextChild.previousSibling = newLast;
+          }
+  
+          do {
+            newFirst.parentNode = parentNode;
+          } while (newFirst !== newLast && (newFirst = newFirst.nextSibling));
+  
+          _onUpdateChild(parentNode.ownerDocument || parentNode, parentNode); //console.log(parentNode.lastChild.nextSibling == null)
+  
+  
+          if (newChild.nodeType == DOCUMENT_FRAGMENT_NODE) {
+            newChild.firstChild = newChild.lastChild = null;
+          }
+  
+          return newChild;
+        }
+  
+        function _appendSingleChild(parentNode, newChild) {
+          var cp = newChild.parentNode;
+  
+          if (cp) {
+            var pre = parentNode.lastChild;
+            cp.removeChild(newChild); //remove and update
+  
+            var pre = parentNode.lastChild;
+          }
+  
+          var pre = parentNode.lastChild;
+          newChild.parentNode = parentNode;
+          newChild.previousSibling = pre;
+          newChild.nextSibling = null;
+  
+          if (pre) {
+            pre.nextSibling = newChild;
+          } else {
+            parentNode.firstChild = newChild;
+          }
+  
+          parentNode.lastChild = newChild;
+  
+          _onUpdateChild(parentNode.ownerDocument, parentNode, newChild);
+  
+          return newChild; //console.log("__aa",parentNode.lastChild.nextSibling == null)
+        }
+  
+        Document.prototype = {
+          //implementation : null,
+          nodeName: "#document",
+          nodeType: DOCUMENT_NODE,
+          doctype: null,
+          documentElement: null,
+          _inc: 1,
+          insertBefore: function insertBefore(newChild, refChild) {
+            //raises
+            if (newChild.nodeType == DOCUMENT_FRAGMENT_NODE) {
+              var child = newChild.firstChild;
+  
+              while (child) {
+                var next = child.nextSibling;
+                this.insertBefore(child, refChild);
+                child = next;
+              }
+  
+              return newChild;
+            }
+  
+            if (this.documentElement == null && newChild.nodeType == ELEMENT_NODE) {
+              this.documentElement = newChild;
+            }
+  
+            return _insertBefore(this, newChild, refChild), newChild.ownerDocument = this, newChild;
+          },
+          removeChild: function removeChild(oldChild) {
+            if (this.documentElement == oldChild) {
+              this.documentElement = null;
+            }
+  
+            return _removeChild(this, oldChild);
+          },
+          // Introduced in DOM Level 2:
+          importNode: function importNode(importedNode, deep) {
+            return _importNode(this, importedNode, deep);
+          },
+          // Introduced in DOM Level 2:
+          getElementById: function getElementById(id) {
+            var rtv = null;
+  
+            _visitNode(this.documentElement, function (node) {
+              if (node.nodeType == ELEMENT_NODE) {
+                if (node.getAttribute("id") == id) {
+                  rtv = node;
+                  return true;
+                }
+              }
+            });
+  
+            return rtv;
+          },
+          //document factory method:
+          createElement: function createElement(tagName) {
+            var node = new Element();
+            node.ownerDocument = this;
+            node.nodeName = tagName;
+            node.tagName = tagName;
+            node.childNodes = new NodeList();
+            var attrs = node.attributes = new NamedNodeMap();
+            attrs._ownerElement = node;
+            return node;
+          },
+          createDocumentFragment: function createDocumentFragment() {
+            var node = new DocumentFragment();
+            node.ownerDocument = this;
+            node.childNodes = new NodeList();
+            return node;
+          },
+          createTextNode: function createTextNode(data) {
+            var node = new Text();
+            node.ownerDocument = this;
+            node.appendData(data);
+            return node;
+          },
+          createComment: function createComment(data) {
+            var node = new Comment();
+            node.ownerDocument = this;
+            node.appendData(data);
+            return node;
+          },
+          createCDATASection: function createCDATASection(data) {
+            var node = new CDATASection();
+            node.ownerDocument = this;
+            node.appendData(data);
+            return node;
+          },
+          createProcessingInstruction: function createProcessingInstruction(target, data) {
+            var node = new ProcessingInstruction();
+            node.ownerDocument = this;
+            node.tagName = node.target = target;
+            node.nodeValue = node.data = data;
+            return node;
+          },
+          createAttribute: function createAttribute(name) {
+            var node = new Attr();
+            node.ownerDocument = this;
+            node.name = name;
+            node.nodeName = name;
+            node.localName = name;
+            node.specified = true;
+            return node;
+          },
+          createEntityReference: function createEntityReference(name) {
+            var node = new EntityReference();
+            node.ownerDocument = this;
+            node.nodeName = name;
+            return node;
+          },
+          // Introduced in DOM Level 2:
+          createElementNS: function createElementNS(namespaceURI, qualifiedName) {
+            var node = new Element();
+            var pl = qualifiedName.split(":");
+            var attrs = node.attributes = new NamedNodeMap();
+            node.childNodes = new NodeList();
+            node.ownerDocument = this;
+            node.nodeName = qualifiedName;
+            node.tagName = qualifiedName;
+            node.namespaceURI = namespaceURI;
+  
+            if (pl.length == 2) {
+              node.prefix = pl[0];
+              node.localName = pl[1];
+            } else {
+              //el.prefix = null;
+              node.localName = qualifiedName;
+            }
+  
+            attrs._ownerElement = node;
+            return node;
+          },
+          // Introduced in DOM Level 2:
+          createAttributeNS: function createAttributeNS(namespaceURI, qualifiedName) {
+            var node = new Attr();
+            var pl = qualifiedName.split(":");
+            node.ownerDocument = this;
+            node.nodeName = qualifiedName;
+            node.name = qualifiedName;
+            node.namespaceURI = namespaceURI;
+            node.specified = true;
+  
+            if (pl.length == 2) {
+              node.prefix = pl[0];
+              node.localName = pl[1];
+            } else {
+              //el.prefix = null;
+              node.localName = qualifiedName;
+            }
+  
+            return node;
+          }
+        };
+  
+        _extends(Document, Node);
+  
+        function Element() {
+          this._nsMap = {};
+        }
+  
+        Element.prototype = {
+          nodeType: ELEMENT_NODE,
+          hasAttribute: function hasAttribute(name) {
+            return this.getAttributeNode(name) != null;
+          },
+          getAttribute: function getAttribute(name) {
+            var attr = this.getAttributeNode(name);
+            return attr && attr.value || "";
+          },
+          getAttributeNode: function getAttributeNode(name) {
+            return this.attributes.getNamedItem(name);
+          },
+          setAttribute: function setAttribute(name, value) {
+            var attr = this.ownerDocument.createAttribute(name);
+            attr.value = attr.nodeValue = "" + value;
+            this.setAttributeNode(attr);
+          },
+          removeAttribute: function removeAttribute(name) {
+            var attr = this.getAttributeNode(name);
+            attr && this.removeAttributeNode(attr);
+          },
+          //four real opeartion method
+          appendChild: function appendChild(newChild) {
+            if (newChild.nodeType === DOCUMENT_FRAGMENT_NODE) {
+              return this.insertBefore(newChild, null);
+            } else {
+              return _appendSingleChild(this, newChild);
+            }
+          },
+          setAttributeNode: function setAttributeNode(newAttr) {
+            return this.attributes.setNamedItem(newAttr);
+          },
+          setAttributeNodeNS: function setAttributeNodeNS(newAttr) {
+            return this.attributes.setNamedItemNS(newAttr);
+          },
+          removeAttributeNode: function removeAttributeNode(oldAttr) {
+            //console.log(this == oldAttr.ownerElement)
+            return this.attributes.removeNamedItem(oldAttr.nodeName);
+          },
+          //get real attribute name,and remove it by removeAttributeNode
+          removeAttributeNS: function removeAttributeNS(namespaceURI, localName) {
+            var old = this.getAttributeNodeNS(namespaceURI, localName);
+            old && this.removeAttributeNode(old);
+          },
+          hasAttributeNS: function hasAttributeNS(namespaceURI, localName) {
+            return this.getAttributeNodeNS(namespaceURI, localName) != null;
+          },
+          getAttributeNS: function getAttributeNS(namespaceURI, localName) {
+            var attr = this.getAttributeNodeNS(namespaceURI, localName);
+            return attr && attr.value || "";
+          },
+          setAttributeNS: function setAttributeNS(namespaceURI, qualifiedName, value) {
+            var attr = this.ownerDocument.createAttributeNS(namespaceURI, qualifiedName);
+            attr.value = attr.nodeValue = "" + value;
+            this.setAttributeNode(attr);
+          },
+          getAttributeNodeNS: function getAttributeNodeNS(namespaceURI, localName) {
+            return this.attributes.getNamedItemNS(namespaceURI, localName);
+          },
+          getElementsByTagName: function getElementsByTagName(tagName) {
+            return new LiveNodeList(this, function (base) {
+              var ls = [];
+  
+              _visitNode(base, function (node) {
+                if (node !== base && node.nodeType == ELEMENT_NODE && (tagName === "*" || node.tagName == tagName)) {
+                  ls.push(node);
+                }
+              });
+  
+              return ls;
+            });
+          },
+          getElementsByTagNameNS: function getElementsByTagNameNS(namespaceURI, localName) {
+            return new LiveNodeList(this, function (base) {
+              var ls = [];
+  
+              _visitNode(base, function (node) {
+                if (node !== base && node.nodeType === ELEMENT_NODE && (namespaceURI === "*" || node.namespaceURI === namespaceURI) && (localName === "*" || node.localName == localName)) {
+                  ls.push(node);
+                }
+              });
+  
+              return ls;
+            });
+          }
+        };
+        Document.prototype.getElementsByTagName = Element.prototype.getElementsByTagName;
+        Document.prototype.getElementsByTagNameNS = Element.prototype.getElementsByTagNameNS;
+  
+        _extends(Element, Node);
+  
+        function Attr() {}
+  
+        Attr.prototype.nodeType = ATTRIBUTE_NODE;
+  
+        _extends(Attr, Node);
+  
+        function CharacterData() {}
+  
+        CharacterData.prototype = {
+          data: "",
+          substringData: function substringData(offset, count) {
+            return this.data.substring(offset, offset + count);
+          },
+          appendData: function appendData(text) {
+            text = this.data + text;
+            this.nodeValue = this.data = text;
+            this.length = text.length;
+          },
+          insertData: function insertData(offset, text) {
+            this.replaceData(offset, 0, text);
+          },
+          appendChild: function appendChild(newChild) {
+            throw new Error(ExceptionMessage[HIERARCHY_REQUEST_ERR]);
+          },
+          deleteData: function deleteData(offset, count) {
+            this.replaceData(offset, count, "");
+          },
+          replaceData: function replaceData(offset, count, text) {
+            var start = this.data.substring(0, offset);
+            var end = this.data.substring(offset + count);
+            text = start + text + end;
+            this.nodeValue = this.data = text;
+            this.length = text.length;
+          }
+        };
+  
+        _extends(CharacterData, Node);
+  
+        function Text() {}
+  
+        Text.prototype = {
+          nodeName: "#text",
+          nodeType: TEXT_NODE,
+          splitText: function splitText(offset) {
+            var text = this.data;
+            var newText = text.substring(offset);
+            text = text.substring(0, offset);
+            this.data = this.nodeValue = text;
+            this.length = text.length;
+            var newNode = this.ownerDocument.createTextNode(newText);
+  
+            if (this.parentNode) {
+              this.parentNode.insertBefore(newNode, this.nextSibling);
+            }
+  
+            return newNode;
+          }
+        };
+  
+        _extends(Text, CharacterData);
+  
+        function Comment() {}
+  
+        Comment.prototype = {
+          nodeName: "#comment",
+          nodeType: COMMENT_NODE
+        };
+  
+        _extends(Comment, CharacterData);
+  
+        function CDATASection() {}
+  
+        CDATASection.prototype = {
+          nodeName: "#cdata-section",
+          nodeType: CDATA_SECTION_NODE
+        };
+  
+        _extends(CDATASection, CharacterData);
+  
+        function DocumentType() {}
+  
+        DocumentType.prototype.nodeType = DOCUMENT_TYPE_NODE;
+  
+        _extends(DocumentType, Node);
+  
+        function Notation() {}
+  
+        Notation.prototype.nodeType = NOTATION_NODE;
+  
+        _extends(Notation, Node);
+  
+        function Entity() {}
+  
+        Entity.prototype.nodeType = ENTITY_NODE;
+  
+        _extends(Entity, Node);
+  
+        function EntityReference() {}
+  
+        EntityReference.prototype.nodeType = ENTITY_REFERENCE_NODE;
+  
+        _extends(EntityReference, Node);
+  
+        function DocumentFragment() {}
+  
+        DocumentFragment.prototype.nodeName = "#document-fragment";
+        DocumentFragment.prototype.nodeType = DOCUMENT_FRAGMENT_NODE;
+  
+        _extends(DocumentFragment, Node);
+  
+        function ProcessingInstruction() {}
+  
+        ProcessingInstruction.prototype.nodeType = PROCESSING_INSTRUCTION_NODE;
+  
+        _extends(ProcessingInstruction, Node);
+  
+        function XMLSerializer() {}
+  
+        XMLSerializer.prototype.serializeToString = function (node, isHtml, nodeFilter) {
+          return nodeSerializeToString.call(node, isHtml, nodeFilter);
+        };
+  
+        Node.prototype.toString = nodeSerializeToString;
+  
+        function nodeSerializeToString(isHtml, nodeFilter) {
+          var buf = [];
+          var refNode = this.nodeType == 9 ? this.documentElement : this;
+          var prefix = refNode.prefix;
+          var uri = refNode.namespaceURI;
+  
+          if (uri && prefix == null) {
+            //console.log(prefix)
+            var prefix = refNode.lookupPrefix(uri);
+  
+            if (prefix == null) {
+              //isHTML = true;
+              var visibleNamespaces = [{
+                namespace: uri,
+                prefix: null
+              } //{namespace:uri,prefix:''}
+              ];
+            }
+          }
+  
+          serializeToString(this, buf, isHtml, nodeFilter, visibleNamespaces); //console.log('###',this.nodeType,uri,prefix,buf.join(''))
+  
+          return buf.join("");
+        }
+  
+        function needNamespaceDefine(node, isHTML, visibleNamespaces) {
+          var prefix = node.prefix || "";
+          var uri = node.namespaceURI;
+  
+          if (!prefix && !uri) {
+            return false;
+          }
+  
+          if (prefix === "xml" && uri === "http://www.w3.org/XML/1998/namespace" || uri == "http://www.w3.org/2000/xmlns/") {
+            return false;
+          }
+  
+          var i = visibleNamespaces.length; //console.log('@@@@',node.tagName,prefix,uri,visibleNamespaces)
+  
+          while (i--) {
+            var ns = visibleNamespaces[i]; // get namespace prefix
+            //console.log(node.nodeType,node.tagName,ns.prefix,prefix)
+  
+            if (ns.prefix == prefix) {
+              return ns.namespace != uri;
+            }
+          } //console.log(isHTML,uri,prefix=='')
+          //if(isHTML && prefix ==null && uri == 'http://www.w3.org/1999/xhtml'){
+          //	return false;
+          //}
+          //node.flag = '11111'
+          //console.error(3,true,node.flag,node.prefix,node.namespaceURI)
+  
+  
+          return true;
+        }
+  
+        function serializeToString(node, buf, isHTML, nodeFilter, visibleNamespaces) {
+          if (nodeFilter) {
+            node = nodeFilter(node);
+  
+            if (node) {
+              if (typeof node == "string") {
+                buf.push(node);
+                return;
+              }
+            } else {
+              return;
+            } //buf.sort.apply(attrs, attributeSorter);
+  
+          }
+  
+          switch (node.nodeType) {
+            case ELEMENT_NODE:
+              if (!visibleNamespaces) visibleNamespaces = [];
+              var startVisibleNamespaces = visibleNamespaces.length;
+              var attrs = node.attributes;
+              var len = attrs.length;
+              var child = node.firstChild;
+              var nodeName = node.tagName;
+              isHTML = htmlns === node.namespaceURI || isHTML;
+              buf.push("<", nodeName);
+  
+              for (var i = 0; i < len; i++) {
+                // add namespaces for attributes
+                var attr = attrs.item(i);
+  
+                if (attr.prefix == "xmlns") {
+                  visibleNamespaces.push({
+                    prefix: attr.localName,
+                    namespace: attr.value
+                  });
+                } else if (attr.nodeName == "xmlns") {
+                  visibleNamespaces.push({
+                    prefix: "",
+                    namespace: attr.value
+                  });
+                }
+              }
+  
+              for (var i = 0; i < len; i++) {
+                var attr = attrs.item(i);
+  
+                if (needNamespaceDefine(attr, isHTML, visibleNamespaces)) {
+                  var prefix = attr.prefix || "";
+                  var uri = attr.namespaceURI;
+                  var ns = prefix ? " xmlns:" + prefix : " xmlns";
+                  buf.push(ns, '="', uri, '"');
+                  visibleNamespaces.push({
+                    prefix: prefix,
+                    namespace: uri
+                  });
+                }
+  
+                serializeToString(attr, buf, isHTML, nodeFilter, visibleNamespaces);
+              } // add namespace for current node
+  
+  
+              if (needNamespaceDefine(node, isHTML, visibleNamespaces)) {
+                var prefix = node.prefix || "";
+                var uri = node.namespaceURI;
+                var ns = prefix ? " xmlns:" + prefix : " xmlns";
+                buf.push(ns, '="', uri, '"');
+                visibleNamespaces.push({
+                  prefix: prefix,
+                  namespace: uri
+                });
+              }
+  
+              if (child || isHTML && !/^(?:meta|link|img|br|hr|input)$/i.test(nodeName)) {
+                buf.push(">"); //if is cdata child node
+  
+                if (isHTML && /^script$/i.test(nodeName)) {
+                  while (child) {
+                    if (child.data) {
+                      buf.push(child.data);
+                    } else {
+                      serializeToString(child, buf, isHTML, nodeFilter, visibleNamespaces);
+                    }
+  
+                    child = child.nextSibling;
+                  }
+                } else {
+                  while (child) {
+                    serializeToString(child, buf, isHTML, nodeFilter, visibleNamespaces);
+                    child = child.nextSibling;
+                  }
+                }
+  
+                buf.push("</", nodeName, ">");
+              } else {
+                buf.push("/>");
+              } // remove added visible namespaces
+              //visibleNamespaces.length = startVisibleNamespaces;
+  
+  
+              return;
+  
+            case DOCUMENT_NODE:
+            case DOCUMENT_FRAGMENT_NODE:
+              var child = node.firstChild;
+  
+              while (child) {
+                serializeToString(child, buf, isHTML, nodeFilter, visibleNamespaces);
+                child = child.nextSibling;
+              }
+  
+              return;
+  
+            case ATTRIBUTE_NODE:
+              return buf.push(" ", node.name, '="', node.value.replace(/[<&"]/g, _xmlEncoder), '"');
+  
+            case TEXT_NODE:
+              return buf.push(node.data.replace(/[<&]/g, _xmlEncoder));
+  
+            case CDATA_SECTION_NODE:
+              return buf.push("<![CDATA[", node.data, "]]>");
+  
+            case COMMENT_NODE:
+              return buf.push("<!--", node.data, "-->");
+  
+            case DOCUMENT_TYPE_NODE:
+              var pubid = node.publicId;
+              var sysid = node.systemId;
+              buf.push("<!DOCTYPE ", node.name);
+  
+              if (pubid) {
+                buf.push(' PUBLIC "', pubid);
+  
+                if (sysid && sysid != ".") {
+                  buf.push('" "', sysid);
+                }
+  
+                buf.push('">');
+              } else if (sysid && sysid != ".") {
+                buf.push(' SYSTEM "', sysid, '">');
+              } else {
+                var sub = node.internalSubset;
+  
+                if (sub) {
+                  buf.push(" [", sub, "]");
+                }
+  
+                buf.push(">");
+              }
+  
+              return;
+  
+            case PROCESSING_INSTRUCTION_NODE:
+              return buf.push("<?", node.target, " ", node.data, "?>");
+  
+            case ENTITY_REFERENCE_NODE:
+              return buf.push("&", node.nodeName, ";");
+            //case ENTITY_NODE:
+            //case NOTATION_NODE:
+  
+            default:
+              buf.push("??", node.nodeName);
+          }
+        }
+  
+        function _importNode(doc, node, deep) {
+          var node2;
+  
+          switch (node.nodeType) {
+            case ELEMENT_NODE:
+              node2 = node.cloneNode(false);
+              node2.ownerDocument = doc;
+            //var attrs = node2.attributes;
+            //var len = attrs.length;
+            //for(var i=0;i<len;i++){
+            //node2.setAttributeNodeNS(importNode(doc,attrs.item(i),deep));
+            //}
+  
+            case DOCUMENT_FRAGMENT_NODE:
+              break;
+  
+            case ATTRIBUTE_NODE:
+              deep = true;
+              break;
+            //case ENTITY_REFERENCE_NODE:
+            //case PROCESSING_INSTRUCTION_NODE:
+            ////case TEXT_NODE:
+            //case CDATA_SECTION_NODE:
+            //case COMMENT_NODE:
+            //	deep = false;
+            //	break;
+            //case DOCUMENT_NODE:
+            //case DOCUMENT_TYPE_NODE:
+            //cannot be imported.
+            //case ENTITY_NODE:
+            //case NOTATION_NODE：
+            //can not hit in level3
+            //default:throw e;
+          }
+  
+          if (!node2) {
+            node2 = node.cloneNode(false); //false
+          }
+  
+          node2.ownerDocument = doc;
+          node2.parentNode = null;
+  
+          if (deep) {
+            var child = node.firstChild;
+  
+            while (child) {
+              node2.appendChild(_importNode(doc, child, deep));
+              child = child.nextSibling;
+            }
+          }
+  
+          return node2;
+        } //
+        //var _relationMap = {firstChild:1,lastChild:1,previousSibling:1,nextSibling:1,
+        //					attributes:1,childNodes:1,parentNode:1,documentElement:1,doctype,};
+  
+  
+        function _cloneNode(doc, node, deep) {
+          var node2 = new node.constructor();
+  
+          for (var n in node) {
+            var v = node[n];
+  
+            if (_typeof(v) != "object") {
+              if (v != node2[n]) {
+                node2[n] = v;
+              }
+            }
+          }
+  
+          if (node.childNodes) {
+            node2.childNodes = new NodeList();
+          }
+  
+          node2.ownerDocument = doc;
+  
+          switch (node2.nodeType) {
+            case ELEMENT_NODE:
+              var attrs = node.attributes;
+              var attrs2 = node2.attributes = new NamedNodeMap();
+              var len = attrs.length;
+              attrs2._ownerElement = node2;
+  
+              for (var i = 0; i < len; i++) {
+                node2.setAttributeNode(_cloneNode(doc, attrs.item(i), true));
+              }
+  
+              break;
+  
+            case ATTRIBUTE_NODE:
+              deep = true;
+          }
+  
+          if (deep) {
+            var child = node.firstChild;
+  
+            while (child) {
+              node2.appendChild(_cloneNode(doc, child, deep));
+              child = child.nextSibling;
+            }
+          }
+  
+          return node2;
+        }
+  
+        function __set__(object, key, value) {
+          object[key] = value;
+        } //do dynamic
+  
+  
+        try {
+          if (Object.defineProperty) {
+            var getTextContent = function getTextContent(node) {
+              switch (node.nodeType) {
+                case ELEMENT_NODE:
+                case DOCUMENT_FRAGMENT_NODE:
+                  var buf = [];
+                  node = node.firstChild;
+  
+                  while (node) {
+                    if (node.nodeType !== 7 && node.nodeType !== 8) {
+                      buf.push(getTextContent(node));
+                    }
+  
+                    node = node.nextSibling;
+                  }
+  
+                  return buf.join("");
+  
+                default:
+                  return node.nodeValue;
+              }
+            };
+  
+            Object.defineProperty(LiveNodeList.prototype, "length", {
+              get: function get() {
+                _updateLiveList(this);
+  
+                return this.$$length;
+              }
+            });
+            Object.defineProperty(Node.prototype, "textContent", {
+              get: function get() {
+                return getTextContent(this);
+              },
+              set: function set(data) {
+                switch (this.nodeType) {
+                  case ELEMENT_NODE:
+                  case DOCUMENT_FRAGMENT_NODE:
+                    while (this.firstChild) {
+                      this.removeChild(this.firstChild);
+                    }
+  
+                    if (data || String(data)) {
+                      this.appendChild(this.ownerDocument.createTextNode(data));
+                    }
+  
+                    break;
+  
+                  default:
+                    //TODO:
+                    this.data = data;
+                    this.value = data;
+                    this.nodeValue = data;
+                }
+              }
+            });
+  
+            __set__ = function __set__(object, key, value) {
+              //console.log(value)
+              object["$$" + key] = value;
+            };
+          }
+        } catch (e) {//ie8
+        } //if(typeof require == 'function'){
+  
+  
+        exports.DOMImplementation = DOMImplementation;
+        exports.XMLSerializer = XMLSerializer; //}
+  
+        /***/
+      },
+      /* 3 */
+  
+      /***/
+      function (module, exports) {
+        /*
+         * $Id: base64.js,v 2.15 2014/04/05 12:58:57 dankogai Exp dankogai $
+         *
+         *  Licensed under the BSD 3-Clause License.
+         *    http://opensource.org/licenses/BSD-3-Clause
+         *
+         *  References:
+         *    http://en.wikipedia.org/wiki/Base64
+         */
+        var Base64 = function (global) {
+          global = global || {};
+          "use strict"; // existing version for noConflict()
+  
+  
+          var _Base64 = global.Base64;
+          var version = "2.1.9"; // if node.js, we use Buffer
+  
+          var buffer; // constants
+  
+          var b64chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+  
+          var b64tab = function (bin) {
+            var t = {};
+  
+            for (var i = 0, l = bin.length; i < l; i++) {
+              t[bin.charAt(i)] = i;
+            }
+  
+            return t;
+          }(b64chars);
+  
+          var fromCharCode = String.fromCharCode; // encoder stuff
+  
+          var cb_utob = function cb_utob(c) {
+            if (c.length < 2) {
+              var cc = c.charCodeAt(0);
+              return cc < 0x80 ? c : cc < 0x800 ? fromCharCode(0xc0 | cc >>> 6) + fromCharCode(0x80 | cc & 0x3f) : fromCharCode(0xe0 | cc >>> 12 & 0x0f) + fromCharCode(0x80 | cc >>> 6 & 0x3f) + fromCharCode(0x80 | cc & 0x3f);
+            } else {
+              var cc = 0x10000 + (c.charCodeAt(0) - 0xd800) * 0x400 + (c.charCodeAt(1) - 0xdc00);
+              return fromCharCode(0xf0 | cc >>> 18 & 0x07) + fromCharCode(0x80 | cc >>> 12 & 0x3f) + fromCharCode(0x80 | cc >>> 6 & 0x3f) + fromCharCode(0x80 | cc & 0x3f);
+            }
+          };
+  
+          var re_utob = /[\uD800-\uDBFF][\uDC00-\uDFFFF]|[^\x00-\x7F]/g;
+  
+          var utob = function utob(u) {
+            return u.replace(re_utob, cb_utob);
+          };
+  
+          var cb_encode = function cb_encode(ccc) {
+            var padlen = [0, 2, 1][ccc.length % 3],
+                ord = ccc.charCodeAt(0) << 16 | (ccc.length > 1 ? ccc.charCodeAt(1) : 0) << 8 | (ccc.length > 2 ? ccc.charCodeAt(2) : 0),
+                chars = [b64chars.charAt(ord >>> 18), b64chars.charAt(ord >>> 12 & 63), padlen >= 2 ? "=" : b64chars.charAt(ord >>> 6 & 63), padlen >= 1 ? "=" : b64chars.charAt(ord & 63)];
+            return chars.join("");
+          };
+  
+          var btoa = global.btoa ? function (b) {
+            return global.btoa(b);
+          } : function (b) {
+            return b.replace(/[\s\S]{1,3}/g, cb_encode);
+          };
+  
+          var _encode = buffer ? function (u) {
+            return (u.constructor === buffer.constructor ? u : new buffer(u)).toString("base64");
+          } : function (u) {
+            return btoa(utob(u));
+          };
+  
+          var encode = function encode(u, urisafe) {
+            return !urisafe ? _encode(String(u)) : _encode(String(u)).replace(/[+\/]/g, function (m0) {
+              return m0 == "+" ? "-" : "_";
+            }).replace(/=/g, "");
+          };
+  
+          var encodeURI = function encodeURI(u) {
+            return encode(u, true);
+          }; // decoder stuff
+  
+  
+          var re_btou = new RegExp(["[\xC0-\xDF][\x80-\xBF]", "[\xE0-\xEF][\x80-\xBF]{2}", "[\xF0-\xF7][\x80-\xBF]{3}"].join("|"), "g");
+  
+          var cb_btou = function cb_btou(cccc) {
+            switch (cccc.length) {
+              case 4:
+                var cp = (0x07 & cccc.charCodeAt(0)) << 18 | (0x3f & cccc.charCodeAt(1)) << 12 | (0x3f & cccc.charCodeAt(2)) << 6 | 0x3f & cccc.charCodeAt(3),
+                    offset = cp - 0x10000;
+                return fromCharCode((offset >>> 10) + 0xd800) + fromCharCode((offset & 0x3ff) + 0xdc00);
+  
+              case 3:
+                return fromCharCode((0x0f & cccc.charCodeAt(0)) << 12 | (0x3f & cccc.charCodeAt(1)) << 6 | 0x3f & cccc.charCodeAt(2));
+  
+              default:
+                return fromCharCode((0x1f & cccc.charCodeAt(0)) << 6 | 0x3f & cccc.charCodeAt(1));
+            }
+          };
+  
+          var btou = function btou(b) {
+            return b.replace(re_btou, cb_btou);
+          };
+  
+          var cb_decode = function cb_decode(cccc) {
+            var len = cccc.length,
+                padlen = len % 4,
+                n = (len > 0 ? b64tab[cccc.charAt(0)] << 18 : 0) | (len > 1 ? b64tab[cccc.charAt(1)] << 12 : 0) | (len > 2 ? b64tab[cccc.charAt(2)] << 6 : 0) | (len > 3 ? b64tab[cccc.charAt(3)] : 0),
+                chars = [fromCharCode(n >>> 16), fromCharCode(n >>> 8 & 0xff), fromCharCode(n & 0xff)];
+            chars.length -= [0, 0, 2, 1][padlen];
+            return chars.join("");
+          };
+  
+          var atob = global.atob ? function (a) {
+            return global.atob(a);
+          } : function (a) {
+            return a.replace(/[\s\S]{1,4}/g, cb_decode);
+          };
+  
+          var _decode = buffer ? function (a) {
+            return (a.constructor === buffer.constructor ? a : new buffer(a, "base64")).toString();
+          } : function (a) {
+            return btou(atob(a));
+          };
+  
+          var decode = function decode(a) {
+            return _decode(String(a).replace(/[-_]/g, function (m0) {
+              return m0 == "-" ? "+" : "/";
+            }).replace(/[^A-Za-z0-9\+\/]/g, ""));
+          };
+  
+          var noConflict = function noConflict() {
+            var Base64 = global.Base64;
+            global.Base64 = _Base64;
+            return Base64;
+          }; // export Base64
+  
+  
+          var Base64 = {
+            VERSION: version,
+            atob: atob,
+            btoa: btoa,
+            fromBase64: decode,
+            toBase64: encode,
+            utob: utob,
+            encode: encode,
+            encodeURI: encodeURI,
+            btou: btou,
+            decode: decode,
+            noConflict: noConflict
+          };
+          return Base64;
+        }();
+  
+        module.exports = Base64;
+        /***/
+      },
+      /* 4 */
+  
+      /***/
+      function (module, exports) {
+        var initEvent = function initEvent(cos) {
+          var listeners = {};
+  
+          var getList = function getList(action) {
+            !listeners[action] && (listeners[action] = []);
+            return listeners[action];
+          };
+  
+          cos.on = function (action, callback) {
+            getList(action).push(callback);
+          };
+  
+          cos.off = function (action, callback) {
+            var list = getList(action);
+  
+            for (var i = list.length - 1; i >= 0; i--) {
+              callback === list[i] && list.splice(i, 1);
+            }
+          };
+  
+          cos.emit = function (action, data) {
+            var list = getList(action).map(function (cb) {
+              return cb;
+            });
+  
+            for (var i = 0; i < list.length; i++) {
+              list[i](data);
+            }
+          };
+        };
+  
+        var EventProxy = function EventProxy() {
+          initEvent(this);
+        };
+  
+        module.exports.init = initEvent;
+        module.exports.EventProxy = EventProxy;
+        /***/
+      },
+      /* 5 */
+  
+      /***/
+      function (module, exports, __webpack_require__) {
+        var util = __webpack_require__(0); // 按照文件特征值，缓存 UploadId
+  
+  
+        var cacheKey = "cos_sdk_upload_cache";
+        var expires = 30 * 24 * 3600;
+        var cache;
+        var timer;
+  
+        var getCache = function getCache() {
+          try {
+            var val = JSON.parse(wx.getStorageSync(cacheKey));
+          } catch (e) {}
+  
+          if (!val) val = [];
+          return val;
+        };
+  
+        var setCache = function setCache() {
+          try {
+            wx.setStorageSync(cacheKey, JSON.stringify(cache));
+          } catch (e) {}
+        };
+  
+        var init = function init() {
+          if (cache) return;
+          cache = getCache(); // 清理太老旧的数据
+  
+          var changed = false;
+          var now = Math.round(Date.now() / 1000);
+  
+          for (var i = cache.length - 1; i >= 0; i--) {
+            var mtime = cache[i][2];
+  
+            if (!mtime || mtime + expires < now) {
+              cache.splice(i, 1);
+              changed = true;
+            }
+          }
+  
+          changed && setCache();
+        }; // 把缓存存到本地
+  
+  
+        var save = function save() {
+          if (timer) return;
+          timer = setTimeout(function () {
+            setCache();
+            timer = null;
+          }, 400);
+        };
+  
+        var mod = {
+          using: {},
+          // 标记 UploadId 正在使用
+          setUsing: function setUsing(uuid) {
+            mod.using[uuid] = true;
+          },
+          // 标记 UploadId 已经没在使用
+          removeUsing: function removeUsing(uuid) {
+            delete mod.using[uuid];
+          },
+          // 用上传参数生成哈希值
+          getFileId: function getFileId(FileStat, ChunkSize, Bucket, Key) {
+            if (FileStat.FilePath && FileStat.size && FileStat.lastModifiedTime && ChunkSize) {
+              return util.md5([FileStat.FilePath].join("::")) + "-" + util.md5([FileStat.size, FileStat.mode, FileStat.lastAccessedTime, FileStat.lastModifiedTime, ChunkSize, Bucket, Key].join("::"));
+            } else {
+              return null;
+            }
+          },
+          // 获取文件对应的 UploadId 列表
+          getUploadIdList: function getUploadIdList(uuid) {
+            if (!uuid) return null;
+            init();
+            var list = [];
+  
+            for (var i = 0; i < cache.length; i++) {
+              if (cache[i][0] === uuid) list.push(cache[i][1]);
+            }
+  
+            return list.length ? list : null;
+          },
+          // 缓存 UploadId
+          saveUploadId: function saveUploadId(uuid, UploadId, limit) {
+            init();
+            if (!uuid) return; // 清理没用的 UploadId
+  
+            var part1 = uuid.substr(0, uuid.indexOf("-") + 1);
+  
+            for (var i = cache.length - 1; i >= 0; i--) {
+              var item = cache[i];
+  
+              if (item[0] === uuid && item[1] === UploadId) {
+                cache.splice(i, 1);
+              } else if (uuid !== item[0] && item[0].indexOf(part1) === 0) {
+                // 文件路径相同，但其他信息不同，说明文件改变了或上传参数（存储桶、路径、分片大小）变了，直接清理掉
+                cache.splice(i, 1);
+              }
+            }
+  
+            cache.unshift([uuid, UploadId, Math.round(Date.now() / 1000)]);
+            if (cache.length > limit) cache.splice(limit);
+            save();
+          },
+          // UploadId 已用完，移除掉
+          removeUploadId: function removeUploadId(UploadId) {
+            init();
+            delete mod.using[UploadId];
+  
+            for (var i = cache.length - 1; i >= 0; i--) {
+              if (cache[i][1] === UploadId) cache.splice(i, 1);
+            }
+  
+            save();
+          }
+        };
+        module.exports = mod;
+        /***/
+      },
+      /* 6 */
+  
+      /***/
+      function (module, exports, __webpack_require__) {
+        var COS = __webpack_require__(7);
+  
+        module.exports = COS;
+        /***/
+      },
+      /* 7 */
+  
+      /***/
+      function (module, exports, __webpack_require__) {
+        "use strict";
+  
+        var util = __webpack_require__(0);
+  
+        var event = __webpack_require__(4);
+  
+        var task = __webpack_require__(16);
+  
+        var base = __webpack_require__(17);
+  
+        var advance = __webpack_require__(23);
+  
+        var defaultOptions = {
+          SecretId: "",
+          SecretKey: "",
+          XCosSecurityToken: "",
+          // 使用临时密钥需要注意自行刷新 Token
+          ChunkRetryTimes: 2,
+          FileParallelLimit: 3,
+          ChunkParallelLimit: 3,
+          ChunkSize: 1024 * 1024,
+          SliceSize: 1024 * 1024,
+          CopyChunkParallelLimit: 20,
+          CopyChunkSize: 1024 * 1024 * 10,
+          CopySliceSize: 1024 * 1024 * 10,
+          MaxPartNumber: 10000,
+          ProgressInterval: 1000,
+          UploadQueueSize: 10000,
+          Domain: "",
+          ServiceDomain: "",
+          Protocol: "",
+          CompatibilityMode: false,
+          ForcePathStyle: false,
+          Timeout: 0,
+          // 单位毫秒，0 代表不设置超时时间
+          CorrectClockSkew: true,
+          SystemClockOffset: 0,
+          // 单位毫秒，ms
+          UploadCheckContentMd5: false,
+          UploadIdCacheLimit: 50
+        }; // 对外暴露的类
+  
+        var COS = function COS(options) {
+          this.options = util.extend(util.clone(defaultOptions), options || {});
+          this.options.FileParallelLimit = Math.max(1, this.options.FileParallelLimit);
+          this.options.ChunkParallelLimit = Math.max(1, this.options.ChunkParallelLimit);
+          this.options.ChunkRetryTimes = Math.max(0, this.options.ChunkRetryTimes);
+          this.options.ChunkSize = Math.max(1024 * 1024, this.options.ChunkSize);
+          this.options.CopyChunkParallelLimit = Math.max(1, this.options.CopyChunkParallelLimit);
+          this.options.CopyChunkSize = Math.max(1024 * 1024, this.options.CopyChunkSize);
+          this.options.CopySliceSize = Math.max(0, this.options.CopySliceSize);
+          this.options.MaxPartNumber = Math.max(1024, Math.min(10000, this.options.MaxPartNumber));
+          this.options.Timeout = Math.max(0, this.options.Timeout);
+  
+          if (this.options.AppId) {
+            console.warn('warning: AppId has been deprecated, Please put it at the end of parameter Bucket(E.g: "test-1250000000").');
+          }
+  
+          event.init(this);
+          task.init(this);
+        };
+  
+        base.init(COS, task);
+        advance.init(COS, task);
+        COS.getAuthorization = util.getAuth;
+        COS.version = "1.0.3";
+        module.exports = COS;
+        /***/
+      },
+      /* 8 */
+  
+      /***/
+      function (module, exports, __webpack_require__) {
+        /* WEBPACK VAR INJECTION */
+        (function (process, global) {
+          var __WEBPACK_AMD_DEFINE_RESULT__;
+          /* https://github.com/emn178/js-md5 */
+  
+  
+          (function () {
+            "use strict";
+  
+            var ERROR = "input is invalid type";
+            var WINDOW = (typeof window === "undefined" ? "undefined" : _typeof(window)) === "object";
+            var root = WINDOW ? window : {};
+  
+            if (root.JS_MD5_NO_WINDOW) {
+              WINDOW = false;
+            }
+  
+            var WEB_WORKER = !WINDOW && (typeof self === "undefined" ? "undefined" : _typeof(self)) === "object";
+            var NODE_JS = !root.JS_MD5_NO_NODE_JS && _typeof(process) === "object" && process.versions && process.versions.node;
+  
+            if (NODE_JS) {
+              root = global;
+            } else if (WEB_WORKER) {
+              root = self;
+            }
+  
+            var COMMON_JS = !root.JS_MD5_NO_COMMON_JS && _typeof(module) === "object" && module.exports;
+  
+            var AMD =  true && __webpack_require__(10);
+  
+            var ARRAY_BUFFER = !root.JS_MD5_NO_ARRAY_BUFFER && typeof ArrayBuffer !== "undefined";
+            var HEX_CHARS = "0123456789abcdef".split("");
+            var EXTRA = [128, 32768, 8388608, -2147483648];
+            var SHIFT = [0, 8, 16, 24];
+            var OUTPUT_TYPES = ["hex", "array", "digest", "buffer", "arrayBuffer", "base64"];
+            var BASE64_ENCODE_CHAR = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split("");
+            var blocks = [],
+                buffer8;
+  
+            if (ARRAY_BUFFER) {
+              var buffer = new ArrayBuffer(68);
+              buffer8 = new Uint8Array(buffer);
+              blocks = new Uint32Array(buffer);
+            }
+  
+            if (root.JS_MD5_NO_NODE_JS || !Array.isArray) {
+              Array.isArray = function (obj) {
+                return Object.prototype.toString.call(obj) === "[object Array]";
+              };
+            }
+  
+            if (ARRAY_BUFFER && (root.JS_MD5_NO_ARRAY_BUFFER_IS_VIEW || !ArrayBuffer.isView)) {
+              ArrayBuffer.isView = function (obj) {
+                return _typeof(obj) === "object" && obj.buffer && obj.buffer.constructor === ArrayBuffer;
+              };
+            }
+            /**
+             * @method hex
+             * @memberof md5
+             * @description Output hash as hex string
+             * @param {String|Array|Uint8Array|ArrayBuffer} message message to hash
+             * @returns {String} Hex string
+             * @example
+             * md5.hex('The quick brown fox jumps over the lazy dog');
+             * // equal to
+             * md5('The quick brown fox jumps over the lazy dog');
+             */
+  
+            /**
+             * @method digest
+             * @memberof md5
+             * @description Output hash as bytes array
+             * @param {String|Array|Uint8Array|ArrayBuffer} message message to hash
+             * @returns {Array} Bytes array
+             * @example
+             * md5.digest('The quick brown fox jumps over the lazy dog');
+             */
+  
+            /**
+             * @method array
+             * @memberof md5
+             * @description Output hash as bytes array
+             * @param {String|Array|Uint8Array|ArrayBuffer} message message to hash
+             * @returns {Array} Bytes array
+             * @example
+             * md5.array('The quick brown fox jumps over the lazy dog');
+             */
+  
+            /**
+             * @method arrayBuffer
+             * @memberof md5
+             * @description Output hash as ArrayBuffer
+             * @param {String|Array|Uint8Array|ArrayBuffer} message message to hash
+             * @returns {ArrayBuffer} ArrayBuffer
+             * @example
+             * md5.arrayBuffer('The quick brown fox jumps over the lazy dog');
+             */
+  
+            /**
+             * @method buffer
+             * @deprecated This maybe confuse with Buffer in node.js. Please use arrayBuffer instead.
+             * @memberof md5
+             * @description Output hash as ArrayBuffer
+             * @param {String|Array|Uint8Array|ArrayBuffer} message message to hash
+             * @returns {ArrayBuffer} ArrayBuffer
+             * @example
+             * md5.buffer('The quick brown fox jumps over the lazy dog');
+             */
+  
+            /**
+             * @method base64
+             * @memberof md5
+             * @description Output hash as base64 string
+             * @param {String|Array|Uint8Array|ArrayBuffer} message message to hash
+             * @returns {String} base64 string
+             * @example
+             * md5.base64('The quick brown fox jumps over the lazy dog');
+             */
+  
+  
+            var createOutputMethod = function createOutputMethod(outputType) {
+              return function (message) {
+                return new Md5(true).update(message)[outputType]();
+              };
+            };
+            /**
+             * @method create
+             * @memberof md5
+             * @description Create Md5 object
+             * @returns {Md5} Md5 object.
+             * @example
+             * var hash = md5.create();
+             */
+  
+            /**
+             * @method update
+             * @memberof md5
+             * @description Create and update Md5 object
+             * @param {String|Array|Uint8Array|ArrayBuffer} message message to hash
+             * @returns {Md5} Md5 object.
+             * @example
+             * var hash = md5.update('The quick brown fox jumps over the lazy dog');
+             * // equal to
+             * var hash = md5.create();
+             * hash.update('The quick brown fox jumps over the lazy dog');
+             */
+  
+  
+            var createMethod = function createMethod() {
+              var method = createOutputMethod("hex");
+  
+              if (NODE_JS) {
+                method = nodeWrap(method);
+              }
+  
+              method.getCtx = method.create = function () {
+                return new Md5();
+              };
+  
+              method.update = function (message) {
+                return method.create().update(message);
+              };
+  
+              for (var i = 0; i < OUTPUT_TYPES.length; ++i) {
+                var type = OUTPUT_TYPES[i];
+                method[type] = createOutputMethod(type);
+              }
+  
+              return method;
+            };
+  
+            var nodeWrap = function nodeWrap(method) {
+              var crypto = eval("require('crypto')");
+              var Buffer = eval("require('buffer').Buffer");
+  
+              var nodeMethod = function nodeMethod(message) {
+                if (typeof message === "string") {
+                  return crypto.createHash("md5").update(message, "utf8").digest("hex");
+                } else {
+                  if (message === null || message === undefined) {
+                    throw ERROR;
+                  } else if (message.constructor === ArrayBuffer) {
+                    message = new Uint8Array(message);
+                  }
+                }
+  
+                if (Array.isArray(message) || ArrayBuffer.isView(message) || message.constructor === Buffer) {
+                  return crypto.createHash("md5").update(new Buffer(message)).digest("hex");
+                } else {
+                  return method(message);
+                }
+              };
+  
+              return nodeMethod;
+            };
+            /**
+             * Md5 class
+             * @class Md5
+             * @description This is internal class.
+             * @see {@link md5.create}
+             */
+  
+  
+            function Md5(sharedMemory) {
+              if (sharedMemory) {
+                blocks[0] = blocks[16] = blocks[1] = blocks[2] = blocks[3] = blocks[4] = blocks[5] = blocks[6] = blocks[7] = blocks[8] = blocks[9] = blocks[10] = blocks[11] = blocks[12] = blocks[13] = blocks[14] = blocks[15] = 0;
+                this.blocks = blocks;
+                this.buffer8 = buffer8;
+              } else {
+                if (ARRAY_BUFFER) {
+                  var buffer = new ArrayBuffer(68);
+                  this.buffer8 = new Uint8Array(buffer);
+                  this.blocks = new Uint32Array(buffer);
+                } else {
+                  this.blocks = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+                }
+              }
+  
+              this.h0 = this.h1 = this.h2 = this.h3 = this.start = this.bytes = this.hBytes = 0;
+              this.finalized = this.hashed = false;
+              this.first = true;
+            }
+            /**
+             * @method update
+             * @memberof Md5
+             * @instance
+             * @description Update hash
+             * @param {String|Array|Uint8Array|ArrayBuffer} message message to hash
+             * @returns {Md5} Md5 object.
+             * @see {@link md5.update}
+             */
+  
+  
+            Md5.prototype.update = function (message) {
+              if (this.finalized) {
+                return;
+              }
+  
+              var notString,
+                  type = _typeof(message);
+  
+              if (type !== "string") {
+                if (type === "object") {
+                  if (message === null) {
+                    throw ERROR;
+                  } else if (ARRAY_BUFFER && (message.constructor === ArrayBuffer || message.constructor.name === "ArrayBuffer")) {
+                    message = new Uint8Array(message);
+                  } else if (!Array.isArray(message)) {
+                    if (!ARRAY_BUFFER || !ArrayBuffer.isView(message)) {
+                      throw ERROR;
+                    }
+                  }
+                } else {
+                  throw ERROR;
+                }
+  
+                notString = true;
+              }
+  
+              var code,
+                  index = 0,
+                  i,
+                  length = message.length,
+                  blocks = this.blocks;
+              var buffer8 = this.buffer8;
+  
+              while (index < length) {
+                if (this.hashed) {
+                  this.hashed = false;
+                  blocks[0] = blocks[16];
+                  blocks[16] = blocks[1] = blocks[2] = blocks[3] = blocks[4] = blocks[5] = blocks[6] = blocks[7] = blocks[8] = blocks[9] = blocks[10] = blocks[11] = blocks[12] = blocks[13] = blocks[14] = blocks[15] = 0;
+                }
+  
+                if (notString) {
+                  if (ARRAY_BUFFER) {
+                    for (i = this.start; index < length && i < 64; ++index) {
+                      buffer8[i++] = message[index];
+                    }
+                  } else {
+                    for (i = this.start; index < length && i < 64; ++index) {
+                      blocks[i >> 2] |= message[index] << SHIFT[i++ & 3];
+                    }
+                  }
+                } else {
+                  if (ARRAY_BUFFER) {
+                    for (i = this.start; index < length && i < 64; ++index) {
+                      code = message.charCodeAt(index);
+  
+                      if (code < 0x80) {
+                        buffer8[i++] = code;
+                      } else if (code < 0x800) {
+                        buffer8[i++] = 0xc0 | code >> 6;
+                        buffer8[i++] = 0x80 | code & 0x3f;
+                      } else if (code < 0xd800 || code >= 0xe000) {
+                        buffer8[i++] = 0xe0 | code >> 12;
+                        buffer8[i++] = 0x80 | code >> 6 & 0x3f;
+                        buffer8[i++] = 0x80 | code & 0x3f;
+                      } else {
+                        code = 0x10000 + ((code & 0x3ff) << 10 | message.charCodeAt(++index) & 0x3ff);
+                        buffer8[i++] = 0xf0 | code >> 18;
+                        buffer8[i++] = 0x80 | code >> 12 & 0x3f;
+                        buffer8[i++] = 0x80 | code >> 6 & 0x3f;
+                        buffer8[i++] = 0x80 | code & 0x3f;
+                      }
+                    }
+                  } else {
+                    for (i = this.start; index < length && i < 64; ++index) {
+                      code = message.charCodeAt(index);
+  
+                      if (code < 0x80) {
+                        blocks[i >> 2] |= code << SHIFT[i++ & 3];
+                      } else if (code < 0x800) {
+                        blocks[i >> 2] |= (0xc0 | code >> 6) << SHIFT[i++ & 3];
+                        blocks[i >> 2] |= (0x80 | code & 0x3f) << SHIFT[i++ & 3];
+                      } else if (code < 0xd800 || code >= 0xe000) {
+                        blocks[i >> 2] |= (0xe0 | code >> 12) << SHIFT[i++ & 3];
+                        blocks[i >> 2] |= (0x80 | code >> 6 & 0x3f) << SHIFT[i++ & 3];
+                        blocks[i >> 2] |= (0x80 | code & 0x3f) << SHIFT[i++ & 3];
+                      } else {
+                        code = 0x10000 + ((code & 0x3ff) << 10 | message.charCodeAt(++index) & 0x3ff);
+                        blocks[i >> 2] |= (0xf0 | code >> 18) << SHIFT[i++ & 3];
+                        blocks[i >> 2] |= (0x80 | code >> 12 & 0x3f) << SHIFT[i++ & 3];
+                        blocks[i >> 2] |= (0x80 | code >> 6 & 0x3f) << SHIFT[i++ & 3];
+                        blocks[i >> 2] |= (0x80 | code & 0x3f) << SHIFT[i++ & 3];
+                      }
+                    }
+                  }
+                }
+  
+                this.lastByteIndex = i;
+                this.bytes += i - this.start;
+  
+                if (i >= 64) {
+                  this.start = i - 64;
+                  this.hash();
+                  this.hashed = true;
+                } else {
+                  this.start = i;
+                }
+              }
+  
+              if (this.bytes > 4294967295) {
+                this.hBytes += this.bytes / 4294967296 << 0;
+                this.bytes = this.bytes % 4294967296;
+              }
+  
+              return this;
+            };
+  
+            Md5.prototype.finalize = function () {
+              if (this.finalized) {
+                return;
+              }
+  
+              this.finalized = true;
+              var blocks = this.blocks,
+                  i = this.lastByteIndex;
+              blocks[i >> 2] |= EXTRA[i & 3];
+  
+              if (i >= 56) {
+                if (!this.hashed) {
+                  this.hash();
+                }
+  
+                blocks[0] = blocks[16];
+                blocks[16] = blocks[1] = blocks[2] = blocks[3] = blocks[4] = blocks[5] = blocks[6] = blocks[7] = blocks[8] = blocks[9] = blocks[10] = blocks[11] = blocks[12] = blocks[13] = blocks[14] = blocks[15] = 0;
+              }
+  
+              blocks[14] = this.bytes << 3;
+              blocks[15] = this.hBytes << 3 | this.bytes >>> 29;
+              this.hash();
+            };
+  
+            Md5.prototype.hash = function () {
+              var a,
+                  b,
+                  c,
+                  d,
+                  bc,
+                  da,
+                  blocks = this.blocks;
+  
+              if (this.first) {
+                a = blocks[0] - 680876937;
+                a = (a << 7 | a >>> 25) - 271733879 << 0;
+                d = (-1732584194 ^ a & 2004318071) + blocks[1] - 117830708;
+                d = (d << 12 | d >>> 20) + a << 0;
+                c = (-271733879 ^ d & (a ^ -271733879)) + blocks[2] - 1126478375;
+                c = (c << 17 | c >>> 15) + d << 0;
+                b = (a ^ c & (d ^ a)) + blocks[3] - 1316259209;
+                b = (b << 22 | b >>> 10) + c << 0;
+              } else {
+                a = this.h0;
+                b = this.h1;
+                c = this.h2;
+                d = this.h3;
+                a += (d ^ b & (c ^ d)) + blocks[0] - 680876936;
+                a = (a << 7 | a >>> 25) + b << 0;
+                d += (c ^ a & (b ^ c)) + blocks[1] - 389564586;
+                d = (d << 12 | d >>> 20) + a << 0;
+                c += (b ^ d & (a ^ b)) + blocks[2] + 606105819;
+                c = (c << 17 | c >>> 15) + d << 0;
+                b += (a ^ c & (d ^ a)) + blocks[3] - 1044525330;
+                b = (b << 22 | b >>> 10) + c << 0;
+              }
+  
+              a += (d ^ b & (c ^ d)) + blocks[4] - 176418897;
+              a = (a << 7 | a >>> 25) + b << 0;
+              d += (c ^ a & (b ^ c)) + blocks[5] + 1200080426;
+              d = (d << 12 | d >>> 20) + a << 0;
+              c += (b ^ d & (a ^ b)) + blocks[6] - 1473231341;
+              c = (c << 17 | c >>> 15) + d << 0;
+              b += (a ^ c & (d ^ a)) + blocks[7] - 45705983;
+              b = (b << 22 | b >>> 10) + c << 0;
+              a += (d ^ b & (c ^ d)) + blocks[8] + 1770035416;
+              a = (a << 7 | a >>> 25) + b << 0;
+              d += (c ^ a & (b ^ c)) + blocks[9] - 1958414417;
+              d = (d << 12 | d >>> 20) + a << 0;
+              c += (b ^ d & (a ^ b)) + blocks[10] - 42063;
+              c = (c << 17 | c >>> 15) + d << 0;
+              b += (a ^ c & (d ^ a)) + blocks[11] - 1990404162;
+              b = (b << 22 | b >>> 10) + c << 0;
+              a += (d ^ b & (c ^ d)) + blocks[12] + 1804603682;
+              a = (a << 7 | a >>> 25) + b << 0;
+              d += (c ^ a & (b ^ c)) + blocks[13] - 40341101;
+              d = (d << 12 | d >>> 20) + a << 0;
+              c += (b ^ d & (a ^ b)) + blocks[14] - 1502002290;
+              c = (c << 17 | c >>> 15) + d << 0;
+              b += (a ^ c & (d ^ a)) + blocks[15] + 1236535329;
+              b = (b << 22 | b >>> 10) + c << 0;
+              a += (c ^ d & (b ^ c)) + blocks[1] - 165796510;
+              a = (a << 5 | a >>> 27) + b << 0;
+              d += (b ^ c & (a ^ b)) + blocks[6] - 1069501632;
+              d = (d << 9 | d >>> 23) + a << 0;
+              c += (a ^ b & (d ^ a)) + blocks[11] + 643717713;
+              c = (c << 14 | c >>> 18) + d << 0;
+              b += (d ^ a & (c ^ d)) + blocks[0] - 373897302;
+              b = (b << 20 | b >>> 12) + c << 0;
+              a += (c ^ d & (b ^ c)) + blocks[5] - 701558691;
+              a = (a << 5 | a >>> 27) + b << 0;
+              d += (b ^ c & (a ^ b)) + blocks[10] + 38016083;
+              d = (d << 9 | d >>> 23) + a << 0;
+              c += (a ^ b & (d ^ a)) + blocks[15] - 660478335;
+              c = (c << 14 | c >>> 18) + d << 0;
+              b += (d ^ a & (c ^ d)) + blocks[4] - 405537848;
+              b = (b << 20 | b >>> 12) + c << 0;
+              a += (c ^ d & (b ^ c)) + blocks[9] + 568446438;
+              a = (a << 5 | a >>> 27) + b << 0;
+              d += (b ^ c & (a ^ b)) + blocks[14] - 1019803690;
+              d = (d << 9 | d >>> 23) + a << 0;
+              c += (a ^ b & (d ^ a)) + blocks[3] - 187363961;
+              c = (c << 14 | c >>> 18) + d << 0;
+              b += (d ^ a & (c ^ d)) + blocks[8] + 1163531501;
+              b = (b << 20 | b >>> 12) + c << 0;
+              a += (c ^ d & (b ^ c)) + blocks[13] - 1444681467;
+              a = (a << 5 | a >>> 27) + b << 0;
+              d += (b ^ c & (a ^ b)) + blocks[2] - 51403784;
+              d = (d << 9 | d >>> 23) + a << 0;
+              c += (a ^ b & (d ^ a)) + blocks[7] + 1735328473;
+              c = (c << 14 | c >>> 18) + d << 0;
+              b += (d ^ a & (c ^ d)) + blocks[12] - 1926607734;
+              b = (b << 20 | b >>> 12) + c << 0;
+              bc = b ^ c;
+              a += (bc ^ d) + blocks[5] - 378558;
+              a = (a << 4 | a >>> 28) + b << 0;
+              d += (bc ^ a) + blocks[8] - 2022574463;
+              d = (d << 11 | d >>> 21) + a << 0;
+              da = d ^ a;
+              c += (da ^ b) + blocks[11] + 1839030562;
+              c = (c << 16 | c >>> 16) + d << 0;
+              b += (da ^ c) + blocks[14] - 35309556;
+              b = (b << 23 | b >>> 9) + c << 0;
+              bc = b ^ c;
+              a += (bc ^ d) + blocks[1] - 1530992060;
+              a = (a << 4 | a >>> 28) + b << 0;
+              d += (bc ^ a) + blocks[4] + 1272893353;
+              d = (d << 11 | d >>> 21) + a << 0;
+              da = d ^ a;
+              c += (da ^ b) + blocks[7] - 155497632;
+              c = (c << 16 | c >>> 16) + d << 0;
+              b += (da ^ c) + blocks[10] - 1094730640;
+              b = (b << 23 | b >>> 9) + c << 0;
+              bc = b ^ c;
+              a += (bc ^ d) + blocks[13] + 681279174;
+              a = (a << 4 | a >>> 28) + b << 0;
+              d += (bc ^ a) + blocks[0] - 358537222;
+              d = (d << 11 | d >>> 21) + a << 0;
+              da = d ^ a;
+              c += (da ^ b) + blocks[3] - 722521979;
+              c = (c << 16 | c >>> 16) + d << 0;
+              b += (da ^ c) + blocks[6] + 76029189;
+              b = (b << 23 | b >>> 9) + c << 0;
+              bc = b ^ c;
+              a += (bc ^ d) + blocks[9] - 640364487;
+              a = (a << 4 | a >>> 28) + b << 0;
+              d += (bc ^ a) + blocks[12] - 421815835;
+              d = (d << 11 | d >>> 21) + a << 0;
+              da = d ^ a;
+              c += (da ^ b) + blocks[15] + 530742520;
+              c = (c << 16 | c >>> 16) + d << 0;
+              b += (da ^ c) + blocks[2] - 995338651;
+              b = (b << 23 | b >>> 9) + c << 0;
+              a += (c ^ (b | ~d)) + blocks[0] - 198630844;
+              a = (a << 6 | a >>> 26) + b << 0;
+              d += (b ^ (a | ~c)) + blocks[7] + 1126891415;
+              d = (d << 10 | d >>> 22) + a << 0;
+              c += (a ^ (d | ~b)) + blocks[14] - 1416354905;
+              c = (c << 15 | c >>> 17) + d << 0;
+              b += (d ^ (c | ~a)) + blocks[5] - 57434055;
+              b = (b << 21 | b >>> 11) + c << 0;
+              a += (c ^ (b | ~d)) + blocks[12] + 1700485571;
+              a = (a << 6 | a >>> 26) + b << 0;
+              d += (b ^ (a | ~c)) + blocks[3] - 1894986606;
+              d = (d << 10 | d >>> 22) + a << 0;
+              c += (a ^ (d | ~b)) + blocks[10] - 1051523;
+              c = (c << 15 | c >>> 17) + d << 0;
+              b += (d ^ (c | ~a)) + blocks[1] - 2054922799;
+              b = (b << 21 | b >>> 11) + c << 0;
+              a += (c ^ (b | ~d)) + blocks[8] + 1873313359;
+              a = (a << 6 | a >>> 26) + b << 0;
+              d += (b ^ (a | ~c)) + blocks[15] - 30611744;
+              d = (d << 10 | d >>> 22) + a << 0;
+              c += (a ^ (d | ~b)) + blocks[6] - 1560198380;
+              c = (c << 15 | c >>> 17) + d << 0;
+              b += (d ^ (c | ~a)) + blocks[13] + 1309151649;
+              b = (b << 21 | b >>> 11) + c << 0;
+              a += (c ^ (b | ~d)) + blocks[4] - 145523070;
+              a = (a << 6 | a >>> 26) + b << 0;
+              d += (b ^ (a | ~c)) + blocks[11] - 1120210379;
+              d = (d << 10 | d >>> 22) + a << 0;
+              c += (a ^ (d | ~b)) + blocks[2] + 718787259;
+              c = (c << 15 | c >>> 17) + d << 0;
+              b += (d ^ (c | ~a)) + blocks[9] - 343485551;
+              b = (b << 21 | b >>> 11) + c << 0;
+  
+              if (this.first) {
+                this.h0 = a + 1732584193 << 0;
+                this.h1 = b - 271733879 << 0;
+                this.h2 = c - 1732584194 << 0;
+                this.h3 = d + 271733878 << 0;
+                this.first = false;
+              } else {
+                this.h0 = this.h0 + a << 0;
+                this.h1 = this.h1 + b << 0;
+                this.h2 = this.h2 + c << 0;
+                this.h3 = this.h3 + d << 0;
+              }
+            };
+            /**
+             * @method hex
+             * @memberof Md5
+             * @instance
+             * @description Output hash as hex string
+             * @returns {String} Hex string
+             * @see {@link md5.hex}
+             * @example
+             * hash.hex();
+             */
+  
+  
+            Md5.prototype.hex = function () {
+              this.finalize();
+              var h0 = this.h0,
+                  h1 = this.h1,
+                  h2 = this.h2,
+                  h3 = this.h3;
+              return HEX_CHARS[h0 >> 4 & 0x0f] + HEX_CHARS[h0 & 0x0f] + HEX_CHARS[h0 >> 12 & 0x0f] + HEX_CHARS[h0 >> 8 & 0x0f] + HEX_CHARS[h0 >> 20 & 0x0f] + HEX_CHARS[h0 >> 16 & 0x0f] + HEX_CHARS[h0 >> 28 & 0x0f] + HEX_CHARS[h0 >> 24 & 0x0f] + HEX_CHARS[h1 >> 4 & 0x0f] + HEX_CHARS[h1 & 0x0f] + HEX_CHARS[h1 >> 12 & 0x0f] + HEX_CHARS[h1 >> 8 & 0x0f] + HEX_CHARS[h1 >> 20 & 0x0f] + HEX_CHARS[h1 >> 16 & 0x0f] + HEX_CHARS[h1 >> 28 & 0x0f] + HEX_CHARS[h1 >> 24 & 0x0f] + HEX_CHARS[h2 >> 4 & 0x0f] + HEX_CHARS[h2 & 0x0f] + HEX_CHARS[h2 >> 12 & 0x0f] + HEX_CHARS[h2 >> 8 & 0x0f] + HEX_CHARS[h2 >> 20 & 0x0f] + HEX_CHARS[h2 >> 16 & 0x0f] + HEX_CHARS[h2 >> 28 & 0x0f] + HEX_CHARS[h2 >> 24 & 0x0f] + HEX_CHARS[h3 >> 4 & 0x0f] + HEX_CHARS[h3 & 0x0f] + HEX_CHARS[h3 >> 12 & 0x0f] + HEX_CHARS[h3 >> 8 & 0x0f] + HEX_CHARS[h3 >> 20 & 0x0f] + HEX_CHARS[h3 >> 16 & 0x0f] + HEX_CHARS[h3 >> 28 & 0x0f] + HEX_CHARS[h3 >> 24 & 0x0f];
+            };
+            /**
+             * @method toString
+             * @memberof Md5
+             * @instance
+             * @description Output hash as hex string
+             * @returns {String} Hex string
+             * @see {@link md5.hex}
+             * @example
+             * hash.toString();
+             */
+  
+  
+            Md5.prototype.toString = Md5.prototype.hex;
+            /**
+             * @method digest
+             * @memberof Md5
+             * @instance
+             * @description Output hash as bytes array
+             * @returns {Array} Bytes array
+             * @see {@link md5.digest}
+             * @example
+             * hash.digest();
+             */
+  
+            Md5.prototype.digest = function () {
+              this.finalize();
+              var h0 = this.h0,
+                  h1 = this.h1,
+                  h2 = this.h2,
+                  h3 = this.h3;
+              return [h0 & 0xff, h0 >> 8 & 0xff, h0 >> 16 & 0xff, h0 >> 24 & 0xff, h1 & 0xff, h1 >> 8 & 0xff, h1 >> 16 & 0xff, h1 >> 24 & 0xff, h2 & 0xff, h2 >> 8 & 0xff, h2 >> 16 & 0xff, h2 >> 24 & 0xff, h3 & 0xff, h3 >> 8 & 0xff, h3 >> 16 & 0xff, h3 >> 24 & 0xff];
+            };
+            /**
+             * @method array
+             * @memberof Md5
+             * @instance
+             * @description Output hash as bytes array
+             * @returns {Array} Bytes array
+             * @see {@link md5.array}
+             * @example
+             * hash.array();
+             */
+  
+  
+            Md5.prototype.array = Md5.prototype.digest;
+            /**
+             * @method arrayBuffer
+             * @memberof Md5
+             * @instance
+             * @description Output hash as ArrayBuffer
+             * @returns {ArrayBuffer} ArrayBuffer
+             * @see {@link md5.arrayBuffer}
+             * @example
+             * hash.arrayBuffer();
+             */
+  
+            Md5.prototype.arrayBuffer = function () {
+              this.finalize();
+              var buffer = new ArrayBuffer(16);
+              var blocks = new Uint32Array(buffer);
+              blocks[0] = this.h0;
+              blocks[1] = this.h1;
+              blocks[2] = this.h2;
+              blocks[3] = this.h3;
+              return buffer;
+            };
+            /**
+             * @method buffer
+             * @deprecated This maybe confuse with Buffer in node.js. Please use arrayBuffer instead.
+             * @memberof Md5
+             * @instance
+             * @description Output hash as ArrayBuffer
+             * @returns {ArrayBuffer} ArrayBuffer
+             * @see {@link md5.buffer}
+             * @example
+             * hash.buffer();
+             */
+  
+  
+            Md5.prototype.buffer = Md5.prototype.arrayBuffer;
+            /**
+             * @method base64
+             * @memberof Md5
+             * @instance
+             * @description Output hash as base64 string
+             * @returns {String} base64 string
+             * @see {@link md5.base64}
+             * @example
+             * hash.base64();
+             */
+  
+            Md5.prototype.base64 = function () {
+              var v1,
+                  v2,
+                  v3,
+                  base64Str = "",
+                  bytes = this.array();
+  
+              for (var i = 0; i < 15;) {
+                v1 = bytes[i++];
+                v2 = bytes[i++];
+                v3 = bytes[i++];
+                base64Str += BASE64_ENCODE_CHAR[v1 >>> 2] + BASE64_ENCODE_CHAR[(v1 << 4 | v2 >>> 4) & 63] + BASE64_ENCODE_CHAR[(v2 << 2 | v3 >>> 6) & 63] + BASE64_ENCODE_CHAR[v3 & 63];
+              }
+  
+              v1 = bytes[i];
+              base64Str += BASE64_ENCODE_CHAR[v1 >>> 2] + BASE64_ENCODE_CHAR[v1 << 4 & 63] + "==";
+              return base64Str;
+            };
+  
+            var exports = createMethod();
+  
+            if (COMMON_JS) {
+              module.exports = exports;
+            } else {
+              /**
+               * @method md5
+               * @description Md5 hash function, export to global in browsers.
+               * @param {String|Array|Uint8Array|ArrayBuffer} message message to hash
+               * @returns {String} md5 hashes
+               * @example
+               * md5(''); // d41d8cd98f00b204e9800998ecf8427e
+               * md5('The quick brown fox jumps over the lazy dog'); // 9e107d9d372bb6826bd81d3542a419d6
+               * md5('The quick brown fox jumps over the lazy dog.'); // e4d909c290d0fb1ca068ffaddf22cbd0
+               *
+               * // It also supports UTF-8 encoding
+               * md5('中文'); // a7bac2239fcdcb3a067903d8077c4a07
+               *
+               * // It also supports byte `Array`, `Uint8Array`, `ArrayBuffer`
+               * md5([]); // d41d8cd98f00b204e9800998ecf8427e
+               * md5(new Uint8Array([])); // d41d8cd98f00b204e9800998ecf8427e
+               */
+              root.md5 = exports;
+  
+              if (AMD) {
+                !(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
+                  return exports;
+                }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+              }
+            }
+          })();
+          /* WEBPACK VAR INJECTION */
+  
+        }).call(exports, __webpack_require__(9), __webpack_require__(1));
+        /***/
+      },
+      /* 9 */
+  
+      /***/
+      function (module, exports) {
+        // shim for using process in browser
+        var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
+        // don't break things.  But we need to wrap it in a try catch in case it is
+        // wrapped in strict mode code which doesn't define any globals.  It's inside a
+        // function because try/catches deoptimize in certain engines.
+  
+        var cachedSetTimeout;
+        var cachedClearTimeout;
+  
+        function defaultSetTimout() {
+          throw new Error("setTimeout has not been defined");
+        }
+  
+        function defaultClearTimeout() {
+          throw new Error("clearTimeout has not been defined");
+        }
+  
+        (function () {
+          try {
+            if (typeof setTimeout === "function") {
+              cachedSetTimeout = setTimeout;
+            } else {
+              cachedSetTimeout = defaultSetTimout;
+            }
+          } catch (e) {
+            cachedSetTimeout = defaultSetTimout;
+          }
+  
+          try {
+            if (typeof clearTimeout === "function") {
+              cachedClearTimeout = clearTimeout;
+            } else {
+              cachedClearTimeout = defaultClearTimeout;
+            }
+          } catch (e) {
+            cachedClearTimeout = defaultClearTimeout;
+          }
+        })();
+  
+        function runTimeout(fun) {
+          if (cachedSetTimeout === setTimeout) {
+            //normal enviroments in sane situations
+            return setTimeout(fun, 0);
+          } // if setTimeout wasn't available but was latter defined
+  
+  
+          if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+            cachedSetTimeout = setTimeout;
+            return setTimeout(fun, 0);
+          }
+  
+          try {
+            // when when somebody has screwed with setTimeout but no I.E. maddness
+            return cachedSetTimeout(fun, 0);
+          } catch (e) {
+            try {
+              // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+              return cachedSetTimeout.call(null, fun, 0);
+            } catch (e) {
+              // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+              return cachedSetTimeout.call(this, fun, 0);
+            }
+          }
+        }
+  
+        function runClearTimeout(marker) {
+          if (cachedClearTimeout === clearTimeout) {
+            //normal enviroments in sane situations
+            return clearTimeout(marker);
+          } // if clearTimeout wasn't available but was latter defined
+  
+  
+          if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+            cachedClearTimeout = clearTimeout;
+            return clearTimeout(marker);
+          }
+  
+          try {
+            // when when somebody has screwed with setTimeout but no I.E. maddness
+            return cachedClearTimeout(marker);
+          } catch (e) {
+            try {
+              // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+              return cachedClearTimeout.call(null, marker);
+            } catch (e) {
+              // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+              // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+              return cachedClearTimeout.call(this, marker);
+            }
+          }
+        }
+  
+        var queue = [];
+        var draining = false;
+        var currentQueue;
+        var queueIndex = -1;
+  
+        function cleanUpNextTick() {
+          if (!draining || !currentQueue) {
             return;
           }
-
-          switch (S > C && f(S), e.charAt(S + 1)) {
-            case "/":
-              var A = e.indexOf(">", S + 3),
-                  j = e.substring(S + 2, A),
-                  R = k.pop();
-              A < 0 ? (j = e.substring(S + 2).replace(/[\s<].*/, ""), p.error("end tag name: " + j + " is not complete:" + R.tagName), A = S + 1 + j.length) : j.match(/\s</) && (j = j.replace(/[\s<].*/, ""), p.error("end tag name: " + j + " maybe not complete"), A = S + 1 + j.length);
-              var E = R.localNSMap,
-                  N = R.tagName == j;
-
-              if (N || R.tagName && R.tagName.toLowerCase() == j.toLowerCase()) {
-                if (i.endElement(R.uri, R.localName, j), E) for (var P in E) {
-                  i.endPrefixMapping(P);
-                }
-                N || p.fatalError("end tag name: " + j + " is not match the current start tagName:" + R.tagName);
-              } else k.push(R);
-
-              A++;
-              break;
-
-            case "?":
-              y && v(S), A = u(e, S, i);
-              break;
-
-            case "!":
-              y && v(S), A = l(e, S, i, p);
-              break;
-
-            default:
-              y && v(S);
-              var B = new d(),
-                  I = k[k.length - 1].currentNSMap,
-                  A = s(e, S, B, I, x, p),
-                  D = B.length;
-
-              if (!B.closed && r(e, A, B.tagName, w) && (B.closed = !0, n.nbsp || p.warning("unclosed xml attribute")), y && D) {
-                for (var O = o(y, {}), U = 0; U < D; U++) {
-                  var z = B[U];
-                  v(z.offset), z.locator = o(y, {});
-                }
-
-                i.locator = O, t(B, i, I) && k.push(B), i.locator = y;
-              } else t(B, i, I) && k.push(B);
-
-              "http://www.w3.org/1999/xhtml" !== B.uri || B.closed ? A++ : A = c(e, A, B.tagName, x, i);
+  
+          draining = false;
+  
+          if (currentQueue.length) {
+            queue = currentQueue.concat(queue);
+          } else {
+            queueIndex = -1;
           }
-        } catch (e) {
-          p.error("element parse error: " + e), A = -1;
+  
+          if (queue.length) {
+            drainQueue();
+          }
         }
-
-        A > C ? C = A : f(Math.max(S, C) + 1);
-      }
-    }
-
-    function o(e, a) {
-      return a.lineNumber = e.lineNumber, a.columnNumber = e.columnNumber, a;
-    }
-
-    function s(e, a, n, i, o, s) {
-      for (var t, c, r = ++a, p = g;;) {
-        var l = e.charAt(r);
-
-        switch (l) {
-          case "=":
-            if (p === b) t = e.slice(a, r), p = k;else {
-              if (p !== y) throw new Error("attribute equal must after attrName");
-              p = k;
+  
+        function drainQueue() {
+          if (draining) {
+            return;
+          }
+  
+          var timeout = runTimeout(cleanUpNextTick);
+          draining = true;
+          var len = queue.length;
+  
+          while (len) {
+            currentQueue = queue;
+            queue = [];
+  
+            while (++queueIndex < len) {
+              if (currentQueue) {
+                currentQueue[queueIndex].run();
+              }
             }
-            break;
-
-          case "'":
-          case '"':
-            if (p === k || p === b) {
-              if (p === b && (s.warning('attribute value must after "="'), t = e.slice(a, r)), a = r + 1, !((r = e.indexOf(l, a)) > 0)) throw new Error("attribute value no end '" + l + "' match");
-              c = e.slice(a, r).replace(/&#?\w+;/g, o), n.add(t, c, a - 1), p = C;
-            } else {
-              if (p != w) throw new Error('attribute value must after "="');
-              c = e.slice(a, r).replace(/&#?\w+;/g, o), n.add(t, c, a), s.warning('attribute "' + t + '" missed start quot(' + l + ")!!"), a = r + 1, p = C;
-            }
-
-            break;
-
-          case "/":
-            switch (p) {
-              case g:
-                n.setTagName(e.slice(a, r));
-
-              case C:
-              case S:
-              case T:
-                p = T, n.closed = !0;
-
-              case w:
-              case b:
-              case y:
-                break;
-
-              default:
-                throw new Error("attribute invalid close char('/')");
-            }
-
-            break;
-
-          case "":
-            return s.error("unexpected end of input"), p == g && n.setTagName(e.slice(a, r)), r;
-
-          case ">":
-            switch (p) {
-              case g:
-                n.setTagName(e.slice(a, r));
-
-              case C:
-              case S:
-              case T:
-                break;
-
-              case w:
-              case b:
-                c = e.slice(a, r), "/" === c.slice(-1) && (n.closed = !0, c = c.slice(0, -1));
-
-              case y:
-                p === y && (c = t), p == w ? (s.warning('attribute "' + c + '" missed quot(")!!'), n.add(t, c.replace(/&#?\w+;/g, o), a)) : ("http://www.w3.org/1999/xhtml" === i[""] && c.match(/^(?:disabled|checked|selected)$/i) || s.warning('attribute "' + c + '" missed value!! "' + c + '" instead!!'), n.add(c, c, a));
-                break;
-
-              case k:
-                throw new Error("attribute value missed!!");
-            }
-
-            return r;
-
-          case "":
-            l = " ";
-
-          default:
-            if (l <= " ") switch (p) {
-              case g:
-                n.setTagName(e.slice(a, r)), p = S;
-                break;
-
-              case b:
-                t = e.slice(a, r), p = y;
-                break;
-
-              case w:
-                var c = e.slice(a, r).replace(/&#?\w+;/g, o);
-                s.warning('attribute "' + c + '" missed quot(")!!'), n.add(t, c, a);
-
-              case C:
-                p = S;
-            } else switch (p) {
-              case y:
-                n.tagName;
-                "http://www.w3.org/1999/xhtml" === i[""] && t.match(/^(?:disabled|checked|selected)$/i) || s.warning('attribute "' + t + '" missed value!! "' + t + '" instead2!!'), n.add(t, t, a), a = r, p = b;
-                break;
-
-              case C:
-                s.warning('attribute space is required"' + t + '"!!');
-
-              case S:
-                p = b, a = r;
-                break;
-
-              case k:
-                p = w, a = r;
-                break;
-
-              case T:
-                throw new Error("elements closed character '/' and '>' must be connected to");
-            }
+  
+            queueIndex = -1;
+            len = queue.length;
+          }
+  
+          currentQueue = null;
+          draining = false;
+          runClearTimeout(timeout);
         }
-
-        r++;
-      }
-    }
-
-    function t(e, a, n) {
-      for (var i = e.tagName, o = null, s = e.length; s--;) {
-        var t = e[s],
-            c = t.qName,
-            r = t.value,
-            l = c.indexOf(":");
-        if (l > 0) var u = t.prefix = c.slice(0, l),
-            d = c.slice(l + 1),
-            m = "xmlns" === u && d;else d = c, u = null, m = "xmlns" === c && "";
-        t.localName = d, !1 !== m && (null == o && (o = {}, p(n, n = {})), n[m] = o[m] = r, t.uri = "http://www.w3.org/2000/xmlns/", a.startPrefixMapping(m, r));
-      }
-
-      for (var s = e.length; s--;) {
-        t = e[s];
-        var u = t.prefix;
-        u && ("xml" === u && (t.uri = "http://www.w3.org/XML/1998/namespace"), "xmlns" !== u && (t.uri = n[u || ""]));
-      }
-
-      var l = i.indexOf(":");
-      l > 0 ? (u = e.prefix = i.slice(0, l), d = e.localName = i.slice(l + 1)) : (u = null, d = e.localName = i);
-      var x = e.uri = n[u || ""];
-      if (a.startElement(x, d, i, e), !e.closed) return e.currentNSMap = n, e.localNSMap = o, !0;
-      if (a.endElement(x, d, i), o) for (u in o) {
-        a.endPrefixMapping(u);
-      }
-    }
-
-    function c(e, a, n, i, o) {
-      if (/^(?:script|textarea)$/i.test(n)) {
-        var s = e.indexOf("</" + n + ">", a),
-            t = e.substring(a + 1, s);
-        if (/[&<]/.test(t)) return /^script$/i.test(n) ? (o.characters(t, 0, t.length), s) : (t = t.replace(/&#?\w+;/g, i), o.characters(t, 0, t.length), s);
-      }
-
-      return a + 1;
-    }
-
-    function r(e, a, n, i) {
-      var o = i[n];
-      return null == o && (o = e.lastIndexOf("</" + n + ">"), o < a && (o = e.lastIndexOf("</" + n)), i[n] = o), o < a;
-    }
-
-    function p(e, a) {
-      for (var n in e) {
-        a[n] = e[n];
-      }
-    }
-
-    function l(e, a, n, i) {
-      switch (e.charAt(a + 2)) {
-        case "-":
-          if ("-" === e.charAt(a + 3)) {
-            var o = e.indexOf("--\x3e", a + 4);
-            return o > a ? (n.comment(e, a + 4, o - a - 4), o + 3) : (i.error("Unclosed comment"), -1);
+  
+        process.nextTick = function (fun) {
+          var args = new Array(arguments.length - 1);
+  
+          if (arguments.length > 1) {
+            for (var i = 1; i < arguments.length; i++) {
+              args[i - 1] = arguments[i];
+            }
           }
-
-          return -1;
-
-        default:
-          if ("CDATA[" == e.substr(a + 3, 6)) {
-            var o = e.indexOf("]]>", a + 9);
-            return n.startCDATA(), n.characters(e, a + 9, o - a - 9), n.endCDATA(), o + 3;
+  
+          queue.push(new Item(fun, args));
+  
+          if (queue.length === 1 && !draining) {
+            runTimeout(drainQueue);
           }
-
-          var s = x(e, a),
-              t = s.length;
-
-          if (t > 1 && /!doctype/i.test(s[0][0])) {
-            var c = s[1][0],
-                r = t > 3 && /^public$/i.test(s[2][0]) && s[3][0],
-                p = t > 4 && s[4][0],
-                l = s[t - 1];
-            return n.startDTD(c, r && r.replace(/^(['"])(.*?)\1$/, "$2"), p && p.replace(/^(['"])(.*?)\1$/, "$2")), n.endDTD(), l.index + l[0].length;
-          }
-
-      }
-
-      return -1;
-    }
-
-    function u(e, a, n) {
-      var i = e.indexOf("?>", a);
-
-      if (i) {
-        var o = e.substring(a, i).match(/^<\?(\S*)\s*([\s\S]*?)\s*$/);
-
-        if (o) {
-          o[0].length;
-          return n.processingInstruction(o[1], o[2]), i + 2;
+        }; // v8 likes predictible objects
+  
+  
+        function Item(fun, array) {
+          this.fun = fun;
+          this.array = array;
         }
-
-        return -1;
-      }
-
-      return -1;
-    }
-
-    function d(e) {}
-
-    function m(e, a) {
-      return e.__proto__ = a, e;
-    }
-
-    function x(e, a) {
-      var n,
-          i = [],
-          o = /'[^']+'|"[^"]+"|[^\s<>\/=]+=?|(\/?\s*>|<)/g;
-
-      for (o.lastIndex = a, o.exec(e); n = o.exec(e);) {
-        if (i.push(n), n[1]) return i;
-      }
-    }
-
-    var f = /[A-Z_a-z\xC0-\xD6\xD8-\xF6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD]/,
-        v = new RegExp("[\\-\\.0-9" + f.source.slice(1, -1) + "\\u00B7\\u0300-\\u036F\\u203F-\\u2040]"),
-        h = new RegExp("^" + f.source + v.source + "*(?::" + f.source + v.source + "*)?$"),
-        g = 0,
-        b = 1,
-        y = 2,
-        k = 3,
-        w = 4,
-        C = 5,
-        S = 6,
-        T = 7;
-    n.prototype = {
-      parse: function parse(e, a, n) {
-        var o = this.domBuilder;
-        o.startDocument(), p(a, a = {}), i(e, a, n, o, this.errorHandler), o.endDocument();
-      }
-    }, d.prototype = {
-      setTagName: function setTagName(e) {
-        if (!h.test(e)) throw new Error("invalid tagName:" + e);
-        this.tagName = e;
-      },
-      add: function add(e, a, n) {
-        if (!h.test(e)) throw new Error("invalid attribute:" + e);
-        this[this.length++] = {
-          qName: e,
-          value: a,
-          offset: n
+  
+        Item.prototype.run = function () {
+          this.fun.apply(null, this.array);
         };
-      },
-      length: 0,
-      getLocalName: function getLocalName(e) {
-        return this[e].localName;
-      },
-      getLocator: function getLocator(e) {
-        return this[e].locator;
-      },
-      getQName: function getQName(e) {
-        return this[e].qName;
-      },
-      getURI: function getURI(e) {
-        return this[e].uri;
-      },
-      getValue: function getValue(e) {
-        return this[e].value;
-      }
-    }, m({}, m.prototype) instanceof m || (m = function m(e, a) {
-      function n() {}
-
-      n.prototype = a, n = new n();
-
-      for (a in e) {
-        n[a] = e[a];
-      }
-
-      return n;
-    }), a.XMLReader = n;
-  }, function (e, a, n) {
-    function i(e, a) {
-      var n,
-          i,
-          s = this,
-          t = new h(),
-          r = e.TaskId,
-          l = e.Bucket,
-          u = e.Region,
-          d = e.Key,
-          m = e.FilePath,
-          x = e.ChunkSize || e.SliceSize || s.options.ChunkSize,
-          v = e.AsyncLimit,
-          b = e.StorageClass,
-          y = e.ServerSideEncryption,
-          k = e.onHashProgress;
-      t.on("error", function (e) {
-        if (s._isRunningTask(r)) return a(e);
-      }), t.on("upload_complete", function (e) {
-        a(null, e);
-      }), t.on("upload_slice_complete", function (e) {
-        p.call(s, {
-          Bucket: l,
-          Region: u,
-          Key: d,
-          UploadId: e.UploadId,
-          SliceList: e.SliceList
-        }, function (a, o) {
-          if (s._isRunningTask(r)) {
-            if (f.removeUsing(e.UploadId), a) return i(null, !0), t.emit("error", a);
-            f.removeUploadId(e.UploadId), i({
-              loaded: n,
-              total: n
-            }, !0), t.emit("upload_complete", o);
-          }
-        });
-      }), t.on("get_upload_data_finish", function (a) {
-        var o = f.getFileId(e.FileStat, e.ChunkSize, l, d);
-        o && f.saveUploadId(o, a.UploadId, s.options.UploadIdCacheLimit), f.setUsing(a.UploadId), i(null, !0), c.call(s, {
-          TaskId: r,
-          Bucket: l,
-          Region: u,
-          Key: d,
-          FilePath: m,
-          FileSize: n,
-          SliceSize: x,
-          AsyncLimit: v,
-          ServerSideEncryption: y,
-          UploadData: a,
-          onProgress: i
-        }, function (e, a) {
-          if (s._isRunningTask(r)) return e ? (i(null, !0), t.emit("error", e)) : void t.emit("upload_slice_complete", a);
-        });
-      }), t.on("get_file_size_finish", function () {
-        if (i = g.throttleOnProgress.call(s, n, e.onProgress), e.UploadData.UploadId) t.emit("get_upload_data_finish", e.UploadData);else {
-          var a = g.extend({
-            TaskId: r,
-            Bucket: l,
-            Region: u,
-            Key: d,
-            Headers: e.Headers,
-            StorageClass: b,
-            FilePath: m,
-            FileSize: n,
-            SliceSize: x,
-            onHashProgress: k
-          }, e);
-          o.call(s, a, function (a, n) {
-            if (s._isRunningTask(r)) {
-              if (a) return t.emit("error", a);
-              e.UploadData.UploadId = n.UploadId, e.UploadData.PartList = n.PartList, t.emit("get_upload_data_finish", e.UploadData);
-            }
-          });
-        }
-      }), n = e.ContentLength, delete e.ContentLength, !e.Headers && (e.Headers = {}), g.each(e.Headers, function (a, n) {
-        "content-length" === n.toLowerCase() && delete e.Headers[n];
-      }), function () {
-        for (var a = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 5120], i = 1048576, o = 0; o < a.length && (i = 1024 * a[o] * 1024, !(n / i <= s.options.MaxPartNumber)); o++) {
-          ;
-        }
-
-        e.ChunkSize = e.SliceSize = x = Math.max(x, i);
-      }(), 0 === n ? (e.Body = "", e.ContentLength = 0, e.SkipTask = !0, s.putObject(e, function (e, n) {
-        if (e) return a(e);
-        a(null, n);
-      })) : t.emit("get_file_size_finish");
-    }
-
-    function o(e, a) {
-      var n = e.TaskId,
-          i = e.Bucket,
-          o = e.Region,
-          c = e.Key,
-          r = e.StorageClass,
-          p = this,
-          l = {},
-          u = e.FileSize,
-          d = e.SliceSize,
-          m = Math.ceil(u / d),
-          x = 0,
-          b = 0,
-          y = g.throttleOnProgress.call(p, u, e.onHashProgress),
-          k = function k(a, n) {
-        var i = d * (a - 1),
-            o = Math.min(i + d, u),
-            s = o - i;
-        l[a] ? n(null, {
-          PartNumber: a,
-          ETag: l[a],
-          Size: s
-        }) : g.fileSlice(e.FilePath, i, o, function (e) {
-          try {
-            var i = g.getFileMd5(e);
-          } catch (e) {
-            return n(e);
-          }
-
-          var o = '"' + i + '"';
-          l[a] = o, x += 1, b += s, n(null, {
-            PartNumber: a,
-            ETag: o,
-            Size: s
-          }), y({
-            loaded: b,
-            total: u
-          });
-        });
-      },
-          w = function w(e, a) {
-        var n = e.length;
-        if (0 === n) return a(null, !0);
-        if (n > m) return a(null, !1);
-
-        if (n > 1) {
-          if (Math.max(e[0].Size, e[1].Size) !== d) return a(null, !1);
-        }
-
-        var i = function i(o) {
-          if (o < n) {
-            var s = e[o];
-            k(s.PartNumber, function (e, n) {
-              n && n.ETag === s.ETag && n.Size === s.Size ? i(o + 1) : a(null, !1);
-            });
-          } else a(null, !0);
+  
+        process.title = "browser";
+        process.browser = true;
+        process.env = {};
+        process.argv = [];
+        process.version = ""; // empty string to avoid regexp issues
+  
+        process.versions = {};
+  
+        function noop() {}
+  
+        process.on = noop;
+        process.addListener = noop;
+        process.once = noop;
+        process.off = noop;
+        process.removeListener = noop;
+        process.removeAllListeners = noop;
+        process.emit = noop;
+        process.prependListener = noop;
+        process.prependOnceListener = noop;
+  
+        process.listeners = function (name) {
+          return [];
         };
-
-        i(0);
+  
+        process.binding = function (name) {
+          throw new Error("process.binding is not supported");
+        };
+  
+        process.cwd = function () {
+          return "/";
+        };
+  
+        process.chdir = function (dir) {
+          throw new Error("process.chdir is not supported");
+        };
+  
+        process.umask = function () {
+          return 0;
+        };
+        /***/
+  
       },
-          C = new h();
-
-      C.on("error", function (e) {
-        if (p._isRunningTask(n)) return a(e);
-      }), C.on("upload_id_available", function (e) {
-        var n = {},
-            i = [];
-        g.each(e.PartList, function (e) {
-          n[e.PartNumber] = e;
-        });
-
-        for (var o = 1; o <= m; o++) {
-          var s = n[o];
-          s ? (s.PartNumber = o, s.Uploaded = !0) : s = {
-            PartNumber: o,
-            ETag: null,
-            Uploaded: !1
-          }, i.push(s);
-        }
-
-        e.PartList = i, a(null, e);
-      }), C.on("no_available_upload_id", function () {
-        if (p._isRunningTask(n)) {
-          var s = g.extend({
-            Bucket: i,
-            Region: o,
-            Key: c,
-            Headers: g.clone(e.Headers),
-            StorageClass: r
-          }, e);
-          p.multipartInit(s, function (e, i) {
-            if (p._isRunningTask(n)) {
-              if (e) return C.emit("error", e);
-              var o = i.UploadId;
-              if (!o) return a({
-                Message: "no upload id"
+      /* 10 */
+  
+      /***/
+      function (module, exports) {
+        /* WEBPACK VAR INJECTION */
+        (function (__webpack_amd_options__) {
+          /* globals __webpack_amd_options__ */
+          module.exports = __webpack_amd_options__;
+          /* WEBPACK VAR INJECTION */
+        }).call(exports, {});
+        /***/
+      },
+      /* 11 */
+  
+      /***/
+      function (module, exports) {
+        /*
+        CryptoJS v3.1.2
+        code.google.com/p/crypto-js
+        (c) 2009-2013 by Jeff Mott. All rights reserved.
+        code.google.com/p/crypto-js/wiki/License
+        */
+        var CryptoJS = CryptoJS || function (g, l) {
+          var e = {},
+              d = e.lib = {},
+              m = function m() {},
+              k = d.Base = {
+            extend: function extend(a) {
+              m.prototype = this;
+              var c = new m();
+              a && c.mixIn(a);
+              c.hasOwnProperty("init") || (c.init = function () {
+                c.$super.init.apply(this, arguments);
               });
-              C.emit("upload_id_available", {
-                UploadId: o,
+              c.init.prototype = c;
+              c.$super = this;
+              return c;
+            },
+            create: function create() {
+              var a = this.extend();
+              a.init.apply(a, arguments);
+              return a;
+            },
+            init: function init() {},
+            mixIn: function mixIn(a) {
+              for (var c in a) {
+                a.hasOwnProperty(c) && (this[c] = a[c]);
+              }
+  
+              a.hasOwnProperty("toString") && (this.toString = a.toString);
+            },
+            clone: function clone() {
+              return this.init.prototype.extend(this);
+            }
+          },
+              p = d.WordArray = k.extend({
+            init: function init(a, c) {
+              a = this.words = a || [];
+              this.sigBytes = c != l ? c : 4 * a.length;
+            },
+            toString: function toString(a) {
+              return (a || n).stringify(this);
+            },
+            concat: function concat(a) {
+              var c = this.words,
+                  q = a.words,
+                  f = this.sigBytes;
+              a = a.sigBytes;
+              this.clamp();
+              if (f % 4) for (var b = 0; b < a; b++) {
+                c[f + b >>> 2] |= (q[b >>> 2] >>> 24 - 8 * (b % 4) & 255) << 24 - 8 * ((f + b) % 4);
+              } else if (65535 < q.length) for (b = 0; b < a; b += 4) {
+                c[f + b >>> 2] = q[b >>> 2];
+              } else c.push.apply(c, q);
+              this.sigBytes += a;
+              return this;
+            },
+            clamp: function clamp() {
+              var a = this.words,
+                  c = this.sigBytes;
+              a[c >>> 2] &= 4294967295 << 32 - 8 * (c % 4);
+              a.length = g.ceil(c / 4);
+            },
+            clone: function clone() {
+              var a = k.clone.call(this);
+              a.words = this.words.slice(0);
+              return a;
+            },
+            random: function random(a) {
+              for (var c = [], b = 0; b < a; b += 4) {
+                c.push(4294967296 * g.random() | 0);
+              }
+  
+              return new p.init(c, a);
+            }
+          }),
+              b = e.enc = {},
+              n = b.Hex = {
+            stringify: function stringify(a) {
+              var c = a.words;
+              a = a.sigBytes;
+  
+              for (var b = [], f = 0; f < a; f++) {
+                var d = c[f >>> 2] >>> 24 - 8 * (f % 4) & 255;
+                b.push((d >>> 4).toString(16));
+                b.push((d & 15).toString(16));
+              }
+  
+              return b.join("");
+            },
+            parse: function parse(a) {
+              for (var c = a.length, b = [], f = 0; f < c; f += 2) {
+                b[f >>> 3] |= parseInt(a.substr(f, 2), 16) << 24 - 4 * (f % 8);
+              }
+  
+              return new p.init(b, c / 2);
+            }
+          },
+              j = b.Latin1 = {
+            stringify: function stringify(a) {
+              var c = a.words;
+              a = a.sigBytes;
+  
+              for (var b = [], f = 0; f < a; f++) {
+                b.push(String.fromCharCode(c[f >>> 2] >>> 24 - 8 * (f % 4) & 255));
+              }
+  
+              return b.join("");
+            },
+            parse: function parse(a) {
+              for (var c = a.length, b = [], f = 0; f < c; f++) {
+                b[f >>> 2] |= (a.charCodeAt(f) & 255) << 24 - 8 * (f % 4);
+              }
+  
+              return new p.init(b, c);
+            }
+          },
+              h = b.Utf8 = {
+            stringify: function stringify(a) {
+              try {
+                return decodeURIComponent(escape(j.stringify(a)));
+              } catch (c) {
+                throw Error("Malformed UTF-8 data");
+              }
+            },
+            parse: function parse(a) {
+              return j.parse(unescape(encodeURIComponent(a)));
+            }
+          },
+              r = d.BufferedBlockAlgorithm = k.extend({
+            reset: function reset() {
+              this._data = new p.init();
+              this._nDataBytes = 0;
+            },
+            _append: function _append(a) {
+              "string" == typeof a && (a = h.parse(a));
+  
+              this._data.concat(a);
+  
+              this._nDataBytes += a.sigBytes;
+            },
+            _process: function _process(a) {
+              var c = this._data,
+                  b = c.words,
+                  f = c.sigBytes,
+                  d = this.blockSize,
+                  e = f / (4 * d),
+                  e = a ? g.ceil(e) : g.max((e | 0) - this._minBufferSize, 0);
+              a = e * d;
+              f = g.min(4 * a, f);
+  
+              if (a) {
+                for (var k = 0; k < a; k += d) {
+                  this._doProcessBlock(b, k);
+                }
+  
+                k = b.splice(0, a);
+                c.sigBytes -= f;
+              }
+  
+              return new p.init(k, f);
+            },
+            clone: function clone() {
+              var a = k.clone.call(this);
+              a._data = this._data.clone();
+              return a;
+            },
+            _minBufferSize: 0
+          });
+  
+          d.Hasher = r.extend({
+            cfg: k.extend(),
+            init: function init(a) {
+              this.cfg = this.cfg.extend(a);
+              this.reset();
+            },
+            reset: function reset() {
+              r.reset.call(this);
+  
+              this._doReset();
+            },
+            update: function update(a) {
+              this._append(a);
+  
+              this._process();
+  
+              return this;
+            },
+            finalize: function finalize(a) {
+              a && this._append(a);
+              return this._doFinalize();
+            },
+            blockSize: 16,
+            _createHelper: function _createHelper(a) {
+              return function (b, d) {
+                return new a.init(d).finalize(b);
+              };
+            },
+            _createHmacHelper: function _createHmacHelper(a) {
+              return function (b, d) {
+                return new s.HMAC.init(a, d).finalize(b);
+              };
+            }
+          });
+          var s = e.algo = {};
+          return e;
+        }(Math);
+  
+        (function () {
+          var g = CryptoJS,
+              l = g.lib,
+              e = l.WordArray,
+              d = l.Hasher,
+              m = [],
+              l = g.algo.SHA1 = d.extend({
+            _doReset: function _doReset() {
+              this._hash = new e.init([1732584193, 4023233417, 2562383102, 271733878, 3285377520]);
+            },
+            _doProcessBlock: function _doProcessBlock(d, e) {
+              for (var b = this._hash.words, n = b[0], j = b[1], h = b[2], g = b[3], l = b[4], a = 0; 80 > a; a++) {
+                if (16 > a) m[a] = d[e + a] | 0;else {
+                  var c = m[a - 3] ^ m[a - 8] ^ m[a - 14] ^ m[a - 16];
+                  m[a] = c << 1 | c >>> 31;
+                }
+                c = (n << 5 | n >>> 27) + l + m[a];
+                c = 20 > a ? c + ((j & h | ~j & g) + 1518500249) : 40 > a ? c + ((j ^ h ^ g) + 1859775393) : 60 > a ? c + ((j & h | j & g | h & g) - 1894007588) : c + ((j ^ h ^ g) - 899497514);
+                l = g;
+                g = h;
+                h = j << 30 | j >>> 2;
+                j = n;
+                n = c;
+              }
+  
+              b[0] = b[0] + n | 0;
+              b[1] = b[1] + j | 0;
+              b[2] = b[2] + h | 0;
+              b[3] = b[3] + g | 0;
+              b[4] = b[4] + l | 0;
+            },
+            _doFinalize: function _doFinalize() {
+              var d = this._data,
+                  e = d.words,
+                  b = 8 * this._nDataBytes,
+                  g = 8 * d.sigBytes;
+              e[g >>> 5] |= 128 << 24 - g % 32;
+              e[(g + 64 >>> 9 << 4) + 14] = Math.floor(b / 4294967296);
+              e[(g + 64 >>> 9 << 4) + 15] = b;
+              d.sigBytes = 4 * e.length;
+  
+              this._process();
+  
+              return this._hash;
+            },
+            clone: function clone() {
+              var e = d.clone.call(this);
+              e._hash = this._hash.clone();
+              return e;
+            }
+          });
+          g.SHA1 = d._createHelper(l);
+          g.HmacSHA1 = d._createHmacHelper(l);
+        })();
+  
+        (function () {
+          var g = CryptoJS,
+              l = g.enc.Utf8;
+          g.algo.HMAC = g.lib.Base.extend({
+            init: function init(e, d) {
+              e = this._hasher = new e.init();
+              "string" == typeof d && (d = l.parse(d));
+              var g = e.blockSize,
+                  k = 4 * g;
+              d.sigBytes > k && (d = e.finalize(d));
+              d.clamp();
+  
+              for (var p = this._oKey = d.clone(), b = this._iKey = d.clone(), n = p.words, j = b.words, h = 0; h < g; h++) {
+                n[h] ^= 1549556828, j[h] ^= 909522486;
+              }
+  
+              p.sigBytes = b.sigBytes = k;
+              this.reset();
+            },
+            reset: function reset() {
+              var e = this._hasher;
+              e.reset();
+              e.update(this._iKey);
+            },
+            update: function update(e) {
+              this._hasher.update(e);
+  
+              return this;
+            },
+            finalize: function finalize(e) {
+              var d = this._hasher;
+              e = d.finalize(e);
+              d.reset();
+              return d.finalize(this._oKey.clone().concat(e));
+            }
+          });
+        })();
+  
+        (function () {
+          // Shortcuts
+          var C = CryptoJS;
+          var C_lib = C.lib;
+          var WordArray = C_lib.WordArray;
+          var C_enc = C.enc;
+          /**
+           * Base64 encoding strategy.
+           */
+  
+          var Base64 = C_enc.Base64 = {
+            /**
+             * Converts a word array to a Base64 string.
+             *
+             * @param {WordArray} wordArray The word array.
+             *
+             * @return {string} The Base64 string.
+             *
+             * @static
+             *
+             * @example
+             *
+             *     var base64String = CryptoJS.enc.Base64.stringify(wordArray);
+             */
+            stringify: function stringify(wordArray) {
+              // Shortcuts
+              var words = wordArray.words;
+              var sigBytes = wordArray.sigBytes;
+              var map = this._map; // Clamp excess bits
+  
+              wordArray.clamp(); // Convert
+  
+              var base64Chars = [];
+  
+              for (var i = 0; i < sigBytes; i += 3) {
+                var byte1 = words[i >>> 2] >>> 24 - i % 4 * 8 & 0xff;
+                var byte2 = words[i + 1 >>> 2] >>> 24 - (i + 1) % 4 * 8 & 0xff;
+                var byte3 = words[i + 2 >>> 2] >>> 24 - (i + 2) % 4 * 8 & 0xff;
+                var triplet = byte1 << 16 | byte2 << 8 | byte3;
+  
+                for (var j = 0; j < 4 && i + j * 0.75 < sigBytes; j++) {
+                  base64Chars.push(map.charAt(triplet >>> 6 * (3 - j) & 0x3f));
+                }
+              } // Add padding
+  
+  
+              var paddingChar = map.charAt(64);
+  
+              if (paddingChar) {
+                while (base64Chars.length % 4) {
+                  base64Chars.push(paddingChar);
+                }
+              }
+  
+              return base64Chars.join("");
+            },
+  
+            /**
+             * Converts a Base64 string to a word array.
+             *
+             * @param {string} base64Str The Base64 string.
+             *
+             * @return {WordArray} The word array.
+             *
+             * @static
+             *
+             * @example
+             *
+             *     var wordArray = CryptoJS.enc.Base64.parse(base64String);
+             */
+            parse: function parse(base64Str) {
+              // Shortcuts
+              var base64StrLength = base64Str.length;
+              var map = this._map; // Ignore padding
+  
+              var paddingChar = map.charAt(64);
+  
+              if (paddingChar) {
+                var paddingIndex = base64Str.indexOf(paddingChar);
+  
+                if (paddingIndex != -1) {
+                  base64StrLength = paddingIndex;
+                }
+              } // Convert
+  
+  
+              var words = [];
+              var nBytes = 0;
+  
+              for (var i = 0; i < base64StrLength; i++) {
+                if (i % 4) {
+                  var bits1 = map.indexOf(base64Str.charAt(i - 1)) << i % 4 * 2;
+                  var bits2 = map.indexOf(base64Str.charAt(i)) >>> 6 - i % 4 * 2;
+                  words[nBytes >>> 2] |= (bits1 | bits2) << 24 - nBytes % 4 * 8;
+                  nBytes++;
+                }
+              }
+  
+              return WordArray.create(words, nBytes);
+            },
+            _map: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+          };
+        })();
+  
+        module.exports = CryptoJS;
+        /***/
+      },
+      /* 12 */
+  
+      /***/
+      function (module, exports, __webpack_require__) {
+        /*
+        Copyright 2011-2013 Abdulla Abdurakhmanov
+        Original sources are available at https://code.google.com/p/x2js/
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        */
+        var DOMParser = __webpack_require__(13).DOMParser;
+  
+        var x2js = function x2js(config) {
+          "use strict";
+  
+          var VERSION = "1.2.0";
+          config = config || {};
+          initConfigDefaults();
+          initRequiredPolyfills();
+  
+          function initConfigDefaults() {
+            if (config.escapeMode === undefined) {
+              config.escapeMode = true;
+            }
+  
+            config.attributePrefix = config.attributePrefix || "_";
+            config.arrayAccessForm = config.arrayAccessForm || "none";
+            config.emptyNodeForm = config.emptyNodeForm || "text";
+  
+            if (config.enableToStringFunc === undefined) {
+              config.enableToStringFunc = true;
+            }
+  
+            config.arrayAccessFormPaths = config.arrayAccessFormPaths || [];
+  
+            if (config.skipEmptyTextNodesForObj === undefined) {
+              config.skipEmptyTextNodesForObj = true;
+            }
+  
+            if (config.stripWhitespaces === undefined) {
+              config.stripWhitespaces = true;
+            }
+  
+            config.datetimeAccessFormPaths = config.datetimeAccessFormPaths || [];
+  
+            if (config.useDoubleQuotes === undefined) {
+              config.useDoubleQuotes = false;
+            }
+  
+            config.xmlElementsFilter = config.xmlElementsFilter || [];
+            config.jsonPropertiesFilter = config.jsonPropertiesFilter || [];
+  
+            if (config.keepCData === undefined) {
+              config.keepCData = false;
+            }
+          }
+  
+          var DOMNodeTypes = {
+            ELEMENT_NODE: 1,
+            TEXT_NODE: 3,
+            CDATA_SECTION_NODE: 4,
+            COMMENT_NODE: 8,
+            DOCUMENT_NODE: 9
+          };
+  
+          function initRequiredPolyfills() {}
+  
+          function getNodeLocalName(node) {
+            var nodeLocalName = node.localName;
+            if (nodeLocalName == null) // Yeah, this is IE!!
+              nodeLocalName = node.baseName;
+            if (nodeLocalName == null || nodeLocalName == "") // =="" is IE too
+              nodeLocalName = node.nodeName;
+            return nodeLocalName;
+          }
+  
+          function getNodePrefix(node) {
+            return node.prefix;
+          }
+  
+          function escapeXmlChars(str) {
+            if (typeof str == "string") return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");else return str;
+          }
+  
+          function unescapeXmlChars(str) {
+            return str.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&amp;/g, "&");
+          }
+  
+          function checkInStdFiltersArrayForm(stdFiltersArrayForm, obj, name, path) {
+            var idx = 0;
+  
+            for (; idx < stdFiltersArrayForm.length; idx++) {
+              var filterPath = stdFiltersArrayForm[idx];
+  
+              if (typeof filterPath === "string") {
+                if (filterPath == path) break;
+              } else if (filterPath instanceof RegExp) {
+                if (filterPath.test(path)) break;
+              } else if (typeof filterPath === "function") {
+                if (filterPath(obj, name, path)) break;
+              }
+            }
+  
+            return idx != stdFiltersArrayForm.length;
+          }
+  
+          function toArrayAccessForm(obj, childName, path) {
+            switch (config.arrayAccessForm) {
+              case "property":
+                if (!(obj[childName] instanceof Array)) obj[childName + "_asArray"] = [obj[childName]];else obj[childName + "_asArray"] = obj[childName];
+                break;
+  
+              /*case "none":
+              break;*/
+            }
+  
+            if (!(obj[childName] instanceof Array) && config.arrayAccessFormPaths.length > 0) {
+              if (checkInStdFiltersArrayForm(config.arrayAccessFormPaths, obj, childName, path)) {
+                obj[childName] = [obj[childName]];
+              }
+            }
+          }
+  
+          function fromXmlDateTime(prop) {
+            // Implementation based up on http://stackoverflow.com/questions/8178598/xml-datetime-to-javascript-date-object
+            // Improved to support full spec and optional parts
+            var bits = prop.split(/[-T:+Z]/g);
+            var d = new Date(bits[0], bits[1] - 1, bits[2]);
+            var secondBits = bits[5].split(".");
+            d.setHours(bits[3], bits[4], secondBits[0]);
+            if (secondBits.length > 1) d.setMilliseconds(secondBits[1]); // Get supplied time zone offset in minutes
+  
+            if (bits[6] && bits[7]) {
+              var offsetMinutes = bits[6] * 60 + Number(bits[7]);
+              var sign = /\d\d-\d\d:\d\d$/.test(prop) ? "-" : "+"; // Apply the sign
+  
+              offsetMinutes = 0 + (sign == "-" ? -1 * offsetMinutes : offsetMinutes); // Apply offset and local timezone
+  
+              d.setMinutes(d.getMinutes() - offsetMinutes - d.getTimezoneOffset());
+            } else if (prop.indexOf("Z", prop.length - 1) !== -1) {
+              d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), d.getHours(), d.getMinutes(), d.getSeconds(), d.getMilliseconds()));
+            } // d is now a local time equivalent to the supplied time
+  
+  
+            return d;
+          }
+  
+          function checkFromXmlDateTimePaths(value, childName, fullPath) {
+            if (config.datetimeAccessFormPaths.length > 0) {
+              var path = fullPath.split(".#")[0];
+  
+              if (checkInStdFiltersArrayForm(config.datetimeAccessFormPaths, value, childName, path)) {
+                return fromXmlDateTime(value);
+              } else return value;
+            } else return value;
+          }
+  
+          function checkXmlElementsFilter(obj, childType, childName, childPath) {
+            if (childType == DOMNodeTypes.ELEMENT_NODE && config.xmlElementsFilter.length > 0) {
+              return checkInStdFiltersArrayForm(config.xmlElementsFilter, obj, childName, childPath);
+            } else return true;
+          }
+  
+          function parseDOMChildren(node, path) {
+            if (node.nodeType == DOMNodeTypes.DOCUMENT_NODE) {
+              var result = new Object();
+              var nodeChildren = node.childNodes; // Alternative for firstElementChild which is not supported in some environments
+  
+              for (var cidx = 0; cidx < nodeChildren.length; cidx++) {
+                var child = nodeChildren.item(cidx);
+  
+                if (child.nodeType == DOMNodeTypes.ELEMENT_NODE) {
+                  var childName = getNodeLocalName(child);
+                  result[childName] = parseDOMChildren(child, childName);
+                }
+              }
+  
+              return result;
+            } else if (node.nodeType == DOMNodeTypes.ELEMENT_NODE) {
+              var result = new Object();
+              result.__cnt = 0;
+              var nodeChildren = node.childNodes; // Children nodes
+  
+              for (var cidx = 0; cidx < nodeChildren.length; cidx++) {
+                var child = nodeChildren.item(cidx); // nodeChildren[cidx];
+  
+                var childName = getNodeLocalName(child);
+  
+                if (child.nodeType != DOMNodeTypes.COMMENT_NODE) {
+                  var childPath = path + "." + childName;
+  
+                  if (checkXmlElementsFilter(result, child.nodeType, childName, childPath)) {
+                    result.__cnt++;
+  
+                    if (result[childName] == null) {
+                      result[childName] = parseDOMChildren(child, childPath);
+                      toArrayAccessForm(result, childName, childPath);
+                    } else {
+                      if (result[childName] != null) {
+                        if (!(result[childName] instanceof Array)) {
+                          result[childName] = [result[childName]];
+                          toArrayAccessForm(result, childName, childPath);
+                        }
+                      }
+  
+                      result[childName][result[childName].length] = parseDOMChildren(child, childPath);
+                    }
+                  }
+                }
+              } // Attributes
+  
+  
+              for (var aidx = 0; aidx < node.attributes.length; aidx++) {
+                var attr = node.attributes.item(aidx); // [aidx];
+  
+                result.__cnt++;
+                result[config.attributePrefix + attr.name] = attr.value;
+              } // Node namespace prefix
+  
+  
+              var nodePrefix = getNodePrefix(node);
+  
+              if (nodePrefix != null && nodePrefix != "") {
+                result.__cnt++;
+                result.__prefix = nodePrefix;
+              }
+  
+              if (result["#text"] != null) {
+                result.__text = result["#text"];
+  
+                if (result.__text instanceof Array) {
+                  result.__text = result.__text.join("\n");
+                } //if(config.escapeMode)
+                //	result.__text = unescapeXmlChars(result.__text);
+  
+  
+                if (config.stripWhitespaces) result.__text = result.__text.trim();
+                delete result["#text"];
+                if (config.arrayAccessForm == "property") delete result["#text_asArray"];
+                result.__text = checkFromXmlDateTimePaths(result.__text, childName, path + "." + childName);
+              }
+  
+              if (result["#cdata-section"] != null) {
+                result.__cdata = result["#cdata-section"];
+                delete result["#cdata-section"];
+                if (config.arrayAccessForm == "property") delete result["#cdata-section_asArray"];
+              }
+  
+              if (result.__cnt == 0 && config.emptyNodeForm == "text") {
+                result = "";
+              } else if (result.__cnt == 1 && result.__text != null) {
+                result = result.__text;
+              } else if (result.__cnt == 1 && result.__cdata != null && !config.keepCData) {
+                result = result.__cdata;
+              } else if (result.__cnt > 1 && result.__text != null && config.skipEmptyTextNodesForObj) {
+                if (config.stripWhitespaces && result.__text == "" || result.__text.trim() == "") {
+                  delete result.__text;
+                }
+              }
+  
+              delete result.__cnt;
+  
+              if (config.enableToStringFunc && (result.__text != null || result.__cdata != null)) {
+                result.toString = function () {
+                  return (this.__text != null ? this.__text : "") + (this.__cdata != null ? this.__cdata : "");
+                };
+              }
+  
+              return result;
+            } else if (node.nodeType == DOMNodeTypes.TEXT_NODE || node.nodeType == DOMNodeTypes.CDATA_SECTION_NODE) {
+              return node.nodeValue;
+            }
+          }
+  
+          function startTag(jsonObj, element, attrList, closed) {
+            var resultStr = "<" + (jsonObj != null && jsonObj.__prefix != null ? jsonObj.__prefix + ":" : "") + element;
+  
+            if (attrList != null) {
+              for (var aidx = 0; aidx < attrList.length; aidx++) {
+                var attrName = attrList[aidx];
+                var attrVal = jsonObj[attrName];
+                if (config.escapeMode) attrVal = escapeXmlChars(attrVal);
+                resultStr += " " + attrName.substr(config.attributePrefix.length) + "=";
+                if (config.useDoubleQuotes) resultStr += '"' + attrVal + '"';else resultStr += "'" + attrVal + "'";
+              }
+            }
+  
+            if (!closed) resultStr += ">";else resultStr += "/>";
+            return resultStr;
+          }
+  
+          function endTag(jsonObj, elementName) {
+            return "</" + (jsonObj.__prefix != null ? jsonObj.__prefix + ":" : "") + elementName + ">";
+          }
+  
+          function endsWith(str, suffix) {
+            return str.indexOf(suffix, str.length - suffix.length) !== -1;
+          }
+  
+          function jsonXmlSpecialElem(jsonObj, jsonObjField) {
+            if (config.arrayAccessForm == "property" && endsWith(jsonObjField.toString(), "_asArray") || jsonObjField.toString().indexOf(config.attributePrefix) == 0 || jsonObjField.toString().indexOf("__") == 0 || jsonObj[jsonObjField] instanceof Function) return true;else return false;
+          }
+  
+          function jsonXmlElemCount(jsonObj) {
+            var elementsCnt = 0;
+  
+            if (jsonObj instanceof Object) {
+              for (var it in jsonObj) {
+                if (jsonXmlSpecialElem(jsonObj, it)) continue;
+                elementsCnt++;
+              }
+            }
+  
+            return elementsCnt;
+          }
+  
+          function checkJsonObjPropertiesFilter(jsonObj, propertyName, jsonObjPath) {
+            return config.jsonPropertiesFilter.length == 0 || jsonObjPath == "" || checkInStdFiltersArrayForm(config.jsonPropertiesFilter, jsonObj, propertyName, jsonObjPath);
+          }
+  
+          function parseJSONAttributes(jsonObj) {
+            var attrList = [];
+  
+            if (jsonObj instanceof Object) {
+              for (var ait in jsonObj) {
+                if (ait.toString().indexOf("__") == -1 && ait.toString().indexOf(config.attributePrefix) == 0) {
+                  attrList.push(ait);
+                }
+              }
+            }
+  
+            return attrList;
+          }
+  
+          function parseJSONTextAttrs(jsonTxtObj) {
+            var result = "";
+  
+            if (jsonTxtObj.__cdata != null) {
+              result += "<![CDATA[" + jsonTxtObj.__cdata + "]]>";
+            }
+  
+            if (jsonTxtObj.__text != null) {
+              if (config.escapeMode) result += escapeXmlChars(jsonTxtObj.__text);else result += jsonTxtObj.__text;
+            }
+  
+            return result;
+          }
+  
+          function parseJSONTextObject(jsonTxtObj) {
+            var result = "";
+  
+            if (jsonTxtObj instanceof Object) {
+              result += parseJSONTextAttrs(jsonTxtObj);
+            } else if (jsonTxtObj != null) {
+              if (config.escapeMode) result += escapeXmlChars(jsonTxtObj);else result += jsonTxtObj;
+            }
+  
+            return result;
+          }
+  
+          function getJsonPropertyPath(jsonObjPath, jsonPropName) {
+            if (jsonObjPath === "") {
+              return jsonPropName;
+            } else return jsonObjPath + "." + jsonPropName;
+          }
+  
+          function parseJSONArray(jsonArrRoot, jsonArrObj, attrList, jsonObjPath) {
+            var result = "";
+  
+            if (jsonArrRoot.length == 0) {
+              result += startTag(jsonArrRoot, jsonArrObj, attrList, true);
+            } else {
+              for (var arIdx = 0; arIdx < jsonArrRoot.length; arIdx++) {
+                result += startTag(jsonArrRoot[arIdx], jsonArrObj, parseJSONAttributes(jsonArrRoot[arIdx]), false);
+                result += parseJSONObject(jsonArrRoot[arIdx], getJsonPropertyPath(jsonObjPath, jsonArrObj));
+                result += endTag(jsonArrRoot[arIdx], jsonArrObj);
+              }
+            }
+  
+            return result;
+          }
+  
+          function parseJSONObject(jsonObj, jsonObjPath) {
+            var result = "";
+            var elementsCnt = jsonXmlElemCount(jsonObj);
+  
+            if (elementsCnt > 0) {
+              for (var it in jsonObj) {
+                if (jsonXmlSpecialElem(jsonObj, it) || jsonObjPath != "" && !checkJsonObjPropertiesFilter(jsonObj, it, getJsonPropertyPath(jsonObjPath, it))) continue;
+                var subObj = jsonObj[it];
+                var attrList = parseJSONAttributes(subObj);
+  
+                if (subObj == null || subObj == undefined) {
+                  result += startTag(subObj, it, attrList, true);
+                } else if (subObj instanceof Object) {
+                  if (subObj instanceof Array) {
+                    result += parseJSONArray(subObj, it, attrList, jsonObjPath);
+                  } else if (subObj instanceof Date) {
+                    result += startTag(subObj, it, attrList, false);
+                    result += subObj.toISOString();
+                    result += endTag(subObj, it);
+                  } else {
+                    var subObjElementsCnt = jsonXmlElemCount(subObj);
+  
+                    if (subObjElementsCnt > 0 || subObj.__text != null || subObj.__cdata != null) {
+                      result += startTag(subObj, it, attrList, false);
+                      result += parseJSONObject(subObj, getJsonPropertyPath(jsonObjPath, it));
+                      result += endTag(subObj, it);
+                    } else {
+                      result += startTag(subObj, it, attrList, true);
+                    }
+                  }
+                } else {
+                  result += startTag(subObj, it, attrList, false);
+                  result += parseJSONTextObject(subObj);
+                  result += endTag(subObj, it);
+                }
+              }
+            }
+  
+            result += parseJSONTextObject(jsonObj);
+            return result;
+          }
+  
+          this.parseXmlString = function (xmlDocStr) {
+            // var isIEParser = window.ActiveXObject || "ActiveXObject" in window;
+            var isIEParser = false;
+  
+            if (xmlDocStr === undefined) {
+              return null;
+            }
+  
+            var xmlDoc;
+  
+            if (DOMParser) {
+              var parser = new DOMParser();
+              var parsererrorNS = null; // IE9+ now is here
+  
+              if (!isIEParser) {
+                try {
+                  parsererrorNS = parser.parseFromString("INVALID", "text/xml").getElementsByTagName("parsererror")[0].namespaceURI;
+                } catch (err) {
+                  parsererrorNS = null;
+                }
+              }
+  
+              try {
+                xmlDoc = parser.parseFromString(xmlDocStr, "text/xml");
+  
+                if (parsererrorNS != null && xmlDoc.getElementsByTagNameNS(parsererrorNS, "parsererror").length > 0) {
+                  //throw new Error('Error parsing XML: '+xmlDocStr);
+                  xmlDoc = null;
+                }
+              } catch (err) {
+                xmlDoc = null;
+              }
+            } else {
+              // IE :(
+              if (xmlDocStr.indexOf("<?") == 0) {
+                xmlDocStr = xmlDocStr.substr(xmlDocStr.indexOf("?>") + 2);
+              }
+  
+              xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+              xmlDoc.async = "false";
+              xmlDoc.loadXML(xmlDocStr);
+            }
+  
+            return xmlDoc;
+          };
+  
+          this.asArray = function (prop) {
+            if (prop === undefined || prop == null) return [];else if (prop instanceof Array) return prop;else return [prop];
+          };
+  
+          this.toXmlDateTime = function (dt) {
+            if (dt instanceof Date) return dt.toISOString();else if (typeof dt === "number") return new Date(dt).toISOString();else return null;
+          };
+  
+          this.asDateTime = function (prop) {
+            if (typeof prop == "string") {
+              return fromXmlDateTime(prop);
+            } else return prop;
+          };
+  
+          this.xml2json = function (xmlDoc) {
+            return parseDOMChildren(xmlDoc);
+          };
+  
+          this.xml_str2json = function (xmlDocStr) {
+            var xmlDoc = this.parseXmlString(xmlDocStr);
+            if (xmlDoc != null) return this.xml2json(xmlDoc);else return null;
+          };
+  
+          this.json2xml_str = function (jsonObj) {
+            return parseJSONObject(jsonObj, "");
+          };
+  
+          this.json2xml = function (jsonObj) {
+            var xmlDocStr = this.json2xml_str(jsonObj);
+            return this.parseXmlString(xmlDocStr);
+          };
+  
+          this.getVersion = function () {
+            return VERSION;
+          };
+        };
+  
+        var xml2json = function xml2json(str) {
+          if (!str) return null;
+          var parser = new DOMParser();
+          var xmlDoc = parser.parseFromString(str, "text/xml");
+          var x2jsObj = new x2js();
+          var data = x2jsObj.xml2json(xmlDoc);
+  
+          if (data.html && data.getElementsByTagName("parsererror").length) {
+            return null;
+          } else {
+            return data;
+          }
+        };
+  
+        var json2xml = function json2xml(data) {
+          var x2jsObj = new x2js();
+          return x2jsObj.json2xml(data);
+        };
+  
+        module.exports = xml2json;
+        /***/
+      },
+      /* 13 */
+  
+      /***/
+      function (module, exports, __webpack_require__) {
+        function DOMParser(options) {
+          this.options = options || {
+            locator: {}
+          };
+        }
+  
+        DOMParser.prototype.parseFromString = function (source, mimeType) {
+          var options = this.options;
+          var sax = new XMLReader();
+          var domBuilder = options.domBuilder || new DOMHandler(); //contentHandler and LexicalHandler
+  
+          var errorHandler = options.errorHandler;
+          var locator = options.locator;
+          var defaultNSMap = options.xmlns || {};
+          var entityMap = {
+            lt: "<",
+            gt: ">",
+            amp: "&",
+            quot: '"',
+            apos: "'"
+          };
+  
+          if (locator) {
+            domBuilder.setDocumentLocator(locator);
+          }
+  
+          sax.errorHandler = buildErrorHandler(errorHandler, domBuilder, locator);
+          sax.domBuilder = options.domBuilder || domBuilder;
+  
+          if (/\/x?html?$/.test(mimeType)) {
+            entityMap.nbsp = "\xa0";
+            entityMap.copy = "\xa9";
+            defaultNSMap[""] = "http://www.w3.org/1999/xhtml";
+          }
+  
+          defaultNSMap.xml = defaultNSMap.xml || "http://www.w3.org/XML/1998/namespace";
+  
+          if (source) {
+            sax.parse(source, defaultNSMap, entityMap);
+          } else {
+            sax.errorHandler.error("invalid doc source");
+          }
+  
+          return domBuilder.doc;
+        };
+  
+        function buildErrorHandler(errorImpl, domBuilder, locator) {
+          if (!errorImpl) {
+            if (domBuilder instanceof DOMHandler) {
+              return domBuilder;
+            }
+  
+            errorImpl = domBuilder;
+          }
+  
+          var errorHandler = {};
+          var isCallback = errorImpl instanceof Function;
+          locator = locator || {};
+  
+          function build(key) {
+            var fn = errorImpl[key];
+  
+            if (!fn && isCallback) {
+              fn = errorImpl.length == 2 ? function (msg) {
+                errorImpl(key, msg);
+              } : errorImpl;
+            }
+  
+            errorHandler[key] = fn && function (msg) {
+              fn("[xmldom " + key + "]\t" + msg + _locator(locator));
+            } || function () {};
+          }
+  
+          build("warning");
+          build("error");
+          build("fatalError");
+          return errorHandler;
+        } //console.log('#\n\n\n\n\n\n\n####')
+  
+        /**
+         * +ContentHandler+ErrorHandler
+         * +LexicalHandler+EntityResolver2
+         * -DeclHandler-DTDHandler
+         *
+         * DefaultHandler:EntityResolver, DTDHandler, ContentHandler, ErrorHandler
+         * DefaultHandler2:DefaultHandler,LexicalHandler, DeclHandler, EntityResolver2
+         * @link http://www.saxproject.org/apidoc/org/xml/sax/helpers/DefaultHandler.html
+         */
+  
+  
+        function DOMHandler() {
+          this.cdata = false;
+        }
+  
+        function position(locator, node) {
+          node.lineNumber = locator.lineNumber;
+          node.columnNumber = locator.columnNumber;
+        }
+        /**
+         * @see org.xml.sax.ContentHandler#startDocument
+         * @link http://www.saxproject.org/apidoc/org/xml/sax/ContentHandler.html
+         */
+  
+  
+        DOMHandler.prototype = {
+          startDocument: function startDocument() {
+            this.doc = new DOMImplementation().createDocument(null, null, null);
+  
+            if (this.locator) {
+              this.doc.documentURI = this.locator.systemId;
+            }
+          },
+          startElement: function startElement(namespaceURI, localName, qName, attrs) {
+            var doc = this.doc;
+            var el = doc.createElementNS(namespaceURI, qName || localName);
+            var len = attrs.length;
+            appendElement(this, el);
+            this.currentElement = el;
+            this.locator && position(this.locator, el);
+  
+            for (var i = 0; i < len; i++) {
+              var namespaceURI = attrs.getURI(i);
+              var value = attrs.getValue(i);
+              var qName = attrs.getQName(i);
+              var attr = doc.createAttributeNS(namespaceURI, qName);
+              this.locator && position(attrs.getLocator(i), attr);
+              attr.value = attr.nodeValue = value;
+              el.setAttributeNode(attr);
+            }
+          },
+          endElement: function endElement(namespaceURI, localName, qName) {
+            var current = this.currentElement;
+            var tagName = current.tagName;
+            this.currentElement = current.parentNode;
+          },
+          startPrefixMapping: function startPrefixMapping(prefix, uri) {},
+          endPrefixMapping: function endPrefixMapping(prefix) {},
+          processingInstruction: function processingInstruction(target, data) {
+            var ins = this.doc.createProcessingInstruction(target, data);
+            this.locator && position(this.locator, ins);
+            appendElement(this, ins);
+          },
+          ignorableWhitespace: function ignorableWhitespace(ch, start, length) {},
+          characters: function characters(chars, start, length) {
+            chars = _toString.apply(this, arguments); //console.log(chars)
+  
+            if (chars) {
+              if (this.cdata) {
+                var charNode = this.doc.createCDATASection(chars);
+              } else {
+                var charNode = this.doc.createTextNode(chars);
+              }
+  
+              if (this.currentElement) {
+                this.currentElement.appendChild(charNode);
+              } else if (/^\s*$/.test(chars)) {
+                this.doc.appendChild(charNode); //process xml
+              }
+  
+              this.locator && position(this.locator, charNode);
+            }
+          },
+          skippedEntity: function skippedEntity(name) {},
+          endDocument: function endDocument() {
+            this.doc.normalize();
+          },
+          setDocumentLocator: function setDocumentLocator(locator) {
+            if (this.locator = locator) {
+              // && !('lineNumber' in locator)){
+              locator.lineNumber = 0;
+            }
+          },
+          //LexicalHandler
+          comment: function comment(chars, start, length) {
+            chars = _toString.apply(this, arguments);
+            var comm = this.doc.createComment(chars);
+            this.locator && position(this.locator, comm);
+            appendElement(this, comm);
+          },
+          startCDATA: function startCDATA() {
+            //used in characters() methods
+            this.cdata = true;
+          },
+          endCDATA: function endCDATA() {
+            this.cdata = false;
+          },
+          startDTD: function startDTD(name, publicId, systemId) {
+            var impl = this.doc.implementation;
+  
+            if (impl && impl.createDocumentType) {
+              var dt = impl.createDocumentType(name, publicId, systemId);
+              this.locator && position(this.locator, dt);
+              appendElement(this, dt);
+            }
+          },
+  
+          /**
+           * @see org.xml.sax.ErrorHandler
+           * @link http://www.saxproject.org/apidoc/org/xml/sax/ErrorHandler.html
+           */
+          warning: function warning(error) {
+            console.warn("[xmldom warning]\t" + error, _locator(this.locator));
+          },
+          error: function error(_error) {
+            console.error("[xmldom error]\t" + _error, _locator(this.locator));
+          },
+          fatalError: function fatalError(error) {
+            console.error("[xmldom fatalError]\t" + error, _locator(this.locator));
+            throw error;
+          }
+        };
+  
+        function _locator(l) {
+          if (l) {
+            return "\n@" + (l.systemId || "") + "#[line:" + l.lineNumber + ",col:" + l.columnNumber + "]";
+          }
+        }
+  
+        function _toString(chars, start, length) {
+          if (typeof chars == "string") {
+            return chars.substr(start, length);
+          } else {
+            //java sax connect width xmldom on rhino(what about: "? && !(chars instanceof String)")
+            if (chars.length >= start + length || start) {
+              return new java.lang.String(chars, start, length) + "";
+            }
+  
+            return chars;
+          }
+        }
+        /*
+         * @link http://www.saxproject.org/apidoc/org/xml/sax/ext/LexicalHandler.html
+         * used method of org.xml.sax.ext.LexicalHandler:
+         *  #comment(chars, start, length)
+         *  #startCDATA()
+         *  #endCDATA()
+         *  #startDTD(name, publicId, systemId)
+         *
+         *
+         * IGNORED method of org.xml.sax.ext.LexicalHandler:
+         *  #endDTD()
+         *  #startEntity(name)
+         *  #endEntity(name)
+         *
+         *
+         * @link http://www.saxproject.org/apidoc/org/xml/sax/ext/DeclHandler.html
+         * IGNORED method of org.xml.sax.ext.DeclHandler
+         * 	#attributeDecl(eName, aName, type, mode, value)
+         *  #elementDecl(name, model)
+         *  #externalEntityDecl(name, publicId, systemId)
+         *  #internalEntityDecl(name, value)
+         * @link http://www.saxproject.org/apidoc/org/xml/sax/ext/EntityResolver2.html
+         * IGNORED method of org.xml.sax.EntityResolver2
+         *  #resolveEntity(String name,String publicId,String baseURI,String systemId)
+         *  #resolveEntity(publicId, systemId)
+         *  #getExternalSubset(name, baseURI)
+         * @link http://www.saxproject.org/apidoc/org/xml/sax/DTDHandler.html
+         * IGNORED method of org.xml.sax.DTDHandler
+         *  #notationDecl(name, publicId, systemId) {};
+         *  #unparsedEntityDecl(name, publicId, systemId, notationName) {};
+         */
+  
+  
+        "endDTD,startEntity,endEntity,attributeDecl,elementDecl,externalEntityDecl,internalEntityDecl,resolveEntity,getExternalSubset,notationDecl,unparsedEntityDecl".replace(/\w+/g, function (key) {
+          DOMHandler.prototype[key] = function () {
+            return null;
+          };
+        });
+        /* Private static helpers treated below as private instance methods, so don't need to add these to the public API; we might use a Relator to also get rid of non-standard public properties */
+  
+        function appendElement(hander, node) {
+          if (!hander.currentElement) {
+            hander.doc.appendChild(node);
+          } else {
+            hander.currentElement.appendChild(node);
+          }
+        } //appendChild and setAttributeNS are preformance key
+        //if(typeof require == 'function'){
+  
+  
+        var XMLReader = __webpack_require__(14).XMLReader;
+  
+        var DOMImplementation = exports.DOMImplementation = __webpack_require__(2).DOMImplementation;
+  
+        exports.XMLSerializer = __webpack_require__(2).XMLSerializer;
+        exports.DOMParser = DOMParser; //}
+  
+        /***/
+      },
+      /* 14 */
+  
+      /***/
+      function (module, exports) {
+        //[4]   	NameStartChar	   ::=   	":" | [A-Z] | "_" | [a-z] | [#xC0-#xD6] | [#xD8-#xF6] | [#xF8-#x2FF] | [#x370-#x37D] | [#x37F-#x1FFF] | [#x200C-#x200D] | [#x2070-#x218F] | [#x2C00-#x2FEF] | [#x3001-#xD7FF] | [#xF900-#xFDCF] | [#xFDF0-#xFFFD] | [#x10000-#xEFFFF]
+        //[4a]   	NameChar	   ::=   	NameStartChar | "-" | "." | [0-9] | #xB7 | [#x0300-#x036F] | [#x203F-#x2040]
+        //[5]   	Name	   ::=   	NameStartChar (NameChar)*
+        var nameStartChar = /[A-Z_a-z\xC0-\xD6\xD8-\xF6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD]/; //\u10000-\uEFFFF
+  
+        var nameChar = new RegExp("[\\-\\.0-9" + nameStartChar.source.slice(1, -1) + "\\u00B7\\u0300-\\u036F\\u203F-\\u2040]");
+        var tagNamePattern = new RegExp("^" + nameStartChar.source + nameChar.source + "*(?::" + nameStartChar.source + nameChar.source + "*)?$"); //var tagNamePattern = /^[a-zA-Z_][\w\-\.]*(?:\:[a-zA-Z_][\w\-\.]*)?$/
+        //var handlers = 'resolveEntity,getExternalSubset,characters,endDocument,endElement,endPrefixMapping,ignorableWhitespace,processingInstruction,setDocumentLocator,skippedEntity,startDocument,startElement,startPrefixMapping,notationDecl,unparsedEntityDecl,error,fatalError,warning,attributeDecl,elementDecl,externalEntityDecl,internalEntityDecl,comment,endCDATA,endDTD,endEntity,startCDATA,startDTD,startEntity'.split(',')
+        //S_TAG,	S_ATTR,	S_EQ,	S_ATTR_NOQUOT_VALUE
+        //S_ATTR_SPACE,	S_ATTR_END,	S_TAG_SPACE, S_TAG_CLOSE
+  
+        var S_TAG = 0; //tag name offerring
+  
+        var S_ATTR = 1; //attr name offerring
+  
+        var S_ATTR_SPACE = 2; //attr name end and space offer
+  
+        var S_EQ = 3; //=space?
+  
+        var S_ATTR_NOQUOT_VALUE = 4; //attr value(no quot value only)
+  
+        var S_ATTR_END = 5; //attr value end and no space(quot end)
+  
+        var S_TAG_SPACE = 6; //(attr value end || tag end ) && (space offer)
+  
+        var S_TAG_CLOSE = 7; //closed el<el />
+  
+        function XMLReader() {}
+  
+        XMLReader.prototype = {
+          parse: function parse(source, defaultNSMap, entityMap) {
+            var domBuilder = this.domBuilder;
+            domBuilder.startDocument();
+  
+            _copy(defaultNSMap, defaultNSMap = {});
+  
+            _parse(source, defaultNSMap, entityMap, domBuilder, this.errorHandler);
+  
+            domBuilder.endDocument();
+          }
+        };
+  
+        function _parse(source, defaultNSMapCopy, entityMap, domBuilder, errorHandler) {
+          function fixedFromCharCode(code) {
+            // String.prototype.fromCharCode does not supports
+            // > 2 bytes unicode chars directly
+            if (code > 0xffff) {
+              code -= 0x10000;
+              var surrogate1 = 0xd800 + (code >> 10),
+                  surrogate2 = 0xdc00 + (code & 0x3ff);
+              return String.fromCharCode(surrogate1, surrogate2);
+            } else {
+              return String.fromCharCode(code);
+            }
+          }
+  
+          function entityReplacer(a) {
+            var k = a.slice(1, -1);
+  
+            if (k in entityMap) {
+              return entityMap[k];
+            } else if (k.charAt(0) === "#") {
+              return fixedFromCharCode(parseInt(k.substr(1).replace("x", "0x")));
+            } else {
+              errorHandler.error("entity not found:" + a);
+              return a;
+            }
+          }
+  
+          function appendText(end) {
+            //has some bugs
+            if (end > start) {
+              var xt = source.substring(start, end).replace(/&#?\w+;/g, entityReplacer);
+              locator && position(start);
+              domBuilder.characters(xt, 0, end - start);
+              start = end;
+            }
+          }
+  
+          function position(p, m) {
+            while (p >= lineEnd && (m = linePattern.exec(source))) {
+              lineStart = m.index;
+              lineEnd = lineStart + m[0].length;
+              locator.lineNumber++; //console.log('line++:',locator,startPos,endPos)
+            }
+  
+            locator.columnNumber = p - lineStart + 1;
+          }
+  
+          var lineStart = 0;
+          var lineEnd = 0;
+          var linePattern = /.*(?:\r\n?|\n)|.*$/g;
+          var locator = domBuilder.locator;
+          var parseStack = [{
+            currentNSMap: defaultNSMapCopy
+          }];
+          var closeMap = {};
+          var start = 0;
+  
+          while (true) {
+            try {
+              var tagStart = source.indexOf("<", start);
+  
+              if (tagStart < 0) {
+                if (!source.substr(start).match(/^\s*$/)) {
+                  var doc = domBuilder.doc;
+                  var text = doc.createTextNode(source.substr(start));
+                  doc.appendChild(text);
+                  domBuilder.currentElement = text;
+                }
+  
+                return;
+              }
+  
+              if (tagStart > start) {
+                appendText(tagStart);
+              }
+  
+              switch (source.charAt(tagStart + 1)) {
+                case "/":
+                  var end = source.indexOf(">", tagStart + 3);
+                  var tagName = source.substring(tagStart + 2, end);
+                  var config = parseStack.pop();
+  
+                  if (end < 0) {
+                    tagName = source.substring(tagStart + 2).replace(/[\s<].*/, ""); //console.error('#@@@@@@'+tagName)
+  
+                    errorHandler.error("end tag name: " + tagName + " is not complete:" + config.tagName);
+                    end = tagStart + 1 + tagName.length;
+                  } else if (tagName.match(/\s</)) {
+                    tagName = tagName.replace(/[\s<].*/, "");
+                    errorHandler.error("end tag name: " + tagName + " maybe not complete");
+                    end = tagStart + 1 + tagName.length;
+                  } //console.error(parseStack.length,parseStack)
+                  //console.error(config);
+  
+  
+                  var localNSMap = config.localNSMap;
+                  var endMatch = config.tagName == tagName;
+                  var endIgnoreCaseMach = endMatch || config.tagName && config.tagName.toLowerCase() == tagName.toLowerCase();
+  
+                  if (endIgnoreCaseMach) {
+                    domBuilder.endElement(config.uri, config.localName, tagName);
+  
+                    if (localNSMap) {
+                      for (var prefix in localNSMap) {
+                        domBuilder.endPrefixMapping(prefix);
+                      }
+                    }
+  
+                    if (!endMatch) {
+                      errorHandler.fatalError("end tag name: " + tagName + " is not match the current start tagName:" + config.tagName);
+                    }
+                  } else {
+                    parseStack.push(config);
+                  }
+  
+                  end++;
+                  break;
+                // end elment
+  
+                case "?":
+                  // <?...?>
+                  locator && position(tagStart);
+                  end = parseInstruction(source, tagStart, domBuilder);
+                  break;
+  
+                case "!":
+                  // <!doctype,<![CDATA,<!--
+                  locator && position(tagStart);
+                  end = parseDCC(source, tagStart, domBuilder, errorHandler);
+                  break;
+  
+                default:
+                  locator && position(tagStart);
+                  var el = new ElementAttributes();
+                  var currentNSMap = parseStack[parseStack.length - 1].currentNSMap; //elStartEnd
+  
+                  var end = parseElementStartPart(source, tagStart, el, currentNSMap, entityReplacer, errorHandler);
+                  var len = el.length;
+  
+                  if (!el.closed && fixSelfClosed(source, end, el.tagName, closeMap)) {
+                    el.closed = true;
+  
+                    if (!entityMap.nbsp) {
+                      errorHandler.warning("unclosed xml attribute");
+                    }
+                  }
+  
+                  if (locator && len) {
+                    var locator2 = copyLocator(locator, {}); //try{//attribute position fixed
+  
+                    for (var i = 0; i < len; i++) {
+                      var a = el[i];
+                      position(a.offset);
+                      a.locator = copyLocator(locator, {});
+                    } //}catch(e){console.error('@@@@@'+e)}
+  
+  
+                    domBuilder.locator = locator2;
+  
+                    if (appendElement(el, domBuilder, currentNSMap)) {
+                      parseStack.push(el);
+                    }
+  
+                    domBuilder.locator = locator;
+                  } else {
+                    if (appendElement(el, domBuilder, currentNSMap)) {
+                      parseStack.push(el);
+                    }
+                  }
+  
+                  if (el.uri === "http://www.w3.org/1999/xhtml" && !el.closed) {
+                    end = parseHtmlSpecialContent(source, end, el.tagName, entityReplacer, domBuilder);
+                  } else {
+                    end++;
+                  }
+  
+              }
+            } catch (e) {
+              errorHandler.error("element parse error: " + e); //errorHandler.error('element parse error: '+e);
+  
+              end = -1; //throw e;
+            }
+  
+            if (end > start) {
+              start = end;
+            } else {
+              //TODO: 这里有可能sax回退，有位置错误风险
+              appendText(Math.max(tagStart, start) + 1);
+            }
+          }
+        }
+  
+        function copyLocator(f, t) {
+          t.lineNumber = f.lineNumber;
+          t.columnNumber = f.columnNumber;
+          return t;
+        }
+        /**
+         * @see #appendElement(source,elStartEnd,el,selfClosed,entityReplacer,domBuilder,parseStack);
+         * @return end of the elementStartPart(end of elementEndPart for selfClosed el)
+         */
+  
+  
+        function parseElementStartPart(source, start, el, currentNSMap, entityReplacer, errorHandler) {
+          var attrName;
+          var value;
+          var p = ++start;
+          var s = S_TAG; //status
+  
+          while (true) {
+            var c = source.charAt(p);
+  
+            switch (c) {
+              case "=":
+                if (s === S_ATTR) {
+                  //attrName
+                  attrName = source.slice(start, p);
+                  s = S_EQ;
+                } else if (s === S_ATTR_SPACE) {
+                  s = S_EQ;
+                } else {
+                  //fatalError: equal must after attrName or space after attrName
+                  throw new Error("attribute equal must after attrName");
+                }
+  
+                break;
+  
+              case "'":
+              case '"':
+                if (s === S_EQ || s === S_ATTR //|| s == S_ATTR_SPACE
+                ) {
+                    //equal
+                    if (s === S_ATTR) {
+                      errorHandler.warning('attribute value must after "="');
+                      attrName = source.slice(start, p);
+                    }
+  
+                    start = p + 1;
+                    p = source.indexOf(c, start);
+  
+                    if (p > 0) {
+                      value = source.slice(start, p).replace(/&#?\w+;/g, entityReplacer);
+                      el.add(attrName, value, start - 1);
+                      s = S_ATTR_END;
+                    } else {
+                      //fatalError: no end quot match
+                      throw new Error("attribute value no end '" + c + "' match");
+                    }
+                  } else if (s == S_ATTR_NOQUOT_VALUE) {
+                  value = source.slice(start, p).replace(/&#?\w+;/g, entityReplacer); //console.log(attrName,value,start,p)
+  
+                  el.add(attrName, value, start); //console.dir(el)
+  
+                  errorHandler.warning('attribute "' + attrName + '" missed start quot(' + c + ")!!");
+                  start = p + 1;
+                  s = S_ATTR_END;
+                } else {
+                  //fatalError: no equal before
+                  throw new Error('attribute value must after "="');
+                }
+  
+                break;
+  
+              case "/":
+                switch (s) {
+                  case S_TAG:
+                    el.setTagName(source.slice(start, p));
+  
+                  case S_ATTR_END:
+                  case S_TAG_SPACE:
+                  case S_TAG_CLOSE:
+                    s = S_TAG_CLOSE;
+                    el.closed = true;
+  
+                  case S_ATTR_NOQUOT_VALUE:
+                  case S_ATTR:
+                  case S_ATTR_SPACE:
+                    break;
+                  //case S_EQ:
+  
+                  default:
+                    throw new Error("attribute invalid close char('/')");
+                }
+  
+                break;
+  
+              case "":
+                //end document
+                //throw new Error('unexpected end of input')
+                errorHandler.error("unexpected end of input");
+  
+                if (s == S_TAG) {
+                  el.setTagName(source.slice(start, p));
+                }
+  
+                return p;
+  
+              case ">":
+                switch (s) {
+                  case S_TAG:
+                    el.setTagName(source.slice(start, p));
+  
+                  case S_ATTR_END:
+                  case S_TAG_SPACE:
+                  case S_TAG_CLOSE:
+                    break;
+                  //normal
+  
+                  case S_ATTR_NOQUOT_VALUE: //Compatible state
+  
+                  case S_ATTR:
+                    value = source.slice(start, p);
+  
+                    if (value.slice(-1) === "/") {
+                      el.closed = true;
+                      value = value.slice(0, -1);
+                    }
+  
+                  case S_ATTR_SPACE:
+                    if (s === S_ATTR_SPACE) {
+                      value = attrName;
+                    }
+  
+                    if (s == S_ATTR_NOQUOT_VALUE) {
+                      errorHandler.warning('attribute "' + value + '" missed quot(")!!');
+                      el.add(attrName, value.replace(/&#?\w+;/g, entityReplacer), start);
+                    } else {
+                      if (currentNSMap[""] !== "http://www.w3.org/1999/xhtml" || !value.match(/^(?:disabled|checked|selected)$/i)) {
+                        errorHandler.warning('attribute "' + value + '" missed value!! "' + value + '" instead!!');
+                      }
+  
+                      el.add(value, value, start);
+                    }
+  
+                    break;
+  
+                  case S_EQ:
+                    throw new Error("attribute value missed!!");
+                } //			console.log(tagName,tagNamePattern,tagNamePattern.test(tagName))
+  
+  
+                return p;
+  
+              /*xml space '\x20' | #x9 | #xD | #xA; */
+  
+              case "\x80":
+                c = " ";
+  
+              default:
+                if (c <= " ") {
+                  //space
+                  switch (s) {
+                    case S_TAG:
+                      el.setTagName(source.slice(start, p)); //tagName
+  
+                      s = S_TAG_SPACE;
+                      break;
+  
+                    case S_ATTR:
+                      attrName = source.slice(start, p);
+                      s = S_ATTR_SPACE;
+                      break;
+  
+                    case S_ATTR_NOQUOT_VALUE:
+                      var value = source.slice(start, p).replace(/&#?\w+;/g, entityReplacer);
+                      errorHandler.warning('attribute "' + value + '" missed quot(")!!');
+                      el.add(attrName, value, start);
+  
+                    case S_ATTR_END:
+                      s = S_TAG_SPACE;
+                      break;
+                    //case S_TAG_SPACE:
+                    //case S_EQ:
+                    //case S_ATTR_SPACE:
+                    //	void();break;
+                    //case S_TAG_CLOSE:
+                    //ignore warning
+                  }
+                } else {
+                  //not space
+                  //S_TAG,	S_ATTR,	S_EQ,	S_ATTR_NOQUOT_VALUE
+                  //S_ATTR_SPACE,	S_ATTR_END,	S_TAG_SPACE, S_TAG_CLOSE
+                  switch (s) {
+                    //case S_TAG:void();break;
+                    //case S_ATTR:void();break;
+                    //case S_ATTR_NOQUOT_VALUE:void();break;
+                    case S_ATTR_SPACE:
+                      var tagName = el.tagName;
+  
+                      if (currentNSMap[""] !== "http://www.w3.org/1999/xhtml" || !attrName.match(/^(?:disabled|checked|selected)$/i)) {
+                        errorHandler.warning('attribute "' + attrName + '" missed value!! "' + attrName + '" instead2!!');
+                      }
+  
+                      el.add(attrName, attrName, start);
+                      start = p;
+                      s = S_ATTR;
+                      break;
+  
+                    case S_ATTR_END:
+                      errorHandler.warning('attribute space is required"' + attrName + '"!!');
+  
+                    case S_TAG_SPACE:
+                      s = S_ATTR;
+                      start = p;
+                      break;
+  
+                    case S_EQ:
+                      s = S_ATTR_NOQUOT_VALUE;
+                      start = p;
+                      break;
+  
+                    case S_TAG_CLOSE:
+                      throw new Error("elements closed character '/' and '>' must be connected to");
+                  }
+                }
+  
+            } //end outer switch
+            //console.log('p++',p)
+  
+  
+            p++;
+          }
+        }
+        /**
+         * @return true if has new namespace define
+         */
+  
+  
+        function appendElement(el, domBuilder, currentNSMap) {
+          var tagName = el.tagName;
+          var localNSMap = null; //var currentNSMap = parseStack[parseStack.length-1].currentNSMap;
+  
+          var i = el.length;
+  
+          while (i--) {
+            var a = el[i];
+            var qName = a.qName;
+            var value = a.value;
+            var nsp = qName.indexOf(":");
+  
+            if (nsp > 0) {
+              var prefix = a.prefix = qName.slice(0, nsp);
+              var localName = qName.slice(nsp + 1);
+              var nsPrefix = prefix === "xmlns" && localName;
+            } else {
+              localName = qName;
+              prefix = null;
+              nsPrefix = qName === "xmlns" && "";
+            } //can not set prefix,because prefix !== ''
+  
+  
+            a.localName = localName; //prefix == null for no ns prefix attribute
+  
+            if (nsPrefix !== false) {
+              //hack!!
+              if (localNSMap == null) {
+                localNSMap = {}; //console.log(currentNSMap,0)
+  
+                _copy(currentNSMap, currentNSMap = {}); //console.log(currentNSMap,1)
+  
+              }
+  
+              currentNSMap[nsPrefix] = localNSMap[nsPrefix] = value;
+              a.uri = "http://www.w3.org/2000/xmlns/";
+              domBuilder.startPrefixMapping(nsPrefix, value);
+            }
+          }
+  
+          var i = el.length;
+  
+          while (i--) {
+            a = el[i];
+            var prefix = a.prefix;
+  
+            if (prefix) {
+              //no prefix attribute has no namespace
+              if (prefix === "xml") {
+                a.uri = "http://www.w3.org/XML/1998/namespace";
+              }
+  
+              if (prefix !== "xmlns") {
+                a.uri = currentNSMap[prefix || ""]; //{console.log('###'+a.qName,domBuilder.locator.systemId+'',currentNSMap,a.uri)}
+              }
+            }
+          }
+  
+          var nsp = tagName.indexOf(":");
+  
+          if (nsp > 0) {
+            prefix = el.prefix = tagName.slice(0, nsp);
+            localName = el.localName = tagName.slice(nsp + 1);
+          } else {
+            prefix = null; //important!!
+  
+            localName = el.localName = tagName;
+          } //no prefix element has default namespace
+  
+  
+          var ns = el.uri = currentNSMap[prefix || ""];
+          domBuilder.startElement(ns, localName, tagName, el); //endPrefixMapping and startPrefixMapping have not any help for dom builder
+          //localNSMap = null
+  
+          if (el.closed) {
+            domBuilder.endElement(ns, localName, tagName);
+  
+            if (localNSMap) {
+              for (prefix in localNSMap) {
+                domBuilder.endPrefixMapping(prefix);
+              }
+            }
+          } else {
+            el.currentNSMap = currentNSMap;
+            el.localNSMap = localNSMap; //parseStack.push(el);
+  
+            return true;
+          }
+        }
+  
+        function parseHtmlSpecialContent(source, elStartEnd, tagName, entityReplacer, domBuilder) {
+          if (/^(?:script|textarea)$/i.test(tagName)) {
+            var elEndStart = source.indexOf("</" + tagName + ">", elStartEnd);
+            var text = source.substring(elStartEnd + 1, elEndStart);
+  
+            if (/[&<]/.test(text)) {
+              if (/^script$/i.test(tagName)) {
+                //if(!/\]\]>/.test(text)){
+                //lexHandler.startCDATA();
+                domBuilder.characters(text, 0, text.length); //lexHandler.endCDATA();
+  
+                return elEndStart; //}
+              } //}else{//text area
+  
+  
+              text = text.replace(/&#?\w+;/g, entityReplacer);
+              domBuilder.characters(text, 0, text.length);
+              return elEndStart; //}
+            }
+          }
+  
+          return elStartEnd + 1;
+        }
+  
+        function fixSelfClosed(source, elStartEnd, tagName, closeMap) {
+          //if(tagName in closeMap){
+          var pos = closeMap[tagName];
+  
+          if (pos == null) {
+            //console.log(tagName)
+            pos = source.lastIndexOf("</" + tagName + ">");
+  
+            if (pos < elStartEnd) {
+              //忘记闭合
+              pos = source.lastIndexOf("</" + tagName);
+            }
+  
+            closeMap[tagName] = pos;
+          }
+  
+          return pos < elStartEnd; //}
+        }
+  
+        function _copy(source, target) {
+          for (var n in source) {
+            target[n] = source[n];
+          }
+        }
+  
+        function parseDCC(source, start, domBuilder, errorHandler) {
+          //sure start with '<!'
+          var next = source.charAt(start + 2);
+  
+          switch (next) {
+            case "-":
+              if (source.charAt(start + 3) === "-") {
+                var end = source.indexOf("-->", start + 4); //append comment source.substring(4,end)//<!--
+  
+                if (end > start) {
+                  domBuilder.comment(source, start + 4, end - start - 4);
+                  return end + 3;
+                } else {
+                  errorHandler.error("Unclosed comment");
+                  return -1;
+                }
+              } else {
+                //error
+                return -1;
+              }
+  
+            default:
+              if (source.substr(start + 3, 6) == "CDATA[") {
+                var end = source.indexOf("]]>", start + 9);
+                domBuilder.startCDATA();
+                domBuilder.characters(source, start + 9, end - start - 9);
+                domBuilder.endCDATA();
+                return end + 3;
+              } //<!DOCTYPE
+              //startDTD(java.lang.String name, java.lang.String publicId, java.lang.String systemId)
+  
+  
+              var matchs = split(source, start);
+              var len = matchs.length;
+  
+              if (len > 1 && /!doctype/i.test(matchs[0][0])) {
+                var name = matchs[1][0];
+                var pubid = len > 3 && /^public$/i.test(matchs[2][0]) && matchs[3][0];
+                var sysid = len > 4 && matchs[4][0];
+                var lastMatch = matchs[len - 1];
+                domBuilder.startDTD(name, pubid && pubid.replace(/^(['"])(.*?)\1$/, "$2"), sysid && sysid.replace(/^(['"])(.*?)\1$/, "$2"));
+                domBuilder.endDTD();
+                return lastMatch.index + lastMatch[0].length;
+              }
+  
+          }
+  
+          return -1;
+        }
+  
+        function parseInstruction(source, start, domBuilder) {
+          var end = source.indexOf("?>", start);
+  
+          if (end) {
+            var match = source.substring(start, end).match(/^<\?(\S*)\s*([\s\S]*?)\s*$/);
+  
+            if (match) {
+              var len = match[0].length;
+              domBuilder.processingInstruction(match[1], match[2]);
+              return end + 2;
+            } else {
+              //error
+              return -1;
+            }
+          }
+  
+          return -1;
+        }
+        /**
+         * @param source
+         */
+  
+  
+        function ElementAttributes(source) {}
+  
+        ElementAttributes.prototype = {
+          setTagName: function setTagName(tagName) {
+            if (!tagNamePattern.test(tagName)) {
+              throw new Error("invalid tagName:" + tagName);
+            }
+  
+            this.tagName = tagName;
+          },
+          add: function add(qName, value, offset) {
+            if (!tagNamePattern.test(qName)) {
+              throw new Error("invalid attribute:" + qName);
+            }
+  
+            this[this.length++] = {
+              qName: qName,
+              value: value,
+              offset: offset
+            };
+          },
+          length: 0,
+          getLocalName: function getLocalName(i) {
+            return this[i].localName;
+          },
+          getLocator: function getLocator(i) {
+            return this[i].locator;
+          },
+          getQName: function getQName(i) {
+            return this[i].qName;
+          },
+          getURI: function getURI(i) {
+            return this[i].uri;
+          },
+          getValue: function getValue(i) {
+            return this[i].value;
+          } //	,getIndex:function(uri, localName)){
+          //		if(localName){
+          //
+          //		}else{
+          //			var qName = uri
+          //		}
+          //	},
+          //	getValue:function(){return this.getValue(this.getIndex.apply(this,arguments))},
+          //	getType:function(uri,localName){}
+          //	getType:function(i){},
+  
+        };
+  
+        function _set_proto_(thiz, parent) {
+          thiz.__proto__ = parent;
+          return thiz;
+        }
+  
+        if (!(_set_proto_({}, _set_proto_.prototype) instanceof _set_proto_)) {
+          _set_proto_ = function _set_proto_(thiz, parent) {
+            function p() {}
+  
+            p.prototype = parent;
+            p = new p();
+  
+            for (parent in thiz) {
+              p[parent] = thiz[parent];
+            }
+  
+            return p;
+          };
+        }
+  
+        function split(source, start) {
+          var match;
+          var buf = [];
+          var reg = /'[^']+'|"[^"]+"|[^\s<>\/=]+=?|(\/?\s*>|<)/g;
+          reg.lastIndex = start;
+          reg.exec(source); //skip <
+  
+          while (match = reg.exec(source)) {
+            buf.push(match);
+            if (match[1]) return buf;
+          }
+        }
+  
+        exports.XMLReader = XMLReader;
+        /***/
+      },
+      /* 15 */
+  
+      /***/
+      function (module, exports) {
+        //copyright Ryan Day 2010 <http://ryanday.org>, Joscha Feth 2013 <http://www.feth.com> [MIT Licensed]
+        var element_start_char = "a-zA-Z_\xC0-\xD6\xD8-\xF6\xF8-\xFF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FFF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD";
+        var element_non_start_char = "-.0-9\xB7\u0300-\u036F\u203F\u2040";
+        var element_replace = new RegExp("^([^" + element_start_char + "])|^((x|X)(m|M)(l|L))|([^" + element_start_char + element_non_start_char + "])", "g");
+        var not_safe_in_xml = /[^\x09\x0A\x0D\x20-\xFF\x85\xA0-\uD7FF\uE000-\uFDCF\uFDE0-\uFFFD]/gm;
+  
+        var objKeys = function objKeys(obj) {
+          var l = [];
+  
+          if (obj instanceof Object) {
+            for (var k in obj) {
+              if (obj.hasOwnProperty(k)) {
+                l.push(k);
+              }
+            }
+          }
+  
+          return l;
+        };
+  
+        var process_to_xml = function process_to_xml(node_data, options) {
+          var makeNode = function makeNode(name, content, attributes, level, hasSubNodes) {
+            var indent_value = options.indent !== undefined ? options.indent : "\t";
+            var indent = options.prettyPrint ? "\n" + new Array(level).join(indent_value) : "";
+  
+            if (options.removeIllegalNameCharacters) {
+              name = name.replace(element_replace, "_");
+            }
+  
+            var node = [indent, "<", name, attributes || ""];
+  
+            if (content && content.length > 0) {
+              node.push(">");
+              node.push(content);
+              hasSubNodes && node.push(indent);
+              node.push("</");
+              node.push(name);
+              node.push(">");
+            } else {
+              node.push("/>");
+            }
+  
+            return node.join("");
+          };
+  
+          return function fn(node_data, node_descriptor, level) {
+            var type = _typeof(node_data);
+  
+            if (Array.isArray ? Array.isArray(node_data) : node_data instanceof Array) {
+              type = "array";
+            } else if (node_data instanceof Date) {
+              type = "date";
+            }
+  
+            switch (type) {
+              //if value is an array create child nodes from values
+              case "array":
+                var ret = [];
+                node_data.map(function (v) {
+                  ret.push(fn(v, 1, level + 1)); //entries that are values of an array are the only ones that can be special node descriptors
+                });
+                options.prettyPrint && ret.push("\n");
+                return ret.join("");
+                break;
+  
+              case "date":
+                // cast dates to ISO 8601 date (soap likes it)
+                return node_data.toJSON ? node_data.toJSON() : node_data + "";
+                break;
+  
+              case "object":
+                var nodes = [];
+  
+                for (var name in node_data) {
+                  if (node_data.hasOwnProperty(name)) {
+                    if (node_data[name] instanceof Array) {
+                      for (var j in node_data[name]) {
+                        if (node_data[name].hasOwnProperty(j)) nodes.push(makeNode(name, fn(node_data[name][j], 0, level + 1), null, level + 1, objKeys(node_data[name][j]).length));
+                      }
+                    } else {
+                      nodes.push(makeNode(name, fn(node_data[name], 0, level + 1), null, level + 1));
+                    }
+                  }
+                }
+  
+                options.prettyPrint && nodes.length > 0 && nodes.push("\n");
+                return nodes.join("");
+                break;
+  
+              case "function":
+                return node_data();
+                break;
+  
+              default:
+                return options.escape ? esc(node_data) : "" + node_data;
+            }
+          }(node_data, 0, 0);
+        };
+  
+        var xml_header = function xml_header(standalone) {
+          var ret = ['<?xml version="1.0" encoding="UTF-8"'];
+  
+          if (standalone) {
+            ret.push(' standalone="yes"');
+          }
+  
+          ret.push("?>");
+          return ret.join("");
+        };
+  
+        function esc(str) {
+          return ("" + str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/'/g, "&apos;").replace(/"/g, "&quot;").replace(not_safe_in_xml, "");
+        }
+  
+        var json2xml = function json2xml(obj, options) {
+          if (!options) {
+            options = {
+              xmlHeader: {
+                standalone: true
+              },
+              prettyPrint: true,
+              indent: "  "
+            };
+          }
+  
+          if (typeof obj == "string") {
+            try {
+              obj = JSON.parse(obj.toString());
+            } catch (e) {
+              return false;
+            }
+          }
+  
+          var xmlheader = "";
+          var docType = "";
+  
+          if (options) {
+            if (_typeof(options) == "object") {
+              // our config is an object
+              if (options.xmlHeader) {
+                // the user wants an xml header
+                xmlheader = xml_header(!!options.xmlHeader.standalone);
+              }
+  
+              if (typeof options.docType != "undefined") {
+                docType = "<!DOCTYPE " + options.docType + ">";
+              }
+            } else {
+              // our config is a boolean value, so just add xml header
+              xmlheader = xml_header();
+            }
+          }
+  
+          options = options || {};
+          var ret = [xmlheader, options.prettyPrint && docType ? "\n" : "", docType, process_to_xml(obj, options)];
+          return ret.join("").replace(/\n{2,}/g, "\n").replace(/\s+$/g, "");
+        };
+  
+        module.exports = json2xml;
+        /***/
+      },
+      /* 16 */
+  
+      /***/
+      function (module, exports, __webpack_require__) {
+        var session = __webpack_require__(5);
+  
+        var util = __webpack_require__(0);
+  
+        var originApiMap = {};
+  
+        var transferToTaskMethod = function transferToTaskMethod(apiMap, apiName) {
+          originApiMap[apiName] = apiMap[apiName];
+  
+          apiMap[apiName] = function (params, callback) {
+            if (params.SkipTask) {
+              originApiMap[apiName].call(this, params, callback);
+            } else {
+              this._addTask(apiName, params, callback);
+            }
+          };
+        };
+  
+        var initTask = function initTask(cos) {
+          var queue = [];
+          var tasks = {};
+          var uploadingFileCount = 0;
+          var nextUploadIndex = 0; // 接口返回简略的任务信息
+  
+          var formatTask = function formatTask(task) {
+            var t = {
+              id: task.id,
+              Bucket: task.Bucket,
+              Region: task.Region,
+              Key: task.Key,
+              FilePath: task.FilePath,
+              state: task.state,
+              loaded: task.loaded,
+              size: task.size,
+              speed: task.speed,
+              percent: task.percent,
+              hashPercent: task.hashPercent,
+              error: task.error
+            };
+            if (task.FilePath) t.FilePath = task.FilePath;
+            return t;
+          };
+  
+          var emitListUpdate = function () {
+            var timer;
+  
+            var emit = function emit() {
+              timer = 0;
+              cos.emit("task-list-update", {
+                list: util.map(queue, formatTask)
+              });
+              cos.emit("list-update", {
+                list: util.map(queue, formatTask)
+              });
+            };
+  
+            return function () {
+              if (!timer) timer = setTimeout(emit);
+            };
+          }();
+  
+          var clearQueue = function clearQueue() {
+            if (queue.length <= cos.options.UploadQueueSize) return;
+  
+            for (var i = 0; i < nextUploadIndex && // 小于当前操作的 index 才清理
+            i < queue.length && // 大于队列才清理
+            queue.length > cos.options.UploadQueueSize;) // 如果还太多，才继续清理
+            {
+              var isActive = queue[i].state === "waiting" || queue[i].state === "checking" || queue[i].state === "uploading";
+  
+              if (!queue[i] || !isActive) {
+                tasks[queue[i].id] && delete tasks[queue[i].id];
+                queue.splice(i, 1);
+                nextUploadIndex--;
+              } else {
+                i++;
+              }
+            }
+  
+            emitListUpdate();
+          };
+  
+          var startNextTask = function startNextTask() {
+            // 检查是否允许增加执行进程
+            if (uploadingFileCount >= cos.options.FileParallelLimit) return; // 跳过不可执行的任务
+  
+            while (queue[nextUploadIndex] && queue[nextUploadIndex].state !== "waiting") {
+              nextUploadIndex++;
+            } // 检查是否已遍历结束
+  
+  
+            if (nextUploadIndex >= queue.length) return; // 上传该遍历到的任务
+  
+            var task = queue[nextUploadIndex];
+            nextUploadIndex++;
+            uploadingFileCount++;
+            task.state = "checking";
+            task.params.onTaskStart && task.params.onTaskStart(formatTask(task));
+            !task.params.UploadData && (task.params.UploadData = {});
+            var apiParams = util.formatParams(task.api, task.params);
+            originApiMap[task.api].call(cos, apiParams, function (err, data) {
+              if (!cos._isRunningTask(task.id)) return;
+  
+              if (task.state === "checking" || task.state === "uploading") {
+                task.state = err ? "error" : "success";
+                err && (task.error = err);
+                uploadingFileCount--;
+                emitListUpdate();
+                startNextTask();
+                task.callback && task.callback(err, data);
+  
+                if (task.state === "success") {
+                  if (task.params) {
+                    delete task.params.UploadData;
+                    delete task.params.Body;
+                    delete task.params;
+                  }
+  
+                  delete task.callback;
+                }
+              }
+  
+              clearQueue();
+            });
+            emitListUpdate(); // 异步执行下一个任务
+  
+            setTimeout(startNextTask);
+          };
+  
+          var killTask = function killTask(id, switchToState) {
+            var task = tasks[id];
+            if (!task) return;
+            var waiting = task && task.state === "waiting";
+            var running = task && (task.state === "checking" || task.state === "uploading");
+  
+            if (switchToState === "canceled" && task.state !== "canceled" || switchToState === "paused" && waiting || switchToState === "paused" && running) {
+              if (switchToState === "paused" && task.params.Body && typeof task.params.Body.pipe === "function") {
+                console.error("stream not support pause");
+                return;
+              }
+  
+              task.state = switchToState;
+              cos.emit("inner-kill-task", {
+                TaskId: id,
+                toState: switchToState
+              });
+  
+              try {
+                var UploadId = task && task.params && task.params.UploadData.UploadId;
+              } catch (e) {}
+  
+              if (switchToState === "canceled" && UploadId) session.removeUsing(UploadId);
+              emitListUpdate();
+  
+              if (running) {
+                uploadingFileCount--;
+                startNextTask();
+              }
+  
+              if (switchToState === "canceled") {
+                if (task.params) {
+                  delete task.params.UploadData;
+                  delete task.params.Body;
+                  delete task.params;
+                }
+  
+                delete task.callback;
+              }
+            }
+  
+            clearQueue();
+          };
+  
+          cos._addTasks = function (taskList) {
+            util.each(taskList, function (task) {
+              cos._addTask(task.api, task.params, task.callback, true);
+            });
+            emitListUpdate();
+          };
+  
+          cos._addTask = function (api, params, callback, ignoreAddEvent) {
+            // 如果小程序版本不支持获取文件分片内容，统一转到 postObject 接口上传
+            if (api === "sliceUploadFile" && !util.canFileSlice()) api = "postObject"; // 复制参数对象
+  
+            params = util.formatParams(api, params); // 生成 id
+  
+            var id = util.uuid();
+            params.TaskId = id;
+            params.onTaskReady && params.onTaskReady(id);
+            var task = {
+              // env
+              params: params,
+              callback: callback,
+              api: api,
+              index: queue.length,
+              // task
+              id: id,
+              Bucket: params.Bucket,
+              Region: params.Region,
+              Key: params.Key,
+              FilePath: params.FilePath || "",
+              state: "waiting",
+              loaded: 0,
+              size: 0,
+              speed: 0,
+              percent: 0,
+              hashPercent: 0,
+              error: null
+            };
+            var onHashProgress = params.onHashProgress;
+  
+            params.onHashProgress = function (info) {
+              if (!cos._isRunningTask(task.id)) return;
+              task.hashPercent = info.percent;
+              onHashProgress && onHashProgress(info);
+              emitListUpdate();
+            };
+  
+            var onProgress = params.onProgress;
+  
+            params.onProgress = function (info) {
+              if (!cos._isRunningTask(task.id)) return;
+              task.state === "checking" && (task.state = "uploading");
+              task.loaded = info.loaded;
+              task.size = info.total;
+              task.speed = info.speed;
+              task.percent = info.percent;
+              onProgress && onProgress(info);
+              emitListUpdate();
+            }; // 异步获取 filesize
+  
+  
+            util.getFileSize(api, params, function (err, size) {
+              // 开始处理上传
+              if (err) {
+                // 如果获取大小出错，不加入队列
+                callback(err);
+                return;
+              } // 获取完文件大小再把任务加入队列
+  
+  
+              tasks[id] = task;
+              queue.push(task);
+              task.size = size;
+              !ignoreAddEvent && emitListUpdate();
+              startNextTask();
+              clearQueue();
+            });
+            return id;
+          };
+  
+          cos._isRunningTask = function (id) {
+            var task = tasks[id];
+            return !!(task && (task.state === "checking" || task.state === "uploading"));
+          };
+  
+          cos.getTaskList = function () {
+            return util.map(queue, formatTask);
+          };
+  
+          cos.cancelTask = function (id) {
+            killTask(id, "canceled");
+          };
+  
+          cos.pauseTask = function (id) {
+            killTask(id, "paused");
+          };
+  
+          cos.restartTask = function (id) {
+            var task = tasks[id];
+  
+            if (task && (task.state === "paused" || task.state === "error")) {
+              task.state = "waiting";
+              emitListUpdate();
+              nextUploadIndex = Math.min(nextUploadIndex, task.index);
+              startNextTask();
+            }
+          };
+  
+          cos.isUploadRunning = function () {
+            return uploadingFileCount || nextUploadIndex < queue.length;
+          };
+        };
+  
+        module.exports.transferToTaskMethod = transferToTaskMethod;
+        module.exports.init = initTask;
+        /***/
+      },
+      /* 17 */
+  
+      /***/
+      function (module, exports, __webpack_require__) {
+        "use strict";
+  
+        var REQUEST = __webpack_require__(18);
+  
+        var base64 = __webpack_require__(3);
+  
+        var util = __webpack_require__(0);
+  
+        var mime = __webpack_require__(19); // Bucket 相关
+  
+        /**
+         * 获取用户的 bucket 列表
+         * @param  {Object}  params         回调函数，必须，下面为参数列表
+         * 无特殊参数
+         * @param  {Function}  callback     回调函数，必须
+         */
+  
+  
+        function getService(params, callback) {
+          if (typeof params === "function") {
+            callback = params;
+            params = {};
+          }
+  
+          var protocol = "https:";
+          var domain = this.options.ServiceDomain;
+          var region = params.Region;
+  
+          if (domain) {
+            domain = domain.replace(/\{\{Region\}\}/gi, region || "").replace(/\{\{.*?\}\}/gi, "");
+  
+            if (!/^[a-zA-Z]+:\/\//.test(domain)) {
+              domain = protocol + "//" + domain;
+            }
+  
+            if (domain.slice(-1) === "/") {
+              domain = domain.slice(0, -1);
+            }
+          } else if (region) {
+            domain = protocol + "//cos." + region + ".myqcloud.com";
+          } else {
+            domain = protocol + "//service.cos.myqcloud.com";
+          }
+  
+          submitRequest.call(this, {
+            Action: "name/cos:GetService",
+            url: domain,
+            method: "GET",
+            headers: params.Headers
+          }, function (err, data) {
+            if (err) return callback(err);
+            var buckets = data && data.ListAllMyBucketsResult && data.ListAllMyBucketsResult.Buckets && data.ListAllMyBucketsResult.Buckets.Bucket || [];
+            buckets = util.isArray(buckets) ? buckets : [buckets];
+            var owner = data && data.ListAllMyBucketsResult && data.ListAllMyBucketsResult.Owner || {};
+            callback(null, {
+              Buckets: buckets,
+              Owner: owner,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 创建 Bucket，并初始化访问权限
+         * @param  {Object}  params                         参数对象，必须
+         *     @param  {String}  params.Bucket              Bucket名称，必须
+         *     @param  {String}  params.Region              地域名称，必须
+         *     @param  {String}  params.ACL                 用户自定义文件权限，可以设置：private，public-read；默认值：private，非必须
+         *     @param  {String}  params.GrantRead           赋予被授权者读的权限，格式x-cos-grant-read: uin=" ",uin=" "，非必须
+         *     @param  {String}  params.GrantWrite          赋予被授权者写的权限，格式x-cos-grant-write: uin=" ",uin=" "，非必须
+         *     @param  {String}  params.GrantFullControl    赋予被授权者读写权限，格式x-cos-grant-full-control: uin=" ",uin=" "，非必须
+         * @param  {Function}  callback                     回调函数，必须
+         * @return  {Object}  err                           请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                          返回的数据
+         *     @return  {String}  data.Location             操作地址
+         */
+  
+  
+        function putBucket(params, callback) {
+          var self = this;
+          var xml = "";
+  
+          if (params["BucketAZConfig"]) {
+            var CreateBucketConfiguration = {
+              BucketAZConfig: params.BucketAZConfig
+            };
+            xml = util.json2xml({
+              CreateBucketConfiguration: CreateBucketConfiguration
+            });
+          }
+  
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucket",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            body: xml
+          }, function (err, data) {
+            if (err) return callback(err);
+            var url = getUrl({
+              protocol: self.options.Protocol,
+              domain: self.options.Domain,
+              bucket: params.Bucket,
+              region: params.Region,
+              isLocation: true
+            });
+            callback(null, {
+              Location: url,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 查看是否存在该Bucket，是否有权限访问
+         * @param  {Object}  params                     参数对象，必须
+         *     @param  {String}  params.Bucket          Bucket名称，必须
+         *     @param  {String}  params.Region          地域名称，必须
+         * @param  {Function}  callback                 回调函数，必须
+         * @return  {Object}  err                       请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                      返回的数据
+         *     @return  {Boolean}  data.BucketExist     Bucket是否存在
+         *     @return  {Boolean}  data.BucketAuth      是否有 Bucket 的访问权限
+         */
+  
+  
+        function headBucket(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:HeadBucket",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            method: "HEAD"
+          }, function (err, data) {
+            callback(err, data);
+          });
+        }
+        /**
+         * 获取 Bucket 下的 object 列表
+         * @param  {Object}  params                         参数对象，必须
+         *     @param  {String}  params.Bucket              Bucket名称，必须
+         *     @param  {String}  params.Region              地域名称，必须
+         *     @param  {String}  params.Prefix              前缀匹配，用来规定返回的文件前缀地址，非必须
+         *     @param  {String}  params.Delimiter           定界符为一个符号，如果有Prefix，则将Prefix到delimiter之间的相同路径归为一类，非必须
+         *     @param  {String}  params.Marker              默认以UTF-8二进制顺序列出条目，所有列出条目从marker开始，非必须
+         *     @param  {String}  params.MaxKeys             单次返回最大的条目数量，默认1000，非必须
+         *     @param  {String}  params.EncodingType        规定返回值的编码方式，非必须
+         * @param  {Function}  callback                     回调函数，必须
+         * @return  {Object}  err                           请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                          返回的数据
+         *     @return  {Object}  data.ListBucketResult     返回的 object 列表信息
+         */
+  
+  
+        function getBucket(params, callback) {
+          var reqParams = {};
+          reqParams["prefix"] = params["Prefix"] || "";
+          reqParams["delimiter"] = params["Delimiter"];
+          reqParams["marker"] = params["Marker"];
+          reqParams["max-keys"] = params["MaxKeys"];
+          reqParams["encoding-type"] = params["EncodingType"];
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucket",
+            ResourceKey: reqParams["prefix"],
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            qs: reqParams
+          }, function (err, data) {
+            if (err) return callback(err);
+            var ListBucketResult = data.ListBucketResult || {};
+            var Contents = ListBucketResult.Contents || [];
+            var CommonPrefixes = ListBucketResult.CommonPrefixes || [];
+            Contents = util.isArray(Contents) ? Contents : [Contents];
+            CommonPrefixes = util.isArray(CommonPrefixes) ? CommonPrefixes : [CommonPrefixes];
+            var result = util.clone(ListBucketResult);
+            util.extend(result, {
+              Contents: Contents,
+              CommonPrefixes: CommonPrefixes,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+            callback(null, result);
+          });
+        }
+        /**
+         * 删除 Bucket
+         * @param  {Object}  params                 参数对象，必须
+         *     @param  {String}  params.Bucket      Bucket名称，必须
+         *     @param  {String}  params.Region      地域名称，必须
+         * @param  {Function}  callback             回调函数，必须
+         * @return  {Object}  err                   请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                  返回的数据
+         *     @return  {String}  data.Location     操作地址
+         */
+  
+  
+        function deleteBucket(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:DeleteBucket",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            method: "DELETE"
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 设置 Bucket 的 权限列表
+         * @param  {Object}  params                         参数对象，必须
+         *     @param  {String}  params.Bucket              Bucket名称，必须
+         *     @param  {String}  params.Region              地域名称，必须
+         *     @param  {String}  params.ACL                 用户自定义文件权限，可以设置：private，public-read；默认值：private，非必须
+         *     @param  {String}  params.GrantRead           赋予被授权者读的权限，格式x-cos-grant-read: uin=" ",uin=" "，非必须
+         *     @param  {String}  params.GrantWrite          赋予被授权者写的权限，格式x-cos-grant-write: uin=" ",uin=" "，非必须
+         *     @param  {String}  params.GrantFullControl    赋予被授权者读写权限，格式x-cos-grant-full-control: uin=" ",uin=" "，非必须
+         * @param  {Function}  callback                     回调函数，必须
+         * @return  {Object}  err                           请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                          返回的数据
+         */
+  
+  
+        function putBucketAcl(params, callback) {
+          var headers = params.Headers;
+          var xml = "";
+  
+          if (params["AccessControlPolicy"]) {
+            var AccessControlPolicy = util.clone(params["AccessControlPolicy"] || {});
+            var Grants = AccessControlPolicy.Grants || AccessControlPolicy.Grant;
+            Grants = util.isArray(Grants) ? Grants : [Grants];
+            delete AccessControlPolicy.Grant;
+            delete AccessControlPolicy.Grants;
+            AccessControlPolicy.AccessControlList = {
+              Grant: Grants
+            };
+            xml = util.json2xml({
+              AccessControlPolicy: AccessControlPolicy
+            });
+            headers["Content-Type"] = "application/xml";
+            headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          } // Grant Header 去重
+  
+  
+          util.each(headers, function (val, key) {
+            if (key.indexOf("x-cos-grant-") === 0) {
+              headers[key] = uniqGrant(headers[key]);
+            }
+          });
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketACL",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: headers,
+            action: "acl",
+            body: xml
+          }, function (err, data) {
+            if (err) return callback(err);
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Bucket 的 权限列表
+         * @param  {Object}  params                         参数对象，必须
+         *     @param  {String}  params.Bucket              Bucket名称，必须
+         *     @param  {String}  params.Region              地域名称，必须
+         * @param  {Function}  callback                     回调函数，必须
+         * @return  {Object}  err                           请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                          返回的数据
+         *     @return  {Object}  data.AccessControlPolicy  访问权限信息
+         */
+  
+  
+        function getBucketAcl(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketACL",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "acl"
+          }, function (err, data) {
+            if (err) return callback(err);
+            var AccessControlPolicy = data.AccessControlPolicy || {};
+            var Owner = AccessControlPolicy.Owner || {};
+            var Grant = AccessControlPolicy.AccessControlList.Grant || [];
+            Grant = util.isArray(Grant) ? Grant : [Grant];
+            var result = decodeAcl(AccessControlPolicy);
+  
+            if (data.headers && data.headers["x-cos-acl"]) {
+              result.ACL = data.headers["x-cos-acl"];
+            }
+  
+            result = util.extend(result, {
+              Owner: Owner,
+              Grants: Grant,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+            callback(null, result);
+          });
+        }
+        /**
+         * 设置 Bucket 的 跨域设置
+         * @param  {Object}  params                             参数对象，必须
+         *     @param  {String}  params.Bucket                  Bucket名称，必须
+         *     @param  {String}  params.Region                  地域名称，必须
+         *     @param  {Object}  params.CORSConfiguration       相关的跨域设置，必须
+         * @param  {Array}  params.CORSConfiguration.CORSRules  对应的跨域规则
+         * @param  {Function}  callback                         回调函数，必须
+         * @return  {Object}  err                               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                              返回的数据
+         */
+  
+  
+        function putBucketCors(params, callback) {
+          var CORSConfiguration = params["CORSConfiguration"] || {};
+          var CORSRules = CORSConfiguration["CORSRules"] || params["CORSRules"] || [];
+          CORSRules = util.clone(util.isArray(CORSRules) ? CORSRules : [CORSRules]);
+          util.each(CORSRules, function (rule) {
+            util.each(["AllowedOrigin", "AllowedHeader", "AllowedMethod", "ExposeHeader"], function (key) {
+              var sKey = key + "s";
+              var val = rule[sKey] || rule[key] || [];
+              delete rule[sKey];
+              rule[key] = util.isArray(val) ? val : [val];
+            });
+          });
+          var xml = util.json2xml({
+            CORSConfiguration: {
+              CORSRule: CORSRules
+            }
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketCORS",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "cors",
+            headers: headers
+          }, function (err, data) {
+            if (err) return callback(err);
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Bucket 的 跨域设置
+         * @param  {Object}  params                         参数对象，必须
+         *     @param  {String}  params.Bucket              Bucket名称，必须
+         *     @param  {String}  params.Region              地域名称，必须
+         * @param  {Function}  callback                     回调函数，必须
+         * @return  {Object}  err                           请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                          返回的数据
+         *     @return  {Object}  data.CORSRules            Bucket的跨域设置
+         */
+  
+  
+        function getBucketCors(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketCORS",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "cors"
+          }, function (err, data) {
+            if (err) {
+              if (err.statusCode === 404 && err.error && err.error.Code === "NoSuchCORSConfiguration") {
+                var result = {
+                  CORSRules: [],
+                  statusCode: err.statusCode
+                };
+                err.headers && (result.headers = err.headers);
+                callback(null, result);
+              } else {
+                callback(err);
+              }
+  
+              return;
+            }
+  
+            var CORSConfiguration = data.CORSConfiguration || {};
+            var CORSRules = CORSConfiguration.CORSRules || CORSConfiguration.CORSRule || [];
+            CORSRules = util.clone(util.isArray(CORSRules) ? CORSRules : [CORSRules]);
+            util.each(CORSRules, function (rule) {
+              util.each(["AllowedOrigin", "AllowedHeader", "AllowedMethod", "ExposeHeader"], function (key) {
+                var sKey = key + "s";
+                var val = rule[sKey] || rule[key] || [];
+                delete rule[key];
+                rule[sKey] = util.isArray(val) ? val : [val];
+              });
+            });
+            callback(null, {
+              CORSRules: CORSRules,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 删除 Bucket 的 跨域设置
+         * @param  {Object}  params                 参数对象，必须
+         *     @param  {String}  params.Bucket      Bucket名称，必须
+         *     @param  {String}  params.Region      地域名称，必须
+         * @param  {Function}  callback             回调函数，必须
+         * @return  {Object}  err                   请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                  返回的数据
+         */
+  
+  
+        function deleteBucketCors(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:DeleteBucketCORS",
+            method: "DELETE",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "cors"
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode || err.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Bucket 的 地域信息
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据，包含地域信息 LocationConstraint
+         */
+  
+  
+        function getBucketLocation(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketLocation",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "location"
+          }, function (err, data) {
+            if (err) return callback(err);
+            callback(null, data);
+          });
+        }
+  
+        function putBucketPolicy(params, callback) {
+          var Policy = params["Policy"];
+          var PolicyStr = Policy;
+  
+          try {
+            if (typeof Policy === "string") {
+              Policy = JSON.parse(PolicyStr);
+            } else {
+              PolicyStr = JSON.stringify(Policy);
+            }
+          } catch (e) {
+            callback({
+              error: "Policy format error"
+            });
+          }
+  
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/json";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(PolicyStr));
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketPolicy",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            action: "policy",
+            body: PolicyStr,
+            headers: headers,
+            json: true
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Bucket 的读取权限策略
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function getBucketPolicy(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketPolicy",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "policy",
+            rawBody: true
+          }, function (err, data) {
+            if (err) {
+              if (err.statusCode && err.statusCode === 403) {
+                return callback({
+                  ErrorStatus: "Access Denied"
+                });
+              }
+  
+              if (err.statusCode && err.statusCode === 405) {
+                return callback({
+                  ErrorStatus: "Method Not Allowed"
+                });
+              }
+  
+              if (err.statusCode && err.statusCode === 404) {
+                return callback({
+                  ErrorStatus: "Policy Not Found"
+                });
+              }
+  
+              return callback(err);
+            }
+  
+            var Policy = {};
+  
+            try {
+              Policy = JSON.parse(data.body);
+            } catch (e) {}
+  
+            callback(null, {
+              Policy: Policy,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 删除 Bucket 的 跨域设置
+         * @param  {Object}  params                 参数对象，必须
+         *     @param  {String}  params.Bucket      Bucket名称，必须
+         *     @param  {String}  params.Region      地域名称，必须
+         * @param  {Function}  callback             回调函数，必须
+         * @return  {Object}  err                   请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                  返回的数据
+         */
+  
+  
+        function deleteBucketPolicy(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:DeleteBucketPolicy",
+            method: "DELETE",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "policy"
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode || err.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 设置 Bucket 的标签
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         *     @param  {Array}   params.TagSet  标签设置，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function putBucketTagging(params, callback) {
+          var Tagging = params["Tagging"] || {};
+          var Tags = Tagging.TagSet || Tagging.Tags || params["Tags"] || [];
+          Tags = util.clone(util.isArray(Tags) ? Tags : [Tags]);
+          var xml = util.json2xml({
+            Tagging: {
+              TagSet: {
+                Tag: Tags
+              }
+            }
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketTagging",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "tagging",
+            headers: headers
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Bucket 的标签设置
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function getBucketTagging(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketTagging",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "tagging"
+          }, function (err, data) {
+            if (err) {
+              if (err.statusCode === 404 && err.error && (err.error === "Not Found" || err.error.Code === "NoSuchTagSet")) {
+                var result = {
+                  Tags: [],
+                  statusCode: err.statusCode
+                };
+                err.headers && (result.headers = err.headers);
+                callback(null, result);
+              } else {
+                callback(err);
+              }
+  
+              return;
+            }
+  
+            var Tags = [];
+  
+            try {
+              Tags = data.Tagging.TagSet.Tag || [];
+            } catch (e) {}
+  
+            Tags = util.clone(util.isArray(Tags) ? Tags : [Tags]);
+            callback(null, {
+              Tags: Tags,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 删除 Bucket 的 标签设置
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回的数据
+         */
+  
+  
+        function deleteBucketTagging(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:DeleteBucketTagging",
+            method: "DELETE",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "tagging"
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+  
+        function putBucketLifecycle(params, callback) {
+          var LifecycleConfiguration = params["LifecycleConfiguration"] || {};
+          var Rules = LifecycleConfiguration.Rules || params.Rules || [];
+          Rules = util.clone(Rules);
+          var xml = util.json2xml({
+            LifecycleConfiguration: {
+              Rule: Rules
+            }
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketLifecycle",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "lifecycle",
+            headers: headers
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+  
+        function getBucketLifecycle(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketLifecycle",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "lifecycle"
+          }, function (err, data) {
+            if (err) {
+              if (err.statusCode === 404 && err.error && err.error.Code === "NoSuchLifecycleConfiguration") {
+                var result = {
+                  Rules: [],
+                  statusCode: err.statusCode
+                };
+                err.headers && (result.headers = err.headers);
+                callback(null, result);
+              } else {
+                callback(err);
+              }
+  
+              return;
+            }
+  
+            var Rules = [];
+  
+            try {
+              Rules = data.LifecycleConfiguration.Rule || [];
+            } catch (e) {}
+  
+            Rules = util.clone(util.isArray(Rules) ? Rules : [Rules]);
+            callback(null, {
+              Rules: Rules,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+  
+        function deleteBucketLifecycle(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:DeleteBucketLifecycle",
+            method: "DELETE",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "lifecycle"
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+  
+        function putBucketVersioning(params, callback) {
+          if (!params["VersioningConfiguration"]) {
+            callback({
+              error: "missing param VersioningConfiguration"
+            });
+            return;
+          }
+  
+          var VersioningConfiguration = params["VersioningConfiguration"] || {};
+          var xml = util.json2xml({
+            VersioningConfiguration: VersioningConfiguration
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketVersioning",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "versioning",
+            headers: headers
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+  
+        function getBucketVersioning(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketVersioning",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "versioning"
+          }, function (err, data) {
+            if (!err) {
+              !data.VersioningConfiguration && (data.VersioningConfiguration = {});
+            }
+  
+            callback(err, data);
+          });
+        }
+  
+        function putBucketReplication(params, callback) {
+          var ReplicationConfiguration = util.clone(params.ReplicationConfiguration);
+          var xml = util.json2xml({
+            ReplicationConfiguration: ReplicationConfiguration
+          });
+          xml = xml.replace(/<(\/?)Rules>/gi, "<$1Rule>");
+          xml = xml.replace(/<(\/?)Tags>/gi, "<$1Tag>");
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketReplication",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "replication",
+            headers: headers
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+  
+        function getBucketReplication(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketReplication",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "replication"
+          }, function (err, data) {
+            if (err) {
+              if (err.statusCode === 404 && err.error && (err.error === "Not Found" || err.error.Code === "ReplicationConfigurationnotFoundError")) {
+                var result = {
+                  ReplicationConfiguration: {
+                    Rules: []
+                  },
+                  statusCode: err.statusCode
+                };
+                err.headers && (result.headers = err.headers);
+                callback(null, result);
+              } else {
+                callback(err);
+              }
+  
+              return;
+            }
+  
+            if (!err) {
+              !data.ReplicationConfiguration && (data.ReplicationConfiguration = {});
+            }
+  
+            if (data.ReplicationConfiguration.Rule) {
+              data.ReplicationConfiguration.Rules = data.ReplicationConfiguration.Rule;
+              delete data.ReplicationConfiguration.Rule;
+            }
+  
+            callback(err, data);
+          });
+        }
+  
+        function deleteBucketReplication(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:DeleteBucketReplication",
+            method: "DELETE",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "replication"
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 设置 Bucket 静态网站配置信息
+         * @param  {Object}  params                                                 参数对象，必须
+         *     @param  {String}  params.Bucket                                      Bucket名称，必须
+         *     @param  {String}  params.Region                                      地域名称，必须
+         *     @param  {Object}  params.WebsiteConfiguration                        地域名称，必须
+         *         @param  {Object}   WebsiteConfiguration.IndexDocument            索引文档，必须
+         *         @param  {Object}   WebsiteConfiguration.ErrorDocument            错误文档，非必须
+         *         @param  {Object}   WebsiteConfiguration.RedirectAllRequestsTo    重定向所有请求，非必须
+         *         @param  {Array}   params.RoutingRules                            重定向规则，非必须
+         * @param  {Function}  callback                                             回调函数，必须
+         * @return  {Object}  err                                                   请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                                                  返回数据
+         */
+  
+  
+        function putBucketWebsite(params, callback) {
+          if (!params["WebsiteConfiguration"]) {
+            callback({
+              error: "missing param WebsiteConfiguration"
+            });
+            return;
+          }
+  
+          var WebsiteConfiguration = util.clone(params["WebsiteConfiguration"] || {});
+          var RoutingRules = WebsiteConfiguration["RoutingRules"] || WebsiteConfiguration["RoutingRule"] || [];
+          RoutingRules = util.isArray(RoutingRules) ? RoutingRules : [RoutingRules];
+          delete WebsiteConfiguration.RoutingRule;
+          delete WebsiteConfiguration.RoutingRules;
+          if (RoutingRules.length) WebsiteConfiguration.RoutingRules = {
+            RoutingRule: RoutingRules
+          };
+          var xml = util.json2xml({
+            WebsiteConfiguration: WebsiteConfiguration
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketWebsite",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "website",
+            headers: headers
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Bucket 的静态网站配置信息
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function getBucketWebsite(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketWebsite",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            headers: params.Headers,
+            action: "website"
+          }, function (err, data) {
+            if (err) {
+              if (err.statusCode === 404 && err.error.Code === "NoSuchWebsiteConfiguration") {
+                var result = {
+                  WebsiteConfiguration: {},
+                  statusCode: err.statusCode
+                };
+                err.headers && (result.headers = err.headers);
+                callback(null, result);
+              } else {
+                callback(err);
+              }
+  
+              return;
+            }
+  
+            var WebsiteConfiguration = data.WebsiteConfiguration || {};
+  
+            if (WebsiteConfiguration["RoutingRules"]) {
+              var RoutingRules = util.clone(WebsiteConfiguration["RoutingRules"].RoutingRule || []);
+              RoutingRules = util.makeArray(RoutingRules);
+              WebsiteConfiguration.RoutingRules = RoutingRules;
+            }
+  
+            callback(null, {
+              WebsiteConfiguration: WebsiteConfiguration,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 删除 Bucket 的静态网站配置
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function deleteBucketWebsite(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:DeleteBucketWebsite",
+            method: "DELETE",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "website"
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 设置 Bucket 的防盗链白名单或者黑名单
+         * @param  {Object}  params                                                 参数对象，必须
+         *     @param  {String}  params.Bucket                                      Bucket名称，必须
+         *     @param  {String}  params.Region                                      地域名称，必须
+         *     @param  {Object}  params.RefererConfiguration                        地域名称，必须
+         *         @param  {String}   RefererConfiguration.Status                   是否开启防盗链，枚举值：Enabled、Disabled
+         *         @param  {String}   RefererConfiguration.RefererType              防盗链类型，枚举值：Black-List、White-List，必须
+         *         @param  {Array}   RefererConfiguration.DomianList.Domain         生效域名，必须
+         *         @param  {String}   RefererConfiguration.EmptyReferConfiguration  ，非必须
+         * @param  {Function}  callback                                             回调函数，必须
+         * @return  {Object}  err                                                   请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                                                  返回数据
+         */
+  
+  
+        function putBucketReferer(params, callback) {
+          if (!params["RefererConfiguration"]) {
+            callback({
+              error: "missing param RefererConfiguration"
+            });
+            return;
+          }
+  
+          var RefererConfiguration = util.clone(params["RefererConfiguration"] || {});
+          var DomainList = RefererConfiguration["DomainList"] || {};
+          var Domains = DomainList["Domains"] || DomainList["Domain"] || [];
+          Domains = util.isArray(Domains) ? Domains : [Domains];
+          if (Domains.length) RefererConfiguration.DomainList = {
+            Domain: Domains
+          };
+          var xml = util.json2xml({
+            RefererConfiguration: RefererConfiguration
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketReferer",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "referer",
+            headers: headers
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Bucket 的防盗链白名单或者黑名单
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function getBucketReferer(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketReferer",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            headers: params.Headers,
+            action: "referer"
+          }, function (err, data) {
+            if (err) {
+              if (err.statusCode === 404 && err.error.Code === "NoSuchRefererConfiguration") {
+                var result = {
+                  WebsiteConfiguration: {},
+                  statusCode: err.statusCode
+                };
+                err.headers && (result.headers = err.headers);
+                callback(null, result);
+              } else {
+                callback(err);
+              }
+  
+              return;
+            }
+  
+            var RefererConfiguration = data.RefererConfiguration || {};
+  
+            if (RefererConfiguration["DomainList"]) {
+              var Domains = util.clone(RefererConfiguration["DomainList"].Domain || []);
+              Domains = util.makeArray(Domains);
+              RefererConfiguration.DomainList = {
+                Domains: Domains
+              };
+            }
+  
+            callback(null, {
+              RefererConfiguration: RefererConfiguration,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 设置 Bucket 自定义域名
+         * @param  {Object}  params                                                 参数对象，必须
+         *     @param  {String}  params.Bucket                                      Bucket名称，必须
+         *     @param  {String}  params.Region                                      地域名称，必须
+         * @param  {Function}  callback                                             回调函数，必须
+         * @return  {Object}  err                                                   请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                                                  返回数据
+         */
+  
+  
+        function putBucketDomain(params, callback) {
+          var DomainConfiguration = params["DomainConfiguration"] || {};
+          var DomainRule = DomainConfiguration.DomainRule || params.DomainRule || [];
+          DomainRule = util.clone(DomainRule);
+          var xml = util.json2xml({
+            DomainConfiguration: {
+              DomainRule: DomainRule
+            }
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketDomain",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "domain",
+            headers: headers
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Bucket 的自定义域名
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function getBucketDomain(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketDomain",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "domain"
+          }, function (err, data) {
+            if (err) return callback(err);
+            var DomainRule = [];
+  
+            try {
+              DomainRule = data.DomainConfiguration.DomainRule || [];
+            } catch (e) {}
+  
+            DomainRule = util.clone(util.isArray(DomainRule) ? DomainRule : [DomainRule]);
+            callback(null, {
+              DomainRule: DomainRule,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 删除 Bucket 自定义域名
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function deleteBucketDomain(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:DeleteBucketDomain",
+            method: "DELETE",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "domain"
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 设置 Bucket 的回源
+         * @param  {Object}  params                                                 参数对象，必须
+         *     @param  {String}  params.Bucket                                      Bucket名称，必须
+         *     @param  {String}  params.Region                                      地域名称，必须
+         * @param  {Function}  callback                                             回调函数，必须
+         * @return  {Object}  err                                                   请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                                                  返回数据
+         */
+  
+  
+        function putBucketOrigin(params, callback) {
+          var OriginConfiguration = params["OriginConfiguration"] || {};
+          var OriginRule = OriginConfiguration.OriginRule || params.OriginRule || [];
+          OriginRule = util.clone(OriginRule);
+          var xml = util.json2xml({
+            OriginConfiguration: {
+              OriginRule: OriginRule
+            }
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketOrigin",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "origin",
+            headers: headers
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Bucket 的回源
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function getBucketOrigin(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketOrigin",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "origin"
+          }, function (err, data) {
+            if (err) return callback(err);
+            var OriginRule = [];
+  
+            try {
+              OriginRule = data.OriginConfiguration.OriginRule || [];
+            } catch (e) {}
+  
+            OriginRule = util.clone(util.isArray(OriginRule) ? OriginRule : [OriginRule]);
+            callback(null, {
+              OriginRule: OriginRule,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 删除 Bucket 的回源
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function deleteBucketOrigin(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:DeleteBucketOrigin",
+            method: "DELETE",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "origin"
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 设置 Bucket 的日志记录
+         * @param  {Object}  params                                                 参数对象，必须
+         *     @param  {String}  params.Bucket                                      Bucket名称，必须
+         *     @param  {String}  params.Region                                      地域名称，必须
+         *     @param  {(Object|String)}  params.BucketLoggingStatus                         说明日志记录配置的状态，如果无子节点信息则意为关闭日志记录，必须
+         * @param  {Function}  callback                                             回调函数，必须
+         * @return  {Object}  err                                                   请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                                                  返回数据
+         */
+  
+  
+        function putBucketLogging(params, callback) {
+          var xml = util.json2xml({
+            BucketLoggingStatus: params["BucketLoggingStatus"] || ""
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketLogging",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "logging",
+            headers: headers
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Bucket 的日志记录
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function getBucketLogging(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketLogging",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "logging"
+          }, function (err, data) {
+            if (err) return callback(err);
+            delete data.BucketLoggingStatus._xmlns;
+            callback(null, {
+              BucketLoggingStatus: data.BucketLoggingStatus,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 创建/编辑 Bucket 的清单任务
+         * @param  {Object}  params                                                 参数对象，必须
+         *     @param  {String}  params.Bucket                                      Bucket名称，必须
+         *     @param  {String}  params.Region                                      地域名称，必须
+         *     @param  {String}  params.Id                                          清单任务的名称，必须
+         *     @param  {Object}  params.InventoryConfiguration                      包含清单的配置参数，必须
+         * @param  {Function}  callback                                             回调函数，必须
+         * @return  {Object}  err                                                   请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                                                  返回数据
+         */
+  
+  
+        function putBucketInventory(params, callback) {
+          var InventoryConfiguration = util.clone(params["InventoryConfiguration"]);
+  
+          if (InventoryConfiguration.OptionalFields) {
+            var Field = InventoryConfiguration.OptionalFields || [];
+            InventoryConfiguration.OptionalFields = {
+              Field: Field
+            };
+          }
+  
+          if (InventoryConfiguration.Destination && InventoryConfiguration.Destination.COSBucketDestination && InventoryConfiguration.Destination.COSBucketDestination.Encryption) {
+            var Encryption = InventoryConfiguration.Destination.COSBucketDestination.Encryption;
+  
+            if (Object.keys(Encryption).indexOf("SSECOS") > -1) {
+              Encryption["SSE-COS"] = Encryption["SSECOS"];
+              delete Encryption["SSECOS"];
+            }
+          }
+  
+          var xml = util.json2xml({
+            InventoryConfiguration: InventoryConfiguration
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:PutBucketInventory",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "inventory",
+            qs: {
+              id: params["Id"]
+            },
+            headers: headers
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Bucket 的清单任务信息
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         *     @param  {String}  params.Id      清单任务的名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function getBucketInventory(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketInventory",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "inventory",
+            qs: {
+              id: params["Id"]
+            }
+          }, function (err, data) {
+            if (err) return callback(err);
+            var InventoryConfiguration = data["InventoryConfiguration"];
+  
+            if (InventoryConfiguration && InventoryConfiguration.OptionalFields && InventoryConfiguration.OptionalFields.Field) {
+              var Field = InventoryConfiguration.OptionalFields.Field;
+  
+              if (!util.isArray(Field)) {
+                Field = [Field];
+              }
+  
+              InventoryConfiguration.OptionalFields = Field;
+            }
+  
+            if (InventoryConfiguration.Destination && InventoryConfiguration.Destination.COSBucketDestination && InventoryConfiguration.Destination.COSBucketDestination.Encryption) {
+              var Encryption = InventoryConfiguration.Destination.COSBucketDestination.Encryption;
+  
+              if (Object.keys(Encryption).indexOf("SSE-COS") > -1) {
+                Encryption["SSECOS"] = Encryption["SSE-COS"];
+                delete Encryption["SSE-COS"];
+              }
+            }
+  
+            callback(null, {
+              InventoryConfiguration: InventoryConfiguration,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Bucket 的清单任务信息
+         * @param  {Object}  params                             参数对象，必须
+         *     @param  {String}  params.Bucket                  Bucket名称，必须
+         *     @param  {String}  params.Region                  地域名称，必须
+         *     @param  {String}  params.ContinuationToken       当 COS 响应体中 IsTruncated 为 true，且 NextContinuationToken 节点中存在参数值时，您可以将这个参数作为 continuation-token 参数值，以获取下一页的清单任务信息，非必须
+         * @param  {Function}  callback                         回调函数，必须
+         * @return  {Object}  err                               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                              返回数据
+         */
+  
+  
+        function listBucketInventory(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:ListBucketInventory",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "inventory",
+            qs: {
+              "continuation-token": params["ContinuationToken"]
+            }
+          }, function (err, data) {
+            if (err) return callback(err);
+            var ListInventoryConfigurationResult = data["ListInventoryConfigurationResult"];
+            var InventoryConfigurations = ListInventoryConfigurationResult.InventoryConfiguration || [];
+            InventoryConfigurations = util.isArray(InventoryConfigurations) ? InventoryConfigurations : [InventoryConfigurations];
+            delete ListInventoryConfigurationResult["InventoryConfiguration"];
+            util.each(InventoryConfigurations, function (InventoryConfiguration) {
+              if (InventoryConfiguration && InventoryConfiguration.OptionalFields && InventoryConfiguration.OptionalFields.Field) {
+                var Field = InventoryConfiguration.OptionalFields.Field;
+  
+                if (!util.isArray(Field)) {
+                  Field = [Field];
+                }
+  
+                InventoryConfiguration.OptionalFields = Field;
+              }
+  
+              if (InventoryConfiguration.Destination && InventoryConfiguration.Destination.COSBucketDestination && InventoryConfiguration.Destination.COSBucketDestination.Encryption) {
+                var Encryption = InventoryConfiguration.Destination.COSBucketDestination.Encryption;
+  
+                if (Object.keys(Encryption).indexOf("SSE-COS") > -1) {
+                  Encryption["SSECOS"] = Encryption["SSE-COS"];
+                  delete Encryption["SSE-COS"];
+                }
+              }
+            });
+            ListInventoryConfigurationResult.InventoryConfigurations = InventoryConfigurations;
+            util.extend(ListInventoryConfigurationResult, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+            callback(null, ListInventoryConfigurationResult);
+          });
+        }
+        /**
+         * 删除 Bucket 的清单任务
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         *     @param  {String}  params.Id      清单任务的名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function deleteBucketInventory(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:DeleteBucketInventory",
+            method: "DELETE",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "inventory",
+            qs: {
+              id: params["Id"]
+            }
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /* 全球加速 */
+  
+  
+        function putBucketAccelerate(params, callback) {
+          if (!params["AccelerateConfiguration"]) {
+            callback({
+              error: "missing param AccelerateConfiguration"
+            });
+            return;
+          }
+  
+          var configuration = {
+            AccelerateConfiguration: params.AccelerateConfiguration || {}
+          };
+          var xml = util.json2xml(configuration);
+          var headers = {};
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Interface: "putBucketAccelerate",
+            Action: "name/cos:PutBucketAccelerate",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "accelerate",
+            headers: headers
+          }, function (err, data) {
+            if (err) return callback(err);
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+  
+        function getBucketAccelerate(params, callback) {
+          submitRequest.call(this, {
+            Interface: "getBucketAccelerate",
+            Action: "name/cos:GetBucketAccelerate",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            action: "accelerate"
+          }, function (err, data) {
+            if (!err) {
+              !data.AccelerateConfiguration && (data.AccelerateConfiguration = {});
+            }
+  
+            callback(err, data);
+          });
+        } // Object 相关
+  
+        /**
+         * 取回对应Object的元数据，Head的权限与Get的权限一致
+         * @param  {Object}  params                         参数对象，必须
+         *     @param  {String}  params.Bucket              Bucket名称，必须
+         *     @param  {String}  params.Region              地域名称，必须
+         *     @param  {String}  params.Key                 文件名称，必须
+         *     @param  {String}  params.IfModifiedSince     当Object在指定时间后被修改，则返回对应Object元信息，否则返回304，非必须
+         * @param  {Function}  callback                     回调函数，必须
+         * @return  {Object}  err                           请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                          为指定 object 的元数据，如果设置了 IfModifiedSince ，且文件未修改，则返回一个对象，NotModified 属性为 true
+         *     @return  {Boolean}  data.NotModified         是否在 IfModifiedSince 时间点之后未修改该 object，则为 true
+         */
+  
+  
+        function headObject(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:HeadObject",
+            method: "HEAD",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            VersionId: params.VersionId,
+            headers: params.Headers
+          }, function (err, data) {
+            if (err) {
+              var statusCode = err.statusCode;
+  
+              if (params.Headers["If-Modified-Since"] && statusCode && statusCode === 304) {
+                return callback(null, {
+                  NotModified: true,
+                  statusCode: statusCode
+                });
+              }
+  
+              return callback(err);
+            }
+  
+            data.ETag = util.attr(data.headers, "etag", "");
+            callback(null, data);
+          });
+        }
+  
+        function listObjectVersions(params, callback) {
+          var reqParams = {};
+          reqParams["prefix"] = params["Prefix"] || "";
+          reqParams["delimiter"] = params["Delimiter"];
+          reqParams["key-marker"] = params["KeyMarker"];
+          reqParams["version-id-marker"] = params["VersionIdMarker"];
+          reqParams["max-keys"] = params["MaxKeys"];
+          reqParams["encoding-type"] = params["EncodingType"];
+          submitRequest.call(this, {
+            Action: "name/cos:GetBucketObjectVersions",
+            ResourceKey: reqParams["prefix"],
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            qs: reqParams,
+            action: "versions"
+          }, function (err, data) {
+            if (err) return callback(err);
+            var ListVersionsResult = data.ListVersionsResult || {};
+            var DeleteMarkers = ListVersionsResult.DeleteMarker || [];
+            DeleteMarkers = util.isArray(DeleteMarkers) ? DeleteMarkers : [DeleteMarkers];
+            var Versions = ListVersionsResult.Version || [];
+            Versions = util.isArray(Versions) ? Versions : [Versions];
+            var result = util.clone(ListVersionsResult);
+            delete result.DeleteMarker;
+            delete result.Version;
+            util.extend(result, {
+              DeleteMarkers: DeleteMarkers,
+              Versions: Versions,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+            callback(null, result);
+          });
+        }
+        /**
+         * 下载 object
+         * @param  {Object}  params                                 参数对象，必须
+         *     @param  {String}  params.Bucket                      Bucket名称，必须
+         *     @param  {String}  params.Region                      地域名称，必须
+         *     @param  {String}  params.Key                         文件名称，必须
+         *     @param  {WriteStream}  params.Output                 文件写入流，非必须
+         *     @param  {String}  params.IfModifiedSince             当Object在指定时间后被修改，则返回对应Object元信息，否则返回304，非必须
+         *     @param  {String}  params.IfUnmodifiedSince           如果文件修改时间早于或等于指定时间，才返回文件内容。否则返回 412 (precondition failed)，非必须
+         *     @param  {String}  params.IfMatch                     当 ETag 与指定的内容一致，才返回文件。否则返回 412 (precondition failed)，非必须
+         *     @param  {String}  params.IfNoneMatch                 当 ETag 与指定的内容不一致，才返回文件。否则返回304 (not modified)，非必须
+         *     @param  {String}  params.ResponseContentType         设置返回头部中的 Content-Type 参数，非必须
+         *     @param  {String}  params.ResponseContentLanguage     设置返回头部中的 Content-Language 参数，非必须
+         *     @param  {String}  params.ResponseExpires             设置返回头部中的 Content-Expires 参数，非必须
+         *     @param  {String}  params.ResponseCacheControl        设置返回头部中的 Cache-Control 参数，非必须
+         *     @param  {String}  params.ResponseContentDisposition  设置返回头部中的 Content-Disposition 参数，非必须
+         *     @param  {String}  params.ResponseContentEncoding     设置返回头部中的 Content-Encoding 参数，非必须
+         * @param  {Function}  callback                             回调函数，必须
+         * @param  {Object}  err                                    请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @param  {Object}  data                                   为对应的 object 数据，包括 body 和 headers
+         */
+  
+  
+        function getObject(params, callback) {
+          var reqParams = {};
+          reqParams["response-content-type"] = params["ResponseContentType"];
+          reqParams["response-content-language"] = params["ResponseContentLanguage"];
+          reqParams["response-expires"] = params["ResponseExpires"];
+          reqParams["response-cache-control"] = params["ResponseCacheControl"];
+          reqParams["response-content-disposition"] = params["ResponseContentDisposition"];
+          reqParams["response-content-encoding"] = params["ResponseContentEncoding"]; // 如果用户自己传入了 output
+  
+          submitRequest.call(this, {
+            Action: "name/cos:GetObject",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            VersionId: params.VersionId,
+            headers: params.Headers,
+            qs: reqParams,
+            rawBody: true
+          }, function (err, data) {
+            if (err) {
+              var statusCode = err.statusCode;
+  
+              if (params.Headers["If-Modified-Since"] && statusCode && statusCode === 304) {
+                return callback(null, {
+                  NotModified: true
+                });
+              }
+  
+              return callback(err);
+            }
+  
+            callback(null, {
+              Body: data.body,
+              ETag: util.attr(data.headers, "etag", ""),
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 上传 object
+         * @param  {Object} params                                          参数对象，必须
+         *     @param  {String}  params.Bucket                              Bucket名称，必须
+         *     @param  {String}  params.Region                              地域名称，必须
+         *     @param  {String}  params.Key                                 文件名称，必须
+         *     @param  {String}  params.Body                                上传文件的内容，只支持字符串
+         *     @param  {String}  params.CacheControl                        RFC 2616 中定义的缓存策略，将作为 Object 元数据保存，非必须
+         *     @param  {String}  params.ContentDisposition                  RFC 2616 中定义的文件名称，将作为 Object 元数据保存，非必须
+         *     @param  {String}  params.ContentEncoding                     RFC 2616 中定义的编码格式，将作为 Object 元数据保存，非必须
+         *     @param  {String}  params.ContentLength                       RFC 2616 中定义的 HTTP 请求内容长度（字节），必须
+         *     @param  {String}  params.ContentType                         RFC 2616 中定义的内容类型（MIME），将作为 Object 元数据保存，非必须
+         *     @param  {String}  params.Expect                              当使用 Expect: 100-continue 时，在收到服务端确认后，才会发送请求内容，非必须
+         *     @param  {String}  params.Expires                             RFC 2616 中定义的过期时间，将作为 Object 元数据保存，非必须
+         *     @param  {String}  params.ContentSha1                         RFC 3174 中定义的 160-bit 内容 SHA-1 算法校验，非必须
+         *     @param  {String}  params.ACL                                 允许用户自定义文件权限，有效值：private | public-read，非必须
+         *     @param  {String}  params.GrantRead                           赋予被授权者读的权限，格式 x-cos-grant-read: uin=" ",uin=" "，非必须
+         *     @param  {String}  params.GrantWrite                          赋予被授权者写的权限，格式 x-cos-grant-write: uin=" ",uin=" "，非必须
+         *     @param  {String}  params.GrantFullControl                    赋予被授权者读写权限，格式 x-cos-grant-full-control: uin=" ",uin=" "，非必须
+         *     @param  {String}  params.ServerSideEncryption               支持按照指定的加密算法进行服务端数据加密，格式 x-cos-server-side-encryption: "AES256"，非必须
+         *     @param  {Function}  params.onProgress                        上传进度回调函数
+         * @param  {Function}  callback                                     回调函数，必须
+         * @return  {Object}  err                                           请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                                          为对应的 object 数据
+         *     @return  {String}  data.ETag                                 为对应上传文件的 ETag 值
+         */
+  
+  
+        function putObject(params, callback) {
+          var self = this;
+          var FileSize = params.ContentLength;
+          var onProgress = util.throttleOnProgress.call(self, FileSize, params.onProgress); // 特殊处理 Cache-Control、Content-Type，避免代理更改这两个字段导致写入到 Object 属性里
+  
+          var headers = params.Headers;
+          if (!headers["Cache-Control"] && !headers["cache-control"]) headers["Cache-Control"] = "";
+          if (!headers["Content-Type"] && !headers["content-type"]) headers["Content-Type"] = mime.getType(params.Key) || "application/octet-stream";
+          util.getBodyMd5(self.options.UploadCheckContentMd5, params.Body, function (md5) {
+            if (md5) headers["Content-MD5"] = util.binaryBase64(md5);
+            if (params.ContentLength !== undefined) headers["Content-Length"] = params.ContentLength;
+            onProgress(null, true); // 任务状态开始 uploading
+  
+            submitRequest.call(self, {
+              Action: "name/cos:PutObject",
+              TaskId: params.TaskId,
+              method: "PUT",
+              Bucket: params.Bucket,
+              Region: params.Region,
+              Key: params.Key,
+              headers: params.Headers,
+              body: params.Body,
+              onProgress: onProgress
+            }, function (err, data) {
+              if (err) {
+                onProgress(null, true);
+                return callback(err);
+              }
+  
+              onProgress({
+                loaded: FileSize,
+                total: FileSize
+              }, true);
+              var url = getUrl({
+                ForcePathStyle: self.options.ForcePathStyle,
+                protocol: self.options.Protocol,
+                domain: self.options.Domain,
+                bucket: params.Bucket,
+                region: params.Region,
+                object: params.Key
+              });
+              url = url.substr(url.indexOf("://") + 3);
+              var result = {
+                Location: url,
+                ETag: util.attr(data.headers, "etag", ""),
+                statusCode: data.statusCode,
+                headers: data.headers
+              };
+              callback(null, result);
+            });
+          });
+        }
+        /**
+         * 上传 object
+         * @param  {Object} params                                          参数对象，必须
+         *     @param  {String}  params.Bucket                              Bucket名称，必须
+         *     @param  {String}  params.Region                              地域名称，必须
+         *     @param  {String}  params.Key                                 文件名称，必须
+         *     @param  {FilePath}  params.FilePath                          要上传的文件路径
+         *     @param  {Function}  params.onProgress                        上传进度回调函数
+         * @param  {Function}  callback                                     回调函数，必须
+         * @return  {Object}  err                                           请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                                          为对应的 object 数据
+         *     @return  {String}  data.ETag                                 为对应上传文件的 ETag 值
+         */
+  
+  
+        function postObject(params, callback) {
+          var self = this;
+          var headers = {};
+          var filePath = params.FilePath;
+  
+          if (!filePath) {
+            callback({
+              error: "missing param FilePath"
+            });
+            return;
+          }
+  
+          headers["Cache-Control"] = params["CacheControl"];
+          headers["Content-Disposition"] = params["ContentDisposition"];
+          headers["Content-Encoding"] = params["ContentEncoding"];
+          headers["Content-MD5"] = params["ContentMD5"];
+          headers["Content-Length"] = params["ContentLength"];
+          headers["Content-Type"] = params["ContentType"];
+          headers["Expect"] = params["Expect"];
+          headers["Expires"] = params["Expires"];
+          headers["x-cos-acl"] = params["ACL"];
+          headers["x-cos-grant-read"] = params["GrantRead"];
+          headers["x-cos-grant-write"] = params["GrantWrite"];
+          headers["x-cos-grant-full-control"] = params["GrantFullControl"];
+          headers["x-cos-storage-class"] = params["StorageClass"]; // 删除 Content-Length 避免签名错误
+  
+          delete headers["Content-Length"];
+          delete headers["content-length"];
+  
+          for (var key in params) {
+            if (key.indexOf("x-cos-meta-") > -1) {
+              headers[key] = params[key];
+            }
+          }
+  
+          var onProgress = util.throttleOnProgress.call(self, headers["Content-Length"], params.onProgress);
+          submitRequest.call(this, {
+            Action: "name/cos:PostObject",
+            method: "POST",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            headers: headers,
+            filePath: filePath,
+            onProgress: onProgress
+          }, function (err, data) {
+            onProgress(null, true);
+            if (err) return callback(err);
+  
+            if (data && data.headers) {
+              var headers = data.headers;
+              var ETag = headers.etag || headers.Etag || headers.ETag || "";
+              var url = getUrl({
+                ForcePathStyle: self.options.ForcePathStyle,
+                protocol: self.options.Protocol,
+                domain: self.options.Domain,
+                bucket: params.Bucket,
+                region: params.Region,
+                object: params.Key,
+                isLocation: true
+              });
+              return callback(null, {
+                Location: url,
+                statusCode: data.statusCode,
+                headers: headers,
+                ETag: ETag
+              });
+            }
+  
+            callback(null, data);
+          });
+        }
+        /**
+         * 删除 object
+         * @param  {Object}  params                     参数对象，必须
+         *     @param  {String}  params.Bucket          Bucket名称，必须
+         *     @param  {String}  params.Region          地域名称，必须
+         *     @param  {String}  params.Key             object名称，必须
+         * @param  {Function}  callback                 回调函数，必须
+         * @param  {Object}  err                        请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @param  {Object}  data                       删除操作成功之后返回的数据
+         */
+  
+  
+        function deleteObject(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:DeleteObject",
+            method: "DELETE",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            headers: params.Headers,
+            VersionId: params.VersionId
+          }, function (err, data) {
+            if (err) {
+              var statusCode = err.statusCode;
+  
+              if (statusCode && statusCode === 204) {
+                return callback(null, {
+                  statusCode: statusCode
+                });
+              } else if (statusCode && statusCode === 404) {
+                return callback(null, {
+                  BucketNotFound: true,
+                  statusCode: statusCode
+                });
+              } else {
+                return callback(err);
+              }
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 object 的 权限列表
+         * @param  {Object}  params                         参数对象，必须
+         *     @param  {String}  params.Bucket              Bucket名称，必须
+         *     @param  {String}  params.Region              地域名称，必须
+         *     @param  {String}  params.Key                 object名称，必须
+         * @param  {Function}  callback                     回调函数，必须
+         * @return  {Object}  err                           请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                          返回的数据
+         *     @return  {Object}  data.AccessControlPolicy  权限列表
+         */
+  
+  
+        function getObjectAcl(params, callback) {
+          submitRequest.call(this, {
+            Action: "name/cos:GetObjectACL",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            headers: params.Headers,
+            action: "acl"
+          }, function (err, data) {
+            if (err) return callback(err);
+            var AccessControlPolicy = data.AccessControlPolicy || {};
+            var Owner = AccessControlPolicy.Owner || {};
+            var Grant = AccessControlPolicy.AccessControlList && AccessControlPolicy.AccessControlList.Grant || [];
+            Grant = util.isArray(Grant) ? Grant : [Grant];
+            var result = decodeAcl(AccessControlPolicy);
+  
+            if (data.headers && data.headers["x-cos-acl"]) {
+              result.ACL = data.headers["x-cos-acl"];
+            }
+  
+            result = util.extend(result, {
+              Owner: Owner,
+              Grants: Grant,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+            callback(null, result);
+          });
+        }
+        /**
+         * 设置 object 的 权限列表
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         *     @param  {String}  params.Key     object名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回的数据
+         */
+  
+  
+        function putObjectAcl(params, callback) {
+          var headers = params.Headers;
+          var xml = "";
+  
+          if (params["AccessControlPolicy"]) {
+            var AccessControlPolicy = util.clone(params["AccessControlPolicy"] || {});
+            var Grants = AccessControlPolicy.Grants || AccessControlPolicy.Grant;
+            Grants = util.isArray(Grants) ? Grants : [Grants];
+            delete AccessControlPolicy.Grant;
+            delete AccessControlPolicy.Grants;
+            AccessControlPolicy.AccessControlList = {
+              Grant: Grants
+            };
+            xml = util.json2xml({
+              AccessControlPolicy: AccessControlPolicy
+            });
+            headers["Content-Type"] = "application/xml";
+            headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          } // Grant Header 去重
+  
+  
+          util.each(headers, function (val, key) {
+            if (key.indexOf("x-cos-grant-") === 0) {
+              headers[key] = uniqGrant(headers[key]);
+            }
+          });
+          submitRequest.call(this, {
+            Action: "name/cos:PutObjectACL",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            action: "acl",
+            headers: headers,
+            body: xml
+          }, function (err, data) {
+            if (err) return callback(err);
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * Options Object请求实现跨域访问的预请求。即发出一个 OPTIONS 请求给服务器以确认是否可以进行跨域操作。
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         *     @param  {String}  params.Key     object名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data              返回的数据
+         */
+  
+  
+        function optionsObject(params, callback) {
+          var headers = params.Headers;
+          headers["Origin"] = params["Origin"];
+          headers["Access-Control-Request-Method"] = params["AccessControlRequestMethod"];
+          headers["Access-Control-Request-Headers"] = params["AccessControlRequestHeaders"];
+          submitRequest.call(this, {
+            Action: "name/cos:OptionsObject",
+            method: "OPTIONS",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            headers: headers
+          }, function (err, data) {
+            if (err) {
+              if (err.statusCode && err.statusCode === 403) {
+                return callback(null, {
+                  OptionsForbidden: true,
+                  statusCode: err.statusCode
+                });
+              }
+  
+              return callback(err);
+            }
+  
+            var headers = data.headers || {};
+            callback(null, {
+              AccessControlAllowOrigin: headers["access-control-allow-origin"],
+              AccessControlAllowMethods: headers["access-control-allow-methods"],
+              AccessControlAllowHeaders: headers["access-control-allow-headers"],
+              AccessControlExposeHeaders: headers["access-control-expose-headers"],
+              AccessControlMaxAge: headers["access-control-max-age"],
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * @param  {Object}                                     参数列表
+         *     @param  {String}  Bucket                         Bucket 名称
+         *     @param  {String}  Region                         地域名称
+         *     @param  {String}  Key                            文件名称
+         *     @param  {String}  CopySource                     源文件URL绝对路径，可以通过versionid子资源指定历史版本
+         *     @param  {String}  ACL                            允许用户自定义文件权限。有效值：private，public-read默认值：private。
+         *     @param  {String}  GrantRead                      赋予被授权者读的权限，格式 x-cos-grant-read: uin=" ",uin=" "，当需要给子账户授权时，uin="RootAcountID/SubAccountID"，当需要给根账户授权时，uin="RootAcountID"。
+         *     @param  {String}  GrantWrite                     赋予被授权者写的权限，格式 x-cos-grant-write: uin=" ",uin=" "，当需要给子账户授权时，uin="RootAcountID/SubAccountID"，当需要给根账户授权时，uin="RootAcountID"。
+         *     @param  {String}  GrantFullControl               赋予被授权者读写权限，格式 x-cos-grant-full-control: uin=" ",uin=" "，当需要给子账户授权时，uin="RootAcountID/SubAccountID"，当需要给根账户授权时，uin="RootAcountID"。
+         *     @param  {String}  MetadataDirective              是否拷贝元数据，枚举值：Copy, Replaced，默认值Copy。假如标记为Copy，忽略Header中的用户元数据信息直接复制；假如标记为Replaced，按Header信息修改元数据。当目标路径和原路径一致，即用户试图修改元数据时，必须为Replaced
+         *     @param  {String}  CopySourceIfModifiedSince      当Object在指定时间后被修改，则执行操作，否则返回412。可与x-cos-copy-source-If-None-Match一起使用，与其他条件联合使用返回冲突。
+         *     @param  {String}  CopySourceIfUnmodifiedSince    当Object在指定时间后未被修改，则执行操作，否则返回412。可与x-cos-copy-source-If-Match一起使用，与其他条件联合使用返回冲突。
+         *     @param  {String}  CopySourceIfMatch              当Object的ETag和给定一致时，则执行操作，否则返回412。可与x-cos-copy-source-If-Unmodified-Since一起使用，与其他条件联合使用返回冲突。
+         *     @param  {String}  CopySourceIfNoneMatch          当Object的ETag和给定不一致时，则执行操作，否则返回412。可与x-cos-copy-source-If-Modified-Since一起使用，与其他条件联合使用返回冲突。
+         *     @param  {String}  StorageClass                   存储级别，枚举值：存储级别，枚举值：Standard, Standard_IA，Archive；默认值：Standard
+         *     @param  {String}  CacheControl                   指定所有缓存机制在整个请求/响应链中必须服从的指令。
+         *     @param  {String}  ContentDisposition             MIME 协议的扩展，MIME 协议指示 MIME 用户代理如何显示附加的文件
+         *     @param  {String}  ContentEncoding                HTTP 中用来对「采用何种编码格式传输正文」进行协定的一对头部字段
+         *     @param  {String}  ContentLength                  设置响应消息的实体内容的大小，单位为字节
+         *     @param  {String}  ContentType                    RFC 2616 中定义的 HTTP 请求内容类型（MIME），例如text/plain
+         *     @param  {String}  Expect                         请求的特定的服务器行为
+         *     @param  {String}  Expires                        响应过期的日期和时间
+         *     @param  {String}  params.ServerSideEncryption   支持按照指定的加密算法进行服务端数据加密，格式 x-cos-server-side-encryption: "AES256"，非必须
+         *     @param  {String}  ContentLanguage                指定内容语言
+         *     @param  {String}  x-cos-meta-*                   允许用户自定义的头部信息，将作为 Object 元数据返回。大小限制2K。
+         */
+  
+  
+        function putObjectCopy(params, callback) {
+          // 特殊处理 Cache-Control
+          var headers = params.Headers;
+          if (!headers["Cache-Control"] && !!headers["cache-control"]) headers["Cache-Control"] = "";
+          var CopySource = params.CopySource || "";
+          var m = CopySource.match(/^([^.]+-\d+)\.cos(v6)?\.([^.]+)\.[^/]+\/(.+)$/);
+  
+          if (!m) {
+            callback({
+              error: "CopySource format error"
+            });
+            return;
+          }
+  
+          var SourceBucket = m[1];
+          var SourceRegion = m[3];
+          var SourceKey = decodeURIComponent(m[4]);
+          submitRequest.call(this, {
+            Scope: [{
+              action: "name/cos:GetObject",
+              bucket: SourceBucket,
+              region: SourceRegion,
+              prefix: SourceKey
+            }, {
+              action: "name/cos:PutObject",
+              bucket: params.Bucket,
+              region: params.Region,
+              prefix: params.Key
+            }],
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            VersionId: params.VersionId,
+            headers: params.Headers
+          }, function (err, data) {
+            if (err) return callback(err);
+            var result = util.clone(data.CopyObjectResult || {});
+            util.extend(result, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+            callback(null, result);
+          });
+        }
+  
+        function uploadPartCopy(params, callback) {
+          var CopySource = params.CopySource || "";
+          var m = CopySource.match(/^([^.]+-\d+)\.cos(v6)?\.([^.]+)\.[^/]+\/(.+)$/);
+  
+          if (!m) {
+            callback({
+              error: "CopySource format error"
+            });
+            return;
+          }
+  
+          var SourceBucket = m[1];
+          var SourceRegion = m[3];
+          var SourceKey = decodeURIComponent(m[4]);
+          submitRequest.call(this, {
+            Scope: [{
+              action: "name/cos:GetObject",
+              bucket: SourceBucket,
+              region: SourceRegion,
+              prefix: SourceKey
+            }, {
+              action: "name/cos:PutObject",
+              bucket: params.Bucket,
+              region: params.Region,
+              prefix: params.Key
+            }],
+            method: "PUT",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            VersionId: params.VersionId,
+            qs: {
+              partNumber: params["PartNumber"],
+              uploadId: params["UploadId"]
+            },
+            headers: params.Headers
+          }, function (err, data) {
+            if (err) return callback(err);
+            var result = util.clone(data.CopyPartResult || {});
+            util.extend(result, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+            callback(null, result);
+          });
+        }
+  
+        function deleteMultipleObject(params, callback) {
+          var Objects = params.Objects || [];
+          var Quiet = params.Quiet;
+          Objects = util.isArray(Objects) ? Objects : [Objects];
+          var xml = util.json2xml({
+            Delete: {
+              Object: Objects,
+              Quiet: Quiet || false
+            }
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          var Scope = util.map(Objects, function (v) {
+            return {
+              action: "name/cos:DeleteObject",
+              bucket: params.Bucket,
+              region: params.Region,
+              prefix: v.Key
+            };
+          });
+          submitRequest.call(this, {
+            Scope: Scope,
+            method: "POST",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            body: xml,
+            action: "delete",
+            headers: headers
+          }, function (err, data) {
+            if (err) return callback(err);
+            var DeleteResult = data.DeleteResult || {};
+            var Deleted = DeleteResult.Deleted || [];
+            var Errors = DeleteResult.Error || [];
+            Deleted = util.isArray(Deleted) ? Deleted : [Deleted];
+            Errors = util.isArray(Errors) ? Errors : [Errors];
+            var result = util.clone(DeleteResult);
+            util.extend(result, {
+              Error: Errors,
+              Deleted: Deleted,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+            callback(null, result);
+          });
+        }
+  
+        function restoreObject(params, callback) {
+          var headers = params.Headers;
+  
+          if (!params["RestoreRequest"]) {
+            callback({
+              error: "missing param RestoreRequest"
+            });
+            return;
+          }
+  
+          var RestoreRequest = params.RestoreRequest || {};
+          var xml = util.json2xml({
+            RestoreRequest: RestoreRequest
+          });
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:RestoreObject",
+            method: "POST",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            VersionId: params.VersionId,
+            body: xml,
+            action: "restore",
+            headers: headers
+          }, function (err, data) {
+            callback(err, data);
+          });
+        }
+        /**
+         * 设置 Object 的标签
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Object名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         *     @param  {Array}   params.TagSet  标签设置，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/42998
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function putObjectTagging(params, callback) {
+          var Tagging = params["Tagging"] || {};
+          var Tags = Tagging.TagSet || Tagging.Tags || params["Tags"] || [];
+          Tags = util.clone(util.isArray(Tags) ? Tags : [Tags]);
+          var xml = util.json2xml({
+            Tagging: {
+              TagSet: {
+                Tag: Tags
+              }
+            }
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Interface: "putObjectTagging",
+            Action: "name/cos:PutObjectTagging",
+            method: "PUT",
+            Bucket: params.Bucket,
+            Key: params.Key,
+            Region: params.Region,
+            body: xml,
+            action: "tagging",
+            headers: headers,
+            VersionId: params.VersionId
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取 Object 的标签设置
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Bucket名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/42998
+         * @return  {Object}  data              返回数据
+         */
+  
+  
+        function getObjectTagging(params, callback) {
+          submitRequest.call(this, {
+            Interface: "getObjectTagging",
+            Action: "name/cos:GetObjectTagging",
+            method: "GET",
+            Key: params.Key,
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            action: "tagging",
+            VersionId: params.VersionId
+          }, function (err, data) {
+            if (err) {
+              if (err.statusCode === 404 && err.error && (err.error === "Not Found" || err.error.Code === "NoSuchTagSet")) {
+                var result = {
+                  Tags: [],
+                  statusCode: err.statusCode
+                };
+                err.headers && (result.headers = err.headers);
+                callback(null, result);
+              } else {
+                callback(err);
+              }
+  
+              return;
+            }
+  
+            var Tags = [];
+  
+            try {
+              Tags = data.Tagging.TagSet.Tag || [];
+            } catch (e) {}
+  
+            Tags = util.clone(util.isArray(Tags) ? Tags : [Tags]);
+            callback(null, {
+              Tags: Tags,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 删除 Object 的 标签设置
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Bucket  Object名称，必须
+         *     @param  {String}  params.Region  地域名称，必须
+         * @param  {Function}  callback         回调函数，必须
+         * @return  {Object}  err               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/42998
+         * @return  {Object}  data              返回的数据
+         */
+  
+  
+        function deleteObjectTagging(params, callback) {
+          submitRequest.call(this, {
+            Interface: "deleteObjectTagging",
+            Action: "name/cos:DeleteObjectTagging",
+            method: "DELETE",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            headers: params.Headers,
+            action: "tagging",
+            VersionId: params.VersionId
+          }, function (err, data) {
+            if (err && err.statusCode === 204) {
+              return callback(null, {
+                statusCode: err.statusCode
+              });
+            } else if (err) {
+              return callback(err);
+            }
+  
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        } // 分块上传
+  
+        /**
+         * 初始化分块上传
+         * @param  {Object}  params                                     参数对象，必须
+         *     @param  {String}  params.Bucket                          Bucket名称，必须
+         *     @param  {String}  params.Region                          地域名称，必须
+         *     @param  {String}  params.Key                             object名称，必须
+         *     @param  {String}  params.UploadId                        object名称，必须
+         *     @param  {String}  params.CacheControl                    RFC 2616 中定义的缓存策略，将作为 Object 元数据保存，非必须
+         *     @param  {String}  params.ContentDisposition              RFC 2616 中定义的文件名称，将作为 Object 元数据保存    ，非必须
+         *     @param  {String}  params.ContentEncoding                 RFC 2616 中定义的编码格式，将作为 Object 元数据保存，非必须
+         *     @param  {String}  params.ContentType                     RFC 2616 中定义的内容类型（MIME），将作为 Object 元数据保存，非必须
+         *     @param  {String}  params.Expires                         RFC 2616 中定义的过期时间，将作为 Object 元数据保存，非必须
+         *     @param  {String}  params.ACL                             允许用户自定义文件权限，非必须
+         *     @param  {String}  params.GrantRead                       赋予被授权者读的权限 ，非必须
+         *     @param  {String}  params.GrantWrite                      赋予被授权者写的权限 ，非必须
+         *     @param  {String}  params.GrantFullControl                赋予被授权者读写权限 ，非必须
+         *     @param  {String}  params.StorageClass                    设置Object的存储级别，枚举值：Standard，Standard_IA，Archive，非必须
+         *     @param  {String}  params.ServerSideEncryption           支持按照指定的加密算法进行服务端数据加密，格式 x-cos-server-side-encryption: "AES256"，非必须
+         * @param  {Function}  callback                                 回调函数，必须
+         * @return  {Object}  err                                       请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                                      返回的数据
+         */
+  
+  
+        function multipartInit(params, callback) {
+          var self = this;
+          var headers = params.Headers; // 特殊处理 Cache-Control、Content-Type
+  
+          if (!headers["Cache-Control"] && !headers["cache-control"]) headers["Cache-Control"] = "";
+          if (!headers["Content-Type"] && !headers["content-type"]) headers["Content-Type"] = mime.getType(params.Key) || "application/octet-stream";
+          submitRequest.call(self, {
+            Action: "name/cos:InitiateMultipartUpload",
+            method: "POST",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            action: "uploads",
+            headers: params.Headers
+          }, function (err, data) {
+            if (err) return callback(err);
+            data = util.clone(data || {});
+  
+            if (data && data.InitiateMultipartUploadResult) {
+              return callback(null, util.extend(data.InitiateMultipartUploadResult, {
+                statusCode: data.statusCode,
+                headers: data.headers
+              }));
+            }
+  
+            callback(null, data);
+          });
+        }
+        /**
+         * 分块上传
+         * @param  {Object}  params                                 参数对象，必须
+         *     @param  {String}  params.Bucket                      Bucket名称，必须
+         *     @param  {String}  params.Region                      地域名称，必须
+         *     @param  {String}  params.Key                         object名称，必须
+         *     @param  {String}  params.Body                        上传文件对象或字符串
+         *     @param  {String} params.ContentLength                RFC 2616 中定义的 HTTP 请求内容长度（字节），非必须
+         *     @param  {String} params.Expect                       当使用 Expect: 100-continue 时，在收到服务端确认后，才会发送请求内容，非必须
+         *     @param  {String} params.ServerSideEncryption         支持按照指定的加密算法进行服务端数据加密，格式 x-cos-server-side-encryption: "AES256"，非必须
+         *     @param  {String} params.ContentSha1                  RFC 3174 中定义的 160-bit 内容 SHA-1 算法校验值，非必须
+         * @param  {Function}  callback                             回调函数，必须
+         *     @return  {Object}  err                               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         *     @return  {Object}  data                              返回的数据
+         *     @return  {Object}  data.ETag                         返回的文件分块 sha1 值
+         */
+  
+  
+        function multipartUpload(params, callback) {
+          var self = this;
+          util.getFileSize("multipartUpload", params, function () {
+            util.getBodyMd5(self.options.UploadCheckContentMd5, params.Body, function (md5) {
+              if (md5) params.Headers["Content-MD5"] = util.binaryBase64(md5);
+              submitRequest.call(self, {
+                Action: "name/cos:UploadPart",
+                TaskId: params.TaskId,
+                method: "PUT",
+                Bucket: params.Bucket,
+                Region: params.Region,
+                Key: params.Key,
+                qs: {
+                  partNumber: params["PartNumber"],
+                  uploadId: params["UploadId"]
+                },
+                headers: params.Headers,
+                onProgress: params.onProgress,
+                body: params.Body || null
+              }, function (err, data) {
+                if (err) return callback(err);
+                callback(null, {
+                  ETag: util.attr(data.headers, "etag", {}),
+                  statusCode: data.statusCode,
+                  headers: data.headers
+                });
+              });
+            });
+          });
+        }
+        /**
+         * 完成分块上传
+         * @param  {Object}  params                             参数对象，必须
+         *     @param  {String}  params.Bucket                  Bucket名称，必须
+         *     @param  {String}  params.Region                  地域名称，必须
+         *     @param  {String}  params.Key                     object名称，必须
+         *     @param  {Array}   params.Parts                   分块信息列表，必须
+         *     @param  {String}  params.Parts[i].PartNumber     块编号，必须
+         *     @param  {String}  params.Parts[i].ETag           分块的 sha1 校验值
+         * @param  {Function}  callback                         回调函数，必须
+         * @return  {Object}  err                               请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                              返回的数据
+         *     @return  {Object}  data.CompleteMultipartUpload  完成分块上传后的文件信息，包括Location, Bucket, Key 和 ETag
+         */
+  
+  
+        function multipartComplete(params, callback) {
+          var self = this;
+          var UploadId = params.UploadId;
+          var Parts = params["Parts"];
+  
+          for (var i = 0, len = Parts.length; i < len; i++) {
+            if (Parts[i]["ETag"].indexOf('"') === 0) {
+              continue;
+            }
+  
+            Parts[i]["ETag"] = '"' + Parts[i]["ETag"] + '"';
+          }
+  
+          var xml = util.json2xml({
+            CompleteMultipartUpload: {
+              Part: Parts
+            }
+          });
+          var headers = params.Headers;
+          headers["Content-Type"] = "application/xml";
+          headers["Content-MD5"] = util.binaryBase64(util.md5(xml));
+          submitRequest.call(this, {
+            Action: "name/cos:CompleteMultipartUpload",
+            method: "POST",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            qs: {
+              uploadId: UploadId
+            },
+            body: xml,
+            headers: headers
+          }, function (err, data) {
+            if (err) return callback(err);
+            var url = getUrl({
+              ForcePathStyle: self.options.ForcePathStyle,
+              protocol: self.options.Protocol,
+              domain: self.options.Domain,
+              bucket: params.Bucket,
+              region: params.Region,
+              object: params.Key,
+              isLocation: true
+            });
+            var CompleteMultipartUploadResult = data.CompleteMultipartUploadResult || {};
+            var result = util.extend(CompleteMultipartUploadResult, {
+              Location: url,
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+            callback(null, result);
+          });
+        }
+        /**
+         * 分块上传任务列表查询
+         * @param  {Object}  params                                 参数对象，必须
+         *     @param  {String}  params.Bucket                      Bucket名称，必须
+         *     @param  {String}  params.Region                      地域名称，必须
+         *     @param  {String}  params.Delimiter                   定界符为一个符号，如果有Prefix，则将Prefix到delimiter之间的相同路径归为一类，定义为Common Prefix，然后列出所有Common Prefix。如果没有Prefix，则从路径起点开始，非必须
+         *     @param  {String}  params.EncodingType                规定返回值的编码方式，非必须
+         *     @param  {String}  params.Prefix                      前缀匹配，用来规定返回的文件前缀地址，非必须
+         *     @param  {String}  params.MaxUploads                  单次返回最大的条目数量，默认1000，非必须
+         *     @param  {String}  params.KeyMarker                   与upload-id-marker一起使用 </Br>当upload-id-marker未被指定时，ObjectName字母顺序大于key-marker的条目将被列出 </Br>当upload-id-marker被指定时，ObjectName字母顺序大于key-marker的条目被列出，ObjectName字母顺序等于key-marker同时UploadId大于upload-id-marker的条目将被列出，非必须
+         *     @param  {String}  params.UploadIdMarker              与key-marker一起使用 </Br>当key-marker未被指定时，upload-id-marker将被忽略 </Br>当key-marker被指定时，ObjectName字母顺序大于key-marker的条目被列出，ObjectName字母顺序等于key-marker同时UploadId大于upload-id-marker的条目将被列出，非必须
+         * @param  {Function}  callback                             回调函数，必须
+         * @return  {Object}  err                                   请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                                  返回的数据
+         *     @return  {Object}  data.ListMultipartUploadsResult   分块上传任务信息
+         */
+  
+  
+        function multipartList(params, callback) {
+          var reqParams = {};
+          reqParams["delimiter"] = params["Delimiter"];
+          reqParams["encoding-type"] = params["EncodingType"];
+          reqParams["prefix"] = params["Prefix"] || "";
+          reqParams["max-uploads"] = params["MaxUploads"];
+          reqParams["key-marker"] = params["KeyMarker"];
+          reqParams["upload-id-marker"] = params["UploadIdMarker"];
+          reqParams = util.clearKey(reqParams);
+          submitRequest.call(this, {
+            Action: "name/cos:ListMultipartUploads",
+            ResourceKey: reqParams["prefix"],
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            headers: params.Headers,
+            qs: reqParams,
+            action: "uploads"
+          }, function (err, data) {
+            if (err) return callback(err);
+  
+            if (data && data.ListMultipartUploadsResult) {
+              var Upload = data.ListMultipartUploadsResult.Upload || [];
+              var CommonPrefixes = data.ListMultipartUploadsResult.CommonPrefixes || [];
+              CommonPrefixes = util.isArray(CommonPrefixes) ? CommonPrefixes : [CommonPrefixes];
+              Upload = util.isArray(Upload) ? Upload : [Upload];
+              data.ListMultipartUploadsResult.Upload = Upload;
+              data.ListMultipartUploadsResult.CommonPrefixes = CommonPrefixes;
+            }
+  
+            var result = util.clone(data.ListMultipartUploadsResult || {});
+            util.extend(result, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+            callback(null, result);
+          });
+        }
+        /**
+         * 上传的分块列表查询
+         * @param  {Object}  params                                 参数对象，必须
+         *     @param  {String}  params.Bucket                      Bucket名称，必须
+         *     @param  {String}  params.Region                      地域名称，必须
+         *     @param  {String}  params.Key                         object名称，必须
+         *     @param  {String}  params.UploadId                    标示本次分块上传的ID，必须
+         *     @param  {String}  params.EncodingType                规定返回值的编码方式，非必须
+         *     @param  {String}  params.MaxParts                    单次返回最大的条目数量，默认1000，非必须
+         *     @param  {String}  params.PartNumberMarker            默认以UTF-8二进制顺序列出条目，所有列出条目从marker开始，非必须
+         * @param  {Function}  callback                             回调函数，必须
+         * @return  {Object}  err                                   请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         * @return  {Object}  data                                  返回的数据
+         *     @return  {Object}  data.ListMultipartUploadsResult   分块信息
+         */
+  
+  
+        function multipartListPart(params, callback) {
+          var reqParams = {};
+          reqParams["uploadId"] = params["UploadId"];
+          reqParams["encoding-type"] = params["EncodingType"];
+          reqParams["max-parts"] = params["MaxParts"];
+          reqParams["part-number-marker"] = params["PartNumberMarker"];
+          submitRequest.call(this, {
+            Action: "name/cos:ListParts",
+            method: "GET",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            headers: params.Headers,
+            qs: reqParams
+          }, function (err, data) {
+            if (err) return callback(err);
+            var ListPartsResult = data.ListPartsResult || {};
+            var Part = ListPartsResult.Part || [];
+            Part = util.isArray(Part) ? Part : [Part];
+            ListPartsResult.Part = Part;
+            var result = util.clone(ListPartsResult);
+            util.extend(result, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+            callback(null, result);
+          });
+        }
+        /**
+         * 抛弃分块上传
+         * @param  {Object}  params                 参数对象，必须
+         *     @param  {String}  params.Bucket      Bucket名称，必须
+         *     @param  {String}  params.Region      地域名称，必须
+         *     @param  {String}  params.Key         object名称，必须
+         *     @param  {String}  params.UploadId    标示本次分块上传的ID，必须
+         * @param  {Function}  callback             回调函数，必须
+         *     @return  {Object}    err             请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         *     @return  {Object}    data            返回的数据
+         */
+  
+  
+        function multipartAbort(params, callback) {
+          var reqParams = {};
+          reqParams["uploadId"] = params["UploadId"];
+          submitRequest.call(this, {
+            Action: "name/cos:AbortMultipartUpload",
+            method: "DELETE",
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            headers: params.Headers,
+            qs: reqParams
+          }, function (err, data) {
+            if (err) return callback(err);
+            callback(null, {
+              statusCode: data.statusCode,
+              headers: data.headers
+            });
+          });
+        }
+        /**
+         * 获取签名
+         * @param  {Object}  params             参数对象，必须
+         *     @param  {String}  params.Method  请求方法，必须
+         *     @param  {String}  params.Key     object名称，必须
+         *     @param  {String}  params.Expires 名超时时间，单位秒，可选
+         * @return  {String}  data              返回签名字符串
+         */
+  
+  
+        function getAuth(params) {
+          var self = this;
+          return util.getAuth({
+            SecretId: params.SecretId || this.options.SecretId || "",
+            SecretKey: params.SecretKey || this.options.SecretKey || "",
+            Method: params.Method,
+            Key: params.Key,
+            Query: params.Query,
+            Headers: params.Headers,
+            Expires: params.Expires,
+            SystemClockOffset: self.options.SystemClockOffset
+          });
+        }
+        /**
+         * 获取文件下载链接
+         * @param  {Object}  params                 参数对象，必须
+         *     @param  {String}  params.Bucket      Bucket名称，必须
+         *     @param  {String}  params.Region      地域名称，必须
+         *     @param  {String}  params.Key         object名称，必须
+         *     @param  {String}  params.Method      请求的方法，可选
+         *     @param  {String}  params.Expires     签名超时时间，单位秒，可选
+         * @param  {Function}  callback             回调函数，必须
+         *     @return  {Object}    err             请求失败的错误，如果请求成功，则为空。https://cloud.tencent.com/document/product/436/7730
+         *     @return  {Object}    data            返回的数据
+         */
+  
+  
+        function getObjectUrl(params, callback) {
+          var self = this;
+          var url = getUrl({
+            ForcePathStyle: self.options.ForcePathStyle,
+            protocol: params.Protocol || self.options.Protocol,
+            domain: params.Domain || self.options.Domain,
+            bucket: params.Bucket,
+            region: params.Region,
+            object: params.Key
+          });
+  
+          if (params.Sign !== undefined && !params.Sign) {
+            callback(null, {
+              Url: url
+            });
+            return url;
+          }
+  
+          var AuthData = getAuthorizationAsync.call(this, {
+            Action: (params.Method || "").toUpperCase() === "PUT" ? "name/cos:PutObject" : "name/cos:GetObject",
+            Bucket: params.Bucket || "",
+            Region: params.Region || "",
+            Method: params.Method || "get",
+            Key: params.Key,
+            Expires: params.Expires
+          }, function (err, AuthData) {
+            if (!callback) return;
+  
+            if (err) {
+              callback(err);
+              return;
+            }
+  
+            var signUrl = url;
+            signUrl += "?" + (AuthData.Authorization.indexOf("q-signature") > -1 ? AuthData.Authorization : "sign=" + encodeURIComponent(AuthData.Authorization));
+            AuthData.XCosSecurityToken && (signUrl += "&x-cos-security-token=" + AuthData.XCosSecurityToken);
+            AuthData.ClientIP && (signUrl += "&clientIP=" + AuthData.ClientIP);
+            AuthData.ClientUA && (signUrl += "&clientUA=" + AuthData.ClientUA);
+            AuthData.Token && (signUrl += "&token=" + AuthData.Token);
+            setTimeout(function () {
+              callback(null, {
+                Url: signUrl
+              });
+            });
+          });
+  
+          if (AuthData) {
+            return url + "?" + AuthData.Authorization + (AuthData.XCosSecurityToken ? "&x-cos-security-token=" + AuthData.XCosSecurityToken : "");
+          } else {
+            return url;
+          }
+        }
+        /**
+         * 私有方法
+         */
+  
+  
+        function decodeAcl(AccessControlPolicy) {
+          var result = {
+            GrantFullControl: [],
+            GrantWrite: [],
+            GrantRead: [],
+            GrantReadAcp: [],
+            GrantWriteAcp: [],
+            ACL: ""
+          };
+          var GrantMap = {
+            FULL_CONTROL: "GrantFullControl",
+            WRITE: "GrantWrite",
+            READ: "GrantRead",
+            READ_ACP: "GrantReadAcp",
+            WRITE_ACP: "GrantWriteAcp"
+          };
+          var AccessControlList = AccessControlPolicy && AccessControlPolicy.AccessControlList || {};
+          var Grant = AccessControlList.Grant;
+  
+          if (Grant) {
+            Grant = util.isArray(Grant) ? Grant : [Grant];
+          }
+  
+          var PublicAcl = {
+            READ: 0,
+            WRITE: 0,
+            FULL_CONTROL: 0
+          };
+          Grant && Grant.length && util.each(Grant, function (item) {
+            if (item.Grantee.ID === "qcs::cam::anyone:anyone" || item.Grantee.URI === "http://cam.qcloud.com/groups/global/AllUsers") {
+              PublicAcl[item.Permission] = 1;
+            } else if (item.Grantee.ID !== AccessControlPolicy.Owner.ID) {
+              result[GrantMap[item.Permission]].push('id="' + item.Grantee.ID + '"');
+            }
+          });
+  
+          if (PublicAcl.FULL_CONTROL || PublicAcl.WRITE && PublicAcl.READ) {
+            result.ACL = "public-read-write";
+          } else if (PublicAcl.READ) {
+            result.ACL = "public-read";
+          } else {
+            result.ACL = "private";
+          }
+  
+          util.each(GrantMap, function (item) {
+            result[item] = uniqGrant(result[item].join(","));
+          });
+          return result;
+        } // Grant 去重
+  
+  
+        function uniqGrant(str) {
+          var arr = str.split(",");
+          var exist = {};
+          var i, item;
+  
+          for (i = 0; i < arr.length;) {
+            item = arr[i].trim();
+  
+            if (exist[item]) {
+              arr.splice(i, 1);
+            } else {
+              exist[item] = true;
+              arr[i] = item;
+              i++;
+            }
+          }
+  
+          return arr.join(",");
+        } // 生成操作 url
+  
+  
+        function getUrl(params) {
+          var longBucket = params.bucket;
+          var shortBucket = longBucket.substr(0, longBucket.lastIndexOf("-"));
+          var appId = longBucket.substr(longBucket.lastIndexOf("-") + 1);
+          var domain = params.domain;
+          var region = params.region;
+          var object = params.object;
+          var protocol = "https:";
+  
+          if (!domain) {
+            if (["cn-south", "cn-south-2", "cn-north", "cn-east", "cn-southwest", "sg"].indexOf(region) > -1) {
+              domain = "{Region}.myqcloud.com";
+            } else {
+              domain = "cos.{Region}.myqcloud.com";
+            }
+  
+            if (!params.ForcePathStyle) {
+              domain = "{Bucket}." + domain;
+            }
+          }
+  
+          domain = domain.replace(/\{\{AppId\}\}/gi, appId).replace(/\{\{Bucket\}\}/gi, shortBucket).replace(/\{\{Region\}\}/gi, region).replace(/\{\{.*?\}\}/gi, "");
+          domain = domain.replace(/\{AppId\}/gi, appId).replace(/\{BucketName\}/gi, shortBucket).replace(/\{Bucket\}/gi, longBucket).replace(/\{Region\}/gi, region).replace(/\{.*?\}/gi, "");
+  
+          if (!/^[a-zA-Z]+:\/\//.test(domain)) {
+            domain = protocol + "//" + domain;
+          } // 去掉域名最后的斜杆
+  
+  
+          if (domain.slice(-1) === "/") {
+            domain = domain.slice(0, -1);
+          }
+  
+          var url = domain;
+  
+          if (params.ForcePathStyle) {
+            url += "/" + longBucket;
+          }
+  
+          url += "/";
+  
+          if (object) {
+            url += util.camSafeUrlEncode(object).replace(/%2F/g, "/");
+          }
+  
+          if (params.isLocation) {
+            url = url.replace(/^https?:\/\//, "");
+          }
+  
+          return url;
+        } // 异步获取签名
+  
+  
+        function getAuthorizationAsync(params, callback) {
+          var headers = util.clone(params.Headers);
+          delete headers["Content-Type"];
+          delete headers["Cache-Control"];
+          util.each(headers, function (v, k) {
+            v === "" && delete headers[k];
+          });
+  
+          var cb = function cb(AuthData) {
+            // 检查签名格式
+            var formatAllow = false;
+            var auth = AuthData.Authorization;
+  
+            if (auth) {
+              if (auth.indexOf(" ") > -1) {
+                formatAllow = false;
+              } else if (auth.indexOf("q-sign-algorithm=") > -1 && auth.indexOf("q-ak=") > -1 && auth.indexOf("q-sign-time=") > -1 && auth.indexOf("q-key-time=") > -1 && auth.indexOf("q-url-param-list=") > -1) {
+                formatAllow = true;
+              } else {
+                try {
+                  auth = base64.atob(auth);
+  
+                  if (auth.indexOf("a=") > -1 && auth.indexOf("k=") > -1 && auth.indexOf("t=") > -1 && auth.indexOf("r=") > -1 && auth.indexOf("b=") > -1) {
+                    formatAllow = true;
+                  }
+                } catch (e) {}
+              }
+            }
+  
+            if (formatAllow) {
+              callback && callback(null, AuthData);
+            } else {
+              callback && callback("authorization error");
+            }
+          };
+  
+          var self = this;
+          var Bucket = params.Bucket || "";
+          var Region = params.Region || ""; // PathName
+  
+          var KeyName = params.Action === "name/cos:PostObject" || !params.Key ? "" : params.Key;
+  
+          if (self.options.ForcePathStyle && Bucket) {
+            KeyName = Bucket + "/" + KeyName;
+          }
+  
+          var Pathname = "/" + KeyName; // Action、ResourceKey
+  
+          var StsData = {};
+          var Scope = params.Scope;
+  
+          if (!Scope) {
+            var Action = params.Action || "";
+            var ResourceKey = params.ResourceKey || params.Key || "";
+            Scope = params.Scope || [{
+              action: Action,
+              bucket: Bucket,
+              region: Region,
+              prefix: ResourceKey
+            }];
+          }
+  
+          var ScopeKey = util.md5(JSON.stringify(Scope)); // STS
+  
+          self._StsCache = self._StsCache || [];
+  
+          (function () {
+            var i, AuthData;
+  
+            for (i = self._StsCache.length - 1; i >= 0; i--) {
+              AuthData = self._StsCache[i];
+              var compareTime = Math.round(util.getSkewTime(self.options.SystemClockOffset) / 1000) + 30;
+  
+              if (AuthData.StartTime && compareTime < AuthData.StartTime || compareTime >= AuthData.ExpiredTime) {
+                self._StsCache.splice(i, 1);
+  
+                continue;
+              }
+  
+              if (!AuthData.ScopeLimit || AuthData.ScopeLimit && AuthData.ScopeKey === ScopeKey) {
+                StsData = AuthData;
+                break;
+              }
+            }
+          })();
+  
+          var calcAuthByTmpKey = function calcAuthByTmpKey() {
+            var KeyTime = StsData.StartTime && StsData.ExpiredTime ? StsData.StartTime + ";" + StsData.ExpiredTime : "";
+            var Authorization = util.getAuth({
+              SecretId: StsData.TmpSecretId,
+              SecretKey: StsData.TmpSecretKey,
+              Method: params.Method,
+              Pathname: Pathname,
+              Query: params.Query,
+              Headers: headers,
+              Expires: params.Expires,
+              SystemClockOffset: self.options.SystemClockOffset,
+              KeyTime: KeyTime
+            });
+            var AuthData = {
+              Authorization: Authorization,
+              XCosSecurityToken: StsData.XCosSecurityToken || "",
+              Token: StsData.Token || "",
+              ClientIP: StsData.ClientIP || "",
+              ClientUA: StsData.ClientUA || ""
+            };
+            cb(AuthData);
+          }; // 先判断是否有临时密钥
+  
+  
+          if (StsData.ExpiredTime && StsData.ExpiredTime - util.getSkewTime(self.options.SystemClockOffset) / 1000 > 60) {
+            // 如果缓存的临时密钥有效，并还有超过60秒有效期就直接使用
+            calcAuthByTmpKey();
+          } else if (self.options.getAuthorization) {
+            // 外部计算签名或获取临时密钥
+            self.options.getAuthorization.call(self, {
+              Bucket: Bucket,
+              Region: Region,
+              Method: params.Method,
+              Key: KeyName,
+              Pathname: Pathname,
+              Query: params.Query,
+              Headers: headers,
+              Scope: Scope,
+              SystemClockOffset: self.options.SystemClockOffset
+            }, function (AuthData) {
+              if (typeof AuthData === "string") {
+                AuthData = {
+                  Authorization: AuthData
+                };
+              }
+  
+              if (AuthData.TmpSecretId && AuthData.TmpSecretKey && AuthData.XCosSecurityToken && AuthData.ExpiredTime) {
+                StsData = AuthData || {};
+                StsData.Scope = Scope;
+                StsData.ScopeKey = ScopeKey;
+  
+                self._StsCache.push(StsData);
+  
+                calcAuthByTmpKey();
+              } else {
+                cb(AuthData);
+              }
+            });
+          } else if (self.options.getSTS) {
+            // 外部获取临时密钥
+            self.options.getSTS.call(self, {
+              Bucket: Bucket,
+              Region: Region
+            }, function (data) {
+              StsData = data || {};
+              StsData.Scope = Scope;
+              StsData.ScopeKey = ScopeKey;
+              StsData.TmpSecretId = StsData.SecretId;
+              StsData.TmpSecretKey = StsData.SecretKey;
+  
+              self._StsCache.push(StsData);
+  
+              calcAuthByTmpKey();
+            });
+          } else {
+            // 内部计算获取签名
+            return function () {
+              var Authorization = util.getAuth({
+                SecretId: params.SecretId || self.options.SecretId,
+                SecretKey: params.SecretKey || self.options.SecretKey,
+                Method: params.Method,
+                Pathname: Pathname,
+                Query: params.Query,
+                Headers: headers,
+                Expires: params.Expires,
+                SystemClockOffset: self.options.SystemClockOffset
+              });
+              var AuthData = {
+                Authorization: Authorization,
+                XCosSecurityToken: self.options.XCosSecurityToken
+              };
+              cb(AuthData);
+              return AuthData;
+            }();
+          }
+  
+          return "";
+        } // 调整时间偏差
+  
+  
+        function allowRetry(err) {
+          var allowRetry = false;
+          var isTimeError = false;
+          var serverDate = err.headers && (err.headers.date || err.headers.Date) || err.error && err.error.ServerTime;
+  
+          try {
+            var errorCode = err.error.Code;
+            var errorMessage = err.error.Message;
+  
+            if (errorCode === "RequestTimeTooSkewed" || errorCode === "AccessDenied" && errorMessage === "Request has expired") {
+              isTimeError = true;
+            }
+          } catch (e) {}
+  
+          if (err) {
+            if (isTimeError && serverDate) {
+              var serverTime = Date.parse(serverDate);
+  
+              if (this.options.CorrectClockSkew && Math.abs(util.getSkewTime(this.options.SystemClockOffset) - serverTime) >= 30000) {
+                console.error("error: Local time is too skewed.");
+                this.options.SystemClockOffset = serverTime - Date.now();
+                allowRetry = true;
+              }
+            } else if (Math.floor(err.statusCode / 100) === 5) {
+              allowRetry = true;
+            }
+          }
+  
+          return allowRetry;
+        } // 获取签名并发起请求
+  
+  
+        function submitRequest(params, callback) {
+          var self = this; // 处理 headers
+  
+          !params.headers && (params.headers = {}); // 处理 query
+  
+          !params.qs && (params.qs = {});
+          params.VersionId && (params.qs.versionId = params.VersionId);
+          params.qs = util.clearKey(params.qs); // 清理 undefined 和 null 字段
+  
+          params.headers && (params.headers = util.clearKey(params.headers));
+          params.qs && (params.qs = util.clearKey(params.qs));
+          var Query = util.clone(params.qs);
+          params.action && (Query[params.action] = "");
+  
+          var next = function next(tryTimes) {
+            var oldClockOffset = self.options.SystemClockOffset;
+            getAuthorizationAsync.call(self, {
+              Bucket: params.Bucket || "",
+              Region: params.Region || "",
+              Method: params.method,
+              Key: params.Key,
+              Query: Query,
+              Headers: params.headers,
+              Action: params.Action,
+              ResourceKey: params.ResourceKey,
+              Scope: params.Scope
+            }, function (err, AuthData) {
+              if (err) {
+                callback(err);
+                return;
+              }
+  
+              params.AuthData = AuthData;
+  
+              _submitRequest.call(self, params, function (err, data) {
+                if (err && tryTimes < 2 && (oldClockOffset !== self.options.SystemClockOffset || allowRetry.call(self, err))) {
+                  if (params.headers) {
+                    delete params.headers.Authorization;
+                    delete params.headers["token"];
+                    delete params.headers["clientIP"];
+                    delete params.headers["clientUA"];
+                    delete params.headers["x-cos-security-token"];
+                  }
+  
+                  next(tryTimes + 1);
+                } else {
+                  callback(err, data);
+                }
+              });
+            });
+          };
+  
+          next(1);
+        } // 发起请求
+  
+  
+        function _submitRequest(params, callback) {
+          var self = this;
+          var TaskId = params.TaskId;
+          if (TaskId && !self._isRunningTask(TaskId)) return;
+          var bucket = params.Bucket;
+          var region = params.Region;
+          var object = params.Key;
+          var method = params.method || "GET";
+          var url = params.url;
+          var body = params.body;
+          var json = params.json;
+          var rawBody = params.rawBody; // url
+  
+          url = url || getUrl({
+            ForcePathStyle: self.options.ForcePathStyle,
+            protocol: self.options.Protocol,
+            domain: self.options.Domain,
+            bucket: bucket,
+            region: region,
+            object: object
+          });
+  
+          if (params.action) {
+            url = url + "?" + params.action;
+          }
+  
+          var opt = {
+            method: method,
+            url: url,
+            headers: params.headers,
+            qs: params.qs,
+            filePath: params.filePath,
+            body: body,
+            json: json
+          }; // 获取签名
+  
+          opt.headers.Authorization = params.AuthData.Authorization;
+          params.AuthData.Token && (opt.headers["token"] = params.AuthData.Token);
+          params.AuthData.ClientIP && (opt.headers["clientIP"] = params.AuthData.ClientIP);
+          params.AuthData.ClientUA && (opt.headers["clientUA"] = params.AuthData.ClientUA);
+          params.AuthData.XCosSecurityToken && (opt.headers["x-cos-security-token"] = params.AuthData.XCosSecurityToken); // 清理 undefined 和 null 字段
+  
+          opt.headers && (opt.headers = util.clearKey(opt.headers));
+          opt = util.clearKey(opt); // progress
+  
+          if (params.onProgress && typeof params.onProgress === "function") {
+            opt.onProgress = function (e) {
+              if (TaskId && !self._isRunningTask(TaskId)) return;
+              var loaded = e ? e.loaded : 0;
+              params.onProgress({
+                loaded: loaded,
+                total: e.total
+              });
+            };
+          }
+  
+          if (this.options.Timeout) {
+            opt.timeout = this.options.Timeout;
+          }
+  
+          self.options.ForcePathStyle && (opt.pathStyle = self.options.ForcePathStyle);
+          self.emit("before-send", opt);
+          var sender = REQUEST(opt, function (err, response, body) {
+            if (err === "abort") return; // 返回内容添加 状态码 和 headers
+  
+            var hasReturned;
+  
+            var cb = function cb(err, data) {
+              TaskId && self.off("inner-kill-task", killTask);
+              if (hasReturned) return;
+              hasReturned = true;
+              var attrs = {};
+              response && response.statusCode && (attrs.statusCode = response.statusCode);
+              response && response.headers && (attrs.headers = response.headers);
+  
+              if (err) {
+                err = util.extend(err || {}, attrs);
+                callback(err, null);
+              } else {
+                data = util.extend(data || {}, attrs);
+                callback(null, data);
+              }
+  
+              sender = null;
+            }; // 请求错误，发生网络错误
+  
+  
+            if (err) {
+              cb({
+                error: err
+              });
+              return;
+            } // 不对 body 进行转换，body 直接挂载返回
+  
+  
+            var jsonRes;
+  
+            if (rawBody) {
+              jsonRes = {};
+              jsonRes.body = body;
+            } else {
+              try {
+                jsonRes = body && body.indexOf("<") > -1 && body.indexOf(">") > -1 && util.xml2json(body) || {};
+              } catch (e) {
+                jsonRes = body || {};
+              }
+            } // 请求返回码不为 200
+  
+  
+            var statusCode = response.statusCode;
+            var statusSuccess = Math.floor(statusCode / 100) === 2; // 200 202 204 206
+  
+            if (!statusSuccess) {
+              cb({
+                error: jsonRes.Error || jsonRes
+              });
+              return;
+            }
+  
+            if (jsonRes.Error) {
+              cb({
+                error: jsonRes.Error
+              });
+              return;
+            }
+  
+            cb(null, jsonRes);
+          }); // kill task
+  
+          var killTask = function killTask(data) {
+            if (data.TaskId === TaskId) {
+              sender && sender.abort && sender.abort();
+              self.off("inner-kill-task", killTask);
+            }
+          };
+  
+          TaskId && self.on("inner-kill-task", killTask);
+        }
+  
+        var API_MAP = {
+          // Bucket 相关方法
+          getService: getService,
+          // Bucket
+          putBucket: putBucket,
+          headBucket: headBucket,
+          // Bucket
+          getBucket: getBucket,
+          deleteBucket: deleteBucket,
+          putBucketAcl: putBucketAcl,
+          // BucketACL
+          getBucketAcl: getBucketAcl,
+          putBucketCors: putBucketCors,
+          // BucketCors
+          getBucketCors: getBucketCors,
+          deleteBucketCors: deleteBucketCors,
+          getBucketLocation: getBucketLocation,
+          // BucketLocation
+          getBucketPolicy: getBucketPolicy,
+          // BucketPolicy
+          putBucketPolicy: putBucketPolicy,
+          deleteBucketPolicy: deleteBucketPolicy,
+          putBucketTagging: putBucketTagging,
+          // BucketTagging
+          getBucketTagging: getBucketTagging,
+          deleteBucketTagging: deleteBucketTagging,
+          putBucketLifecycle: putBucketLifecycle,
+          // BucketLifecycle
+          getBucketLifecycle: getBucketLifecycle,
+          deleteBucketLifecycle: deleteBucketLifecycle,
+          putBucketVersioning: putBucketVersioning,
+          // BucketVersioning
+          getBucketVersioning: getBucketVersioning,
+          putBucketReplication: putBucketReplication,
+          // BucketReplication
+          getBucketReplication: getBucketReplication,
+          deleteBucketReplication: deleteBucketReplication,
+          putBucketWebsite: putBucketWebsite,
+          // BucketWebsite
+          getBucketWebsite: getBucketWebsite,
+          deleteBucketWebsite: deleteBucketWebsite,
+          putBucketReferer: putBucketReferer,
+          // BucketReferer
+          getBucketReferer: getBucketReferer,
+          putBucketDomain: putBucketDomain,
+          // BucketDomain
+          getBucketDomain: getBucketDomain,
+          deleteBucketDomain: deleteBucketDomain,
+          putBucketOrigin: putBucketOrigin,
+          // BucketOrigin
+          getBucketOrigin: getBucketOrigin,
+          deleteBucketOrigin: deleteBucketOrigin,
+          putBucketLogging: putBucketLogging,
+          // BucketLogging
+          getBucketLogging: getBucketLogging,
+          putBucketInventory: putBucketInventory,
+          // BucketInventory
+          getBucketInventory: getBucketInventory,
+          listBucketInventory: listBucketInventory,
+          deleteBucketInventory: deleteBucketInventory,
+          putBucketAccelerate: putBucketAccelerate,
+          getBucketAccelerate: getBucketAccelerate,
+          // Object 相关方法
+          getObject: getObject,
+          headObject: headObject,
+          listObjectVersions: listObjectVersions,
+          putObject: putObject,
+          postObject: postObject,
+          deleteObject: deleteObject,
+          getObjectAcl: getObjectAcl,
+          putObjectAcl: putObjectAcl,
+          optionsObject: optionsObject,
+          putObjectCopy: putObjectCopy,
+          deleteMultipleObject: deleteMultipleObject,
+          restoreObject: restoreObject,
+          putObjectTagging: putObjectTagging,
+          getObjectTagging: getObjectTagging,
+          deleteObjectTagging: deleteObjectTagging,
+          // 分块上传相关方法
+          uploadPartCopy: uploadPartCopy,
+          multipartInit: multipartInit,
+          multipartUpload: multipartUpload,
+          multipartComplete: multipartComplete,
+          multipartList: multipartList,
+          multipartListPart: multipartListPart,
+          multipartAbort: multipartAbort,
+          // 工具方法
+          getObjectUrl: getObjectUrl,
+          getAuth: getAuth
+        };
+  
+        module.exports.init = function (COS, task) {
+          task.transferToTaskMethod(API_MAP, "postObject");
+          task.transferToTaskMethod(API_MAP, "putObject");
+          util.each(API_MAP, function (fn, apiName) {
+            COS.prototype[apiName] = util.apiWrapper(apiName, fn);
+          });
+        };
+        /***/
+  
+      },
+      /* 18 */
+  
+      /***/
+      function (module, exports) {
+        var obj2str = function obj2str(obj) {
+          var i, key, val;
+          var list = [];
+          var keyList = Object.keys(obj);
+  
+          for (i = 0; i < keyList.length; i++) {
+            key = keyList[i];
+            val = obj[key] || "";
+            list.push(key + "=" + encodeURIComponent(val));
+          }
+  
+          return list.join("&");
+        };
+  
+        var request = function request(params, callback) {
+          var filePath = params.filePath;
+          var headers = params.headers || {};
+          var url = params.url;
+          var method = params.method;
+          var onProgress = params.onProgress;
+          var requestTask;
+  
+          var cb = function cb(err, response) {
+            var H = response.header;
+            var headers = {};
+            if (H) for (var key in H) {
+              if (H.hasOwnProperty(key)) headers[key.toLowerCase()] = H[key];
+            }
+            callback(err, {
+              statusCode: response.statusCode,
+              headers: headers
+            }, response.data);
+          };
+  
+          if (filePath) {
+            var fileKey;
+            var m = url.match(/^(https?:\/\/[^/]+\/)([^/]*\/?)(.*)$/);
+  
+            if (params.pathStyle) {
+              fileKey = decodeURIComponent(m[3] || "");
+              url = m[1] + m[2];
+            } else {
+              fileKey = decodeURIComponent(m[2] + m[3] || "");
+              url = m[1];
+            } // 整理 postObject 参数
+  
+  
+            var formData = {
+              key: fileKey,
+              success_action_status: 200,
+              Signature: headers.Authorization
+            };
+            var headerKeys = ["Cache-Control", "Content-Type", "Content-Disposition", "Content-Encoding", "Expires", "x-cos-storage-class", "x-cos-security-token"];
+  
+            for (var i in params.headers) {
+              if (params.headers.hasOwnProperty(i) && (i.indexOf("x-cos-meta-") > -1 || headerKeys.indexOf(i) > -1)) {
+                formData[i] = params.headers[i];
+              }
+            }
+  
+            headers["x-cos-acl"] && (formData.acl = headers["x-cos-acl"]);
+            !formData["Content-Type"] && (formData["Content-Type"] = "");
+            requestTask = wx.uploadFile({
+              url: url,
+              method: method,
+              name: "file",
+              header: headers,
+              filePath: filePath,
+              formData: formData,
+              timeout: params.timeout,
+              success: function success(response) {
+                cb(null, response);
+              },
+              fail: function fail(response) {
+                cb(response.errMsg, response);
+              }
+            });
+            requestTask.onProgressUpdate(function (res) {
+              onProgress && onProgress({
+                loaded: res.totalBytesSent,
+                total: res.totalBytesExpectedToSend,
+                progress: res.progress / 100
+              });
+            });
+          } else {
+            var qsStr = params.qs && obj2str(params.qs) || "";
+  
+            if (qsStr) {
+              url += (url.indexOf("?") > -1 ? "&" : "?") + qsStr;
+            }
+  
+            headers["Content-Length"] && delete headers["Content-Length"];
+            requestTask = wx.request({
+              url: url,
+              method: method,
+              header: headers,
+              dataType: "text",
+              data: params.body,
+              timeout: params.timeout,
+              success: function success(response) {
+                cb(null, response);
+              },
+              fail: function fail(response) {
+                cb(response.errMsg, response);
+              }
+            });
+          }
+  
+          return requestTask;
+        };
+  
+        module.exports = request;
+        /***/
+      },
+      /* 19 */
+  
+      /***/
+      function (module, exports, __webpack_require__) {
+        "use strict";
+  
+        var Mime = __webpack_require__(20);
+  
+        module.exports = new Mime(__webpack_require__(21), __webpack_require__(22));
+        /***/
+      },
+      /* 20 */
+  
+      /***/
+      function (module, exports, __webpack_require__) {
+        "use strict";
+        /**
+         * @param typeMap [Object] Map of MIME type -> Array[extensions]
+         * @param ...
+         */
+  
+        function Mime() {
+          this._types = Object.create(null);
+          this._extensions = Object.create(null);
+  
+          for (var i = 0; i < arguments.length; i++) {
+            this.define(arguments[i]);
+          }
+  
+          this.define = this.define.bind(this);
+          this.getType = this.getType.bind(this);
+          this.getExtension = this.getExtension.bind(this);
+        }
+        /**
+         * Define mimetype -> extension mappings.  Each key is a mime-type that maps
+         * to an array of extensions associated with the type.  The first extension is
+         * used as the default extension for the type.
+         *
+         * e.g. mime.define({'audio/ogg', ['oga', 'ogg', 'spx']});
+         *
+         * If a type declares an extension that has already been defined, an error will
+         * be thrown.  To suppress this error and force the extension to be associated
+         * with the new type, pass `force`=true.  Alternatively, you may prefix the
+         * extension with "*" to map the type to extension, without mapping the
+         * extension to the type.
+         *
+         * e.g. mime.define({'audio/wav', ['wav']}, {'audio/x-wav', ['*wav']});
+         *
+         *
+         * @param map (Object) type definitions
+         * @param force (Boolean) if true, force overriding of existing definitions
+         */
+  
+  
+        Mime.prototype.define = function (typeMap, force) {
+          for (var type in typeMap) {
+            var extensions = typeMap[type].map(function (t) {
+              return t.toLowerCase();
+            });
+            type = type.toLowerCase();
+  
+            for (var i = 0; i < extensions.length; i++) {
+              var ext = extensions[i]; // '*' prefix = not the preferred type for this extension.  So fixup the
+              // extension, and skip it.
+  
+              if (ext[0] == "*") {
+                continue;
+              }
+  
+              if (!force && ext in this._types) {
+                throw new Error('Attempt to change mapping for "' + ext + '" extension from "' + this._types[ext] + '" to "' + type + '". Pass `force=true` to allow this, otherwise remove "' + ext + '" from the list of extensions for "' + type + '".');
+              }
+  
+              this._types[ext] = type;
+            } // Use first extension as default
+  
+  
+            if (force || !this._extensions[type]) {
+              var ext = extensions[0];
+              this._extensions[type] = ext[0] != "*" ? ext : ext.substr(1);
+            }
+          }
+        };
+        /**
+         * Lookup a mime type based on extension
+         */
+  
+  
+        Mime.prototype.getType = function (path) {
+          path = String(path);
+          var last = path.replace(/^.*[/\\]/, "").toLowerCase();
+          var ext = last.replace(/^.*\./, "").toLowerCase();
+          var hasPath = last.length < path.length;
+          var hasDot = ext.length < last.length - 1;
+          return (hasDot || !hasPath) && this._types[ext] || null;
+        };
+        /**
+         * Return file extension associated with a mime type
+         */
+  
+  
+        Mime.prototype.getExtension = function (type) {
+          type = /^\s*([^;\s]*)/.test(type) && RegExp.$1;
+          return type && this._extensions[type.toLowerCase()] || null;
+        };
+  
+        module.exports = Mime;
+        /***/
+      },
+      /* 21 */
+  
+      /***/
+      function (module, exports) {
+        module.exports = {
+          "application/andrew-inset": ["ez"],
+          "application/applixware": ["aw"],
+          "application/atom+xml": ["atom"],
+          "application/atomcat+xml": ["atomcat"],
+          "application/atomdeleted+xml": ["atomdeleted"],
+          "application/atomsvc+xml": ["atomsvc"],
+          "application/atsc-dwd+xml": ["dwd"],
+          "application/atsc-held+xml": ["held"],
+          "application/atsc-rsat+xml": ["rsat"],
+          "application/bdoc": ["bdoc"],
+          "application/calendar+xml": ["xcs"],
+          "application/ccxml+xml": ["ccxml"],
+          "application/cdfx+xml": ["cdfx"],
+          "application/cdmi-capability": ["cdmia"],
+          "application/cdmi-container": ["cdmic"],
+          "application/cdmi-domain": ["cdmid"],
+          "application/cdmi-object": ["cdmio"],
+          "application/cdmi-queue": ["cdmiq"],
+          "application/cu-seeme": ["cu"],
+          "application/dash+xml": ["mpd"],
+          "application/davmount+xml": ["davmount"],
+          "application/docbook+xml": ["dbk"],
+          "application/dssc+der": ["dssc"],
+          "application/dssc+xml": ["xdssc"],
+          "application/ecmascript": ["ecma", "es"],
+          "application/emma+xml": ["emma"],
+          "application/emotionml+xml": ["emotionml"],
+          "application/epub+zip": ["epub"],
+          "application/exi": ["exi"],
+          "application/fdt+xml": ["fdt"],
+          "application/font-tdpfr": ["pfr"],
+          "application/geo+json": ["geojson"],
+          "application/gml+xml": ["gml"],
+          "application/gpx+xml": ["gpx"],
+          "application/gxf": ["gxf"],
+          "application/gzip": ["gz"],
+          "application/hjson": ["hjson"],
+          "application/hyperstudio": ["stk"],
+          "application/inkml+xml": ["ink", "inkml"],
+          "application/ipfix": ["ipfix"],
+          "application/its+xml": ["its"],
+          "application/java-archive": ["jar", "war", "ear"],
+          "application/java-serialized-object": ["ser"],
+          "application/java-vm": ["class"],
+          "application/javascript": ["js", "mjs"],
+          "application/json": ["json", "map"],
+          "application/json5": ["json5"],
+          "application/jsonml+json": ["jsonml"],
+          "application/ld+json": ["jsonld"],
+          "application/lgr+xml": ["lgr"],
+          "application/lost+xml": ["lostxml"],
+          "application/mac-binhex40": ["hqx"],
+          "application/mac-compactpro": ["cpt"],
+          "application/mads+xml": ["mads"],
+          "application/manifest+json": ["webmanifest"],
+          "application/marc": ["mrc"],
+          "application/marcxml+xml": ["mrcx"],
+          "application/mathematica": ["ma", "nb", "mb"],
+          "application/mathml+xml": ["mathml"],
+          "application/mbox": ["mbox"],
+          "application/mediaservercontrol+xml": ["mscml"],
+          "application/metalink+xml": ["metalink"],
+          "application/metalink4+xml": ["meta4"],
+          "application/mets+xml": ["mets"],
+          "application/mmt-aei+xml": ["maei"],
+          "application/mmt-usd+xml": ["musd"],
+          "application/mods+xml": ["mods"],
+          "application/mp21": ["m21", "mp21"],
+          "application/mp4": ["mp4s", "m4p"],
+          "application/mrb-consumer+xml": ["*xdf"],
+          "application/mrb-publish+xml": ["*xdf"],
+          "application/msword": ["doc", "dot"],
+          "application/mxf": ["mxf"],
+          "application/n-quads": ["nq"],
+          "application/n-triples": ["nt"],
+          "application/node": ["cjs"],
+          "application/octet-stream": ["bin", "dms", "lrf", "mar", "so", "dist", "distz", "pkg", "bpk", "dump", "elc", "deploy", "exe", "dll", "deb", "dmg", "iso", "img", "msi", "msp", "msm", "buffer"],
+          "application/oda": ["oda"],
+          "application/oebps-package+xml": ["opf"],
+          "application/ogg": ["ogx"],
+          "application/omdoc+xml": ["omdoc"],
+          "application/onenote": ["onetoc", "onetoc2", "onetmp", "onepkg"],
+          "application/oxps": ["oxps"],
+          "application/p2p-overlay+xml": ["relo"],
+          "application/patch-ops-error+xml": ["*xer"],
+          "application/pdf": ["pdf"],
+          "application/pgp-encrypted": ["pgp"],
+          "application/pgp-signature": ["asc", "sig"],
+          "application/pics-rules": ["prf"],
+          "application/pkcs10": ["p10"],
+          "application/pkcs7-mime": ["p7m", "p7c"],
+          "application/pkcs7-signature": ["p7s"],
+          "application/pkcs8": ["p8"],
+          "application/pkix-attr-cert": ["ac"],
+          "application/pkix-cert": ["cer"],
+          "application/pkix-crl": ["crl"],
+          "application/pkix-pkipath": ["pkipath"],
+          "application/pkixcmp": ["pki"],
+          "application/pls+xml": ["pls"],
+          "application/postscript": ["ai", "eps", "ps"],
+          "application/provenance+xml": ["provx"],
+          "application/pskc+xml": ["pskcxml"],
+          "application/raml+yaml": ["raml"],
+          "application/rdf+xml": ["rdf", "owl"],
+          "application/reginfo+xml": ["rif"],
+          "application/relax-ng-compact-syntax": ["rnc"],
+          "application/resource-lists+xml": ["rl"],
+          "application/resource-lists-diff+xml": ["rld"],
+          "application/rls-services+xml": ["rs"],
+          "application/route-apd+xml": ["rapd"],
+          "application/route-s-tsid+xml": ["sls"],
+          "application/route-usd+xml": ["rusd"],
+          "application/rpki-ghostbusters": ["gbr"],
+          "application/rpki-manifest": ["mft"],
+          "application/rpki-roa": ["roa"],
+          "application/rsd+xml": ["rsd"],
+          "application/rss+xml": ["rss"],
+          "application/rtf": ["rtf"],
+          "application/sbml+xml": ["sbml"],
+          "application/scvp-cv-request": ["scq"],
+          "application/scvp-cv-response": ["scs"],
+          "application/scvp-vp-request": ["spq"],
+          "application/scvp-vp-response": ["spp"],
+          "application/sdp": ["sdp"],
+          "application/senml+xml": ["senmlx"],
+          "application/sensml+xml": ["sensmlx"],
+          "application/set-payment-initiation": ["setpay"],
+          "application/set-registration-initiation": ["setreg"],
+          "application/shf+xml": ["shf"],
+          "application/sieve": ["siv", "sieve"],
+          "application/smil+xml": ["smi", "smil"],
+          "application/sparql-query": ["rq"],
+          "application/sparql-results+xml": ["srx"],
+          "application/srgs": ["gram"],
+          "application/srgs+xml": ["grxml"],
+          "application/sru+xml": ["sru"],
+          "application/ssdl+xml": ["ssdl"],
+          "application/ssml+xml": ["ssml"],
+          "application/swid+xml": ["swidtag"],
+          "application/tei+xml": ["tei", "teicorpus"],
+          "application/thraud+xml": ["tfi"],
+          "application/timestamped-data": ["tsd"],
+          "application/toml": ["toml"],
+          "application/ttml+xml": ["ttml"],
+          "application/urc-ressheet+xml": ["rsheet"],
+          "application/voicexml+xml": ["vxml"],
+          "application/wasm": ["wasm"],
+          "application/widget": ["wgt"],
+          "application/winhlp": ["hlp"],
+          "application/wsdl+xml": ["wsdl"],
+          "application/wspolicy+xml": ["wspolicy"],
+          "application/xaml+xml": ["xaml"],
+          "application/xcap-att+xml": ["xav"],
+          "application/xcap-caps+xml": ["xca"],
+          "application/xcap-diff+xml": ["xdf"],
+          "application/xcap-el+xml": ["xel"],
+          "application/xcap-error+xml": ["xer"],
+          "application/xcap-ns+xml": ["xns"],
+          "application/xenc+xml": ["xenc"],
+          "application/xhtml+xml": ["xhtml", "xht"],
+          "application/xliff+xml": ["xlf"],
+          "application/xml": ["xml", "xsl", "xsd", "rng"],
+          "application/xml-dtd": ["dtd"],
+          "application/xop+xml": ["xop"],
+          "application/xproc+xml": ["xpl"],
+          "application/xslt+xml": ["xslt"],
+          "application/xspf+xml": ["xspf"],
+          "application/xv+xml": ["mxml", "xhvml", "xvml", "xvm"],
+          "application/yang": ["yang"],
+          "application/yin+xml": ["yin"],
+          "application/zip": ["zip"],
+          "audio/3gpp": ["*3gpp"],
+          "audio/adpcm": ["adp"],
+          "audio/basic": ["au", "snd"],
+          "audio/midi": ["mid", "midi", "kar", "rmi"],
+          "audio/mobile-xmf": ["mxmf"],
+          "audio/mp3": ["*mp3"],
+          "audio/mp4": ["m4a", "mp4a"],
+          "audio/mpeg": ["mpga", "mp2", "mp2a", "mp3", "m2a", "m3a"],
+          "audio/ogg": ["oga", "ogg", "spx"],
+          "audio/s3m": ["s3m"],
+          "audio/silk": ["sil"],
+          "audio/wav": ["wav"],
+          "audio/wave": ["*wav"],
+          "audio/webm": ["weba"],
+          "audio/xm": ["xm"],
+          "font/collection": ["ttc"],
+          "font/otf": ["otf"],
+          "font/ttf": ["ttf"],
+          "font/woff": ["woff"],
+          "font/woff2": ["woff2"],
+          "image/aces": ["exr"],
+          "image/apng": ["apng"],
+          "image/bmp": ["bmp"],
+          "image/cgm": ["cgm"],
+          "image/dicom-rle": ["drle"],
+          "image/emf": ["emf"],
+          "image/fits": ["fits"],
+          "image/g3fax": ["g3"],
+          "image/gif": ["gif"],
+          "image/heic": ["heic"],
+          "image/heic-sequence": ["heics"],
+          "image/heif": ["heif"],
+          "image/heif-sequence": ["heifs"],
+          "image/hej2k": ["hej2"],
+          "image/hsj2": ["hsj2"],
+          "image/ief": ["ief"],
+          "image/jls": ["jls"],
+          "image/jp2": ["jp2", "jpg2"],
+          "image/jpeg": ["jpeg", "jpg", "jpe"],
+          "image/jph": ["jph"],
+          "image/jphc": ["jhc"],
+          "image/jpm": ["jpm"],
+          "image/jpx": ["jpx", "jpf"],
+          "image/jxr": ["jxr"],
+          "image/jxra": ["jxra"],
+          "image/jxrs": ["jxrs"],
+          "image/jxs": ["jxs"],
+          "image/jxsc": ["jxsc"],
+          "image/jxsi": ["jxsi"],
+          "image/jxss": ["jxss"],
+          "image/ktx": ["ktx"],
+          "image/png": ["png"],
+          "image/sgi": ["sgi"],
+          "image/svg+xml": ["svg", "svgz"],
+          "image/t38": ["t38"],
+          "image/tiff": ["tif", "tiff"],
+          "image/tiff-fx": ["tfx"],
+          "image/webp": ["webp"],
+          "image/wmf": ["wmf"],
+          "message/disposition-notification": ["disposition-notification"],
+          "message/global": ["u8msg"],
+          "message/global-delivery-status": ["u8dsn"],
+          "message/global-disposition-notification": ["u8mdn"],
+          "message/global-headers": ["u8hdr"],
+          "message/rfc822": ["eml", "mime"],
+          "model/3mf": ["3mf"],
+          "model/gltf+json": ["gltf"],
+          "model/gltf-binary": ["glb"],
+          "model/iges": ["igs", "iges"],
+          "model/mesh": ["msh", "mesh", "silo"],
+          "model/mtl": ["mtl"],
+          "model/obj": ["obj"],
+          "model/stl": ["stl"],
+          "model/vrml": ["wrl", "vrml"],
+          "model/x3d+binary": ["*x3db", "x3dbz"],
+          "model/x3d+fastinfoset": ["x3db"],
+          "model/x3d+vrml": ["*x3dv", "x3dvz"],
+          "model/x3d+xml": ["x3d", "x3dz"],
+          "model/x3d-vrml": ["x3dv"],
+          "text/cache-manifest": ["appcache", "manifest"],
+          "text/calendar": ["ics", "ifb"],
+          "text/coffeescript": ["coffee", "litcoffee"],
+          "text/css": ["css"],
+          "text/csv": ["csv"],
+          "text/html": ["html", "htm", "shtml"],
+          "text/jade": ["jade"],
+          "text/jsx": ["jsx"],
+          "text/less": ["less"],
+          "text/markdown": ["markdown", "md"],
+          "text/mathml": ["mml"],
+          "text/mdx": ["mdx"],
+          "text/n3": ["n3"],
+          "text/plain": ["txt", "text", "conf", "def", "list", "log", "in", "ini"],
+          "text/richtext": ["rtx"],
+          "text/rtf": ["*rtf"],
+          "text/sgml": ["sgml", "sgm"],
+          "text/shex": ["shex"],
+          "text/slim": ["slim", "slm"],
+          "text/stylus": ["stylus", "styl"],
+          "text/tab-separated-values": ["tsv"],
+          "text/troff": ["t", "tr", "roff", "man", "me", "ms"],
+          "text/turtle": ["ttl"],
+          "text/uri-list": ["uri", "uris", "urls"],
+          "text/vcard": ["vcard"],
+          "text/vtt": ["vtt"],
+          "text/xml": ["*xml"],
+          "text/yaml": ["yaml", "yml"],
+          "video/3gpp": ["3gp", "3gpp"],
+          "video/3gpp2": ["3g2"],
+          "video/h261": ["h261"],
+          "video/h263": ["h263"],
+          "video/h264": ["h264"],
+          "video/jpeg": ["jpgv"],
+          "video/jpm": ["*jpm", "jpgm"],
+          "video/mj2": ["mj2", "mjp2"],
+          "video/mp2t": ["ts"],
+          "video/mp4": ["mp4", "mp4v", "mpg4"],
+          "video/mpeg": ["mpeg", "mpg", "mpe", "m1v", "m2v"],
+          "video/ogg": ["ogv"],
+          "video/quicktime": ["qt", "mov"],
+          "video/webm": ["webm"]
+        };
+        /***/
+      },
+      /* 22 */
+  
+      /***/
+      function (module, exports) {
+        module.exports = {
+          "application/prs.cww": ["cww"],
+          "application/vnd.1000minds.decision-model+xml": ["1km"],
+          "application/vnd.3gpp.pic-bw-large": ["plb"],
+          "application/vnd.3gpp.pic-bw-small": ["psb"],
+          "application/vnd.3gpp.pic-bw-var": ["pvb"],
+          "application/vnd.3gpp2.tcap": ["tcap"],
+          "application/vnd.3m.post-it-notes": ["pwn"],
+          "application/vnd.accpac.simply.aso": ["aso"],
+          "application/vnd.accpac.simply.imp": ["imp"],
+          "application/vnd.acucobol": ["acu"],
+          "application/vnd.acucorp": ["atc", "acutc"],
+          "application/vnd.adobe.air-application-installer-package+zip": ["air"],
+          "application/vnd.adobe.formscentral.fcdt": ["fcdt"],
+          "application/vnd.adobe.fxp": ["fxp", "fxpl"],
+          "application/vnd.adobe.xdp+xml": ["xdp"],
+          "application/vnd.adobe.xfdf": ["xfdf"],
+          "application/vnd.ahead.space": ["ahead"],
+          "application/vnd.airzip.filesecure.azf": ["azf"],
+          "application/vnd.airzip.filesecure.azs": ["azs"],
+          "application/vnd.amazon.ebook": ["azw"],
+          "application/vnd.americandynamics.acc": ["acc"],
+          "application/vnd.amiga.ami": ["ami"],
+          "application/vnd.android.package-archive": ["apk"],
+          "application/vnd.anser-web-certificate-issue-initiation": ["cii"],
+          "application/vnd.anser-web-funds-transfer-initiation": ["fti"],
+          "application/vnd.antix.game-component": ["atx"],
+          "application/vnd.apple.installer+xml": ["mpkg"],
+          "application/vnd.apple.keynote": ["keynote"],
+          "application/vnd.apple.mpegurl": ["m3u8"],
+          "application/vnd.apple.numbers": ["numbers"],
+          "application/vnd.apple.pages": ["pages"],
+          "application/vnd.apple.pkpass": ["pkpass"],
+          "application/vnd.aristanetworks.swi": ["swi"],
+          "application/vnd.astraea-software.iota": ["iota"],
+          "application/vnd.audiograph": ["aep"],
+          "application/vnd.balsamiq.bmml+xml": ["bmml"],
+          "application/vnd.blueice.multipass": ["mpm"],
+          "application/vnd.bmi": ["bmi"],
+          "application/vnd.businessobjects": ["rep"],
+          "application/vnd.chemdraw+xml": ["cdxml"],
+          "application/vnd.chipnuts.karaoke-mmd": ["mmd"],
+          "application/vnd.cinderella": ["cdy"],
+          "application/vnd.citationstyles.style+xml": ["csl"],
+          "application/vnd.claymore": ["cla"],
+          "application/vnd.cloanto.rp9": ["rp9"],
+          "application/vnd.clonk.c4group": ["c4g", "c4d", "c4f", "c4p", "c4u"],
+          "application/vnd.cluetrust.cartomobile-config": ["c11amc"],
+          "application/vnd.cluetrust.cartomobile-config-pkg": ["c11amz"],
+          "application/vnd.commonspace": ["csp"],
+          "application/vnd.contact.cmsg": ["cdbcmsg"],
+          "application/vnd.cosmocaller": ["cmc"],
+          "application/vnd.crick.clicker": ["clkx"],
+          "application/vnd.crick.clicker.keyboard": ["clkk"],
+          "application/vnd.crick.clicker.palette": ["clkp"],
+          "application/vnd.crick.clicker.template": ["clkt"],
+          "application/vnd.crick.clicker.wordbank": ["clkw"],
+          "application/vnd.criticaltools.wbs+xml": ["wbs"],
+          "application/vnd.ctc-posml": ["pml"],
+          "application/vnd.cups-ppd": ["ppd"],
+          "application/vnd.curl.car": ["car"],
+          "application/vnd.curl.pcurl": ["pcurl"],
+          "application/vnd.dart": ["dart"],
+          "application/vnd.data-vision.rdz": ["rdz"],
+          "application/vnd.dece.data": ["uvf", "uvvf", "uvd", "uvvd"],
+          "application/vnd.dece.ttml+xml": ["uvt", "uvvt"],
+          "application/vnd.dece.unspecified": ["uvx", "uvvx"],
+          "application/vnd.dece.zip": ["uvz", "uvvz"],
+          "application/vnd.denovo.fcselayout-link": ["fe_launch"],
+          "application/vnd.dna": ["dna"],
+          "application/vnd.dolby.mlp": ["mlp"],
+          "application/vnd.dpgraph": ["dpg"],
+          "application/vnd.dreamfactory": ["dfac"],
+          "application/vnd.ds-keypoint": ["kpxx"],
+          "application/vnd.dvb.ait": ["ait"],
+          "application/vnd.dvb.service": ["svc"],
+          "application/vnd.dynageo": ["geo"],
+          "application/vnd.ecowin.chart": ["mag"],
+          "application/vnd.enliven": ["nml"],
+          "application/vnd.epson.esf": ["esf"],
+          "application/vnd.epson.msf": ["msf"],
+          "application/vnd.epson.quickanime": ["qam"],
+          "application/vnd.epson.salt": ["slt"],
+          "application/vnd.epson.ssf": ["ssf"],
+          "application/vnd.eszigno3+xml": ["es3", "et3"],
+          "application/vnd.ezpix-album": ["ez2"],
+          "application/vnd.ezpix-package": ["ez3"],
+          "application/vnd.fdf": ["fdf"],
+          "application/vnd.fdsn.mseed": ["mseed"],
+          "application/vnd.fdsn.seed": ["seed", "dataless"],
+          "application/vnd.flographit": ["gph"],
+          "application/vnd.fluxtime.clip": ["ftc"],
+          "application/vnd.framemaker": ["fm", "frame", "maker", "book"],
+          "application/vnd.frogans.fnc": ["fnc"],
+          "application/vnd.frogans.ltf": ["ltf"],
+          "application/vnd.fsc.weblaunch": ["fsc"],
+          "application/vnd.fujitsu.oasys": ["oas"],
+          "application/vnd.fujitsu.oasys2": ["oa2"],
+          "application/vnd.fujitsu.oasys3": ["oa3"],
+          "application/vnd.fujitsu.oasysgp": ["fg5"],
+          "application/vnd.fujitsu.oasysprs": ["bh2"],
+          "application/vnd.fujixerox.ddd": ["ddd"],
+          "application/vnd.fujixerox.docuworks": ["xdw"],
+          "application/vnd.fujixerox.docuworks.binder": ["xbd"],
+          "application/vnd.fuzzysheet": ["fzs"],
+          "application/vnd.genomatix.tuxedo": ["txd"],
+          "application/vnd.geogebra.file": ["ggb"],
+          "application/vnd.geogebra.tool": ["ggt"],
+          "application/vnd.geometry-explorer": ["gex", "gre"],
+          "application/vnd.geonext": ["gxt"],
+          "application/vnd.geoplan": ["g2w"],
+          "application/vnd.geospace": ["g3w"],
+          "application/vnd.gmx": ["gmx"],
+          "application/vnd.google-apps.document": ["gdoc"],
+          "application/vnd.google-apps.presentation": ["gslides"],
+          "application/vnd.google-apps.spreadsheet": ["gsheet"],
+          "application/vnd.google-earth.kml+xml": ["kml"],
+          "application/vnd.google-earth.kmz": ["kmz"],
+          "application/vnd.grafeq": ["gqf", "gqs"],
+          "application/vnd.groove-account": ["gac"],
+          "application/vnd.groove-help": ["ghf"],
+          "application/vnd.groove-identity-message": ["gim"],
+          "application/vnd.groove-injector": ["grv"],
+          "application/vnd.groove-tool-message": ["gtm"],
+          "application/vnd.groove-tool-template": ["tpl"],
+          "application/vnd.groove-vcard": ["vcg"],
+          "application/vnd.hal+xml": ["hal"],
+          "application/vnd.handheld-entertainment+xml": ["zmm"],
+          "application/vnd.hbci": ["hbci"],
+          "application/vnd.hhe.lesson-player": ["les"],
+          "application/vnd.hp-hpgl": ["hpgl"],
+          "application/vnd.hp-hpid": ["hpid"],
+          "application/vnd.hp-hps": ["hps"],
+          "application/vnd.hp-jlyt": ["jlt"],
+          "application/vnd.hp-pcl": ["pcl"],
+          "application/vnd.hp-pclxl": ["pclxl"],
+          "application/vnd.hydrostatix.sof-data": ["sfd-hdstx"],
+          "application/vnd.ibm.minipay": ["mpy"],
+          "application/vnd.ibm.modcap": ["afp", "listafp", "list3820"],
+          "application/vnd.ibm.rights-management": ["irm"],
+          "application/vnd.ibm.secure-container": ["sc"],
+          "application/vnd.iccprofile": ["icc", "icm"],
+          "application/vnd.igloader": ["igl"],
+          "application/vnd.immervision-ivp": ["ivp"],
+          "application/vnd.immervision-ivu": ["ivu"],
+          "application/vnd.insors.igm": ["igm"],
+          "application/vnd.intercon.formnet": ["xpw", "xpx"],
+          "application/vnd.intergeo": ["i2g"],
+          "application/vnd.intu.qbo": ["qbo"],
+          "application/vnd.intu.qfx": ["qfx"],
+          "application/vnd.ipunplugged.rcprofile": ["rcprofile"],
+          "application/vnd.irepository.package+xml": ["irp"],
+          "application/vnd.is-xpr": ["xpr"],
+          "application/vnd.isac.fcs": ["fcs"],
+          "application/vnd.jam": ["jam"],
+          "application/vnd.jcp.javame.midlet-rms": ["rms"],
+          "application/vnd.jisp": ["jisp"],
+          "application/vnd.joost.joda-archive": ["joda"],
+          "application/vnd.kahootz": ["ktz", "ktr"],
+          "application/vnd.kde.karbon": ["karbon"],
+          "application/vnd.kde.kchart": ["chrt"],
+          "application/vnd.kde.kformula": ["kfo"],
+          "application/vnd.kde.kivio": ["flw"],
+          "application/vnd.kde.kontour": ["kon"],
+          "application/vnd.kde.kpresenter": ["kpr", "kpt"],
+          "application/vnd.kde.kspread": ["ksp"],
+          "application/vnd.kde.kword": ["kwd", "kwt"],
+          "application/vnd.kenameaapp": ["htke"],
+          "application/vnd.kidspiration": ["kia"],
+          "application/vnd.kinar": ["kne", "knp"],
+          "application/vnd.koan": ["skp", "skd", "skt", "skm"],
+          "application/vnd.kodak-descriptor": ["sse"],
+          "application/vnd.las.las+xml": ["lasxml"],
+          "application/vnd.llamagraphics.life-balance.desktop": ["lbd"],
+          "application/vnd.llamagraphics.life-balance.exchange+xml": ["lbe"],
+          "application/vnd.lotus-1-2-3": ["123"],
+          "application/vnd.lotus-approach": ["apr"],
+          "application/vnd.lotus-freelance": ["pre"],
+          "application/vnd.lotus-notes": ["nsf"],
+          "application/vnd.lotus-organizer": ["org"],
+          "application/vnd.lotus-screencam": ["scm"],
+          "application/vnd.lotus-wordpro": ["lwp"],
+          "application/vnd.macports.portpkg": ["portpkg"],
+          "application/vnd.mcd": ["mcd"],
+          "application/vnd.medcalcdata": ["mc1"],
+          "application/vnd.mediastation.cdkey": ["cdkey"],
+          "application/vnd.mfer": ["mwf"],
+          "application/vnd.mfmp": ["mfm"],
+          "application/vnd.micrografx.flo": ["flo"],
+          "application/vnd.micrografx.igx": ["igx"],
+          "application/vnd.mif": ["mif"],
+          "application/vnd.mobius.daf": ["daf"],
+          "application/vnd.mobius.dis": ["dis"],
+          "application/vnd.mobius.mbk": ["mbk"],
+          "application/vnd.mobius.mqy": ["mqy"],
+          "application/vnd.mobius.msl": ["msl"],
+          "application/vnd.mobius.plc": ["plc"],
+          "application/vnd.mobius.txf": ["txf"],
+          "application/vnd.mophun.application": ["mpn"],
+          "application/vnd.mophun.certificate": ["mpc"],
+          "application/vnd.mozilla.xul+xml": ["xul"],
+          "application/vnd.ms-artgalry": ["cil"],
+          "application/vnd.ms-cab-compressed": ["cab"],
+          "application/vnd.ms-excel": ["xls", "xlm", "xla", "xlc", "xlt", "xlw"],
+          "application/vnd.ms-excel.addin.macroenabled.12": ["xlam"],
+          "application/vnd.ms-excel.sheet.binary.macroenabled.12": ["xlsb"],
+          "application/vnd.ms-excel.sheet.macroenabled.12": ["xlsm"],
+          "application/vnd.ms-excel.template.macroenabled.12": ["xltm"],
+          "application/vnd.ms-fontobject": ["eot"],
+          "application/vnd.ms-htmlhelp": ["chm"],
+          "application/vnd.ms-ims": ["ims"],
+          "application/vnd.ms-lrm": ["lrm"],
+          "application/vnd.ms-officetheme": ["thmx"],
+          "application/vnd.ms-outlook": ["msg"],
+          "application/vnd.ms-pki.seccat": ["cat"],
+          "application/vnd.ms-pki.stl": ["*stl"],
+          "application/vnd.ms-powerpoint": ["ppt", "pps", "pot"],
+          "application/vnd.ms-powerpoint.addin.macroenabled.12": ["ppam"],
+          "application/vnd.ms-powerpoint.presentation.macroenabled.12": ["pptm"],
+          "application/vnd.ms-powerpoint.slide.macroenabled.12": ["sldm"],
+          "application/vnd.ms-powerpoint.slideshow.macroenabled.12": ["ppsm"],
+          "application/vnd.ms-powerpoint.template.macroenabled.12": ["potm"],
+          "application/vnd.ms-project": ["mpp", "mpt"],
+          "application/vnd.ms-word.document.macroenabled.12": ["docm"],
+          "application/vnd.ms-word.template.macroenabled.12": ["dotm"],
+          "application/vnd.ms-works": ["wps", "wks", "wcm", "wdb"],
+          "application/vnd.ms-wpl": ["wpl"],
+          "application/vnd.ms-xpsdocument": ["xps"],
+          "application/vnd.mseq": ["mseq"],
+          "application/vnd.musician": ["mus"],
+          "application/vnd.muvee.style": ["msty"],
+          "application/vnd.mynfc": ["taglet"],
+          "application/vnd.neurolanguage.nlu": ["nlu"],
+          "application/vnd.nitf": ["ntf", "nitf"],
+          "application/vnd.noblenet-directory": ["nnd"],
+          "application/vnd.noblenet-sealer": ["nns"],
+          "application/vnd.noblenet-web": ["nnw"],
+          "application/vnd.nokia.n-gage.ac+xml": ["*ac"],
+          "application/vnd.nokia.n-gage.data": ["ngdat"],
+          "application/vnd.nokia.n-gage.symbian.install": ["n-gage"],
+          "application/vnd.nokia.radio-preset": ["rpst"],
+          "application/vnd.nokia.radio-presets": ["rpss"],
+          "application/vnd.novadigm.edm": ["edm"],
+          "application/vnd.novadigm.edx": ["edx"],
+          "application/vnd.novadigm.ext": ["ext"],
+          "application/vnd.oasis.opendocument.chart": ["odc"],
+          "application/vnd.oasis.opendocument.chart-template": ["otc"],
+          "application/vnd.oasis.opendocument.database": ["odb"],
+          "application/vnd.oasis.opendocument.formula": ["odf"],
+          "application/vnd.oasis.opendocument.formula-template": ["odft"],
+          "application/vnd.oasis.opendocument.graphics": ["odg"],
+          "application/vnd.oasis.opendocument.graphics-template": ["otg"],
+          "application/vnd.oasis.opendocument.image": ["odi"],
+          "application/vnd.oasis.opendocument.image-template": ["oti"],
+          "application/vnd.oasis.opendocument.presentation": ["odp"],
+          "application/vnd.oasis.opendocument.presentation-template": ["otp"],
+          "application/vnd.oasis.opendocument.spreadsheet": ["ods"],
+          "application/vnd.oasis.opendocument.spreadsheet-template": ["ots"],
+          "application/vnd.oasis.opendocument.text": ["odt"],
+          "application/vnd.oasis.opendocument.text-master": ["odm"],
+          "application/vnd.oasis.opendocument.text-template": ["ott"],
+          "application/vnd.oasis.opendocument.text-web": ["oth"],
+          "application/vnd.olpc-sugar": ["xo"],
+          "application/vnd.oma.dd2+xml": ["dd2"],
+          "application/vnd.openblox.game+xml": ["obgx"],
+          "application/vnd.openofficeorg.extension": ["oxt"],
+          "application/vnd.openstreetmap.data+xml": ["osm"],
+          "application/vnd.openxmlformats-officedocument.presentationml.presentation": ["pptx"],
+          "application/vnd.openxmlformats-officedocument.presentationml.slide": ["sldx"],
+          "application/vnd.openxmlformats-officedocument.presentationml.slideshow": ["ppsx"],
+          "application/vnd.openxmlformats-officedocument.presentationml.template": ["potx"],
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": ["xlsx"],
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.template": ["xltx"],
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document": ["docx"],
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.template": ["dotx"],
+          "application/vnd.osgeo.mapguide.package": ["mgp"],
+          "application/vnd.osgi.dp": ["dp"],
+          "application/vnd.osgi.subsystem": ["esa"],
+          "application/vnd.palm": ["pdb", "pqa", "oprc"],
+          "application/vnd.pawaafile": ["paw"],
+          "application/vnd.pg.format": ["str"],
+          "application/vnd.pg.osasli": ["ei6"],
+          "application/vnd.picsel": ["efif"],
+          "application/vnd.pmi.widget": ["wg"],
+          "application/vnd.pocketlearn": ["plf"],
+          "application/vnd.powerbuilder6": ["pbd"],
+          "application/vnd.previewsystems.box": ["box"],
+          "application/vnd.proteus.magazine": ["mgz"],
+          "application/vnd.publishare-delta-tree": ["qps"],
+          "application/vnd.pvi.ptid1": ["ptid"],
+          "application/vnd.quark.quarkxpress": ["qxd", "qxt", "qwd", "qwt", "qxl", "qxb"],
+          "application/vnd.realvnc.bed": ["bed"],
+          "application/vnd.recordare.musicxml": ["mxl"],
+          "application/vnd.recordare.musicxml+xml": ["musicxml"],
+          "application/vnd.rig.cryptonote": ["cryptonote"],
+          "application/vnd.rim.cod": ["cod"],
+          "application/vnd.rn-realmedia": ["rm"],
+          "application/vnd.rn-realmedia-vbr": ["rmvb"],
+          "application/vnd.route66.link66+xml": ["link66"],
+          "application/vnd.sailingtracker.track": ["st"],
+          "application/vnd.seemail": ["see"],
+          "application/vnd.sema": ["sema"],
+          "application/vnd.semd": ["semd"],
+          "application/vnd.semf": ["semf"],
+          "application/vnd.shana.informed.formdata": ["ifm"],
+          "application/vnd.shana.informed.formtemplate": ["itp"],
+          "application/vnd.shana.informed.interchange": ["iif"],
+          "application/vnd.shana.informed.package": ["ipk"],
+          "application/vnd.simtech-mindmapper": ["twd", "twds"],
+          "application/vnd.smaf": ["mmf"],
+          "application/vnd.smart.teacher": ["teacher"],
+          "application/vnd.software602.filler.form+xml": ["fo"],
+          "application/vnd.solent.sdkm+xml": ["sdkm", "sdkd"],
+          "application/vnd.spotfire.dxp": ["dxp"],
+          "application/vnd.spotfire.sfs": ["sfs"],
+          "application/vnd.stardivision.calc": ["sdc"],
+          "application/vnd.stardivision.draw": ["sda"],
+          "application/vnd.stardivision.impress": ["sdd"],
+          "application/vnd.stardivision.math": ["smf"],
+          "application/vnd.stardivision.writer": ["sdw", "vor"],
+          "application/vnd.stardivision.writer-global": ["sgl"],
+          "application/vnd.stepmania.package": ["smzip"],
+          "application/vnd.stepmania.stepchart": ["sm"],
+          "application/vnd.sun.wadl+xml": ["wadl"],
+          "application/vnd.sun.xml.calc": ["sxc"],
+          "application/vnd.sun.xml.calc.template": ["stc"],
+          "application/vnd.sun.xml.draw": ["sxd"],
+          "application/vnd.sun.xml.draw.template": ["std"],
+          "application/vnd.sun.xml.impress": ["sxi"],
+          "application/vnd.sun.xml.impress.template": ["sti"],
+          "application/vnd.sun.xml.math": ["sxm"],
+          "application/vnd.sun.xml.writer": ["sxw"],
+          "application/vnd.sun.xml.writer.global": ["sxg"],
+          "application/vnd.sun.xml.writer.template": ["stw"],
+          "application/vnd.sus-calendar": ["sus", "susp"],
+          "application/vnd.svd": ["svd"],
+          "application/vnd.symbian.install": ["sis", "sisx"],
+          "application/vnd.syncml+xml": ["xsm"],
+          "application/vnd.syncml.dm+wbxml": ["bdm"],
+          "application/vnd.syncml.dm+xml": ["xdm"],
+          "application/vnd.syncml.dmddf+xml": ["ddf"],
+          "application/vnd.tao.intent-module-archive": ["tao"],
+          "application/vnd.tcpdump.pcap": ["pcap", "cap", "dmp"],
+          "application/vnd.tmobile-livetv": ["tmo"],
+          "application/vnd.trid.tpt": ["tpt"],
+          "application/vnd.triscape.mxs": ["mxs"],
+          "application/vnd.trueapp": ["tra"],
+          "application/vnd.ufdl": ["ufd", "ufdl"],
+          "application/vnd.uiq.theme": ["utz"],
+          "application/vnd.umajin": ["umj"],
+          "application/vnd.unity": ["unityweb"],
+          "application/vnd.uoml+xml": ["uoml"],
+          "application/vnd.vcx": ["vcx"],
+          "application/vnd.visio": ["vsd", "vst", "vss", "vsw"],
+          "application/vnd.visionary": ["vis"],
+          "application/vnd.vsf": ["vsf"],
+          "application/vnd.wap.wbxml": ["wbxml"],
+          "application/vnd.wap.wmlc": ["wmlc"],
+          "application/vnd.wap.wmlscriptc": ["wmlsc"],
+          "application/vnd.webturbo": ["wtb"],
+          "application/vnd.wolfram.player": ["nbp"],
+          "application/vnd.wordperfect": ["wpd"],
+          "application/vnd.wqd": ["wqd"],
+          "application/vnd.wt.stf": ["stf"],
+          "application/vnd.xara": ["xar"],
+          "application/vnd.xfdl": ["xfdl"],
+          "application/vnd.yamaha.hv-dic": ["hvd"],
+          "application/vnd.yamaha.hv-script": ["hvs"],
+          "application/vnd.yamaha.hv-voice": ["hvp"],
+          "application/vnd.yamaha.openscoreformat": ["osf"],
+          "application/vnd.yamaha.openscoreformat.osfpvg+xml": ["osfpvg"],
+          "application/vnd.yamaha.smaf-audio": ["saf"],
+          "application/vnd.yamaha.smaf-phrase": ["spf"],
+          "application/vnd.yellowriver-custom-menu": ["cmp"],
+          "application/vnd.zul": ["zir", "zirz"],
+          "application/vnd.zzazz.deck+xml": ["zaz"],
+          "application/x-7z-compressed": ["7z"],
+          "application/x-abiword": ["abw"],
+          "application/x-ace-compressed": ["ace"],
+          "application/x-apple-diskimage": ["*dmg"],
+          "application/x-arj": ["arj"],
+          "application/x-authorware-bin": ["aab", "x32", "u32", "vox"],
+          "application/x-authorware-map": ["aam"],
+          "application/x-authorware-seg": ["aas"],
+          "application/x-bcpio": ["bcpio"],
+          "application/x-bdoc": ["*bdoc"],
+          "application/x-bittorrent": ["torrent"],
+          "application/x-blorb": ["blb", "blorb"],
+          "application/x-bzip": ["bz"],
+          "application/x-bzip2": ["bz2", "boz"],
+          "application/x-cbr": ["cbr", "cba", "cbt", "cbz", "cb7"],
+          "application/x-cdlink": ["vcd"],
+          "application/x-cfs-compressed": ["cfs"],
+          "application/x-chat": ["chat"],
+          "application/x-chess-pgn": ["pgn"],
+          "application/x-chrome-extension": ["crx"],
+          "application/x-cocoa": ["cco"],
+          "application/x-conference": ["nsc"],
+          "application/x-cpio": ["cpio"],
+          "application/x-csh": ["csh"],
+          "application/x-debian-package": ["*deb", "udeb"],
+          "application/x-dgc-compressed": ["dgc"],
+          "application/x-director": ["dir", "dcr", "dxr", "cst", "cct", "cxt", "w3d", "fgd", "swa"],
+          "application/x-doom": ["wad"],
+          "application/x-dtbncx+xml": ["ncx"],
+          "application/x-dtbook+xml": ["dtb"],
+          "application/x-dtbresource+xml": ["res"],
+          "application/x-dvi": ["dvi"],
+          "application/x-envoy": ["evy"],
+          "application/x-eva": ["eva"],
+          "application/x-font-bdf": ["bdf"],
+          "application/x-font-ghostscript": ["gsf"],
+          "application/x-font-linux-psf": ["psf"],
+          "application/x-font-pcf": ["pcf"],
+          "application/x-font-snf": ["snf"],
+          "application/x-font-type1": ["pfa", "pfb", "pfm", "afm"],
+          "application/x-freearc": ["arc"],
+          "application/x-futuresplash": ["spl"],
+          "application/x-gca-compressed": ["gca"],
+          "application/x-glulx": ["ulx"],
+          "application/x-gnumeric": ["gnumeric"],
+          "application/x-gramps-xml": ["gramps"],
+          "application/x-gtar": ["gtar"],
+          "application/x-hdf": ["hdf"],
+          "application/x-httpd-php": ["php"],
+          "application/x-install-instructions": ["install"],
+          "application/x-iso9660-image": ["*iso"],
+          "application/x-java-archive-diff": ["jardiff"],
+          "application/x-java-jnlp-file": ["jnlp"],
+          "application/x-keepass2": ["kdbx"],
+          "application/x-latex": ["latex"],
+          "application/x-lua-bytecode": ["luac"],
+          "application/x-lzh-compressed": ["lzh", "lha"],
+          "application/x-makeself": ["run"],
+          "application/x-mie": ["mie"],
+          "application/x-mobipocket-ebook": ["prc", "mobi"],
+          "application/x-ms-application": ["application"],
+          "application/x-ms-shortcut": ["lnk"],
+          "application/x-ms-wmd": ["wmd"],
+          "application/x-ms-wmz": ["wmz"],
+          "application/x-ms-xbap": ["xbap"],
+          "application/x-msaccess": ["mdb"],
+          "application/x-msbinder": ["obd"],
+          "application/x-mscardfile": ["crd"],
+          "application/x-msclip": ["clp"],
+          "application/x-msdos-program": ["*exe"],
+          "application/x-msdownload": ["*exe", "*dll", "com", "bat", "*msi"],
+          "application/x-msmediaview": ["mvb", "m13", "m14"],
+          "application/x-msmetafile": ["*wmf", "*wmz", "*emf", "emz"],
+          "application/x-msmoney": ["mny"],
+          "application/x-mspublisher": ["pub"],
+          "application/x-msschedule": ["scd"],
+          "application/x-msterminal": ["trm"],
+          "application/x-mswrite": ["wri"],
+          "application/x-netcdf": ["nc", "cdf"],
+          "application/x-ns-proxy-autoconfig": ["pac"],
+          "application/x-nzb": ["nzb"],
+          "application/x-perl": ["pl", "pm"],
+          "application/x-pilot": ["*prc", "*pdb"],
+          "application/x-pkcs12": ["p12", "pfx"],
+          "application/x-pkcs7-certificates": ["p7b", "spc"],
+          "application/x-pkcs7-certreqresp": ["p7r"],
+          "application/x-rar-compressed": ["rar"],
+          "application/x-redhat-package-manager": ["rpm"],
+          "application/x-research-info-systems": ["ris"],
+          "application/x-sea": ["sea"],
+          "application/x-sh": ["sh"],
+          "application/x-shar": ["shar"],
+          "application/x-shockwave-flash": ["swf"],
+          "application/x-silverlight-app": ["xap"],
+          "application/x-sql": ["sql"],
+          "application/x-stuffit": ["sit"],
+          "application/x-stuffitx": ["sitx"],
+          "application/x-subrip": ["srt"],
+          "application/x-sv4cpio": ["sv4cpio"],
+          "application/x-sv4crc": ["sv4crc"],
+          "application/x-t3vm-image": ["t3"],
+          "application/x-tads": ["gam"],
+          "application/x-tar": ["tar"],
+          "application/x-tcl": ["tcl", "tk"],
+          "application/x-tex": ["tex"],
+          "application/x-tex-tfm": ["tfm"],
+          "application/x-texinfo": ["texinfo", "texi"],
+          "application/x-tgif": ["*obj"],
+          "application/x-ustar": ["ustar"],
+          "application/x-virtualbox-hdd": ["hdd"],
+          "application/x-virtualbox-ova": ["ova"],
+          "application/x-virtualbox-ovf": ["ovf"],
+          "application/x-virtualbox-vbox": ["vbox"],
+          "application/x-virtualbox-vbox-extpack": ["vbox-extpack"],
+          "application/x-virtualbox-vdi": ["vdi"],
+          "application/x-virtualbox-vhd": ["vhd"],
+          "application/x-virtualbox-vmdk": ["vmdk"],
+          "application/x-wais-source": ["src"],
+          "application/x-web-app-manifest+json": ["webapp"],
+          "application/x-x509-ca-cert": ["der", "crt", "pem"],
+          "application/x-xfig": ["fig"],
+          "application/x-xliff+xml": ["*xlf"],
+          "application/x-xpinstall": ["xpi"],
+          "application/x-xz": ["xz"],
+          "application/x-zmachine": ["z1", "z2", "z3", "z4", "z5", "z6", "z7", "z8"],
+          "audio/vnd.dece.audio": ["uva", "uvva"],
+          "audio/vnd.digital-winds": ["eol"],
+          "audio/vnd.dra": ["dra"],
+          "audio/vnd.dts": ["dts"],
+          "audio/vnd.dts.hd": ["dtshd"],
+          "audio/vnd.lucent.voice": ["lvp"],
+          "audio/vnd.ms-playready.media.pya": ["pya"],
+          "audio/vnd.nuera.ecelp4800": ["ecelp4800"],
+          "audio/vnd.nuera.ecelp7470": ["ecelp7470"],
+          "audio/vnd.nuera.ecelp9600": ["ecelp9600"],
+          "audio/vnd.rip": ["rip"],
+          "audio/x-aac": ["aac"],
+          "audio/x-aiff": ["aif", "aiff", "aifc"],
+          "audio/x-caf": ["caf"],
+          "audio/x-flac": ["flac"],
+          "audio/x-m4a": ["*m4a"],
+          "audio/x-matroska": ["mka"],
+          "audio/x-mpegurl": ["m3u"],
+          "audio/x-ms-wax": ["wax"],
+          "audio/x-ms-wma": ["wma"],
+          "audio/x-pn-realaudio": ["ram", "ra"],
+          "audio/x-pn-realaudio-plugin": ["rmp"],
+          "audio/x-realaudio": ["*ra"],
+          "audio/x-wav": ["*wav"],
+          "chemical/x-cdx": ["cdx"],
+          "chemical/x-cif": ["cif"],
+          "chemical/x-cmdf": ["cmdf"],
+          "chemical/x-cml": ["cml"],
+          "chemical/x-csml": ["csml"],
+          "chemical/x-xyz": ["xyz"],
+          "image/prs.btif": ["btif"],
+          "image/prs.pti": ["pti"],
+          "image/vnd.adobe.photoshop": ["psd"],
+          "image/vnd.airzip.accelerator.azv": ["azv"],
+          "image/vnd.dece.graphic": ["uvi", "uvvi", "uvg", "uvvg"],
+          "image/vnd.djvu": ["djvu", "djv"],
+          "image/vnd.dvb.subtitle": ["*sub"],
+          "image/vnd.dwg": ["dwg"],
+          "image/vnd.dxf": ["dxf"],
+          "image/vnd.fastbidsheet": ["fbs"],
+          "image/vnd.fpx": ["fpx"],
+          "image/vnd.fst": ["fst"],
+          "image/vnd.fujixerox.edmics-mmr": ["mmr"],
+          "image/vnd.fujixerox.edmics-rlc": ["rlc"],
+          "image/vnd.microsoft.icon": ["ico"],
+          "image/vnd.ms-dds": ["dds"],
+          "image/vnd.ms-modi": ["mdi"],
+          "image/vnd.ms-photo": ["wdp"],
+          "image/vnd.net-fpx": ["npx"],
+          "image/vnd.tencent.tap": ["tap"],
+          "image/vnd.valve.source.texture": ["vtf"],
+          "image/vnd.wap.wbmp": ["wbmp"],
+          "image/vnd.xiff": ["xif"],
+          "image/vnd.zbrush.pcx": ["pcx"],
+          "image/x-3ds": ["3ds"],
+          "image/x-cmu-raster": ["ras"],
+          "image/x-cmx": ["cmx"],
+          "image/x-freehand": ["fh", "fhc", "fh4", "fh5", "fh7"],
+          "image/x-icon": ["*ico"],
+          "image/x-jng": ["jng"],
+          "image/x-mrsid-image": ["sid"],
+          "image/x-ms-bmp": ["*bmp"],
+          "image/x-pcx": ["*pcx"],
+          "image/x-pict": ["pic", "pct"],
+          "image/x-portable-anymap": ["pnm"],
+          "image/x-portable-bitmap": ["pbm"],
+          "image/x-portable-graymap": ["pgm"],
+          "image/x-portable-pixmap": ["ppm"],
+          "image/x-rgb": ["rgb"],
+          "image/x-tga": ["tga"],
+          "image/x-xbitmap": ["xbm"],
+          "image/x-xpixmap": ["xpm"],
+          "image/x-xwindowdump": ["xwd"],
+          "message/vnd.wfa.wsc": ["wsc"],
+          "model/vnd.collada+xml": ["dae"],
+          "model/vnd.dwf": ["dwf"],
+          "model/vnd.gdl": ["gdl"],
+          "model/vnd.gtw": ["gtw"],
+          "model/vnd.mts": ["mts"],
+          "model/vnd.opengex": ["ogex"],
+          "model/vnd.parasolid.transmit.binary": ["x_b"],
+          "model/vnd.parasolid.transmit.text": ["x_t"],
+          "model/vnd.usdz+zip": ["usdz"],
+          "model/vnd.valve.source.compiled-map": ["bsp"],
+          "model/vnd.vtu": ["vtu"],
+          "text/prs.lines.tag": ["dsc"],
+          "text/vnd.curl": ["curl"],
+          "text/vnd.curl.dcurl": ["dcurl"],
+          "text/vnd.curl.mcurl": ["mcurl"],
+          "text/vnd.curl.scurl": ["scurl"],
+          "text/vnd.dvb.subtitle": ["sub"],
+          "text/vnd.fly": ["fly"],
+          "text/vnd.fmi.flexstor": ["flx"],
+          "text/vnd.graphviz": ["gv"],
+          "text/vnd.in3d.3dml": ["3dml"],
+          "text/vnd.in3d.spot": ["spot"],
+          "text/vnd.sun.j2me.app-descriptor": ["jad"],
+          "text/vnd.wap.wml": ["wml"],
+          "text/vnd.wap.wmlscript": ["wmls"],
+          "text/x-asm": ["s", "asm"],
+          "text/x-c": ["c", "cc", "cxx", "cpp", "h", "hh", "dic"],
+          "text/x-component": ["htc"],
+          "text/x-fortran": ["f", "for", "f77", "f90"],
+          "text/x-handlebars-template": ["hbs"],
+          "text/x-java-source": ["java"],
+          "text/x-lua": ["lua"],
+          "text/x-markdown": ["mkd"],
+          "text/x-nfo": ["nfo"],
+          "text/x-opml": ["opml"],
+          "text/x-org": ["*org"],
+          "text/x-pascal": ["p", "pas"],
+          "text/x-processing": ["pde"],
+          "text/x-sass": ["sass"],
+          "text/x-scss": ["scss"],
+          "text/x-setext": ["etx"],
+          "text/x-sfv": ["sfv"],
+          "text/x-suse-ymp": ["ymp"],
+          "text/x-uuencode": ["uu"],
+          "text/x-vcalendar": ["vcs"],
+          "text/x-vcard": ["vcf"],
+          "video/vnd.dece.hd": ["uvh", "uvvh"],
+          "video/vnd.dece.mobile": ["uvm", "uvvm"],
+          "video/vnd.dece.pd": ["uvp", "uvvp"],
+          "video/vnd.dece.sd": ["uvs", "uvvs"],
+          "video/vnd.dece.video": ["uvv", "uvvv"],
+          "video/vnd.dvb.file": ["dvb"],
+          "video/vnd.fvt": ["fvt"],
+          "video/vnd.mpegurl": ["mxu", "m4u"],
+          "video/vnd.ms-playready.media.pyv": ["pyv"],
+          "video/vnd.uvvu.mp4": ["uvu", "uvvu"],
+          "video/vnd.vivo": ["viv"],
+          "video/x-f4v": ["f4v"],
+          "video/x-fli": ["fli"],
+          "video/x-flv": ["flv"],
+          "video/x-m4v": ["m4v"],
+          "video/x-matroska": ["mkv", "mk3d", "mks"],
+          "video/x-mng": ["mng"],
+          "video/x-ms-asf": ["asf", "asx"],
+          "video/x-ms-vob": ["vob"],
+          "video/x-ms-wm": ["wm"],
+          "video/x-ms-wmv": ["wmv"],
+          "video/x-ms-wmx": ["wmx"],
+          "video/x-ms-wvx": ["wvx"],
+          "video/x-msvideo": ["avi"],
+          "video/x-sgi-movie": ["movie"],
+          "video/x-smv": ["smv"],
+          "x-conference/x-cooltalk": ["ice"]
+        };
+        /***/
+      },
+      /* 23 */
+  
+      /***/
+      function (module, exports, __webpack_require__) {
+        var session = __webpack_require__(5);
+  
+        var Async = __webpack_require__(24);
+  
+        var EventProxy = __webpack_require__(4).EventProxy;
+  
+        var util = __webpack_require__(0); // 文件分块上传全过程，暴露的分块上传接口
+  
+  
+        function sliceUploadFile(params, callback) {
+          var self = this; // 如果小程序版本不支持获取文件分片内容，统一转到 postObject 接口上传
+  
+          if (!util.canFileSlice()) {
+            params.SkipTask = true;
+            self.postObject(params, callback);
+            return;
+          }
+  
+          var ep = new EventProxy();
+          var TaskId = params.TaskId;
+          var Bucket = params.Bucket;
+          var Region = params.Region;
+          var Key = params.Key;
+          var FilePath = params.FilePath;
+          var ChunkSize = params.ChunkSize || params.SliceSize || self.options.ChunkSize;
+          var AsyncLimit = params.AsyncLimit;
+          var StorageClass = params.StorageClass;
+          var ServerSideEncryption = params.ServerSideEncryption;
+          var FileSize;
+          var onProgress;
+          var onHashProgress = params.onHashProgress; // 上传过程中出现错误，返回错误
+  
+          ep.on("error", function (err) {
+            if (!self._isRunningTask(TaskId)) return;
+            return callback(err);
+          }); // 上传分块完成，开始 uploadSliceComplete 操作
+  
+          ep.on("upload_complete", function (UploadCompleteData) {
+            callback(null, UploadCompleteData);
+          }); // 上传分块完成，开始 uploadSliceComplete 操作
+  
+          ep.on("upload_slice_complete", function (UploadData) {
+            uploadSliceComplete.call(self, {
+              Bucket: Bucket,
+              Region: Region,
+              Key: Key,
+              UploadId: UploadData.UploadId,
+              SliceList: UploadData.SliceList
+            }, function (err, data) {
+              if (!self._isRunningTask(TaskId)) return;
+              session.removeUsing(UploadData.UploadId);
+  
+              if (err) {
+                onProgress(null, true);
+                return ep.emit("error", err);
+              }
+  
+              session.removeUploadId(UploadData.UploadId);
+              onProgress({
+                loaded: FileSize,
+                total: FileSize
+              }, true);
+              ep.emit("upload_complete", data);
+            });
+          }); // 获取 UploadId 完成，开始上传每个分片
+  
+          ep.on("get_upload_data_finish", function (UploadData) {
+            // 处理 UploadId 缓存
+            var uuid = session.getFileId(params.FileStat, params.ChunkSize, Bucket, Key);
+            uuid && session.saveUploadId(uuid, UploadData.UploadId, self.options.UploadIdCacheLimit); // 缓存 UploadId
+  
+            session.setUsing(UploadData.UploadId); // 标记 UploadId 为正在使用
+            // 获取 UploadId
+  
+            onProgress(null, true); // 任务状态开始 uploading
+  
+            uploadSliceList.call(self, {
+              TaskId: TaskId,
+              Bucket: Bucket,
+              Region: Region,
+              Key: Key,
+              FilePath: FilePath,
+              FileSize: FileSize,
+              SliceSize: ChunkSize,
+              AsyncLimit: AsyncLimit,
+              ServerSideEncryption: ServerSideEncryption,
+              UploadData: UploadData,
+              onProgress: onProgress
+            }, function (err, data) {
+              if (!self._isRunningTask(TaskId)) return;
+  
+              if (err) {
+                onProgress(null, true);
+                return ep.emit("error", err);
+              }
+  
+              ep.emit("upload_slice_complete", data);
+            });
+          }); // 开始获取文件 UploadId，里面会视情况计算 ETag，并比对，保证文件一致性，也优化上传
+  
+          ep.on("get_file_size_finish", function () {
+            onProgress = util.throttleOnProgress.call(self, FileSize, params.onProgress);
+  
+            if (params.UploadData.UploadId) {
+              ep.emit("get_upload_data_finish", params.UploadData);
+            } else {
+              var _params = util.extend({
+                TaskId: TaskId,
+                Bucket: Bucket,
+                Region: Region,
+                Key: Key,
+                Headers: params.Headers,
+                StorageClass: StorageClass,
+                FilePath: FilePath,
+                FileSize: FileSize,
+                SliceSize: ChunkSize,
+                onHashProgress: onHashProgress
+              }, params);
+  
+              getUploadIdAndPartList.call(self, _params, function (err, UploadData) {
+                if (!self._isRunningTask(TaskId)) return;
+                if (err) return ep.emit("error", err);
+                params.UploadData.UploadId = UploadData.UploadId;
+                params.UploadData.PartList = UploadData.PartList;
+                ep.emit("get_upload_data_finish", params.UploadData);
+              });
+            }
+          }); // 获取上传文件大小
+  
+          FileSize = params.ContentLength;
+          delete params.ContentLength;
+          !params.Headers && (params.Headers = {});
+          util.each(params.Headers, function (item, key) {
+            if (key.toLowerCase() === "content-length") {
+              delete params.Headers[key];
+            }
+          }); // 控制分片大小
+  
+          (function () {
+            var SIZE = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 1024 * 2, 1024 * 4, 1024 * 5];
+            var AutoChunkSize = 1024 * 1024;
+  
+            for (var i = 0; i < SIZE.length; i++) {
+              AutoChunkSize = SIZE[i] * 1024 * 1024;
+              if (FileSize / AutoChunkSize <= self.options.MaxPartNumber) break;
+            }
+  
+            params.ChunkSize = params.SliceSize = ChunkSize = Math.max(ChunkSize, AutoChunkSize);
+          })(); // 开始上传
+  
+  
+          if (FileSize === 0) {
+            params.Body = "";
+            params.ContentLength = 0;
+            params.SkipTask = true;
+            self.putObject(params, function (err, data) {
+              if (err) {
+                return callback(err);
+              }
+  
+              callback(null, data);
+            });
+          } else {
+            ep.emit("get_file_size_finish");
+          }
+        } // 获取上传任务的 UploadId
+  
+  
+        function getUploadIdAndPartList(params, callback) {
+          var TaskId = params.TaskId;
+          var Bucket = params.Bucket;
+          var Region = params.Region;
+          var Key = params.Key;
+          var StorageClass = params.StorageClass;
+          var self = this; // 计算 ETag
+  
+          var ETagMap = {};
+          var FileSize = params.FileSize;
+          var SliceSize = params.SliceSize;
+          var SliceCount = Math.ceil(FileSize / SliceSize);
+          var FinishSliceCount = 0;
+          var FinishSize = 0;
+          var onHashProgress = util.throttleOnProgress.call(self, FileSize, params.onHashProgress);
+  
+          var getChunkETag = function getChunkETag(PartNumber, callback) {
+            var start = SliceSize * (PartNumber - 1);
+            var end = Math.min(start + SliceSize, FileSize);
+            var ChunkSize = end - start;
+  
+            if (ETagMap[PartNumber]) {
+              callback(null, {
+                PartNumber: PartNumber,
+                ETag: ETagMap[PartNumber],
+                Size: ChunkSize
+              });
+            } else {
+              util.fileSlice(params.FilePath, start, end, function (chunkItem) {
+                try {
+                  var md5 = util.getFileMd5(chunkItem);
+                } catch (err) {
+                  return callback(err);
+                }
+  
+                var ETag = '"' + md5 + '"';
+                ETagMap[PartNumber] = ETag;
+                FinishSliceCount += 1;
+                FinishSize += ChunkSize;
+                callback(null, {
+                  PartNumber: PartNumber,
+                  ETag: ETag,
+                  Size: ChunkSize
+                });
+                onHashProgress({
+                  loaded: FinishSize,
+                  total: FileSize
+                });
+              });
+            }
+          }; // 通过和文件的 md5 对比，判断 UploadId 是否可用
+  
+  
+          var isAvailableUploadList = function isAvailableUploadList(PartList, callback) {
+            var PartCount = PartList.length; // 如果没有分片，通过
+  
+            if (PartCount === 0) {
+              return callback(null, true);
+            } // 检查分片数量
+  
+  
+            if (PartCount > SliceCount) {
+              return callback(null, false);
+            } // 检查分片大小
+  
+  
+            if (PartCount > 1) {
+              var PartSliceSize = Math.max(PartList[0].Size, PartList[1].Size);
+  
+              if (PartSliceSize !== SliceSize) {
+                return callback(null, false);
+              }
+            } // 逐个分片计算并检查 ETag 是否一致
+  
+  
+            var next = function next(index) {
+              if (index < PartCount) {
+                var Part = PartList[index];
+                getChunkETag(Part.PartNumber, function (err, chunk) {
+                  if (chunk && chunk.ETag === Part.ETag && chunk.Size === Part.Size) {
+                    next(index + 1);
+                  } else {
+                    callback(null, false);
+                  }
+                });
+              } else {
+                callback(null, true);
+              }
+            };
+  
+            next(0);
+          };
+  
+          var ep = new EventProxy();
+          ep.on("error", function (errData) {
+            if (!self._isRunningTask(TaskId)) return;
+            return callback(errData);
+          }); // 存在 UploadId
+  
+          ep.on("upload_id_available", function (UploadData) {
+            // 转换成 map
+            var map = {};
+            var list = [];
+            util.each(UploadData.PartList, function (item) {
+              map[item.PartNumber] = item;
+            });
+  
+            for (var PartNumber = 1; PartNumber <= SliceCount; PartNumber++) {
+              var item = map[PartNumber];
+  
+              if (item) {
+                item.PartNumber = PartNumber;
+                item.Uploaded = true;
+              } else {
+                item = {
+                  PartNumber: PartNumber,
+                  ETag: null,
+                  Uploaded: false
+                };
+              }
+  
+              list.push(item);
+            }
+  
+            UploadData.PartList = list;
+            callback(null, UploadData);
+          }); // 不存在 UploadId, 初始化生成 UploadId
+  
+          ep.on("no_available_upload_id", function () {
+            if (!self._isRunningTask(TaskId)) return;
+  
+            var _params = util.extend({
+              Bucket: Bucket,
+              Region: Region,
+              Key: Key,
+              Headers: util.clone(params.Headers),
+              StorageClass: StorageClass
+            }, params);
+  
+            self.multipartInit(_params, function (err, data) {
+              if (!self._isRunningTask(TaskId)) return;
+              if (err) return ep.emit("error", err);
+              var UploadId = data.UploadId;
+  
+              if (!UploadId) {
+                return callback({
+                  Message: "no upload id"
+                });
+              }
+  
+              ep.emit("upload_id_available", {
+                UploadId: UploadId,
                 PartList: []
               });
-            }
-          });
-        }
-      }), C.on("has_and_check_upload_id", function (e) {
-        e = e.reverse(), v.eachLimit(e, 1, function (e, a) {
-          if (p._isRunningTask(n)) return f.using[e] ? void a() : void t.call(p, {
-            Bucket: i,
-            Region: o,
-            Key: c,
-            UploadId: e
-          }, function (i, o) {
-            if (p._isRunningTask(n)) {
-              if (i) return f.removeUsing(e), C.emit("error", i);
-              var s = o.PartList;
-              s.forEach(function (e) {
-                e.PartNumber *= 1, e.Size *= 1, e.ETag = e.ETag || "";
-              }), w(s, function (i, o) {
-                if (p._isRunningTask(n)) return i ? C.emit("error", i) : void (o ? a({
-                  UploadId: e,
-                  PartList: s
-                }) : a());
-              });
-            }
-          });
-        }, function (e) {
-          p._isRunningTask(n) && (y(null, !0), e && e.UploadId ? C.emit("upload_id_available", e) : C.emit("no_available_upload_id"));
-        });
-      }), C.on("seek_local_avail_upload_id", function (a) {
-        var s = f.getFileId(e.FileStat, e.ChunkSize, i, c),
-            r = f.getUploadIdList(s);
-        if (!s || !r) return void C.emit("has_and_check_upload_id", a);
-
-        var l = function l(e) {
-          if (e >= r.length) return void C.emit("has_and_check_upload_id", a);
-          var s = r[e];
-          return g.isInArray(a, s) ? f.using[s] ? void l(e + 1) : void t.call(p, {
-            Bucket: i,
-            Region: o,
-            Key: c,
-            UploadId: s
-          }, function (a, i) {
-            p._isRunningTask(n) && (a ? (f.removeUploadId(s), l(e + 1)) : C.emit("upload_id_available", {
-              UploadId: s,
-              PartList: i.PartList
-            }));
-          }) : (f.removeUploadId(s), void l(e + 1));
-        };
-
-        l(0);
-      }), C.on("get_remote_upload_id_list", function (a) {
-        s.call(p, {
-          Bucket: i,
-          Region: o,
-          Key: c
-        }, function (a, o) {
-          if (p._isRunningTask(n)) {
-            if (a) return C.emit("error", a);
-            var s = g.filter(o.UploadList, function (e) {
-              return e.Key === c && (!r || e.StorageClass.toUpperCase() === r.toUpperCase());
-            }).reverse().map(function (e) {
-              return e.UploadId || e.UploadID;
             });
-            if (s.length) C.emit("seek_local_avail_upload_id", s);else {
-              var t,
-                  l = f.getFileId(e.FileStat, e.ChunkSize, i, c);
-              l && (t = f.getUploadIdList(l)) && g.each(t, function (e) {
-                f.removeUploadId(e);
-              }), C.emit("no_available_upload_id");
+          }); // 如果已存在 UploadId，找一个可以用的 UploadId
+  
+          ep.on("has_and_check_upload_id", function (UploadIdList) {
+            // 串行地，找一个内容一致的 UploadId
+            UploadIdList = UploadIdList.reverse();
+            Async.eachLimit(UploadIdList, 1, function (UploadId, asyncCallback) {
+              if (!self._isRunningTask(TaskId)) return; // 如果正在上传，跳过
+  
+              if (session.using[UploadId]) {
+                asyncCallback(); // 检查下一个 UploadId
+  
+                return;
+              } // 判断 UploadId 是否可用
+  
+  
+              wholeMultipartListPart.call(self, {
+                Bucket: Bucket,
+                Region: Region,
+                Key: Key,
+                UploadId: UploadId
+              }, function (err, PartListData) {
+                if (!self._isRunningTask(TaskId)) return;
+  
+                if (err) {
+                  session.removeUsing(UploadId);
+                  return ep.emit("error", err);
+                }
+  
+                var PartList = PartListData.PartList;
+                PartList.forEach(function (item) {
+                  item.PartNumber *= 1;
+                  item.Size *= 1;
+                  item.ETag = item.ETag || "";
+                });
+                isAvailableUploadList(PartList, function (err, isAvailable) {
+                  if (!self._isRunningTask(TaskId)) return;
+                  if (err) return ep.emit("error", err);
+  
+                  if (isAvailable) {
+                    asyncCallback({
+                      UploadId: UploadId,
+                      PartList: PartList
+                    }); // 马上结束
+                  } else {
+                    asyncCallback(); // 检查下一个 UploadId
+                  }
+                });
+              });
+            }, function (AvailableUploadData) {
+              if (!self._isRunningTask(TaskId)) return;
+              onHashProgress(null, true);
+  
+              if (AvailableUploadData && AvailableUploadData.UploadId) {
+                ep.emit("upload_id_available", AvailableUploadData);
+              } else {
+                ep.emit("no_available_upload_id");
+              }
+            });
+          }); // 在本地缓存找可用的 UploadId
+  
+          ep.on("seek_local_avail_upload_id", function (RemoteUploadIdList) {
+            // 在本地找可用的 UploadId
+            var uuid = session.getFileId(params.FileStat, params.ChunkSize, Bucket, Key);
+            var LocalUploadIdList = session.getUploadIdList(uuid);
+  
+            if (!uuid || !LocalUploadIdList) {
+              ep.emit("has_and_check_upload_id", RemoteUploadIdList);
+              return;
             }
+  
+            var next = function next(index) {
+              // 如果本地找不到可用 UploadId，再一个个遍历校验远端
+              if (index >= LocalUploadIdList.length) {
+                ep.emit("has_and_check_upload_id", RemoteUploadIdList);
+                return;
+              }
+  
+              var UploadId = LocalUploadIdList[index]; // 如果不在远端 UploadId 列表里，跳过并删除
+  
+              if (!util.isInArray(RemoteUploadIdList, UploadId)) {
+                session.removeUploadId(UploadId);
+                next(index + 1);
+                return;
+              } // 如果正在上传，跳过
+  
+  
+              if (session.using[UploadId]) {
+                next(index + 1);
+                return;
+              } // 判断 UploadId 是否存在线上
+  
+  
+              wholeMultipartListPart.call(self, {
+                Bucket: Bucket,
+                Region: Region,
+                Key: Key,
+                UploadId: UploadId
+              }, function (err, PartListData) {
+                if (!self._isRunningTask(TaskId)) return;
+  
+                if (err) {
+                  // 如果 UploadId 获取会出错，跳过并删除
+                  session.removeUploadId(UploadId);
+                  next(index + 1);
+                } else {
+                  // 找到可用 UploadId
+                  ep.emit("upload_id_available", {
+                    UploadId: UploadId,
+                    PartList: PartListData.PartList
+                  });
+                }
+              });
+            };
+  
+            next(0);
+          }); // 获取线上 UploadId 列表
+  
+          ep.on("get_remote_upload_id_list", function () {
+            // 获取符合条件的 UploadId 列表，因为同一个文件可以有多个上传任务。
+            wholeMultipartList.call(self, {
+              Bucket: Bucket,
+              Region: Region,
+              Key: Key
+            }, function (err, data) {
+              if (!self._isRunningTask(TaskId)) return;
+  
+              if (err) {
+                return ep.emit("error", err);
+              } // 整理远端 UploadId 列表
+  
+  
+              var RemoteUploadIdList = util.filter(data.UploadList, function (item) {
+                return item.Key === Key && (!StorageClass || item.StorageClass.toUpperCase() === StorageClass.toUpperCase());
+              }).reverse().map(function (item) {
+                return item.UploadId || item.UploadID;
+              });
+  
+              if (RemoteUploadIdList.length) {
+                ep.emit("seek_local_avail_upload_id", RemoteUploadIdList);
+              } else {
+                // 远端没有 UploadId，清理缓存的 UploadId
+                var uuid = session.getFileId(params.FileStat, params.ChunkSize, Bucket, Key),
+                    LocalUploadIdList;
+  
+                if (uuid && (LocalUploadIdList = session.getUploadIdList(uuid))) {
+                  util.each(LocalUploadIdList, function (UploadId) {
+                    session.removeUploadId(UploadId);
+                  });
+                }
+  
+                ep.emit("no_available_upload_id");
+              }
+            });
+          }); // 开始找可用 UploadId
+  
+          ep.emit("get_remote_upload_id_list");
+        } // 获取符合条件的全部上传任务 (条件包括 Bucket, Region, Prefix)
+  
+  
+        function wholeMultipartList(params, callback) {
+          var self = this;
+          var UploadList = [];
+          var sendParams = {
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Prefix: params.Key
+          };
+  
+          var next = function next() {
+            self.multipartList(sendParams, function (err, data) {
+              if (err) return callback(err);
+              UploadList.push.apply(UploadList, data.Upload || []);
+  
+              if (data.IsTruncated === "true") {
+                // 列表不完整
+                sendParams.KeyMarker = data.NextKeyMarker;
+                sendParams.UploadIdMarker = data.NextUploadIdMarker;
+                next();
+              } else {
+                callback(null, {
+                  UploadList: UploadList
+                });
+              }
+            });
+          };
+  
+          next();
+        } // 获取指定上传任务的分块列表
+  
+  
+        function wholeMultipartListPart(params, callback) {
+          var self = this;
+          var PartList = [];
+          var sendParams = {
+            Bucket: params.Bucket,
+            Region: params.Region,
+            Key: params.Key,
+            UploadId: params.UploadId
+          };
+  
+          var next = function next() {
+            self.multipartListPart(sendParams, function (err, data) {
+              if (err) return callback(err);
+              PartList.push.apply(PartList, data.Part || []);
+  
+              if (data.IsTruncated === "true") {
+                // 列表不完整
+                sendParams.PartNumberMarker = data.NextPartNumberMarker;
+                next();
+              } else {
+                callback(null, {
+                  PartList: PartList
+                });
+              }
+            });
+          };
+  
+          next();
+        } // 上传文件分块，包括
+  
+        /*
+        UploadId (上传任务编号)
+        AsyncLimit (并发量)，
+        SliceList (上传的分块数组)，
+        FilePath (本地文件的位置)，
+        SliceSize (文件分块大小)
+        FileSize (文件大小)
+        onProgress (上传成功之后的回调函数)
+        */
+  
+  
+        function uploadSliceList(params, cb) {
+          var self = this;
+          var TaskId = params.TaskId;
+          var Bucket = params.Bucket;
+          var Region = params.Region;
+          var Key = params.Key;
+          var UploadData = params.UploadData;
+          var FileSize = params.FileSize;
+          var SliceSize = params.SliceSize;
+          var ChunkParallel = Math.min(params.AsyncLimit || self.options.ChunkParallelLimit || 1, 256);
+          var FilePath = params.FilePath;
+          var SliceCount = Math.ceil(FileSize / SliceSize);
+          var FinishSize = 0;
+          var ServerSideEncryption = params.ServerSideEncryption;
+          var needUploadSlices = util.filter(UploadData.PartList, function (SliceItem) {
+            if (SliceItem["Uploaded"]) {
+              FinishSize += SliceItem["PartNumber"] >= SliceCount ? FileSize % SliceSize || SliceSize : SliceSize;
+            }
+  
+            return !SliceItem["Uploaded"];
+          });
+          var _onProgress2 = params.onProgress;
+          Async.eachLimit(needUploadSlices, ChunkParallel, function (SliceItem, asyncCallback) {
+            if (!self._isRunningTask(TaskId)) return;
+            var PartNumber = SliceItem["PartNumber"];
+            var currentSize = Math.min(FileSize, SliceItem["PartNumber"] * SliceSize) - (SliceItem["PartNumber"] - 1) * SliceSize;
+            var preAddSize = 0;
+            uploadSliceItem.call(self, {
+              TaskId: TaskId,
+              Bucket: Bucket,
+              Region: Region,
+              Key: Key,
+              SliceSize: SliceSize,
+              FileSize: FileSize,
+              PartNumber: PartNumber,
+              ServerSideEncryption: ServerSideEncryption,
+              FilePath: FilePath,
+              UploadData: UploadData,
+              onProgress: function onProgress(data) {
+                FinishSize += data.loaded - preAddSize;
+                preAddSize = data.loaded;
+  
+                _onProgress2({
+                  loaded: FinishSize,
+                  total: FileSize
+                });
+              }
+            }, function (err, data) {
+              if (!self._isRunningTask(TaskId)) return;
+  
+              if (err) {
+                FinishSize -= preAddSize;
+              } else {
+                FinishSize += currentSize - preAddSize;
+                SliceItem.ETag = data.ETag;
+              }
+  
+              _onProgress2({
+                loaded: FinishSize,
+                total: FileSize
+              });
+  
+              asyncCallback(err || null, data);
+            });
+          }, function (err) {
+            if (!self._isRunningTask(TaskId)) return;
+            if (err) return cb(err);
+            cb(null, {
+              UploadId: UploadData.UploadId,
+              SliceList: UploadData.PartList
+            });
+          });
+        } // 上传指定分片
+  
+  
+        function uploadSliceItem(params, callback) {
+          var self = this;
+          var TaskId = params.TaskId;
+          var Bucket = params.Bucket;
+          var Region = params.Region;
+          var Key = params.Key;
+          var FileSize = params.FileSize;
+          var FilePath = params.FilePath;
+          var PartNumber = params.PartNumber * 1;
+          var SliceSize = params.SliceSize;
+          var ServerSideEncryption = params.ServerSideEncryption;
+          var UploadData = params.UploadData;
+          var ChunkRetryTimes = self.options.ChunkRetryTimes + 1;
+          var start = SliceSize * (PartNumber - 1);
+          var ContentLength = SliceSize;
+          var end = start + SliceSize;
+  
+          if (end > FileSize) {
+            end = FileSize;
+            ContentLength = end - start;
           }
-        });
-      }), C.emit("get_remote_upload_id_list");
-    }
-
-    function s(e, a) {
-      var n = this,
-          i = [],
-          o = {
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Prefix: e.Key
-      },
-          s = function s() {
-        n.multipartList(o, function (e, n) {
-          if (e) return a(e);
-          i.push.apply(i, n.Upload || []), "true" === n.IsTruncated ? (o.KeyMarker = n.NextKeyMarker, o.UploadIdMarker = n.NextUploadIdMarker, s()) : a(null, {
-            UploadList: i
+  
+          util.fileSlice(FilePath, start, end, function (Body) {
+            var md5 = util.getFileMd5(Body);
+            var contentMd5 = md5 ? util.binaryBase64(md5) : null;
+            var PartItem = UploadData.PartList[PartNumber - 1];
+            Async.retry(ChunkRetryTimes, function (tryCallback) {
+              if (!self._isRunningTask(TaskId)) return;
+              self.multipartUpload({
+                TaskId: TaskId,
+                Bucket: Bucket,
+                Region: Region,
+                Key: Key,
+                ContentLength: ContentLength,
+                PartNumber: PartNumber,
+                UploadId: UploadData.UploadId,
+                ServerSideEncryption: ServerSideEncryption,
+                Body: Body,
+                onProgress: params.onProgress,
+                ContentMD5: contentMd5
+              }, function (err, data) {
+                if (!self._isRunningTask(TaskId)) return;
+  
+                if (err) {
+                  return tryCallback(err);
+                } else {
+                  PartItem.Uploaded = true;
+                  return tryCallback(null, data);
+                }
+              });
+            }, function (err, data) {
+              if (!self._isRunningTask(TaskId)) return;
+              return callback(err, data);
+            });
           });
-        });
-      };
-
-      s();
-    }
-
-    function t(e, a) {
-      var n = this,
-          i = [],
-          o = {
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        UploadId: e.UploadId
-      },
-          s = function s() {
-        n.multipartListPart(o, function (e, n) {
-          if (e) return a(e);
-          i.push.apply(i, n.Part || []), "true" === n.IsTruncated ? (o.PartNumberMarker = n.NextPartNumberMarker, s()) : a(null, {
-            PartList: i
+        } // 完成分块上传
+  
+  
+        function uploadSliceComplete(params, callback) {
+          var Bucket = params.Bucket;
+          var Region = params.Region;
+          var Key = params.Key;
+          var UploadId = params.UploadId;
+          var SliceList = params.SliceList;
+          var self = this;
+          var ChunkRetryTimes = this.options.ChunkRetryTimes + 1;
+          var Parts = SliceList.map(function (item) {
+            return {
+              PartNumber: item.PartNumber,
+              ETag: item.ETag
+            };
+          }); // 完成上传的请求也做重试
+  
+          Async.retry(ChunkRetryTimes, function (tryCallback) {
+            self.multipartComplete({
+              Bucket: Bucket,
+              Region: Region,
+              Key: Key,
+              UploadId: UploadId,
+              Parts: Parts
+            }, tryCallback);
+          }, function (err, data) {
+            callback(err, data);
           });
-        });
-      };
-
-      s();
-    }
-
-    function c(e, a) {
-      var n = this,
-          i = e.TaskId,
-          o = e.Bucket,
-          s = e.Region,
-          t = e.Key,
-          c = e.UploadData,
-          p = e.FileSize,
-          l = e.SliceSize,
-          u = Math.min(e.AsyncLimit || n.options.ChunkParallelLimit || 1, 256),
-          d = e.FilePath,
-          m = Math.ceil(p / l),
-          x = 0,
-          f = e.ServerSideEncryption,
-          h = g.filter(c.PartList, function (e) {
-        return e.Uploaded && (x += e.PartNumber >= m ? p % l || l : l), !e.Uploaded;
-      }),
-          b = e.onProgress;
-      v.eachLimit(h, u, function (e, a) {
-        if (n._isRunningTask(i)) {
-          var u = e.PartNumber,
-              m = Math.min(p, e.PartNumber * l) - (e.PartNumber - 1) * l,
-              v = 0;
-          r.call(n, {
-            TaskId: i,
-            Bucket: o,
-            Region: s,
-            Key: t,
-            SliceSize: l,
-            FileSize: p,
-            PartNumber: u,
-            ServerSideEncryption: f,
-            FilePath: d,
-            UploadData: c,
-            onProgress: function onProgress(e) {
-              x += e.loaded - v, v = e.loaded, b({
-                loaded: x,
-                total: p
+        } // 抛弃分块上传任务
+  
+        /*
+        AsyncLimit (抛弃上传任务的并发量)，
+        UploadId (上传任务的编号，当 Level 为 task 时候需要)
+        Level (抛弃分块上传任务的级别，task : 抛弃指定的上传任务，file ： 抛弃指定的文件对应的上传任务，其他值 ：抛弃指定Bucket 的全部上传任务)
+        */
+  
+  
+        function abortUploadTask(params, callback) {
+          var Bucket = params.Bucket;
+          var Region = params.Region;
+          var Key = params.Key;
+          var UploadId = params.UploadId;
+          var Level = params.Level || "task";
+          var AsyncLimit = params.AsyncLimit;
+          var self = this;
+          var ep = new EventProxy();
+          ep.on("error", function (errData) {
+            return callback(errData);
+          }); // 已经获取到需要抛弃的任务列表
+  
+          ep.on("get_abort_array", function (AbortArray) {
+            abortUploadTaskArray.call(self, {
+              Bucket: Bucket,
+              Region: Region,
+              Key: Key,
+              Headers: params.Headers,
+              AsyncLimit: AsyncLimit,
+              AbortArray: AbortArray
+            }, function (err, data) {
+              if (err) {
+                return callback(err);
+              }
+  
+              callback(null, data);
+            });
+          });
+  
+          if (Level === "bucket") {
+            // Bucket 级别的任务抛弃，抛弃该 Bucket 下的全部上传任务
+            wholeMultipartList.call(self, {
+              Bucket: Bucket,
+              Region: Region
+            }, function (err, data) {
+              if (err) {
+                return callback(err);
+              }
+  
+              ep.emit("get_abort_array", data.UploadList || []);
+            });
+          } else if (Level === "file") {
+            // 文件级别的任务抛弃，抛弃该文件的全部上传任务
+            if (!Key) return callback({
+              error: "abort_upload_task_no_key"
+            });
+            wholeMultipartList.call(self, {
+              Bucket: Bucket,
+              Region: Region,
+              Key: Key
+            }, function (err, data) {
+              if (err) {
+                return callback(err);
+              }
+  
+              ep.emit("get_abort_array", data.UploadList || []);
+            });
+          } else if (Level === "task") {
+            // 单个任务级别的任务抛弃，抛弃指定 UploadId 的上传任务
+            if (!UploadId) return callback({
+              error: "abort_upload_task_no_id"
+            });
+            if (!Key) return callback({
+              error: "abort_upload_task_no_key"
+            });
+            ep.emit("get_abort_array", [{
+              Key: Key,
+              UploadId: UploadId
+            }]);
+          } else {
+            return callback({
+              error: "abort_unknown_level"
+            });
+          }
+        } // 批量抛弃分块上传任务
+  
+  
+        function abortUploadTaskArray(params, callback) {
+          var Bucket = params.Bucket;
+          var Region = params.Region;
+          var Key = params.Key;
+          var AbortArray = params.AbortArray;
+          var AsyncLimit = params.AsyncLimit || 1;
+          var self = this;
+          var index = 0;
+          var resultList = new Array(AbortArray.length);
+          Async.eachLimit(AbortArray, AsyncLimit, function (AbortItem, callback) {
+            var eachIndex = index;
+  
+            if (Key && Key !== AbortItem.Key) {
+              resultList[eachIndex] = {
+                error: {
+                  KeyNotMatch: true
+                }
+              };
+              callback(null);
+              return;
+            }
+  
+            var UploadId = AbortItem.UploadId || AbortItem.UploadID;
+            self.multipartAbort({
+              Bucket: Bucket,
+              Region: Region,
+              Key: AbortItem.Key,
+              Headers: params.Headers,
+              UploadId: UploadId
+            }, function (err) {
+              var task = {
+                Bucket: Bucket,
+                Region: Region,
+                Key: AbortItem.Key,
+                UploadId: UploadId
+              };
+              resultList[eachIndex] = {
+                error: err,
+                task: task
+              };
+              callback(null);
+            });
+            index++;
+          }, function (err) {
+            if (err) {
+              return callback(err);
+            }
+  
+            var successList = [];
+            var errorList = [];
+  
+            for (var i = 0, len = resultList.length; i < len; i++) {
+              var item = resultList[i];
+  
+              if (item["task"]) {
+                if (item["error"]) {
+                  errorList.push(item["task"]);
+                } else {
+                  successList.push(item["task"]);
+                }
+              }
+            }
+  
+            return callback(null, {
+              successList: successList,
+              errorList: errorList
+            });
+          });
+        } // 批量上传文件
+  
+  
+        function uploadFiles(params, callback) {
+          var self = this; // 判断多大的文件使用分片上传
+  
+          var SliceSize = params.SliceSize === undefined ? self.options.SliceSize : params.SliceSize; // 汇总返回进度
+  
+          var TotalSize = 0;
+          var TotalFinish = 0;
+          var onTotalProgress = util.throttleOnProgress.call(self, TotalFinish, params.onProgress); // 汇总返回回调
+  
+          var unFinishCount = params.files.length;
+          var _onTotalFileFinish = params.onFileFinish;
+          var resultList = Array(unFinishCount);
+  
+          var onTotalFileFinish = function onTotalFileFinish(err, data, options) {
+            onTotalProgress(null, true);
+            _onTotalFileFinish && _onTotalFileFinish(err, data, options);
+            resultList[options.Index] = {
+              options: options,
+              error: err,
+              data: data
+            };
+  
+            if (--unFinishCount <= 0 && callback) {
+              callback(null, {
+                files: resultList
               });
             }
-          }, function (o, s) {
-            n._isRunningTask(i) && (!g.isBrowser || o || s.ETag || (o = 'get ETag error, please add "ETag" to CORS ExposeHeader setting.'), o ? x -= v : (x += m - v, e.ETag = s.ETag), b({
-              loaded: x,
-              total: p
-            }), a(o || null, s));
+          }; // 开始处理每个文件
+  
+  
+          var taskList = [];
+          util.each(params.files, function (fileParams, index) {
+            var FileSize = fileParams.FileSize;
+            var fileInfo = {
+              Index: index,
+              TaskId: ""
+            }; // 更新文件总大小
+  
+            TotalSize += FileSize; // 整理 option，用于返回给回调
+  
+            util.each(fileParams, function (v, k) {
+              if (_typeof(v) !== "object" && typeof v !== "function") {
+                fileInfo[k] = v;
+              }
+            }); // 处理单个文件 TaskReady
+  
+            var _onTaskReady = fileParams.onTaskReady;
+  
+            fileParams.onTaskReady = function (tid) {
+              fileInfo.TaskId = tid;
+              _onTaskReady && _onTaskReady(tid);
+            }; // 处理单个文件进度
+  
+  
+            var PreAddSize = 0;
+            var _onProgress = fileParams.onProgress;
+  
+            fileParams.onProgress = function (info) {
+              TotalFinish = TotalFinish - PreAddSize + info.loaded;
+              PreAddSize = info.loaded;
+              _onProgress && _onProgress(info);
+              onTotalProgress({
+                loaded: TotalFinish,
+                total: TotalSize
+              });
+            }; // 处理单个文件完成
+  
+  
+            var _onFileFinish = fileParams.onFileFinish;
+  
+            var onFileFinish = function onFileFinish(err, data) {
+              _onFileFinish && _onFileFinish(err, data);
+              onTotalFileFinish && onTotalFileFinish(err, data, fileInfo);
+            }; // 添加上传任务
+  
+  
+            var api = FileSize > SliceSize ? "sliceUploadFile" : "postObject";
+            taskList.push({
+              api: api,
+              params: fileParams,
+              callback: onFileFinish
+            });
+          });
+  
+          self._addTasks(taskList);
+        } // 分片复制文件
+  
+  
+        function sliceCopyFile(params, callback) {
+          var ep = new EventProxy();
+          var self = this;
+          var Bucket = params.Bucket;
+          var Region = params.Region;
+          var Key = params.Key;
+          var CopySource = params.CopySource;
+          var m = CopySource.match(/^([^.]+-\d+)\.cos(v6)?\.([^.]+)\.[^/]+\/(.+)$/);
+  
+          if (!m) {
+            callback({
+              error: "CopySource format error"
+            });
+            return;
+          }
+  
+          var SourceBucket = m[1];
+          var SourceRegion = m[3];
+          var SourceKey = decodeURIComponent(m[4]);
+          var CopySliceSize = params.CopySliceSize === undefined ? self.options.CopySliceSize : params.CopySliceSize;
+          CopySliceSize = Math.max(0, CopySliceSize);
+          var ChunkSize = params.CopyChunkSize || this.options.CopyChunkSize;
+          var ChunkParallel = this.options.CopyChunkParallelLimit;
+          var FinishSize = 0;
+          var FileSize;
+  
+          var _onProgress3; // 分片复制完成，开始 multipartComplete 操作
+  
+  
+          ep.on("copy_slice_complete", function (UploadData) {
+            self.multipartComplete({
+              Bucket: Bucket,
+              Region: Region,
+              Key: Key,
+              UploadId: UploadData.UploadId,
+              Parts: UploadData.PartList
+            }, function (err, data) {
+              if (err) {
+                _onProgress3(null, true);
+  
+                return callback(err);
+              }
+  
+              _onProgress3({
+                loaded: FileSize,
+                total: FileSize
+              }, true);
+  
+              callback(null, data);
+            });
+          });
+          ep.on("get_copy_data_finish", function (UploadData) {
+            Async.eachLimit(UploadData.PartList, ChunkParallel, function (SliceItem, asyncCallback) {
+              var PartNumber = SliceItem.PartNumber;
+              var CopySourceRange = SliceItem.CopySourceRange;
+              var currentSize = SliceItem.end - SliceItem.start;
+              var preAddSize = 0;
+              copySliceItem.call(self, {
+                Bucket: Bucket,
+                Region: Region,
+                Key: Key,
+                CopySource: CopySource,
+                UploadId: UploadData.UploadId,
+                PartNumber: PartNumber,
+                CopySourceRange: CopySourceRange,
+                onProgress: function onProgress(data) {
+                  FinishSize += data.loaded - preAddSize;
+                  preAddSize = data.loaded;
+  
+                  _onProgress3({
+                    loaded: FinishSize,
+                    total: FileSize
+                  });
+                }
+              }, function (err, data) {
+                if (err) {
+                  return asyncCallback(err);
+                }
+  
+                _onProgress3({
+                  loaded: FinishSize,
+                  total: FileSize
+                });
+  
+                FinishSize += currentSize - preAddSize;
+                SliceItem.ETag = data.ETag;
+                asyncCallback(err || null, data);
+              });
+            }, function (err) {
+              if (err) {
+                _onProgress3(null, true);
+  
+                return callback(err);
+              }
+  
+              ep.emit("copy_slice_complete", UploadData);
+            });
+          });
+          ep.on("get_file_size_finish", function (SourceHeaders) {
+            // 控制分片大小
+            (function () {
+              var SIZE = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 1024 * 2, 1024 * 4, 1024 * 5];
+              var AutoChunkSize = 1024 * 1024;
+  
+              for (var i = 0; i < SIZE.length; i++) {
+                AutoChunkSize = SIZE[i] * 1024 * 1024;
+                if (FileSize / AutoChunkSize <= self.options.MaxPartNumber) break;
+              }
+  
+              params.ChunkSize = ChunkSize = Math.max(ChunkSize, AutoChunkSize);
+              var ChunkCount = Math.ceil(FileSize / ChunkSize);
+              var list = [];
+  
+              for (var partNumber = 1; partNumber <= ChunkCount; partNumber++) {
+                var start = (partNumber - 1) * ChunkSize;
+                var end = partNumber * ChunkSize < FileSize ? partNumber * ChunkSize - 1 : FileSize - 1;
+                var item = {
+                  PartNumber: partNumber,
+                  start: start,
+                  end: end,
+                  CopySourceRange: "bytes=" + start + "-" + end
+                };
+                list.push(item);
+              }
+  
+              params.PartList = list;
+            })();
+  
+            var TargetHeader;
+  
+            if (params.Headers["x-cos-metadata-directive"] === "Replaced") {
+              TargetHeader = params.Headers;
+            } else {
+              TargetHeader = SourceHeaders;
+            }
+  
+            TargetHeader["x-cos-storage-class"] = params.Headers["x-cos-storage-class"] || SourceHeaders["x-cos-storage-class"];
+            TargetHeader = util.clearKey(TargetHeader);
+            /**
+             * 对于归档存储的对象，如果未恢复副本，则不允许 Copy
+             */
+  
+            if (SourceHeaders["x-cos-storage-class"] === "ARCHIVE" || SourceHeaders["x-cos-storage-class"] === "DEEP_ARCHIVE") {
+              var restoreHeader = SourceHeaders["x-cos-restore"];
+  
+              if (!restoreHeader || restoreHeader === 'ongoing-request="true"') {
+                callback({
+                  error: "Unrestored archive object is not allowed to be copied"
+                });
+                return;
+              }
+            }
+            /**
+             * 去除一些无用的头部，规避 multipartInit 出错
+             * 这些头部通常是在 putObjectCopy 时才使用
+             */
+  
+  
+            delete TargetHeader["x-cos-copy-source"];
+            delete TargetHeader["x-cos-metadata-directive"];
+            delete TargetHeader["x-cos-copy-source-If-Modified-Since"];
+            delete TargetHeader["x-cos-copy-source-If-Unmodified-Since"];
+            delete TargetHeader["x-cos-copy-source-If-Match"];
+            delete TargetHeader["x-cos-copy-source-If-None-Match"];
+            self.multipartInit({
+              Bucket: Bucket,
+              Region: Region,
+              Key: Key,
+              Headers: TargetHeader
+            }, function (err, data) {
+              if (err) {
+                return callback(err);
+              }
+  
+              params.UploadId = data.UploadId;
+              ep.emit("get_copy_data_finish", params);
+            });
+          }); // 获取远端复制源文件的大小
+  
+          self.headObject({
+            Bucket: SourceBucket,
+            Region: SourceRegion,
+            Key: SourceKey
+          }, function (err, data) {
+            if (err) {
+              if (err.statusCode && err.statusCode === 404) {
+                callback({
+                  ErrorStatus: SourceKey + " Not Exist"
+                });
+              } else {
+                callback(err);
+              }
+  
+              return;
+            }
+  
+            FileSize = params.FileSize = data.headers["content-length"];
+  
+            if (FileSize === undefined || !FileSize) {
+              callback({
+                error: 'get Content-Length error, please add "Content-Length" to CORS ExposeHeader setting.'
+              });
+              return;
+            }
+  
+            _onProgress3 = util.throttleOnProgress.call(self, FileSize, params.onProgress); // 开始上传
+  
+            if (FileSize <= CopySliceSize) {
+              if (!params.Headers["x-cos-metadata-directive"]) {
+                params.Headers["x-cos-metadata-directive"] = "Copy";
+              }
+  
+              self.putObjectCopy(params, function (err, data) {
+                if (err) {
+                  _onProgress3(null, true);
+  
+                  return callback(err);
+                }
+  
+                _onProgress3({
+                  loaded: FileSize,
+                  total: FileSize
+                }, true);
+  
+                callback(err, data);
+              });
+            } else {
+              var resHeaders = data.headers;
+              var SourceHeaders = {
+                "Cache-Control": resHeaders["cache-control"],
+                "Content-Disposition": resHeaders["content-disposition"],
+                "Content-Encoding": resHeaders["content-encoding"],
+                "Content-Type": resHeaders["content-type"],
+                Expires: resHeaders["expires"],
+                "x-cos-storage-class": resHeaders["x-cos-storage-class"]
+              };
+              util.each(resHeaders, function (v, k) {
+                var metaPrefix = "x-cos-meta-";
+  
+                if (k.indexOf(metaPrefix) === 0 && k.length > metaPrefix.length) {
+                  SourceHeaders[k] = v;
+                }
+              });
+              ep.emit("get_file_size_finish", SourceHeaders);
+            }
+          });
+        } // 复制指定分片
+  
+  
+        function copySliceItem(params, callback) {
+          var TaskId = params.TaskId;
+          var Bucket = params.Bucket;
+          var Region = params.Region;
+          var Key = params.Key;
+          var CopySource = params.CopySource;
+          var UploadId = params.UploadId;
+          var PartNumber = params.PartNumber * 1;
+          var CopySourceRange = params.CopySourceRange;
+          var ChunkRetryTimes = this.options.ChunkRetryTimes + 1;
+          var self = this;
+          Async.retry(ChunkRetryTimes, function (tryCallback) {
+            self.uploadPartCopy({
+              TaskId: TaskId,
+              Bucket: Bucket,
+              Region: Region,
+              Key: Key,
+              CopySource: CopySource,
+              UploadId: UploadId,
+              PartNumber: PartNumber,
+              CopySourceRange: CopySourceRange,
+              onProgress: params.onProgress
+            }, function (err, data) {
+              tryCallback(err || null, data);
+            });
+          }, function (err, data) {
+            return callback(err, data);
           });
         }
-      }, function (e) {
-        if (n._isRunningTask(i)) return e ? a(e) : void a(null, {
-          UploadId: c.UploadId,
-          SliceList: c.PartList
-        });
-      });
-    }
-
-    function r(e, a) {
-      var n = this,
-          i = e.TaskId,
-          o = e.Bucket,
-          s = e.Region,
-          t = e.Key,
-          c = e.FileSize,
-          r = e.FilePath,
-          p = 1 * e.PartNumber,
-          l = e.SliceSize,
-          u = e.ServerSideEncryption,
-          d = e.UploadData,
-          m = n.options.ChunkRetryTimes + 1,
-          x = l * (p - 1),
-          f = l,
-          h = x + l;
-      h > c && (h = c, f = h - x), g.fileSlice(r, x, h, function (c) {
-        var r = g.getFileMd5(c),
-            l = r ? g.binaryBase64(r) : "",
-            x = d.PartList[p - 1];
-        v.retry(m, function (a) {
-          n._isRunningTask(i) && n.multipartUpload({
-            TaskId: i,
-            Bucket: o,
-            Region: s,
-            Key: t,
-            ContentLength: f,
-            PartNumber: p,
-            UploadId: d.UploadId,
-            ServerSideEncryption: u,
-            Body: c,
-            onProgress: e.onProgress,
-            ContentMD5: l
-          }, function (e, o) {
-            if (n._isRunningTask(i)) return e ? a(e) : (x.Uploaded = !0, a(null, o));
-          });
-        }, function (e, o) {
-          if (n._isRunningTask(i)) return a(e, o);
-        });
-      });
-    }
-
-    function p(e, a) {
-      var n = e.Bucket,
-          i = e.Region,
-          o = e.Key,
-          s = e.UploadId,
-          t = e.SliceList,
-          c = this,
-          r = this.options.ChunkRetryTimes + 1,
-          p = t.map(function (e) {
-        return {
-          PartNumber: e.PartNumber,
-          ETag: e.ETag
+  
+        var API_MAP = {
+          sliceUploadFile: sliceUploadFile,
+          abortUploadTask: abortUploadTask,
+          uploadFiles: uploadFiles,
+          sliceCopyFile: sliceCopyFile
         };
+  
+        module.exports.init = function (COS, task) {
+          task.transferToTaskMethod(API_MAP, "sliceUploadFile");
+          util.each(API_MAP, function (fn, apiName) {
+            COS.prototype[apiName] = util.apiWrapper(apiName, fn);
+          });
+        };
+        /***/
+  
+      },
+      /* 24 */
+  
+      /***/
+      function (module, exports) {
+        var eachLimit = function eachLimit(arr, limit, iterator, callback) {
+          callback = callback || function () {};
+  
+          if (!arr.length || limit <= 0) {
+            return callback();
+          }
+  
+          var completed = 0;
+          var started = 0;
+          var running = 0;
+  
+          (function replenish() {
+            if (completed >= arr.length) {
+              return callback();
+            }
+  
+            while (running < limit && started < arr.length) {
+              started += 1;
+              running += 1;
+              iterator(arr[started - 1], function (err) {
+                if (err) {
+                  callback(err);
+  
+                  callback = function callback() {};
+                } else {
+                  completed += 1;
+                  running -= 1;
+  
+                  if (completed >= arr.length) {
+                    callback();
+                  } else {
+                    replenish();
+                  }
+                }
+              });
+            }
+          })();
+        };
+  
+        var retry = function retry(times, iterator, callback) {
+          var next = function next(index) {
+            iterator(function (err, data) {
+              if (err && index < times) {
+                next(index + 1);
+              } else {
+                callback(err, data);
+              }
+            });
+          };
+  
+          if (times < 1) {
+            callback();
+          } else {
+            next(1);
+          }
+        };
+  
+        var async = {
+          eachLimit: eachLimit,
+          retry: retry
+        };
+        module.exports = async;
+        /***/
+      }
+      /******/
+      ])
+    );
+  });
+  /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
+  
+  /***/ }),
+  /* 2 */
+  /***/ (function(module, exports) {
+  
+  module.exports = function (module) {
+    if (!module.webpackPolyfill) {
+      module.deprecate = function () {};
+  
+      module.paths = []; // module.parent = undefined by default
+  
+      if (!module.children) module.children = [];
+      Object.defineProperty(module, "loaded", {
+        enumerable: true,
+        get: function () {
+          return module.l;
+        }
       });
-      v.retry(r, function (e) {
-        c.multipartComplete({
-          Bucket: n,
-          Region: i,
-          Key: o,
-          UploadId: s,
-          Parts: p
-        }, e);
-      }, function (e, n) {
-        a(e, n);
+      Object.defineProperty(module, "id", {
+        enumerable: true,
+        get: function () {
+          return module.i;
+        }
       });
+      module.webpackPolyfill = 1;
     }
-
-    function l(e, a) {
-      var n = e.Bucket,
-          i = e.Region,
-          o = e.Key,
-          t = e.UploadId,
-          c = e.Level || "task",
-          r = e.AsyncLimit,
-          p = this,
-          l = new h();
-      if (l.on("error", function (e) {
-        return a(e);
-      }), l.on("get_abort_array", function (s) {
-        u.call(p, {
-          Bucket: n,
-          Region: i,
-          Key: o,
-          Headers: e.Headers,
-          AsyncLimit: r,
-          AbortArray: s
-        }, function (e, n) {
-          if (e) return a(e);
-          a(null, n);
-        });
-      }), "bucket" === c) s.call(p, {
-        Bucket: n,
-        Region: i
-      }, function (e, n) {
-        if (e) return a(e);
-        l.emit("get_abort_array", n.UploadList || []);
-      });else if ("file" === c) {
-        if (!o) return a({
-          error: "abort_upload_task_no_key"
-        });
-        s.call(p, {
-          Bucket: n,
-          Region: i,
-          Key: o
-        }, function (e, n) {
-          if (e) return a(e);
-          l.emit("get_abort_array", n.UploadList || []);
-        });
+  
+    return module;
+  };
+  
+  /***/ }),
+  /* 3 */
+  /***/ (function(module, exports) {
+  
+  var vodUtil = {
+    getType: function getType(a) {
+      if (a === null) {
+        return "null";
+      }
+  
+      if (a === undefined) {
+        return "undefined";
+      }
+  
+      return Object.prototype.toString.call(a).slice(8, -1).toLowerCase();
+    },
+    isFunction: function isFunction(para) {
+      if (para && this.getType(para) !== "function") {
+        return false;
+      }
+  
+      return true;
+    },
+    getFileMessage: function getFileMessage(file, fileName) {
+      var fileMsg = {};
+      fileMsg.tempFilePath = file.tempFilePath;
+      fileMsg.type = file.tempFilePath.substring(file.tempFilePath.lastIndexOf(".") + 1);
+  
+      if (typeof fileName === "string") {
+        fileMsg.name = fileName;
       } else {
-        if ("task" !== c) return a({
-          error: "abort_unknown_level"
-        });
-        if (!t) return a({
-          error: "abort_upload_task_no_id"
-        });
-        if (!o) return a({
-          error: "abort_upload_task_no_key"
-        });
-        l.emit("get_abort_array", [{
-          Key: o,
-          UploadId: t
-        }]);
+        fileMsg.name = "来自小程序";
       }
-    }
-
-    function u(e, a) {
-      var n = e.Bucket,
-          i = e.Region,
-          o = e.Key,
-          s = e.AbortArray,
-          t = e.AsyncLimit || 1,
-          c = this,
-          r = 0,
-          p = new Array(s.length);
-      v.eachLimit(s, t, function (a, s) {
-        var t = r;
-        if (o && o !== a.Key) return p[t] = {
-          error: {
-            KeyNotMatch: !0
-          }
-        }, void s(null);
-        var l = a.UploadId || a.UploadID;
-        c.multipartAbort({
-          Bucket: n,
-          Region: i,
-          Key: a.Key,
-          Headers: e.Headers,
-          UploadId: l
-        }, function (e, o) {
-          var c = {
-            Bucket: n,
-            Region: i,
-            Key: a.Key,
-            UploadId: l
-          };
-          p[t] = {
-            error: e,
-            task: c
-          }, s(null);
-        }), r++;
-      }, function (e) {
-        if (e) return a(e);
-
-        for (var n = [], i = [], o = 0, s = p.length; o < s; o++) {
-          var t = p[o];
-          t.task && (t.error ? i.push(t.task) : n.push(t.task));
-        }
-
-        return a(null, {
-          successList: n,
-          errorList: i
-        });
-      });
-    }
-
-    function d(e, a) {
-      var n = this,
-          i = void 0 === e.SliceSize ? n.options.SliceSize : e.SliceSize,
-          o = 0,
-          s = 0,
-          t = g.throttleOnProgress.call(n, s, e.onProgress),
-          c = e.files.length,
-          r = e.onFileFinish,
-          p = Array(c),
-          l = function l(e, n, i) {
-        t(null, !0), r && r(e, n, i), p[i.Index] = {
-          options: i,
-          error: e,
-          data: n
-        }, --c <= 0 && a && a(null, {
-          files: p
-        });
-      },
-          u = [];
-
-      g.each(e.files, function (e, a) {
-        var n = e.FileSize,
-            c = {
-          Index: a,
-          TaskId: ""
-        };
-        o += n, g.each(e, function (e, a) {
-          "object" != _typeof(e) && "function" != typeof e && (c[a] = e);
-        });
-
-        var r = e.onTaskReady,
-            p = function p(e) {
-          c.TaskId = e, r && r(e);
-        };
-
-        e.onTaskReady = p;
-
-        var d = 0,
-            m = e.onProgress,
-            x = function x(e) {
-          s = s - d + e.loaded, d = e.loaded, m && m(e), t({
-            loaded: s,
-            total: o
-          });
-        };
-
-        e.onProgress = x;
-
-        var f = e.onFileFinish,
-            v = function v(e, a) {
-          f && f(e, a), l && l(e, a, c);
-        },
-            h = n > i ? "sliceUploadFile" : "postObject";
-
-        u.push({
-          api: h,
-          params: e,
-          callback: v
-        });
-      }), n._addTasks(u);
-    }
-
-    function m(e, a) {
-      var n = new h(),
-          i = this,
-          o = e.Bucket,
-          s = e.Region,
-          t = e.Key,
-          c = e.CopySource,
-          r = c.match(/^([^.]+-\d+)\.cos(v6)?\.([^.]+)\.[^\/]+\/(.+)$/);
-      if (!r) return void a({
-        error: "CopySource format error"
-      });
-      var p = r[1],
-          l = r[3],
-          u = decodeURIComponent(r[4]),
-          d = void 0 === e.CopySliceSize ? i.options.CopySliceSize : e.CopySliceSize;
-      d = Math.max(0, d);
-      var m,
-          f,
-          b = e.CopyChunkSize || this.options.CopyChunkSize,
-          y = this.options.CopyChunkParallelLimit,
-          k = 0;
-      n.on("copy_slice_complete", function (e) {
-        i.multipartComplete({
-          Bucket: o,
-          Region: s,
-          Key: t,
-          UploadId: e.UploadId,
-          Parts: e.PartList
-        }, function (e, n) {
-          if (e) return f(null, !0), a(e);
-          f({
-            loaded: m,
-            total: m
-          }, !0), a(null, n);
-        });
-      }), n.on("get_copy_data_finish", function (e) {
-        v.eachLimit(e.PartList, y, function (a, n) {
-          var r = a.PartNumber,
-              p = a.CopySourceRange,
-              l = a.end - a.start,
-              u = 0;
-          x.call(i, {
-            Bucket: o,
-            Region: s,
-            Key: t,
-            CopySource: c,
-            UploadId: e.UploadId,
-            PartNumber: r,
-            CopySourceRange: p,
-            onProgress: function onProgress(e) {
-              k += e.loaded - u, u = e.loaded, f({
-                loaded: k,
-                total: m
-              });
-            }
-          }, function (e, i) {
-            if (e) return n(e);
-            f({
-              loaded: k,
-              total: m
-            }), k += l - u, a.ETag = i.ETag, n(e || null, i);
-          });
-        }, function (i) {
-          if (i) return f(null, !0), a(i);
-          n.emit("copy_slice_complete", e);
-        });
-      }), n.on("get_file_size_finish", function (c) {
-        !function () {
-          for (var a = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 5120], n = 1048576, o = 0; o < a.length && (n = 1024 * a[o] * 1024, !(m / n <= i.options.MaxPartNumber)); o++) {
-            ;
-          }
-
-          e.ChunkSize = b = Math.max(b, n);
-
-          for (var s = Math.ceil(m / b), t = [], c = 1; c <= s; c++) {
-            var r = (c - 1) * b,
-                p = c * b < m ? c * b - 1 : m - 1,
-                l = {
-              PartNumber: c,
-              start: r,
-              end: p,
-              CopySourceRange: "bytes=" + r + "-" + p
-            };
-            t.push(l);
-          }
-
-          e.PartList = t;
-        }();
-        var r;
-
-        if (r = "Replaced" === e.Headers["x-cos-metadata-directive"] ? e.Headers : c, r["x-cos-storage-class"] = e.Headers["x-cos-storage-class"] || c["x-cos-storage-class"], r = g.clearKey(r), "ARCHIVE" === c["x-cos-storage-class"]) {
-          var p = c["x-cos-restore"];
-          if (!p || 'ongoing-request="true"' === p) return void a({
-            error: "Unrestored archive object is not allowed to be copied"
-          });
-        }
-
-        delete r["x-cos-copy-source"], delete r["x-cos-metadata-directive"], delete r["x-cos-copy-source-If-Modified-Since"], delete r["x-cos-copy-source-If-Unmodified-Since"], delete r["x-cos-copy-source-If-Match"], delete r["x-cos-copy-source-If-None-Match"], i.multipartInit({
-          Bucket: o,
-          Region: s,
-          Key: t,
-          Headers: r
-        }, function (i, o) {
-          if (i) return a(i);
-          e.UploadId = o.UploadId, n.emit("get_copy_data_finish", e);
-        });
-      }), i.headObject({
-        Bucket: p,
-        Region: l,
-        Key: u
-      }, function (o, s) {
-        if (o) return void a(o.statusCode && 404 === o.statusCode ? {
-          ErrorStatus: u + " Not Exist"
-        } : o);
-        if (void 0 === (m = e.FileSize = s.headers["content-length"]) || !m) return void a({
-          error: 'get Content-Length error, please add "Content-Length" to CORS ExposeHeader setting.'
-        });
-        if (f = g.throttleOnProgress.call(i, m, e.onProgress), m <= d) e.Headers["x-cos-metadata-directive"] || (e.Headers["x-cos-metadata-directive"] = "Copy"), i.putObjectCopy(e, function (e, n) {
-          if (e) return f(null, !0), a(e);
-          f({
-            loaded: m,
-            total: m
-          }, !0), a(e, n);
-        });else {
-          var t = s.headers,
-              c = {
-            "Cache-Control": t["cache-control"],
-            "Content-Disposition": t["content-disposition"],
-            "Content-Encoding": t["content-encoding"],
-            "Content-Type": t["content-type"],
-            Expires: t.expires,
-            "x-cos-storage-class": t["x-cos-storage-class"]
-          };
-          g.each(t, function (e, a) {
-            0 === a.indexOf("x-cos-meta-") && a.length > "x-cos-meta-".length && (c[a] = e);
-          }), n.emit("get_file_size_finish", c);
-        }
-      });
-    }
-
-    function x(e, a) {
-      var n = e.TaskId,
-          i = e.Bucket,
-          o = e.Region,
-          s = e.Key,
-          t = e.CopySource,
-          c = e.UploadId,
-          r = 1 * e.PartNumber,
-          p = e.CopySourceRange,
-          l = this.options.ChunkRetryTimes + 1,
-          u = this;
-      v.retry(l, function (a) {
-        u.uploadPartCopy({
-          TaskId: n,
-          Bucket: i,
-          Region: o,
-          Key: s,
-          CopySource: t,
-          UploadId: c,
-          PartNumber: r,
-          CopySourceRange: p,
-          onProgress: e.onProgress
-        }, function (e, n) {
-          a(e || null, n);
-        });
-      }, function (e, n) {
-        return a(e, n);
-      });
-    }
-
-    var f = n(3),
-        v = n(20),
-        h = n(2).EventProxy,
-        g = n(0),
-        b = {
-      sliceUploadFile: i,
-      abortUploadTask: l,
-      uploadFiles: d,
-      sliceCopyFile: m
-    };
-
-    e.exports.init = function (e, a) {
-      a.transferToTaskMethod(b, "sliceUploadFile"), g.each(b, function (a, n) {
-        e.prototype[n] = g.apiWrapper(n, a);
-      });
-    };
-  }, function (e, a) {
-    var n = function n(e, a, _n, i) {
-      if (i = i || function () {}, !e.length || a <= 0) return i();
-      var o = 0,
-          s = 0,
-          t = 0;
-      !function c() {
-        if (o >= e.length) return i();
-
-        for (; t < a && s < e.length;) {
-          s += 1, t += 1, _n(e[s - 1], function (a) {
-            a ? (i(a), i = function i() {}) : (o += 1, t -= 1, o >= e.length ? i() : c());
-          });
-        }
-      }();
+  
+      fileMsg.size = file.size;
+      return fileMsg;
     },
-        i = function i(e, a, n) {
-      var i = function i(o) {
-        a(function (a, s) {
-          a && o < e ? i(o + 1) : n(a, s);
-        });
-      };
-
-      e < 1 ? n() : i(1);
+    noop: function noop() {}
+  };
+  module.exports = vodUtil;
+  
+  /***/ }),
+  /* 4 */
+  /***/ (function(module, exports) {
+  
+  var UploaderEvent = {
+    video_progress: "video_progress",
+    media_progress: "media_progress"
+  };
+  exports.UploaderEvent = UploaderEvent;
+  
+  /***/ }),
+  /* 5 */
+  /***/ (function(module, exports, __webpack_require__) {
+  
+  "use strict";
+  // Copyright Joyent, Inc. and other Node contributors.
+  //
+  // Permission is hereby granted, free of charge, to any person obtaining a
+  // copy of this software and associated documentation files (the
+  // "Software"), to deal in the Software without restriction, including
+  // without limitation the rights to use, copy, modify, merge, publish,
+  // distribute, sublicense, and/or sell copies of the Software, and to permit
+  // persons to whom the Software is furnished to do so, subject to the
+  // following conditions:
+  //
+  // The above copyright notice and this permission notice shall be included
+  // in all copies or substantial portions of the Software.
+  //
+  // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+  // OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  // MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+  // NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+  // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+  // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+  // USE OR OTHER DEALINGS IN THE SOFTWARE.
+  
+  
+  var R = typeof Reflect === 'object' ? Reflect : null;
+  var ReflectApply = R && typeof R.apply === 'function' ? R.apply : function ReflectApply(target, receiver, args) {
+    return Function.prototype.apply.call(target, receiver, args);
+  };
+  var ReflectOwnKeys;
+  
+  if (R && typeof R.ownKeys === 'function') {
+    ReflectOwnKeys = R.ownKeys;
+  } else if (Object.getOwnPropertySymbols) {
+    ReflectOwnKeys = function ReflectOwnKeys(target) {
+      return Object.getOwnPropertyNames(target).concat(Object.getOwnPropertySymbols(target));
+    };
+  } else {
+    ReflectOwnKeys = function ReflectOwnKeys(target) {
+      return Object.getOwnPropertyNames(target);
+    };
+  }
+  
+  function ProcessEmitWarning(warning) {
+    if (console && console.warn) console.warn(warning);
+  }
+  
+  var NumberIsNaN = Number.isNaN || function NumberIsNaN(value) {
+    return value !== value;
+  };
+  
+  function EventEmitter() {
+    EventEmitter.init.call(this);
+  }
+  
+  module.exports = EventEmitter; // Backwards-compat with node 0.10.x
+  
+  EventEmitter.EventEmitter = EventEmitter;
+  EventEmitter.prototype._events = undefined;
+  EventEmitter.prototype._eventsCount = 0;
+  EventEmitter.prototype._maxListeners = undefined; // By default EventEmitters will print a warning if more than 10 listeners are
+  // added to it. This is a useful default which helps finding memory leaks.
+  
+  var defaultMaxListeners = 10;
+  Object.defineProperty(EventEmitter, 'defaultMaxListeners', {
+    enumerable: true,
+    get: function () {
+      return defaultMaxListeners;
     },
-        o = {
-      eachLimit: n,
-      retry: i
-    };
-
-    e.exports = o;
-  }, function (e, a, n) {
-    "use strict";
-
-    function i(e, a) {
-      "function" == typeof e && (a = e, e = {});
-      var n = this.options.ServiceDomain,
-          i = e.AppId || this.options.appId;
-      n ? (n = n.replace(/\{\{AppId\}\}/gi, i || "").replace(/\{\{.*?\}\}/gi, ""), /^[a-zA-Z]+:\/\//.test(n) || (n = "https://" + n), "/" === n.slice(-1) && (n = n.slice(0, -1))) : n = "https://service.cos.myqcloud.com", ee.call(this, {
-        Action: "name/cos:GetService",
-        url: n + "/",
-        method: "GET"
-      }, function (e, n) {
-        if (e) return a(e);
-        var i = n && n.ListAllMyBucketsResult && n.ListAllMyBucketsResult.Buckets && n.ListAllMyBucketsResult.Buckets.Bucket || [];
-        i = ie.isArray(i) ? i : [i], a(null, {
-          Buckets: i,
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function o(e, a) {
-      ee.call(this, {
-        Action: "name/cos:HeadBucket",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        method: "HEAD"
-      }, function (e, n) {
-        a(e, n);
-      });
-    }
-
-    function s(e, a) {
-      var n = {};
-      n.prefix = e.Prefix || "", n.delimiter = e.Delimiter, n.marker = e.Marker, n["max-keys"] = e.MaxKeys, n["encoding-type"] = e.EncodingType, ee.call(this, {
-        Action: "name/cos:GetBucket",
-        ResourceKey: n.prefix,
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        qs: n
-      }, function (e, n) {
-        if (e) return a(e);
-        var i = n.ListBucketResult || {},
-            o = i.Contents || [],
-            s = i.CommonPrefixes || [];
-        o = ie.isArray(o) ? o : [o], s = ie.isArray(s) ? s : [s];
-        var t = ie.clone(i);
-        ie.extend(t, {
-          Contents: o,
-          CommonPrefixes: s,
-          statusCode: n.statusCode,
-          headers: n.headers
-        }), a(null, t);
-      });
-    }
-
-    function t(e, a) {
-      var n = this,
-          i = {};
-      i["x-cos-acl"] = e.ACL, i["x-cos-grant-read"] = e.GrantRead, i["x-cos-grant-write"] = e.GrantWrite, i["x-cos-grant-read-acp"] = e.GrantReadAcp, i["x-cos-grant-write-acp"] = e.GrantWriteAcp, i["x-cos-grant-full-control"] = e.GrantFullControl, ee.call(this, {
-        Action: "name/cos:PutBucket",
-        method: "PUT",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: i
-      }, function (i, o) {
-        if (i) return a(i);
-        var s = Z({
-          domain: n.options.Domain,
-          bucket: e.Bucket,
-          region: e.Region,
-          isLocation: !0
-        });
-        a(null, {
-          Location: s,
-          statusCode: o.statusCode,
-          headers: o.headers
-        });
-      });
-    }
-
-    function c(e, a) {
-      ee.call(this, {
-        Action: "name/cos:DeleteBucket",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        method: "DELETE"
-      }, function (e, n) {
-        return e && 204 === e.statusCode ? a(null, {
-          statusCode: e.statusCode
-        }) : e ? a(e) : void a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function r(e, a) {
-      ee.call(this, {
-        Action: "name/cos:GetBucketACL",
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "acl"
-      }, function (e, n) {
-        if (e) return a(e);
-        var i = n.AccessControlPolicy || {},
-            o = i.Owner || {},
-            s = i.AccessControlList.Grant || [];
-        s = ie.isArray(s) ? s : [s];
-        var t = W(i);
-        n.headers && n.headers["x-cos-acl"] && (t.ACL = n.headers["x-cos-acl"]), t = ie.extend(t, {
-          Owner: o,
-          Grants: s,
-          statusCode: n.statusCode,
-          headers: n.headers
-        }), a(null, t);
-      });
-    }
-
-    function p(e, a) {
-      var n = e.Headers,
-          i = "";
-
-      if (e.AccessControlPolicy) {
-        var o = ie.clone(e.AccessControlPolicy || {}),
-            s = o.Grants || o.Grant;
-        s = ie.isArray(s) ? s : [s], delete o.Grant, delete o.Grants, o.AccessControlList = {
-          Grant: s
-        }, i = ie.json2xml({
-          AccessControlPolicy: o
-        }), n["Content-Type"] = "application/xml", n["Content-MD5"] = ie.binaryBase64(ie.md5(i));
+    set: function (arg) {
+      if (typeof arg !== 'number' || arg < 0 || NumberIsNaN(arg)) {
+        throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + arg + '.');
       }
-
-      ie.each(n, function (e, a) {
-        0 === a.indexOf("x-cos-grant-") && (n[a] = Q(n[a]));
-      }), ee.call(this, {
-        Action: "name/cos:PutBucketACL",
-        method: "PUT",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: n,
-        action: "acl",
-        body: i
-      }, function (e, n) {
-        if (e) return a(e);
-        a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
+  
+      defaultMaxListeners = arg;
     }
-
-    function l(e, a) {
-      ee.call(this, {
-        Action: "name/cos:GetBucketCORS",
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "cors"
-      }, function (e, n) {
-        if (e) {
-          if (404 === e.statusCode && e.error && "NoSuchCORSConfiguration" === e.error.Code) {
-            var i = {
-              CORSRules: [],
-              statusCode: e.statusCode
-            };
-            e.headers && (i.headers = e.headers), a(null, i);
-          } else a(e);
-        } else {
-          var o = n.CORSConfiguration || {},
-              s = o.CORSRules || o.CORSRule || [];
-          s = ie.clone(ie.isArray(s) ? s : [s]), ie.each(s, function (e) {
-            ie.each(["AllowedOrigin", "AllowedHeader", "AllowedMethod", "ExposeHeader"], function (a, n) {
-              var i = a + "s",
-                  o = e[i] || e[a] || [];
-              delete e[a], e[i] = ie.isArray(o) ? o : [o];
-            });
-          }), a(null, {
-            CORSRules: s,
-            statusCode: n.statusCode,
-            headers: n.headers
-          });
-        }
-      });
-    }
-
-    function u(e, a) {
-      var n = e.CORSConfiguration || {},
-          i = n.CORSRules || e.CORSRules || [];
-      i = ie.clone(ie.isArray(i) ? i : [i]), ie.each(i, function (e) {
-        ie.each(["AllowedOrigin", "AllowedHeader", "AllowedMethod", "ExposeHeader"], function (a, n) {
-          var i = a + "s",
-              o = e[i] || e[a] || [];
-          delete e[i], e[a] = ie.isArray(o) ? o : [o];
-        });
-      });
-      var o = ie.json2xml({
-        CORSConfiguration: {
-          CORSRule: i
-        }
-      }),
-          s = e.Headers;
-      s["Content-Type"] = "application/xml", s["Content-MD5"] = ie.binaryBase64(ie.md5(o)), ee.call(this, {
-        Action: "name/cos:PutBucketCORS",
-        method: "PUT",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        body: o,
-        action: "cors",
-        headers: s
-      }, function (e, n) {
-        if (e) return a(e);
-        a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function d(e, a) {
-      ee.call(this, {
-        Action: "name/cos:DeleteBucketCORS",
-        method: "DELETE",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "cors"
-      }, function (e, n) {
-        return e && 204 === e.statusCode ? a(null, {
-          statusCode: e.statusCode
-        }) : e ? a(e) : void a(null, {
-          statusCode: n.statusCode || e.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function m(e, a) {
-      var n = e.Policy,
-          i = n;
-
-      try {
-        "string" == typeof n ? n = JSON.parse(i) : i = JSON.stringify(n);
-      } catch (e) {
-        a({
-          error: "Policy format error"
-        });
-      }
-
-      var o = e.Headers;
-      o["Content-Type"] = "application/json", o["Content-MD5"] = ie.binaryBase64(ie.md5(i)), ee.call(this, {
-        Action: "name/cos:PutBucketPolicy",
-        method: "PUT",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        action: "policy",
-        body: ie.isBrowser ? i : n,
-        headers: o,
-        json: !0
-      }, function (e, n) {
-        return e && 204 === e.statusCode ? a(null, {
-          statusCode: e.statusCode
-        }) : e ? a(e) : void a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function x(e, a) {
-      ee.call(this, {
-        Action: "name/cos:DeleteBucketPolicy",
-        method: "DELETE",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "policy"
-      }, function (e, n) {
-        return e && 204 === e.statusCode ? a(null, {
-          statusCode: e.statusCode
-        }) : e ? a(e) : void a(null, {
-          statusCode: n.statusCode || e.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function f(e, a) {
-      ee.call(this, {
-        Action: "name/cos:GetBucketLocation",
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "location"
-      }, function (e, n) {
-        if (e) return a(e);
-        a(null, n);
-      });
-    }
-
-    function v(e, a) {
-      ee.call(this, {
-        Action: "name/cos:GetBucketPolicy",
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "policy",
-        rawBody: !0
-      }, function (e, n) {
-        if (e) return a(e.statusCode && 403 === e.statusCode ? {
-          ErrorStatus: "Access Denied"
-        } : e.statusCode && 405 === e.statusCode ? {
-          ErrorStatus: "Method Not Allowed"
-        } : e.statusCode && 404 === e.statusCode ? {
-          ErrorStatus: "Policy Not Found"
-        } : e);
-        var i = {};
-
-        try {
-          i = JSON.parse(n.body);
-        } catch (e) {}
-
-        a(null, {
-          Policy: i,
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function h(e, a) {
-      ee.call(this, {
-        Action: "name/cos:GetBucketTagging",
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "tagging"
-      }, function (e, n) {
-        if (e) {
-          if (404 !== e.statusCode || !e.error || "Not Found" !== e.error && "NoSuchTagSet" !== e.error.Code) a(e);else {
-            var i = {
-              Tags: [],
-              statusCode: e.statusCode
-            };
-            e.headers && (i.headers = e.headers), a(null, i);
-          }
-        } else {
-          var o = [];
-
-          try {
-            o = n.Tagging.TagSet.Tag || [];
-          } catch (e) {}
-
-          o = ie.clone(ie.isArray(o) ? o : [o]), a(null, {
-            Tags: o,
-            statusCode: n.statusCode,
-            headers: n.headers
-          });
-        }
-      });
-    }
-
-    function g(e, a) {
-      var n = e.Tagging || {},
-          i = n.TagSet || n.Tags || e.Tags || [];
-      i = ie.clone(ie.isArray(i) ? i : [i]);
-      var o = ie.json2xml({
-        Tagging: {
-          TagSet: {
-            Tag: i
-          }
-        }
-      }),
-          s = e.Headers;
-      s["Content-Type"] = "application/xml", s["Content-MD5"] = ie.binaryBase64(ie.md5(o)), ee.call(this, {
-        Action: "name/cos:PutBucketTagging",
-        method: "PUT",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        body: o,
-        action: "tagging",
-        headers: s
-      }, function (e, n) {
-        return e && 204 === e.statusCode ? a(null, {
-          statusCode: e.statusCode
-        }) : e ? a(e) : void a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function b(e, a) {
-      ee.call(this, {
-        Action: "name/cos:DeleteBucketTagging",
-        method: "DELETE",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "tagging"
-      }, function (e, n) {
-        return e && 204 === e.statusCode ? a(null, {
-          statusCode: e.statusCode
-        }) : e ? a(e) : void a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function y(e, a) {
-      var n = e.LifecycleConfiguration || {},
-          i = n.Rules || [];
-      i = ie.clone(i);
-      var o = ie.json2xml({
-        LifecycleConfiguration: {
-          Rule: i
-        }
-      }),
-          s = e.Headers;
-      s["Content-Type"] = "application/xml", s["Content-MD5"] = ie.binaryBase64(ie.md5(o)), ee.call(this, {
-        Action: "name/cos:PutBucketLifecycle",
-        method: "PUT",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        body: o,
-        action: "lifecycle",
-        headers: s
-      }, function (e, n) {
-        return e && 204 === e.statusCode ? a(null, {
-          statusCode: e.statusCode
-        }) : e ? a(e) : void a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function k(e, a) {
-      ee.call(this, {
-        Action: "name/cos:GetBucketLifecycle",
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "lifecycle"
-      }, function (e, n) {
-        if (e) {
-          if (404 === e.statusCode && e.error && "NoSuchLifecycleConfiguration" === e.error.Code) {
-            var i = {
-              Rules: [],
-              statusCode: e.statusCode
-            };
-            e.headers && (i.headers = e.headers), a(null, i);
-          } else a(e);
-        } else {
-          var o = [];
-
-          try {
-            o = n.LifecycleConfiguration.Rule || [];
-          } catch (e) {}
-
-          o = ie.clone(ie.isArray(o) ? o : [o]), a(null, {
-            Rules: o,
-            statusCode: n.statusCode,
-            headers: n.headers
-          });
-        }
-      });
-    }
-
-    function w(e, a) {
-      ee.call(this, {
-        Action: "name/cos:DeleteBucketLifecycle",
-        method: "DELETE",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "lifecycle"
-      }, function (e, n) {
-        return e && 204 === e.statusCode ? a(null, {
-          statusCode: e.statusCode
-        }) : e ? a(e) : void a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function C(e, a) {
-      if (!e.VersioningConfiguration) return void a({
-        error: "missing param VersioningConfiguration"
-      });
-      var n = e.VersioningConfiguration || {},
-          i = ie.json2xml({
-        VersioningConfiguration: n
-      }),
-          o = e.Headers;
-      o["Content-Type"] = "application/xml", o["Content-MD5"] = ie.binaryBase64(ie.md5(i)), ee.call(this, {
-        Action: "name/cos:PutBucketVersioning",
-        method: "PUT",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        body: i,
-        action: "versioning",
-        headers: o
-      }, function (e, n) {
-        return e && 204 === e.statusCode ? a(null, {
-          statusCode: e.statusCode
-        }) : e ? a(e) : void a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function S(e, a) {
-      ee.call(this, {
-        Action: "name/cos:GetBucketVersioning",
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "versioning"
-      }, function (e, n) {
-        e || !n.VersioningConfiguration && (n.VersioningConfiguration = {}), a(e, n);
-      });
-    }
-
-    function T(e, a) {
-      var n = ie.clone(e.ReplicationConfiguration),
-          i = ie.json2xml({
-        ReplicationConfiguration: n
-      });
-      i = i.replace(/<(\/?)Rules>/gi, "<$1Rule>"), i = i.replace(/<(\/?)Tags>/gi, "<$1Tag>");
-      var o = e.Headers;
-      o["Content-Type"] = "application/xml", o["Content-MD5"] = ie.binaryBase64(ie.md5(i)), ee.call(this, {
-        Action: "name/cos:PutBucketReplication",
-        method: "PUT",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        body: i,
-        action: "replication",
-        headers: o
-      }, function (e, n) {
-        return e && 204 === e.statusCode ? a(null, {
-          statusCode: e.statusCode
-        }) : e ? a(e) : void a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function _(e, a) {
-      ee.call(this, {
-        Action: "name/cos:GetBucketReplication",
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "replication"
-      }, function (e, n) {
-        if (e) {
-          if (404 !== e.statusCode || !e.error || "Not Found" !== e.error && "ReplicationConfigurationnotFoundError" !== e.error.Code) a(e);else {
-            var i = {
-              ReplicationConfiguration: {
-                Rules: []
-              },
-              statusCode: e.statusCode
-            };
-            e.headers && (i.headers = e.headers), a(null, i);
-          }
-        } else e || !n.ReplicationConfiguration && (n.ReplicationConfiguration = {}), n.ReplicationConfiguration.Rule && (n.ReplicationConfiguration.Rules = n.ReplicationConfiguration.Rule, delete n.ReplicationConfiguration.Rule), a(e, n);
-      });
-    }
-
-    function A(e, a) {
-      ee.call(this, {
-        Action: "name/cos:DeleteBucketReplication",
-        method: "DELETE",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        action: "replication"
-      }, function (e, n) {
-        return e && 204 === e.statusCode ? a(null, {
-          statusCode: e.statusCode
-        }) : e ? a(e) : void a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function j(e, a) {
-      ee.call(this, {
-        Action: "name/cos:HeadObject",
-        method: "HEAD",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        VersionId: e.VersionId,
-        headers: e.Headers
-      }, function (n, i) {
-        if (n) {
-          var o = n.statusCode;
-          return e.Headers["If-Modified-Since"] && o && 304 === o ? a(null, {
-            NotModified: !0,
-            statusCode: o
-          }) : a(n);
-        }
-
-        i.headers && i.headers.etag && (i.ETag = i.headers && i.headers.etag), a(null, i);
-      });
-    }
-
-    function R(e, a) {
-      var n = {};
-      n.prefix = e.Prefix || "", n.delimiter = e.Delimiter, n["key-marker"] = e.KeyMarker, n["version-id-marker"] = e.VersionIdMarker, n["max-keys"] = e.MaxKeys, n["encoding-type"] = e.EncodingType, ee.call(this, {
-        Action: "name/cos:GetBucketObjectVersions",
-        ResourceKey: n.prefix,
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        qs: n,
-        action: "versions"
-      }, function (e, n) {
-        if (e) return a(e);
-        var i = n.ListVersionsResult || {},
-            o = i.DeleteMarker || [];
-        o = ie.isArray(o) ? o : [o];
-        var s = i.Version || [];
-        s = ie.isArray(s) ? s : [s];
-        var t = ie.clone(i);
-        delete t.DeleteMarker, delete t.Version, ie.extend(t, {
-          DeleteMarkers: o,
-          Versions: s,
-          statusCode: n.statusCode,
-          headers: n.headers
-        }), a(null, t);
-      });
-    }
-
-    function E(e, a) {
-      var n = {};
-      n["response-content-type"] = e.ResponseContentType, n["response-content-language"] = e.ResponseContentLanguage, n["response-expires"] = e.ResponseExpires, n["response-cache-control"] = e.ResponseCacheControl, n["response-content-disposition"] = e.ResponseContentDisposition, n["response-content-encoding"] = e.ResponseContentEncoding, ee.call(this, {
-        Action: "name/cos:GetObject",
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        VersionId: e.VersionId,
-        headers: e.Headers,
-        qs: n,
-        rawBody: !0
-      }, function (n, i) {
-        if (n) {
-          var o = n.statusCode;
-          return e.Headers["If-Modified-Since"] && o && 304 === o ? a(null, {
-            NotModified: !0
-          }) : a(n);
-        }
-
-        var s = {};
-        s.Body = i.body, i.headers && i.headers.etag && (s.ETag = i.headers && i.headers.etag), ie.extend(s, {
-          statusCode: i.statusCode,
-          headers: i.headers
-        }), a(null, s);
-      });
-    }
-
-    function N(e, a) {
-      var n = this,
-          i = e.ContentLength,
-          o = ie.throttleOnProgress.call(n, i, e.onProgress),
-          s = e.Headers;
-      ie.getBodyMd5(n.options.UploadCheckContentMd5, e.Body, function (t) {
-        t && (s["Content-MD5"] = ie.binaryBase64(t)), void 0 !== e.ContentLength && (s["Content-Length"] = e.ContentLength), s["Content-Type"] || s["content-type"] || (s["Content-Type"] = "application/octet-stream"), s["Cache-Control"] || s["cache-control"] || (s["Cache-Control"] = ""), ee.call(n, {
-          Action: "name/cos:PutObject",
-          TaskId: e.TaskId,
-          method: "PUT",
-          Bucket: e.Bucket,
-          Region: e.Region,
-          Key: e.Key,
-          headers: s,
-          body: e.Body,
-          onProgress: o
-        }, function (s, t) {
-          if (s) return o(null, !0), a(s);
-
-          if (o({
-            loaded: i,
-            total: i
-          }, !0), t && t.headers && t.headers.etag) {
-            var c = Z({
-              ForcePathStyle: n.options.ForcePathStyle,
-              protocol: n.options.Protocol,
-              domain: n.options.Domain,
-              bucket: e.Bucket,
-              region: e.Region,
-              object: e.Key
-            });
-            return c = c.substr(c.indexOf("://") + 3), a(null, {
-              Location: c,
-              ETag: t.headers.etag,
-              statusCode: t.statusCode,
-              headers: t.headers
-            });
-          }
-
-          a(null, t);
-        });
-      });
-    }
-
-    function P(e, a) {
-      var n = this,
-          i = {};
-      i["Cache-Control"] = e.CacheControl, i["Content-Disposition"] = e.ContentDisposition, i["Content-Encoding"] = e.ContentEncoding, i["Content-MD5"] = e.ContentMD5, i["Content-Length"] = e.ContentLength, i["Content-Type"] = e.ContentType, i.Expect = e.Expect, i.Expires = e.Expires, i["x-cos-acl"] = e.ACL, i["x-cos-grant-read"] = e.GrantRead, i["x-cos-grant-write"] = e.GrantWrite, i["x-cos-grant-full-control"] = e.GrantFullControl, i["x-cos-storage-class"] = e.StorageClass;
-      var o = e.FilePath;
-
-      for (var s in e) {
-        (s.indexOf("x-cos-meta-") > -1 || s.indexOf("Vod-Forward-Cos") > -1) && (i[s] = e[s]);
-      }
-
-      var t = ie.throttleOnProgress.call(n, i["Content-Length"], e.onProgress);
-      ee.call(this, {
-        Action: "name/cos:PostObject",
-        method: "POST",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        headers: i,
-        filePath: o,
-        onProgress: t
-      }, function (i, o) {
-        if (t(null, !0), i) return a(i);
-
-        if (o) {
-          var s = Z({
-            ForcePathStyle: n.options.ForcePathStyle,
-            protocol: n.options.Protocol,
-            domain: n.options.Domain,
-            bucket: e.Bucket,
-            region: e.Region,
-            object: e.Key,
-            isLocation: !0
-          });
-          return a(null, {
-            Location: s,
-            statusCode: o.statusCode
-          });
-        }
-
-        a(null, o);
-      });
-    }
-
-    function B(e, a) {
-      ee.call(this, {
-        Action: "name/cos:DeleteObject",
-        method: "DELETE",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        headers: e.Headers,
-        VersionId: e.VersionId
-      }, function (e, n) {
-        if (e) {
-          var i = e.statusCode;
-          return i && 204 === i ? a(null, {
-            statusCode: i
-          }) : i && 404 === i ? a(null, {
-            BucketNotFound: !0,
-            statusCode: i
-          }) : a(e);
-        }
-
-        a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function I(e, a) {
-      ee.call(this, {
-        Action: "name/cos:GetObjectACL",
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        headers: e.Headers,
-        action: "acl"
-      }, function (e, n) {
-        if (e) return a(e);
-        var i = n.AccessControlPolicy || {},
-            o = i.Owner || {},
-            s = i.AccessControlList && i.AccessControlList.Grant || [];
-        s = ie.isArray(s) ? s : [s];
-        var t = W(i);
-        n.headers && n.headers["x-cos-acl"] && (t.ACL = n.headers["x-cos-acl"]), t = ie.extend(t, {
-          Owner: o,
-          Grants: s,
-          statusCode: n.statusCode,
-          headers: n.headers
-        }), a(null, t);
-      });
-    }
-
-    function D(e, a) {
-      var n = e.Headers,
-          i = "";
-
-      if (e.AccessControlPolicy) {
-        var o = ie.clone(e.AccessControlPolicy || {}),
-            s = o.Grants || o.Grant;
-        s = ie.isArray(s) ? s : [s], delete o.Grant, delete o.Grants, o.AccessControlList = {
-          Grant: s
-        }, i = ie.json2xml({
-          AccessControlPolicy: o
-        }), n["Content-Type"] = "application/xml", n["Content-MD5"] = ie.binaryBase64(ie.md5(i));
-      }
-
-      ie.each(n, function (e, a) {
-        0 === a.indexOf("x-cos-grant-") && (n[a] = Q(n[a]));
-      }), ee.call(this, {
-        Action: "name/cos:PutObjectACL",
-        method: "PUT",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        action: "acl",
-        headers: n,
-        body: i
-      }, function (e, n) {
-        if (e) return a(e);
-        a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function O(e, a) {
-      var n = e.Headers;
-      n.Origin = e.Origin, n["Access-Control-Request-Method"] = e.AccessControlRequestMethod, n["Access-Control-Request-Headers"] = e.AccessControlRequestHeaders, ee.call(this, {
-        Action: "name/cos:OptionsObject",
-        method: "OPTIONS",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        headers: n
-      }, function (e, n) {
-        if (e) return e.statusCode && 403 === e.statusCode ? a(null, {
-          OptionsForbidden: !0,
-          statusCode: e.statusCode
-        }) : a(e);
-        var i = n.headers || {};
-        a(null, {
-          AccessControlAllowOrigin: i["access-control-allow-origin"],
-          AccessControlAllowMethods: i["access-control-allow-methods"],
-          AccessControlAllowHeaders: i["access-control-allow-headers"],
-          AccessControlExposeHeaders: i["access-control-expose-headers"],
-          AccessControlMaxAge: i["access-control-max-age"],
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function U(e, a) {
-      var n = e.CopySource || "",
-          i = n.match(/^([^.]+-\d+)\.cos(v6)?\.([^.]+)\.[^\/]+\/(.+)$/);
-      if (!i) return void a({
-        error: "CopySource format error"
-      });
-      var o = i[1],
-          s = i[3],
-          t = decodeURIComponent(i[4]);
-      ee.call(this, {
-        Scope: [{
-          action: "name/cos:GetObject",
-          bucket: o,
-          region: s,
-          prefix: t
-        }, {
-          action: "name/cos:PutObject",
-          bucket: e.Bucket,
-          region: e.Region,
-          prefix: e.Key
-        }],
-        method: "PUT",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        VersionId: e.VersionId,
-        headers: e.Headers
-      }, function (e, n) {
-        if (e) return a(e);
-        var i = ie.clone(n.CopyObjectResult || {});
-        ie.extend(i, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        }), a(null, i);
-      });
-    }
-
-    function z(e, a) {
-      var n = e.CopySource || "",
-          i = n.match(/^([^.]+-\d+)\.cos(v6)?\.([^.]+)\.[^\/]+\/(.+)$/);
-      if (!i) return void a({
-        error: "CopySource format error"
-      });
-      var o = i[1],
-          s = i[3],
-          t = decodeURIComponent(i[4]);
-      ee.call(this, {
-        Scope: [{
-          action: "name/cos:GetObject",
-          bucket: o,
-          region: s,
-          prefix: t
-        }, {
-          action: "name/cos:PutObject",
-          bucket: e.Bucket,
-          region: e.Region,
-          prefix: e.Key
-        }],
-        method: "PUT",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        VersionId: e.VersionId,
-        qs: {
-          partNumber: e.PartNumber,
-          uploadId: e.UploadId
-        },
-        headers: e.Headers
-      }, function (e, n) {
-        if (e) return a(e);
-        var i = ie.clone(n.CopyPartResult || {});
-        ie.extend(i, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        }), a(null, i);
-      });
-    }
-
-    function M(e, a) {
-      var n = e.Objects || [],
-          i = e.Quiet;
-      n = ie.isArray(n) ? n : [n];
-      var o = ie.json2xml({
-        Delete: {
-          Object: n,
-          Quiet: i || !1
-        }
-      }),
-          s = e.Headers;
-      s["Content-Type"] = "application/xml", s["Content-MD5"] = ie.binaryBase64(ie.md5(o));
-      var t = ie.map(n, function (a) {
-        return {
-          action: "name/cos:DeleteObject",
-          bucket: e.Bucket,
-          region: e.Region,
-          prefix: a.Key
-        };
-      });
-      ee.call(this, {
-        Scope: t,
-        method: "POST",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        body: o,
-        action: "delete",
-        headers: s
-      }, function (e, n) {
-        if (e) return a(e);
-        var i = n.DeleteResult || {},
-            o = i.Deleted || [],
-            s = i.Error || [];
-        o = ie.isArray(o) ? o : [o], s = ie.isArray(s) ? s : [s];
-        var t = ie.clone(i);
-        ie.extend(t, {
-          Error: s,
-          Deleted: o,
-          statusCode: n.statusCode,
-          headers: n.headers
-        }), a(null, t);
-      });
-    }
-
-    function F(e, a) {
-      var n = e.Headers;
-      if (!e.RestoreRequest) return void a({
-        error: "missing param RestoreRequest"
-      });
-      var i = e.RestoreRequest || {},
-          o = ie.json2xml({
-        RestoreRequest: i
-      });
-      n["Content-Type"] = "application/xml", n["Content-MD5"] = ie.binaryBase64(ie.md5(o)), ee.call(this, {
-        Action: "name/cos:RestoreObject",
-        method: "POST",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        VersionId: e.VersionId,
-        body: o,
-        action: "restore",
-        headers: n
-      }, function (e, n) {
-        a(e, n);
-      });
-    }
-
-    function L(e, a) {
-      var n = e.Headers;
-      n["Content-Type"] || n["content-type"] || (n["Content-Type"] = "application/octet-stream"), n["Cache-Control"] || n["cache-control"] || (n["Cache-Control"] = ""), ee.call(this, {
-        Action: "name/cos:InitiateMultipartUpload",
-        method: "POST",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        action: "uploads",
-        headers: e.Headers
-      }, function (e, n) {
-        return e ? a(e) : (n = ie.clone(n || {})) && n.InitiateMultipartUploadResult ? a(null, ie.extend(n.InitiateMultipartUploadResult, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        })) : void a(null, n);
-      });
-    }
-
-    function q(e, a) {
-      var n = this;
-      ie.getFileSize("multipartUpload", e, function () {
-        ie.getBodyMd5(n.options.UploadCheckContentMd5, e.Body, function (i) {
-          i && (e.Headers["Content-MD5"] = ie.binaryBase64(i)), ee.call(n, {
-            Action: "name/cos:UploadPart",
-            TaskId: e.TaskId,
-            method: "PUT",
-            Bucket: e.Bucket,
-            Region: e.Region,
-            Key: e.Key,
-            qs: {
-              partNumber: e.PartNumber,
-              uploadId: e.UploadId
-            },
-            headers: e.Headers,
-            onProgress: e.onProgress,
-            body: e.Body || null
-          }, function (e, n) {
-            if (e) return a(e);
-            n.headers = n.headers || {}, a(null, {
-              ETag: n.headers.etag || "",
-              statusCode: n.statusCode,
-              headers: n.headers
-            });
-          });
-        });
-      });
-    }
-
-    function K(e, a) {
-      for (var n = this, i = e.UploadId, o = e.Parts, s = 0, t = o.length; s < t; s++) {
-        0 !== o[s].ETag.indexOf('"') && (o[s].ETag = '"' + o[s].ETag + '"');
-      }
-
-      var c = ie.json2xml({
-        CompleteMultipartUpload: {
-          Part: o
-        }
-      }),
-          r = e.Headers;
-      r["Content-Type"] = "application/xml", r["Content-MD5"] = ie.binaryBase64(ie.md5(c)), ee.call(this, {
-        Action: "name/cos:CompleteMultipartUpload",
-        method: "POST",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        qs: {
-          uploadId: i
-        },
-        body: c,
-        headers: r
-      }, function (i, o) {
-        if (i) return a(i);
-        var s = Z({
-          ForcePathStyle: n.options.ForcePathStyle,
-          protocol: n.options.Protocol,
-          domain: n.options.Domain,
-          bucket: e.Bucket,
-          region: e.Region,
-          object: e.Key,
-          isLocation: !0
-        }),
-            t = o.CompleteMultipartUploadResult || {},
-            c = ie.extend(t, {
-          Location: s,
-          statusCode: o.statusCode,
-          headers: o.headers
-        });
-        a(null, c);
-      });
-    }
-
-    function H(e, a) {
-      var n = {};
-      n.delimiter = e.Delimiter, n["encoding-type"] = e.EncodingType, n.prefix = e.Prefix || "", n["max-uploads"] = e.MaxUploads, n["key-marker"] = e.KeyMarker, n["upload-id-marker"] = e.UploadIdMarker, n = ie.clearKey(n), ee.call(this, {
-        Action: "name/cos:ListMultipartUploads",
-        ResourceKey: n.prefix,
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        headers: e.Headers,
-        qs: n,
-        action: "uploads"
-      }, function (e, n) {
-        if (e) return a(e);
-
-        if (n && n.ListMultipartUploadsResult) {
-          var i = n.ListMultipartUploadsResult.Upload || [],
-              o = n.ListMultipartUploadsResult.CommonPrefixes || [];
-          o = ie.isArray(o) ? o : [o], i = ie.isArray(i) ? i : [i], n.ListMultipartUploadsResult.Upload = i, n.ListMultipartUploadsResult.CommonPrefixes = o;
-        }
-
-        var s = ie.clone(n.ListMultipartUploadsResult || {});
-        ie.extend(s, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        }), a(null, s);
-      });
-    }
-
-    function G(e, a) {
-      var n = {};
-      n.uploadId = e.UploadId, n["encoding-type"] = e.EncodingType, n["max-parts"] = e.MaxParts, n["part-number-marker"] = e.PartNumberMarker, ee.call(this, {
-        Action: "name/cos:ListParts",
-        method: "GET",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        headers: e.Headers,
-        qs: n
-      }, function (e, n) {
-        if (e) return a(e);
-        var i = n.ListPartsResult || {},
-            o = i.Part || [];
-        o = ie.isArray(o) ? o : [o], i.Part = o;
-        var s = ie.clone(i);
-        ie.extend(s, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        }), a(null, s);
-      });
-    }
-
-    function V(e, a) {
-      var n = {};
-      n.uploadId = e.UploadId, ee.call(this, {
-        Action: "name/cos:AbortMultipartUpload",
-        method: "DELETE",
-        Bucket: e.Bucket,
-        Region: e.Region,
-        Key: e.Key,
-        headers: e.Headers,
-        qs: n
-      }, function (e, n) {
-        if (e) return a(e);
-        a(null, {
-          statusCode: n.statusCode,
-          headers: n.headers
-        });
-      });
-    }
-
-    function X(e) {
-      var a = this;
-      return ie.getAuth({
-        SecretId: e.SecretId || this.options.SecretId || "",
-        SecretKey: e.SecretKey || this.options.SecretKey || "",
-        Method: e.Method,
-        Key: e.Key,
-        Query: e.Query,
-        Headers: e.Headers,
-        Expires: e.Expires,
-        SystemClockOffset: a.options.SystemClockOffset
-      });
-    }
-
-    function $(e, a) {
-      var n = this,
-          i = Z({
-        ForcePathStyle: n.options.ForcePathStyle,
-        protocol: e.Protocol || n.options.Protocol,
-        domain: n.options.Domain,
-        bucket: e.Bucket,
-        region: e.Region,
-        object: e.Key
-      });
-      if (void 0 !== e.Sign && !e.Sign) return a(null, {
-        Url: i
-      }), i;
-      var o = J.call(this, {
-        Action: "PUT" === (e.Method || "").toUpperCase() ? "name/cos:PutObject" : "name/cos:GetObject",
-        Bucket: e.Bucket || "",
-        Region: e.Region || "",
-        Method: e.Method || "get",
-        Key: e.Key,
-        Expires: e.Expires
-      }, function (e, n) {
-        if (a) {
-          if (e) return void a(e);
-          var o = i;
-          o += "?" + (n.Authorization.indexOf("q-signature") > -1 ? n.Authorization : "sign=" + encodeURIComponent(n.Authorization)), n.XCosSecurityToken && (o += "&x-cos-security-token=" + n.XCosSecurityToken), n.ClientIP && (o += "&clientIP=" + n.ClientIP), n.ClientUA && (o += "&clientUA=" + n.ClientUA), n.Token && (o += "&token=" + n.Token), setTimeout(function () {
-            a(null, {
-              Url: o
-            });
-          });
-        }
-      });
-      return o ? i + "?" + o.Authorization + (o.XCosSecurityToken ? "&x-cos-security-token=" + o.XCosSecurityToken : "") : i;
-    }
-
-    function W(e) {
-      var a = {
-        GrantFullControl: [],
-        GrantWrite: [],
-        GrantRead: [],
-        GrantReadAcp: [],
-        GrantWriteAcp: [],
-        ACL: ""
-      },
-          n = {
-        FULL_CONTROL: "GrantFullControl",
-        WRITE: "GrantWrite",
-        READ: "GrantRead",
-        READ_ACP: "GrantReadAcp",
-        WRITE_ACP: "GrantWriteAcp"
-      },
-          i = e.AccessControlList.Grant;
-      i && (i = ie.isArray(i) ? i : [i]);
-      var o = {
-        READ: 0,
-        WRITE: 0,
-        FULL_CONTROL: 0
-      };
-      return i.length && ie.each(i, function (i) {
-        "qcs::cam::anyone:anyone" === i.Grantee.ID || "http://cam.qcloud.com/groups/global/AllUsers" === i.Grantee.URI ? o[i.Permission] = 1 : i.Grantee.ID !== e.Owner.ID && a[n[i.Permission]].push('id="' + i.Grantee.ID + '"');
-      }), o.FULL_CONTROL || o.WRITE && o.READ ? a.ACL = "public-read-write" : o.READ ? a.ACL = "public-read" : a.ACL = "private", ie.each(n, function (e) {
-        a[e] = Q(a[e].join(","));
-      }), a;
-    }
-
-    function Q(e) {
-      var a,
-          n,
-          i = e.split(","),
-          o = {};
-
-      for (a = 0; a < i.length;) {
-        n = i[a].trim(), o[n] ? i.splice(a, 1) : (o[n] = !0, i[a] = n, a++);
-      }
-
-      return i.join(",");
-    }
-
-    function Z(e) {
-      var a = e.bucket,
-          n = a.substr(0, a.lastIndexOf("-")),
-          i = a.substr(a.lastIndexOf("-") + 1),
-          o = e.domain,
-          s = e.region,
-          t = e.object;
-      o || (o = ["cn-south", "cn-south-2", "cn-north", "cn-east", "cn-southwest", "sg"].indexOf(s) > -1 ? "{Region}.myqcloud.com" : "cos.{Region}.myqcloud.com", e.ForcePathStyle || (o = "{Bucket}." + o)), o = o.replace(/\{\{AppId\}\}/gi, i).replace(/\{\{Bucket\}\}/gi, n).replace(/\{\{Region\}\}/gi, s).replace(/\{\{.*?\}\}/gi, ""), o = o.replace(/\{AppId\}/gi, i).replace(/\{BucketName\}/gi, n).replace(/\{Bucket\}/gi, a).replace(/\{Region\}/gi, s).replace(/\{.*?\}/gi, ""), /^[a-zA-Z]+:\/\//.test(o) || (o = "https://" + "vod2.qcloud.com/" + o), "/" === o.slice(-1) && (o = o.slice(0, -1));
-      var c = o;
-      return e.ForcePathStyle && (c += "/" + a), c += "/", t && (c += ie.camSafeUrlEncode(t).replace(/%2F/g, "/")), e.isLocation && (c = c.replace(/^https?:\/\//, "")), c;
-    }
-
-    function J(e, a) {
-      var n = ie.clone(e.Headers);
-      delete n["Content-Type"], delete n["Cache-Control"], ie.each(n, function (e, a) {
-        "" === e && delete n[a];
-      });
-
-      var i = function i(e) {
-        var n = !1,
-            i = e.Authorization;
-        if (i) if (i.indexOf(" ") > -1) n = !1;else if (i.indexOf("q-sign-algorithm=") > -1 && i.indexOf("q-ak=") > -1 && i.indexOf("q-sign-time=") > -1 && i.indexOf("q-key-time=") > -1 && i.indexOf("q-url-param-list=") > -1) n = !0;else try {
-          i = atob(i), i.indexOf("a=") > -1 && i.indexOf("k=") > -1 && i.indexOf("t=") > -1 && i.indexOf("r=") > -1 && i.indexOf("b=") > -1 && (n = !0);
-        } catch (e) {}
-        n ? a && a(null, e) : a && a("authorization error");
-      },
-          o = this,
-          s = e.Bucket || "",
-          t = e.Region || "",
-          c = "name/cos:PostObject" !== e.Action && e.Key ? e.Key : "";
-
-      o.options.ForcePathStyle && s && (c = s + "/" + c);
-      var r = "/" + c,
-          p = {},
-          l = e.Scope;
-
-      if (!l) {
-        var u = e.Action || "",
-            d = e.ResourceKey || e.Key || "";
-        l = e.Scope || [{
-          action: u,
-          bucket: s,
-          region: t,
-          prefix: d
-        }];
-      }
-
-      var m = ie.md5(JSON.stringify(l));
-      o._StsCache = o._StsCache || [], function () {
-        var e, a;
-
-        for (e = o._StsCache.length - 1; e >= 0; e--) {
-          a = o._StsCache[e];
-          var n = Math.round(ie.getSkewTime(o.options.SystemClockOffset) / 1e3) + 30;
-          if (a.StartTime && n < a.StartTime || n >= a.ExpiredTime) o._StsCache.splice(e, 1);else if (!a.ScopeLimit || a.ScopeLimit && a.ScopeKey === m) {
-            p = a;
-            break;
-          }
-        }
-      }();
-
-      var x = function x() {
-        var a = ie.getAuth({
-          SecretId: p.TmpSecretId,
-          SecretKey: p.TmpSecretKey,
-          Method: e.Method,
-          Pathname: r,
-          Query: e.Query,
-          Headers: n,
-          Expires: e.Expires,
-          SystemClockOffset: o.options.SystemClockOffset
-        }),
-            s = {
-          Authorization: a,
-          XCosSecurityToken: p.XCosSecurityToken || "",
-          Token: p.Token || "",
-          ClientIP: p.ClientIP || "",
-          ClientUA: p.ClientUA || ""
-        };
-        i(s);
-      };
-
-      if (p.ExpiredTime && p.ExpiredTime - ie.getSkewTime(o.options.SystemClockOffset) / 1e3 > 60) x();else if (o.options.getAuthorization) o.options.getAuthorization.call(o, {
-        Bucket: s,
-        Region: t,
-        Method: e.Method,
-        Key: c,
-        Pathname: r,
-        Query: e.Query,
-        Headers: n,
-        Scope: l
-      }, function (e) {
-        "string" == typeof e && (e = {
-          Authorization: e
-        }), e.TmpSecretId && e.TmpSecretKey && e.XCosSecurityToken && e.ExpiredTime ? (p = e || {}, p.Scope = l, p.ScopeKey = m, o._StsCache.push(p), x()) : i(e);
-      });else {
-        if (!o.options.getSTS) return function () {
-          var a = ie.getAuth({
-            SecretId: e.SecretId || o.options.SecretId,
-            SecretKey: e.SecretKey || o.options.SecretKey,
-            Method: e.Method,
-            Pathname: r,
-            Query: e.Query,
-            Headers: n,
-            Expires: e.Expires,
-            SystemClockOffset: o.options.SystemClockOffset
-          }),
-              s = {
-            Authorization: a,
-            XCosSecurityToken: o.options.XCosSecurityToken
-          };
-          return i(s), s;
-        }();
-        o.options.getSTS.call(o, {
-          Bucket: s,
-          Region: t
-        }, function (e) {
-          p = e || {}, p.Scope = l, p.ScopeKey = m, p.TmpSecretId = p.SecretId, p.TmpSecretKey = p.SecretKey, o._StsCache.push(p), x();
-        });
-      }
-      return "";
-    }
-
-    function Y(e) {
-      var a = !1,
-          n = !1,
-          i = e.headers && (e.headers.date || e.headers.Date) || "";
-
-      try {
-        var o = e.error.Code,
-            s = e.error.Message;
-        ("RequestTimeTooSkewed" === o || "AccessDenied" === o && "Request has expired" === s) && (n = !0);
-      } catch (e) {}
-
-      if (e) if (n && i) {
-        var t = Date.parse(i);
-        this.options.CorrectClockSkew && Math.abs(ie.getSkewTime(this.options.SystemClockOffset) - t) >= 3e4 && (console.error("error: Local time is too skewed."), this.options.SystemClockOffset = t - Date.now(), a = !0);
-      } else 5 === Math.round(e.statusCode / 100) && (a = !0);
-      return a;
-    }
-
-    function ee(e, a) {
-      var n = this;
-      !e.headers && (e.headers = {}), !e.qs && (e.qs = {}), e.VersionId && (e.qs.versionId = e.VersionId), e.qs = ie.clearKey(e.qs), e.headers && (e.headers = ie.clearKey(e.headers)), e.qs && (e.qs = ie.clearKey(e.qs));
-      var i = ie.clone(e.qs);
-      e.action && (i[e.action] = "");
-
-      var o = function o(s) {
-        var t = n.options.SystemClockOffset;
-        J.call(n, {
-          Bucket: e.Bucket || "",
-          Region: e.Region || "",
-          Method: e.method,
-          Key: e.Key,
-          Query: i,
-          Headers: e.headers,
-          Action: e.Action,
-          ResourceKey: e.ResourceKey,
-          Scope: e.Scope
-        }, function (i, c) {
-          e.AuthData = c, ae.call(n, e, function (i, c) {
-            i && s < 2 && (t !== n.options.SystemClockOffset || Y.call(n, i)) ? (e.headers && (delete e.headers.Authorization, delete e.headers.token, delete e.headers.clientIP, delete e.headers.clientUA, delete e.headers["x-cos-security-token"]), o(s + 1)) : a(i, c);
-          });
-        });
-      };
-
-      o(0);
-    }
-
-    function ae(e, a) {
-      var n = this,
-          i = e.TaskId;
-
-      if (!i || n._isRunningTask(i)) {
-        var o = e.Bucket,
-            s = e.Region,
-            t = e.Key,
-            c = e.method || "GET",
-            r = e.url,
-            p = e.body,
-            l = e.json,
-            u = e.rawBody;
-        r = r || Z({
-          ForcePathStyle: n.options.ForcePathStyle,
-          protocol: n.options.Protocol,
-          domain: n.options.Domain,
-          bucket: o,
-          region: s,
-          object: t
-        }), e.action && (r = r + "?" + e.action);
-        var d = {
-          method: c,
-          url: r,
-          headers: e.headers,
-          qs: e.qs,
-          filePath: e.filePath,
-          body: p,
-          json: l
-        };
-        d.headers.Authorization = e.AuthData.Authorization, e.AuthData.Token && (d.headers.token = e.AuthData.Token), e.AuthData.ClientIP && (d.headers.clientIP = e.AuthData.ClientIP), e.AuthData.ClientUA && (d.headers.clientUA = e.AuthData.ClientUA), e.AuthData.XCosSecurityToken && (d.headers["x-cos-security-token"] = e.AuthData.XCosSecurityToken), d.headers && (d.headers = ie.clearKey(d.headers)), d = ie.clearKey(d), e.onProgress && "function" == typeof e.onProgress && (d.onProgress = function (a) {
-          if (!i || n._isRunningTask(i)) {
-            var o = a ? a.loaded : 0;
-            e.onProgress({
-              loaded: o,
-              total: a.total
-            });
-          }
-        }), n.options.ForcePathStyle && (d.pathStyle = n.options.ForcePathStyle);
-
-        var m = ne(d, function (e, o, s) {
-          var t,
-              c = function c(e, s) {
-            if (i && n.off("inner-kill-task", x), !t) {
-              t = !0;
-              var c = {};
-              o && o.statusCode && (c.statusCode = o.statusCode), o && o.headers && (c.headers = {}, ie.each(o.headers, function (e, a) {
-                c.headers[a.toLowerCase()] = e;
-              })), e ? (e = ie.extend(e || {}, c), a(e, null)) : (s = ie.extend(s || {}, c), a(null, s));
-            }
-          };
-
-          if (e) return void c({
-            error: e
-          });
-          var r;
-
-          try {
-            r = ie.xml2json(s) || {};
-          } catch (e) {
-            r = s || {};
-          }
-
-          var p = o.statusCode;
-          return 2 !== Math.floor(p / 100) ? void c({
-            error: r.Error || r
-          }) : (u && (r = {}, r.body = s), r.Error ? void c({
-            error: r.Error
-          }) : void c(null, r));
-        }),
-            x = function x(e) {
-          e.TaskId === i && (m && m.abort && m.abort(), n.off("inner-kill-task", x));
-        };
-
-        i && n.on("inner-kill-task", x);
-      }
-    }
-
-    var ne = n(10),
-        ie = n(0),
-        oe = (n(14), {
-      getService: i,
-      putBucket: t,
-      getBucket: s,
-      headBucket: o,
-      deleteBucket: c,
-      getBucketAcl: r,
-      putBucketAcl: p,
-      getBucketCors: l,
-      putBucketCors: u,
-      deleteBucketCors: d,
-      getBucketLocation: f,
-      putBucketTagging: g,
-      getBucketTagging: h,
-      deleteBucketTagging: b,
-      getBucketPolicy: v,
-      putBucketPolicy: m,
-      deleteBucketPolicy: x,
-      getBucketLifecycle: k,
-      putBucketLifecycle: y,
-      deleteBucketLifecycle: w,
-      putBucketVersioning: C,
-      getBucketVersioning: S,
-      putBucketReplication: T,
-      getBucketReplication: _,
-      deleteBucketReplication: A,
-      getObject: E,
-      headObject: j,
-      listObjectVersions: R,
-      putObject: N,
-      postObject: P,
-      deleteObject: B,
-      getObjectAcl: I,
-      putObjectAcl: D,
-      optionsObject: O,
-      putObjectCopy: U,
-      deleteMultipleObject: M,
-      restoreObject: F,
-      uploadPartCopy: z,
-      multipartInit: L,
-      multipartUpload: q,
-      multipartComplete: K,
-      multipartList: H,
-      multipartListPart: G,
-      multipartAbort: V,
-      getObjectUrl: $,
-      getAuth: X
-    });
-
-    e.exports.init = function (e, a) {
-      a.transferToTaskMethod(oe, "postObject"), ie.each(oe, function (a, n) {
-        e.prototype[n] = ie.apiWrapper(n, a);
-      });
-    };
-  }, function (e, a, n) {
-    var i = n(3),
-        o = n(0),
-        s = {},
-        t = function t(e, a) {
-      s[a] = e[a], e[a] = function (e, n) {
-        e.SkipTask ? s[a].call(this, e, n) : this._addTask(a, e, n);
-      };
-    },
-        c = function c(e) {
-      var a = [],
-          n = {},
-          t = 0,
-          c = 0,
-          r = function r(e) {
-        var a = {
-          id: e.id,
-          Bucket: e.Bucket,
-          Region: e.Region,
-          Key: e.Key,
-          FilePath: e.FilePath,
-          state: e.state,
-          loaded: e.loaded,
-          size: e.size,
-          speed: e.speed,
-          percent: e.percent,
-          hashPercent: e.hashPercent,
-          error: e.error
-        };
-        return e.FilePath && (a.FilePath = e.FilePath), a;
-      },
-          p = function () {
-        var n,
-            i = function i() {
-          n = 0, e.emit("task-list-update", {
-            list: o.map(a, r)
-          }), e.emit("list-update", {
-            list: o.map(a, r)
-          });
-        };
-
-        return function () {
-          n || (n = setTimeout(i));
-        };
-      }(),
-          l = function l() {
-        if (!(a.length <= e.options.UploadQueueSize)) {
-          for (var i = 0; i < c && i < a.length && a.length > e.options.UploadQueueSize;) {
-            var o = "waiting" === a[i].state || "checking" === a[i].state || "uploading" === a[i].state;
-            a[i] && o ? i++ : (n[a[i].id] && delete n[a[i].id], a.splice(i, 1), c--);
-          }
-
-          p();
-        }
-      },
-          u = function u() {
-        if (!(t >= e.options.FileParallelLimit)) {
-          for (; a[c] && "waiting" !== a[c].state;) {
-            c++;
-          }
-
-          if (!(c >= a.length)) {
-            var n = a[c];
-            c++, t++, n.state = "checking", n.params.onTaskStart && n.params.onTaskStart(r(n)), !n.params.UploadData && (n.params.UploadData = {});
-            var i = o.formatParams(n.api, n.params);
-            s[n.api].call(e, i, function (a, i) {
-              e._isRunningTask(n.id) && ("checking" !== n.state && "uploading" !== n.state || (n.state = a ? "error" : "success", a && (n.error = a), t--, p(), u(), n.callback && n.callback(a, i), "success" === n.state && (n.params && (delete n.params.UploadData, delete n.params.Body, delete n.params), delete n.callback)), l());
-            }), p(), setTimeout(u);
-          }
-        }
-      },
-          d = function d(a, o) {
-        var s = n[a];
-
-        if (s) {
-          var c = s && "waiting" === s.state,
-              r = s && ("checking" === s.state || "uploading" === s.state);
-
-          if ("canceled" === o && "canceled" !== s.state || "paused" === o && c || "paused" === o && r) {
-            if ("paused" === o && s.params.Body && "function" == typeof s.params.Body.pipe) return void console.error("stream not support pause");
-            s.state = o, e.emit("inner-kill-task", {
-              TaskId: a,
-              toState: o
-            });
-
-            try {
-              var d = s && s.params && s.params.UploadData.UploadId;
-            } catch (e) {}
-
-            "canceled" === o && d && i.removeUsing(d), p(), r && (t--, u()), "canceled" === o && (s.params && (delete s.params.UploadData, delete s.params.Body, delete s.params), delete s.callback);
-          }
-
-          l();
-        }
-      };
-
-      e._addTasks = function (a) {
-        o.each(a, function (a) {
-          e._addTask(a.api, a.params, a.callback, !0);
-        }), p();
-      };
-
-      e._addTask = function (i, s, t, c) {
-        s = o.formatParams(i, s);
-        var r = o.uuid();
-        s.TaskId = r, s.onTaskReady && s.onTaskReady(r);
-        var d = {
-          params: s,
-          callback: t,
-          api: i,
-          index: a.length,
-          id: r,
-          Bucket: s.Bucket,
-          Region: s.Region,
-          Key: s.Key,
-          FilePath: s.FilePath || "",
-          state: "waiting",
-          loaded: 0,
-          size: 0,
-          speed: 0,
-          percent: 0,
-          hashPercent: 0,
-          error: null
-        },
-            m = s.onHashProgress;
-
-        s.onHashProgress = function (a) {
-          e._isRunningTask(d.id) && (d.hashPercent = a.percent, m && m(a), p());
-        };
-
-        var x = s.onProgress;
-        return s.onProgress = function (a) {
-          e._isRunningTask(d.id) && ("checking" === d.state && (d.state = "uploading"), d.loaded = a.loaded, d.size = a.total, d.speed = a.speed, d.percent = a.percent, x && x(a), p());
-        }, o.getFileSize(i, s, function (e, i) {
-          if (e) return void t(e);
-          n[r] = d, a.push(d), d.size = i, !c && p(), u(), l();
-        }), r;
-      }, e._isRunningTask = function (e) {
-        var a = n[e];
-        return !(!a || "checking" !== a.state && "uploading" !== a.state);
-      }, e.getTaskList = function () {
-        return o.map(a, r);
-      }, e.cancelTask = function (e) {
-        d(e, "canceled");
-      }, e.pauseTask = function (e) {
-        d(e, "paused");
-      }, e.restartTask = function (e) {
-        var a = n[e];
-        !a || "paused" !== a.state && "error" !== a.state || (a.state = "waiting", p(), c = Math.min(c, a.index), u());
-      }, e.isUploadRunning = function () {
-        return t || c < a.length;
-      };
-    };
-
-    e.exports.transferToTaskMethod = t, e.exports.init = c;
-  }]);
-});
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)(module)))
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = function (module) {
-  if (!module.webpackPolyfill) {
-    module.deprecate = function () {};
-
-    module.paths = []; // module.parent = undefined by default
-
-    if (!module.children) module.children = [];
-    Object.defineProperty(module, "loaded", {
-      enumerable: true,
-      get: function () {
-        return module.l;
-      }
-    });
-    Object.defineProperty(module, "id", {
-      enumerable: true,
-      get: function () {
-        return module.i;
-      }
-    });
-    module.webpackPolyfill = 1;
-  }
-
-  return module;
-};
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-var vodUtil = {
-  getType: function getType(a) {
-    if (a === null) {
-      return "null";
-    }
-
-    if (a === undefined) {
-      return "undefined";
-    }
-
-    return Object.prototype.toString.call(a).slice(8, -1).toLowerCase();
-  },
-  isFunction: function isFunction(para) {
-    if (para && this.getType(para) !== "function") {
-      return false;
-    }
-
-    return true;
-  },
-  getFileMessage: function getFileMessage(file, fileName) {
-    var fileMsg = {};
-    fileMsg.tempFilePath = file.tempFilePath;
-    fileMsg.type = file.tempFilePath.substring(file.tempFilePath.lastIndexOf(".") + 1);
-
-    if (typeof fileName === "string") {
-      fileMsg.name = fileName;
-    } else {
-      fileMsg.name = "来自小程序";
-    }
-
-    fileMsg.size = file.size;
-    return fileMsg;
-  },
-  noop: function noop() {}
-};
-module.exports = vodUtil;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-var UploaderEvent = {
-  video_progress: "video_progress",
-  media_progress: "media_progress"
-};
-exports.UploaderEvent = UploaderEvent;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-var R = typeof Reflect === 'object' ? Reflect : null;
-var ReflectApply = R && typeof R.apply === 'function' ? R.apply : function ReflectApply(target, receiver, args) {
-  return Function.prototype.apply.call(target, receiver, args);
-};
-var ReflectOwnKeys;
-
-if (R && typeof R.ownKeys === 'function') {
-  ReflectOwnKeys = R.ownKeys;
-} else if (Object.getOwnPropertySymbols) {
-  ReflectOwnKeys = function ReflectOwnKeys(target) {
-    return Object.getOwnPropertyNames(target).concat(Object.getOwnPropertySymbols(target));
-  };
-} else {
-  ReflectOwnKeys = function ReflectOwnKeys(target) {
-    return Object.getOwnPropertyNames(target);
-  };
-}
-
-function ProcessEmitWarning(warning) {
-  if (console && console.warn) console.warn(warning);
-}
-
-var NumberIsNaN = Number.isNaN || function NumberIsNaN(value) {
-  return value !== value;
-};
-
-function EventEmitter() {
-  EventEmitter.init.call(this);
-}
-
-module.exports = EventEmitter; // Backwards-compat with node 0.10.x
-
-EventEmitter.EventEmitter = EventEmitter;
-EventEmitter.prototype._events = undefined;
-EventEmitter.prototype._eventsCount = 0;
-EventEmitter.prototype._maxListeners = undefined; // By default EventEmitters will print a warning if more than 10 listeners are
-// added to it. This is a useful default which helps finding memory leaks.
-
-var defaultMaxListeners = 10;
-Object.defineProperty(EventEmitter, 'defaultMaxListeners', {
-  enumerable: true,
-  get: function () {
-    return defaultMaxListeners;
-  },
-  set: function (arg) {
-    if (typeof arg !== 'number' || arg < 0 || NumberIsNaN(arg)) {
-      throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + arg + '.');
-    }
-
-    defaultMaxListeners = arg;
-  }
-});
-
-EventEmitter.init = function () {
-  if (this._events === undefined || this._events === Object.getPrototypeOf(this)._events) {
-    this._events = Object.create(null);
-    this._eventsCount = 0;
-  }
-
-  this._maxListeners = this._maxListeners || undefined;
-}; // Obviously not all Emitters should be limited to 10. This function allows
-// that to be increased. Set to zero for unlimited.
-
-
-EventEmitter.prototype.setMaxListeners = function setMaxListeners(n) {
-  if (typeof n !== 'number' || n < 0 || NumberIsNaN(n)) {
-    throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + n + '.');
-  }
-
-  this._maxListeners = n;
-  return this;
-};
-
-function $getMaxListeners(that) {
-  if (that._maxListeners === undefined) return EventEmitter.defaultMaxListeners;
-  return that._maxListeners;
-}
-
-EventEmitter.prototype.getMaxListeners = function getMaxListeners() {
-  return $getMaxListeners(this);
-};
-
-EventEmitter.prototype.emit = function emit(type) {
-  var args = [];
-
-  for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
-
-  var doError = type === 'error';
-  var events = this._events;
-  if (events !== undefined) doError = doError && events.error === undefined;else if (!doError) return false; // If there is no 'error' event listener then throw.
-
-  if (doError) {
-    var er;
-    if (args.length > 0) er = args[0];
-
-    if (er instanceof Error) {
-      // Note: The comments on the `throw` lines are intentional, they show
-      // up in Node's output if this results in an unhandled exception.
-      throw er; // Unhandled 'error' event
-    } // At least give some kind of context to the user
-
-
-    var err = new Error('Unhandled error.' + (er ? ' (' + er.message + ')' : ''));
-    err.context = er;
-    throw err; // Unhandled 'error' event
-  }
-
-  var handler = events[type];
-  if (handler === undefined) return false;
-
-  if (typeof handler === 'function') {
-    ReflectApply(handler, this, args);
-  } else {
-    var len = handler.length;
-    var listeners = arrayClone(handler, len);
-
-    for (var i = 0; i < len; ++i) ReflectApply(listeners[i], this, args);
-  }
-
-  return true;
-};
-
-function _addListener(target, type, listener, prepend) {
-  var m;
-  var events;
-  var existing;
-
-  if (typeof listener !== 'function') {
-    throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
-  }
-
-  events = target._events;
-
-  if (events === undefined) {
-    events = target._events = Object.create(null);
-    target._eventsCount = 0;
-  } else {
-    // To avoid recursion in the case that type === "newListener"! Before
-    // adding it to the listeners, first emit "newListener".
-    if (events.newListener !== undefined) {
-      target.emit('newListener', type, listener.listener ? listener.listener : listener); // Re-assign `events` because a newListener handler could have caused the
-      // this._events to be assigned to a new object
-
-      events = target._events;
-    }
-
-    existing = events[type];
-  }
-
-  if (existing === undefined) {
-    // Optimize the case of one listener. Don't need the extra array object.
-    existing = events[type] = listener;
-    ++target._eventsCount;
-  } else {
-    if (typeof existing === 'function') {
-      // Adding the second element, need to change to array.
-      existing = events[type] = prepend ? [listener, existing] : [existing, listener]; // If we've already got an array, just append.
-    } else if (prepend) {
-      existing.unshift(listener);
-    } else {
-      existing.push(listener);
-    } // Check for listener leak
-
-
-    m = $getMaxListeners(target);
-
-    if (m > 0 && existing.length > m && !existing.warned) {
-      existing.warned = true; // No error code for this since it is a Warning
-      // eslint-disable-next-line no-restricted-syntax
-
-      var w = new Error('Possible EventEmitter memory leak detected. ' + existing.length + ' ' + String(type) + ' listeners ' + 'added. Use emitter.setMaxListeners() to ' + 'increase limit');
-      w.name = 'MaxListenersExceededWarning';
-      w.emitter = target;
-      w.type = type;
-      w.count = existing.length;
-      ProcessEmitWarning(w);
-    }
-  }
-
-  return target;
-}
-
-EventEmitter.prototype.addListener = function addListener(type, listener) {
-  return _addListener(this, type, listener, false);
-};
-
-EventEmitter.prototype.on = EventEmitter.prototype.addListener;
-
-EventEmitter.prototype.prependListener = function prependListener(type, listener) {
-  return _addListener(this, type, listener, true);
-};
-
-function onceWrapper() {
-  var args = [];
-
-  for (var i = 0; i < arguments.length; i++) args.push(arguments[i]);
-
-  if (!this.fired) {
-    this.target.removeListener(this.type, this.wrapFn);
-    this.fired = true;
-    ReflectApply(this.listener, this.target, args);
-  }
-}
-
-function _onceWrap(target, type, listener) {
-  var state = {
-    fired: false,
-    wrapFn: undefined,
-    target: target,
-    type: type,
-    listener: listener
-  };
-  var wrapped = onceWrapper.bind(state);
-  wrapped.listener = listener;
-  state.wrapFn = wrapped;
-  return wrapped;
-}
-
-EventEmitter.prototype.once = function once(type, listener) {
-  if (typeof listener !== 'function') {
-    throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
-  }
-
-  this.on(type, _onceWrap(this, type, listener));
-  return this;
-};
-
-EventEmitter.prototype.prependOnceListener = function prependOnceListener(type, listener) {
-  if (typeof listener !== 'function') {
-    throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
-  }
-
-  this.prependListener(type, _onceWrap(this, type, listener));
-  return this;
-}; // Emits a 'removeListener' event if and only if the listener was removed.
-
-
-EventEmitter.prototype.removeListener = function removeListener(type, listener) {
-  var list, events, position, i, originalListener;
-
-  if (typeof listener !== 'function') {
-    throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
-  }
-
-  events = this._events;
-  if (events === undefined) return this;
-  list = events[type];
-  if (list === undefined) return this;
-
-  if (list === listener || list.listener === listener) {
-    if (--this._eventsCount === 0) this._events = Object.create(null);else {
-      delete events[type];
-      if (events.removeListener) this.emit('removeListener', type, list.listener || listener);
-    }
-  } else if (typeof list !== 'function') {
-    position = -1;
-
-    for (i = list.length - 1; i >= 0; i--) {
-      if (list[i] === listener || list[i].listener === listener) {
-        originalListener = list[i].listener;
-        position = i;
-        break;
-      }
-    }
-
-    if (position < 0) return this;
-    if (position === 0) list.shift();else {
-      spliceOne(list, position);
-    }
-    if (list.length === 1) events[type] = list[0];
-    if (events.removeListener !== undefined) this.emit('removeListener', type, originalListener || listener);
-  }
-
-  return this;
-};
-
-EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
-
-EventEmitter.prototype.removeAllListeners = function removeAllListeners(type) {
-  var listeners, events, i;
-  events = this._events;
-  if (events === undefined) return this; // not listening for removeListener, no need to emit
-
-  if (events.removeListener === undefined) {
-    if (arguments.length === 0) {
+  });
+  
+  EventEmitter.init = function () {
+    if (this._events === undefined || this._events === Object.getPrototypeOf(this)._events) {
       this._events = Object.create(null);
       this._eventsCount = 0;
-    } else if (events[type] !== undefined) {
-      if (--this._eventsCount === 0) this._events = Object.create(null);else delete events[type];
     }
-
+  
+    this._maxListeners = this._maxListeners || undefined;
+  }; // Obviously not all Emitters should be limited to 10. This function allows
+  // that to be increased. Set to zero for unlimited.
+  
+  
+  EventEmitter.prototype.setMaxListeners = function setMaxListeners(n) {
+    if (typeof n !== 'number' || n < 0 || NumberIsNaN(n)) {
+      throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + n + '.');
+    }
+  
+    this._maxListeners = n;
     return this;
-  } // emit removeListener for all listeners on all events
-
-
-  if (arguments.length === 0) {
-    var keys = Object.keys(events);
-    var key;
-
-    for (i = 0; i < keys.length; ++i) {
-      key = keys[i];
-      if (key === 'removeListener') continue;
-      this.removeAllListeners(key);
+  };
+  
+  function $getMaxListeners(that) {
+    if (that._maxListeners === undefined) return EventEmitter.defaultMaxListeners;
+    return that._maxListeners;
+  }
+  
+  EventEmitter.prototype.getMaxListeners = function getMaxListeners() {
+    return $getMaxListeners(this);
+  };
+  
+  EventEmitter.prototype.emit = function emit(type) {
+    var args = [];
+  
+    for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
+  
+    var doError = type === 'error';
+    var events = this._events;
+    if (events !== undefined) doError = doError && events.error === undefined;else if (!doError) return false; // If there is no 'error' event listener then throw.
+  
+    if (doError) {
+      var er;
+      if (args.length > 0) er = args[0];
+  
+      if (er instanceof Error) {
+        // Note: The comments on the `throw` lines are intentional, they show
+        // up in Node's output if this results in an unhandled exception.
+        throw er; // Unhandled 'error' event
+      } // At least give some kind of context to the user
+  
+  
+      var err = new Error('Unhandled error.' + (er ? ' (' + er.message + ')' : ''));
+      err.context = er;
+      throw err; // Unhandled 'error' event
     }
-
-    this.removeAllListeners('removeListener');
-    this._events = Object.create(null);
-    this._eventsCount = 0;
+  
+    var handler = events[type];
+    if (handler === undefined) return false;
+  
+    if (typeof handler === 'function') {
+      ReflectApply(handler, this, args);
+    } else {
+      var len = handler.length;
+      var listeners = arrayClone(handler, len);
+  
+      for (var i = 0; i < len; ++i) ReflectApply(listeners[i], this, args);
+    }
+  
+    return true;
+  };
+  
+  function _addListener(target, type, listener, prepend) {
+    var m;
+    var events;
+    var existing;
+  
+    if (typeof listener !== 'function') {
+      throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
+    }
+  
+    events = target._events;
+  
+    if (events === undefined) {
+      events = target._events = Object.create(null);
+      target._eventsCount = 0;
+    } else {
+      // To avoid recursion in the case that type === "newListener"! Before
+      // adding it to the listeners, first emit "newListener".
+      if (events.newListener !== undefined) {
+        target.emit('newListener', type, listener.listener ? listener.listener : listener); // Re-assign `events` because a newListener handler could have caused the
+        // this._events to be assigned to a new object
+  
+        events = target._events;
+      }
+  
+      existing = events[type];
+    }
+  
+    if (existing === undefined) {
+      // Optimize the case of one listener. Don't need the extra array object.
+      existing = events[type] = listener;
+      ++target._eventsCount;
+    } else {
+      if (typeof existing === 'function') {
+        // Adding the second element, need to change to array.
+        existing = events[type] = prepend ? [listener, existing] : [existing, listener]; // If we've already got an array, just append.
+      } else if (prepend) {
+        existing.unshift(listener);
+      } else {
+        existing.push(listener);
+      } // Check for listener leak
+  
+  
+      m = $getMaxListeners(target);
+  
+      if (m > 0 && existing.length > m && !existing.warned) {
+        existing.warned = true; // No error code for this since it is a Warning
+        // eslint-disable-next-line no-restricted-syntax
+  
+        var w = new Error('Possible EventEmitter memory leak detected. ' + existing.length + ' ' + String(type) + ' listeners ' + 'added. Use emitter.setMaxListeners() to ' + 'increase limit');
+        w.name = 'MaxListenersExceededWarning';
+        w.emitter = target;
+        w.type = type;
+        w.count = existing.length;
+        ProcessEmitWarning(w);
+      }
+    }
+  
+    return target;
+  }
+  
+  EventEmitter.prototype.addListener = function addListener(type, listener) {
+    return _addListener(this, type, listener, false);
+  };
+  
+  EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+  
+  EventEmitter.prototype.prependListener = function prependListener(type, listener) {
+    return _addListener(this, type, listener, true);
+  };
+  
+  function onceWrapper() {
+    var args = [];
+  
+    for (var i = 0; i < arguments.length; i++) args.push(arguments[i]);
+  
+    if (!this.fired) {
+      this.target.removeListener(this.type, this.wrapFn);
+      this.fired = true;
+      ReflectApply(this.listener, this.target, args);
+    }
+  }
+  
+  function _onceWrap(target, type, listener) {
+    var state = {
+      fired: false,
+      wrapFn: undefined,
+      target: target,
+      type: type,
+      listener: listener
+    };
+    var wrapped = onceWrapper.bind(state);
+    wrapped.listener = listener;
+    state.wrapFn = wrapped;
+    return wrapped;
+  }
+  
+  EventEmitter.prototype.once = function once(type, listener) {
+    if (typeof listener !== 'function') {
+      throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
+    }
+  
+    this.on(type, _onceWrap(this, type, listener));
     return this;
-  }
-
-  listeners = events[type];
-
-  if (typeof listeners === 'function') {
-    this.removeListener(type, listeners);
-  } else if (listeners !== undefined) {
-    // LIFO order
-    for (i = listeners.length - 1; i >= 0; i--) {
-      this.removeListener(type, listeners[i]);
+  };
+  
+  EventEmitter.prototype.prependOnceListener = function prependOnceListener(type, listener) {
+    if (typeof listener !== 'function') {
+      throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
     }
-  }
-
-  return this;
-};
-
-function _listeners(target, type, unwrap) {
-  var events = target._events;
-  if (events === undefined) return [];
-  var evlistener = events[type];
-  if (evlistener === undefined) return [];
-  if (typeof evlistener === 'function') return unwrap ? [evlistener.listener || evlistener] : [evlistener];
-  return unwrap ? unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
-}
-
-EventEmitter.prototype.listeners = function listeners(type) {
-  return _listeners(this, type, true);
-};
-
-EventEmitter.prototype.rawListeners = function rawListeners(type) {
-  return _listeners(this, type, false);
-};
-
-EventEmitter.listenerCount = function (emitter, type) {
-  if (typeof emitter.listenerCount === 'function') {
-    return emitter.listenerCount(type);
-  } else {
-    return listenerCount.call(emitter, type);
-  }
-};
-
-EventEmitter.prototype.listenerCount = listenerCount;
-
-function listenerCount(type) {
-  var events = this._events;
-
-  if (events !== undefined) {
+  
+    this.prependListener(type, _onceWrap(this, type, listener));
+    return this;
+  }; // Emits a 'removeListener' event if and only if the listener was removed.
+  
+  
+  EventEmitter.prototype.removeListener = function removeListener(type, listener) {
+    var list, events, position, i, originalListener;
+  
+    if (typeof listener !== 'function') {
+      throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
+    }
+  
+    events = this._events;
+    if (events === undefined) return this;
+    list = events[type];
+    if (list === undefined) return this;
+  
+    if (list === listener || list.listener === listener) {
+      if (--this._eventsCount === 0) this._events = Object.create(null);else {
+        delete events[type];
+        if (events.removeListener) this.emit('removeListener', type, list.listener || listener);
+      }
+    } else if (typeof list !== 'function') {
+      position = -1;
+  
+      for (i = list.length - 1; i >= 0; i--) {
+        if (list[i] === listener || list[i].listener === listener) {
+          originalListener = list[i].listener;
+          position = i;
+          break;
+        }
+      }
+  
+      if (position < 0) return this;
+      if (position === 0) list.shift();else {
+        spliceOne(list, position);
+      }
+      if (list.length === 1) events[type] = list[0];
+      if (events.removeListener !== undefined) this.emit('removeListener', type, originalListener || listener);
+    }
+  
+    return this;
+  };
+  
+  EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
+  
+  EventEmitter.prototype.removeAllListeners = function removeAllListeners(type) {
+    var listeners, events, i;
+    events = this._events;
+    if (events === undefined) return this; // not listening for removeListener, no need to emit
+  
+    if (events.removeListener === undefined) {
+      if (arguments.length === 0) {
+        this._events = Object.create(null);
+        this._eventsCount = 0;
+      } else if (events[type] !== undefined) {
+        if (--this._eventsCount === 0) this._events = Object.create(null);else delete events[type];
+      }
+  
+      return this;
+    } // emit removeListener for all listeners on all events
+  
+  
+    if (arguments.length === 0) {
+      var keys = Object.keys(events);
+      var key;
+  
+      for (i = 0; i < keys.length; ++i) {
+        key = keys[i];
+        if (key === 'removeListener') continue;
+        this.removeAllListeners(key);
+      }
+  
+      this.removeAllListeners('removeListener');
+      this._events = Object.create(null);
+      this._eventsCount = 0;
+      return this;
+    }
+  
+    listeners = events[type];
+  
+    if (typeof listeners === 'function') {
+      this.removeListener(type, listeners);
+    } else if (listeners !== undefined) {
+      // LIFO order
+      for (i = listeners.length - 1; i >= 0; i--) {
+        this.removeListener(type, listeners[i]);
+      }
+    }
+  
+    return this;
+  };
+  
+  function _listeners(target, type, unwrap) {
+    var events = target._events;
+    if (events === undefined) return [];
     var evlistener = events[type];
-
-    if (typeof evlistener === 'function') {
-      return 1;
-    } else if (evlistener !== undefined) {
-      return evlistener.length;
+    if (evlistener === undefined) return [];
+    if (typeof evlistener === 'function') return unwrap ? [evlistener.listener || evlistener] : [evlistener];
+    return unwrap ? unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
+  }
+  
+  EventEmitter.prototype.listeners = function listeners(type) {
+    return _listeners(this, type, true);
+  };
+  
+  EventEmitter.prototype.rawListeners = function rawListeners(type) {
+    return _listeners(this, type, false);
+  };
+  
+  EventEmitter.listenerCount = function (emitter, type) {
+    if (typeof emitter.listenerCount === 'function') {
+      return emitter.listenerCount(type);
+    } else {
+      return listenerCount.call(emitter, type);
     }
-  }
-
-  return 0;
-}
-
-EventEmitter.prototype.eventNames = function eventNames() {
-  return this._eventsCount > 0 ? ReflectOwnKeys(this._events) : [];
-};
-
-function arrayClone(arr, n) {
-  var copy = new Array(n);
-
-  for (var i = 0; i < n; ++i) copy[i] = arr[i];
-
-  return copy;
-}
-
-function spliceOne(list, index) {
-  for (; index + 1 < list.length; index++) list[index] = list[index + 1];
-
-  list.pop();
-}
-
-function unwrapListeners(arr) {
-  var ret = new Array(arr.length);
-
-  for (var i = 0; i < ret.length; ++i) {
-    ret[i] = arr[i].listener || arr[i];
-  }
-
-  return ret;
-}
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _temp;
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var Uploader = __webpack_require__(0);
-
-var pkg = __webpack_require__(7);
-
-var VodReportEvent = {
-  report_prepare: "report_prepare",
-  report_apply: "report_apply",
-  report_cos_upload: "report_cos_upload",
-  report_commit: "report_commit",
-  report_done: "report_done"
-};
-var ReqType = {
-  prepare: 10000,
-  apply: 10001,
-  cos_upload: 20001,
-  commit: 10002,
-  done: 40001
-};
-exports.reportEvent = VodReportEvent;
-exports.VodReporter = (_temp = /*#__PURE__*/function () {
-  // only partial data when created
-  function _temp(uploader, options) {
-    _classCallCheck(this, _temp);
-
-    _defineProperty(this, "uploader", undefined);
-
-    _defineProperty(this, "options", undefined);
-
-    _defineProperty(this, "baseReportData", {
-      version: pkg.version,
-      platform: 4000,
-      device: function () {
-        var _wx$getSystemInfoSync = wx.getSystemInfoSync(),
-            brand = _wx$getSystemInfoSync.brand,
-            model = _wx$getSystemInfoSync.model,
-            version = _wx$getSystemInfoSync.version;
-
-        return "".concat(brand, "-").concat(model, "-wx").concat(version);
-      }()
-    });
-
-    _defineProperty(this, "reportUrl", "https://vodreport.qcloud.com/ugcupload_new");
-
-    this.uploader = uploader;
-    this.options = options;
-    this.init();
-  }
-
-  _createClass(_temp, [{
-    key: "init",
-    value: function init() {
-      this.uploader.on(VodReportEvent.report_prepare, this.onPrepare.bind(this));
-      this.uploader.on(VodReportEvent.report_apply, this.onApply.bind(this));
-      this.uploader.on(VodReportEvent.report_cos_upload, this.onCosUpload.bind(this));
-      this.uploader.on(VodReportEvent.report_commit, this.onCommit.bind(this));
-      this.uploader.on(VodReportEvent.report_done, this.onDone.bind(this));
-    } // PrepareUpload
-
-  }, {
-    key: "onPrepare",
-    value: function onPrepare(reportObj) {
-      var uploader = this.uploader;
-
-      try {
-        var customReportData = {
-          appId: uploader.appId,
-          reqType: ReqType.prepare,
-          errCode: 0,
-          vodErrCode: 0,
-          errMsg: "",
-          reqTimeCost: Number(new Date()) - Number(reportObj.requestStartTime),
-          reqTime: Number(reportObj.requestStartTime)
-        };
-
-        if (reportObj.err) {
-          customReportData.errCode = 1;
-          customReportData.vodErrCode = reportObj.err.code;
-          customReportData.errMsg = reportObj.err.message;
-        }
-
-        if (reportObj.data) {
-          customReportData.cosRegion = reportObj.data.region;
-        }
-
-        this.report(customReportData);
-      } catch (e) {
-        console.log('onPrepare', e);
+  };
+  
+  EventEmitter.prototype.listenerCount = listenerCount;
+  
+  function listenerCount(type) {
+    var events = this._events;
+  
+    if (events !== undefined) {
+      var evlistener = events[type];
+  
+      if (typeof evlistener === 'function') {
+        return 1;
+      } else if (evlistener !== undefined) {
+        return evlistener.length;
       }
-    } // ApplyUploadUGC
-
-  }, {
-    key: "onApply",
-    value: function onApply(reportObj) {
-      try {
+    }
+  
+    return 0;
+  }
+  
+  EventEmitter.prototype.eventNames = function eventNames() {
+    return this._eventsCount > 0 ? ReflectOwnKeys(this._events) : [];
+  };
+  
+  function arrayClone(arr, n) {
+    var copy = new Array(n);
+  
+    for (var i = 0; i < n; ++i) copy[i] = arr[i];
+  
+    return copy;
+  }
+  
+  function spliceOne(list, index) {
+    for (; index + 1 < list.length; index++) list[index] = list[index + 1];
+  
+    list.pop();
+  }
+  
+  function unwrapListeners(arr) {
+    var ret = new Array(arr.length);
+  
+    for (var i = 0; i < ret.length; ++i) {
+      ret[i] = arr[i].listener || arr[i];
+    }
+  
+    return ret;
+  }
+  
+  /***/ }),
+  /* 6 */
+  /***/ (function(module, exports, __webpack_require__) {
+  
+  var _temp;
+  
+  function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+  
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+  
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+  
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+  
+  var Uploader = __webpack_require__(0);
+  
+  var pkg = __webpack_require__(7);
+  
+  var VodReportEvent = {
+    report_prepare: "report_prepare",
+    report_apply: "report_apply",
+    report_cos_upload: "report_cos_upload",
+    report_commit: "report_commit",
+    report_done: "report_done"
+  };
+  var ReqType = {
+    prepare: 10000,
+    apply: 10001,
+    cos_upload: 20001,
+    commit: 10002,
+    done: 40001
+  };
+  exports.reportEvent = VodReportEvent;
+  exports.VodReporter = (_temp = /*#__PURE__*/function () {
+    // only partial data when created
+    function _temp(uploader, options) {
+      _classCallCheck(this, _temp);
+  
+      _defineProperty(this, "uploader", undefined);
+  
+      _defineProperty(this, "options", undefined);
+  
+      _defineProperty(this, "baseReportData", {
+        version: pkg.version,
+        platform: 4000,
+        device: function () {
+          var _wx$getSystemInfoSync = wx.getSystemInfoSync(),
+              brand = _wx$getSystemInfoSync.brand,
+              model = _wx$getSystemInfoSync.model,
+              version = _wx$getSystemInfoSync.version;
+  
+          return "".concat(brand, "-").concat(model, "-wx").concat(version);
+        }()
+      });
+  
+      _defineProperty(this, "reportUrl", "https://vodreport.qcloud.com/ugcupload_new");
+  
+      this.uploader = uploader;
+      this.options = options;
+      this.init();
+    }
+  
+    _createClass(_temp, [{
+      key: "init",
+      value: function init() {
+        this.uploader.on(VodReportEvent.report_prepare, this.onPrepare.bind(this));
+        this.uploader.on(VodReportEvent.report_apply, this.onApply.bind(this));
+        this.uploader.on(VodReportEvent.report_cos_upload, this.onCosUpload.bind(this));
+        this.uploader.on(VodReportEvent.report_commit, this.onCommit.bind(this));
+        this.uploader.on(VodReportEvent.report_done, this.onDone.bind(this));
+      } // PrepareUpload
+  
+    }, {
+      key: "onPrepare",
+      value: function onPrepare(reportObj) {
         var uploader = this.uploader;
-
-        if (!uploader.videoFileMessage) {
-          return;
-        }
-
-        var file = uploader.videoFileMessage;
-        Object.assign(this.baseReportData, {
-          appId: uploader.appId,
-          fileSize: file.size,
-          fileName: file.name,
-          fileType: file.type,
-          vodSessionKey: uploader.vodSessionKey,
-          reqKey: uploader.reqKey,
-          reportId: uploader.reportId
-        });
-        var customReportData = {
-          reqType: ReqType.apply,
-          errCode: 0,
-          vodErrCode: 0,
-          errMsg: "",
-          reqTimeCost: Number(new Date()) - Number(reportObj.requestStartTime),
-          reqTime: Number(reportObj.requestStartTime)
-        };
-
-        if (reportObj.err) {
-          customReportData.errCode = 1;
-          customReportData.vodErrCode = reportObj.err.code;
-          customReportData.errMsg = reportObj.err.message;
-        }
-
-        if (reportObj.data) {
-          this.baseReportData.cosRegion = reportObj.data.storageRegion;
-        }
-
-        this.report(customReportData);
-      } catch (e) {
-        console.error("onApply", e);
-      }
-    } // upload to cos
-
-  }, {
-    key: "onCosUpload",
-    value: function onCosUpload(reportObj) {
-      try {
-        var customReportData = {
-          reqType: ReqType.cos_upload,
-          errCode: 0,
-          cosErrCode: "",
-          errMsg: "",
-          reqTimeCost: Number(new Date()) - Number(reportObj.requestStartTime),
-          reqTime: Number(reportObj.requestStartTime)
-        };
-
-        if (reportObj.err) {
-          customReportData.errCode = 1;
-          customReportData.cosErrCode = reportObj.err.error ? reportObj.err.error.Code : reportObj.err;
-
-          if (reportObj.err && reportObj.err.error === "error") {
-            customReportData.cosErrCode = "cors error";
+  
+        try {
+          var customReportData = {
+            appId: uploader.appId,
+            reqType: ReqType.prepare,
+            errCode: 0,
+            vodErrCode: 0,
+            errMsg: "",
+            reqTimeCost: Number(new Date()) - Number(reportObj.requestStartTime),
+            reqTime: Number(reportObj.requestStartTime)
+          };
+  
+          if (reportObj.err) {
+            customReportData.errCode = 1;
+            customReportData.vodErrCode = reportObj.err.code;
+            customReportData.errMsg = reportObj.err.message;
           }
-
-          customReportData.errMsg = JSON.stringify(reportObj.err);
+  
+          if (reportObj.data) {
+            customReportData.cosRegion = reportObj.data.region;
+          }
+  
+          this.report(customReportData);
+        } catch (e) {
+          console.log("onPrepare", e);
         }
-
-        this.report(customReportData);
-      } catch (e) {
-        console.error("onCosUpload", e);
-      }
-    } // CommitUploadUGC
-
-  }, {
-    key: "onCommit",
-    value: function onCommit(reportObj) {
-      try {
-        var customReportData = {
-          reqType: ReqType.commit,
-          errCode: 0,
-          vodErrCode: 0,
-          errMsg: "",
-          reqTimeCost: Number(new Date()) - Number(reportObj.requestStartTime),
-          reqTime: Number(reportObj.requestStartTime)
-        };
-
-        if (reportObj.err) {
-          customReportData.errCode = 1;
-          customReportData.vodErrCode = reportObj.err.code;
-          customReportData.errMsg = reportObj.err.message;
+      } // ApplyUploadUGC
+  
+    }, {
+      key: "onApply",
+      value: function onApply(reportObj) {
+        try {
+          var uploader = this.uploader;
+  
+          if (!uploader.videoFileMessage) {
+            return;
+          }
+  
+          var file = uploader.videoFileMessage;
+          Object.assign(this.baseReportData, {
+            appId: uploader.appId,
+            fileSize: file.size,
+            fileName: file.name,
+            fileType: file.type,
+            vodSessionKey: uploader.vodSessionKey,
+            reqKey: uploader.reqKey,
+            reportId: uploader.reportId
+          });
+          var customReportData = {
+            reqType: ReqType.apply,
+            errCode: 0,
+            vodErrCode: 0,
+            errMsg: "",
+            reqTimeCost: Number(new Date()) - Number(reportObj.requestStartTime),
+            reqTime: Number(reportObj.requestStartTime)
+          };
+  
+          if (reportObj.err) {
+            customReportData.errCode = 1;
+            customReportData.vodErrCode = reportObj.err.code;
+            customReportData.errMsg = reportObj.err.message;
+          }
+  
+          if (reportObj.data) {
+            this.baseReportData.cosRegion = reportObj.data.storageRegion;
+          }
+  
+          this.report(customReportData);
+        } catch (e) {
+          console.error("onApply", e);
         }
-
-        if (reportObj.data) {
-          this.baseReportData.fileId = reportObj.data.fileId;
+      } // upload to cos
+  
+    }, {
+      key: "onCosUpload",
+      value: function onCosUpload(reportObj) {
+        try {
+          var customReportData = {
+            reqType: ReqType.cos_upload,
+            errCode: 0,
+            cosErrCode: "",
+            errMsg: "",
+            reqTimeCost: Number(new Date()) - Number(reportObj.requestStartTime),
+            reqTime: Number(reportObj.requestStartTime)
+          };
+  
+          if (reportObj.err) {
+            customReportData.errCode = 1;
+            customReportData.cosErrCode = reportObj.err.error ? reportObj.err.error.Code : reportObj.err;
+  
+            if (reportObj.err && reportObj.err.error === "error") {
+              customReportData.cosErrCode = "cors error";
+            }
+  
+            customReportData.errMsg = JSON.stringify(reportObj.err);
+          }
+  
+          this.report(customReportData);
+        } catch (e) {
+          console.error("onCosUpload", e);
         }
-
-        this.report(customReportData);
-      } catch (e) {
-        console.error("onCommit", e);
+      } // CommitUploadUGC
+  
+    }, {
+      key: "onCommit",
+      value: function onCommit(reportObj) {
+        try {
+          var customReportData = {
+            reqType: ReqType.commit,
+            errCode: 0,
+            vodErrCode: 0,
+            errMsg: "",
+            reqTimeCost: Number(new Date()) - Number(reportObj.requestStartTime),
+            reqTime: Number(reportObj.requestStartTime)
+          };
+  
+          if (reportObj.err) {
+            customReportData.errCode = 1;
+            customReportData.vodErrCode = reportObj.err.code;
+            customReportData.errMsg = reportObj.err.message;
+          }
+  
+          if (reportObj.data) {
+            this.baseReportData.fileId = reportObj.data.fileId;
+          }
+  
+          this.report(customReportData);
+        } catch (e) {
+          console.error("onCommit", e);
+        }
       }
-    }
-  }, {
-    key: "onDone",
-    value: function onDone(reportObj) {
-      try {
-        var customReportData = {
-          reqType: ReqType.done,
-          errCode: reportObj.err && reportObj.err.code,
-          reqTimeCost: Number(new Date()) - Number(reportObj.requestStartTime),
-          reqTime: Number(reportObj.requestStartTime)
-        };
-        this.report(customReportData);
-      } catch (e) {
-        console.error("onDone", e);
+    }, {
+      key: "onDone",
+      value: function onDone(reportObj) {
+        try {
+          var customReportData = {
+            reqType: ReqType.done,
+            errCode: reportObj.err && reportObj.err.code,
+            reqTimeCost: Number(new Date()) - Number(reportObj.requestStartTime),
+            reqTime: Number(reportObj.requestStartTime)
+          };
+          this.report(customReportData);
+        } catch (e) {
+          console.error("onDone", e);
+        }
       }
-    }
-  }, {
-    key: "report",
-    value: function report(reportData) {
-      reportData = _objectSpread(_objectSpread({}, this.baseReportData), reportData);
-      this.send(reportData);
-    }
-  }, {
-    key: "send",
-    value: function send(reportData) {
-      console.log('上报: ', reportData); // wx.request({
-      //   method: "POST",
-      //   url: this.reportUrl,
-      //   data: reportData,
-      //   dataType: "json",
-      //   fail: (err) => {
-      //     console.log(err);
-      //   },
-      // })
-    }
-  }]);
-
-  return _temp;
-}(), _temp);
-
-/***/ }),
-/* 7 */
-/***/ (function(module) {
-
-module.exports = {"name":"vod-wx-sdk-v2","version":"1.1.0","description":"Tencent cloud vod sdk for wechat mini program","main":"dist/vod-wx-sdk-v2.js","miniprogram":"dist","scripts":{"build":"webpack --config webpack.config.js","dev":"webpack --config webpack.config.js --watch"},"repository":{"type":"git","url":"git+https://github.com/tencentyun/vod-wx-sdk-v2.git"},"keywords":["vod","tencentcloud","qcloud","wechat"],"author":"alsotang <alsotang@gmail.com>","contributors":["_windmill <l20122005@live.com>"],"license":"MIT","bugs":{"url":"https://github.com/tencentyun/vod-wx-sdk-v2/issues"},"homepage":"https://github.com/tencentyun/vod-wx-sdk-v2#readme","devDependencies":{"@babel/core":"^7.10.2","@babel/plugin-proposal-class-properties":"^7.10.1","@babel/preset-env":"^7.10.2","babel-loader":"^8.1.0","eslint":"^5.3.0","eslint-config-airbnb-base":"^13.1.0","eslint-config-prettier":"^5.0.0","eslint-plugin-import":"^2.17.3","eslint-plugin-prettier":"^3.1.0","webpack":"^4.34.0","webpack-cli":"^3.3.4"}};
-
-/***/ })
-/******/ ])));
+    }, {
+      key: "report",
+      value: function report(reportData) {
+        reportData = _objectSpread(_objectSpread({}, this.baseReportData), reportData);
+        this.send(reportData);
+      }
+    }, {
+      key: "send",
+      value: function send(reportData) {
+        if (false) {}
+  
+        console.log("上报: ", reportData); // wx.request({
+        //   method: "POST",
+        //   url: this.reportUrl,
+        //   data: reportData,
+        //   dataType: "json",
+        //   fail: (err) => {
+        //     console.log(err);
+        //   },
+        // })
+      }
+    }]);
+  
+    return _temp;
+  }(), _temp);
+  
+  /***/ }),
+  /* 7 */
+  /***/ (function(module) {
+  
+  module.exports = {"name":"vod-wx-sdk-v2","version":"1.0.1","description":"Tencent cloud vod sdk for wechat mini program","main":"dist/index.js","miniprogram":"dist","scripts":{"build":"webpack --config webpack.config.js","dev":"webpack --config webpack.dev.js --watch"},"repository":{"type":"git","url":"git+https://github.com/tencentyun/vod-wx-sdk-v2.git"},"keywords":["vod","tencentcloud","qcloud","wechat"],"author":"alsotang <alsotang@gmail.com>","contributors":["_windmill <l20122005@live.com>"],"license":"MIT","bugs":{"url":"https://github.com/tencentyun/vod-wx-sdk-v2/issues"},"homepage":"https://github.com/tencentyun/vod-wx-sdk-v2#readme","devDependencies":{"@babel/core":"^7.10.2","@babel/plugin-proposal-class-properties":"^7.10.1","@babel/preset-env":"^7.10.2","babel-loader":"^8.1.0","eslint":"^5.3.0","eslint-config-airbnb-base":"^13.1.0","eslint-config-prettier":"^5.0.0","eslint-plugin-import":"^2.17.3","eslint-plugin-prettier":"^3.1.0","webpack":"^4.34.0","webpack-cli":"^3.3.4"}};
+  
+  /***/ })
+  /******/ ])));
